@@ -22,7 +22,7 @@ double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matr
 
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
-    
+
 }
 
 Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
@@ -50,5 +50,45 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
     }
 
     return alphas;
+}
+
+Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
+{
+    int N = observationMatrix.size();
+    int T = O.size();
+
+    Matrix betas = Matrix(T, Row(N));
+
+    for(int i = 0; i < N; i++)
+        betas[T-1][i] = 1;
+
+    for(int t = T - 2; t >= 0; t--)
+    {
+        for(int i = 0; i < N; i++)
+        {
+            double sum = 0;
+
+            for(int j = 0; j < N; j++)
+                sum += transitionMatrix[i][j] * observationMatrix[j][O[t+1]] * betas[t + 1][j];
+
+            betas[t][i] = sum;
+        }
+    }
+
+    return betas;
+}
+
+Matrix HiddenMarkovModel::gammaPass(const Matrix &alphas, const Matrix &betas, double observationSequenceScore)
+{
+    int N = observationMatrix.size();
+    int T = alphas.size();
+
+    Matrix gammas = Matrix(T, Row(N));
+
+    for(int t = 0; t < T; t++)
+        for(int i = 0; i < N; i++)
+            gammas[t][i] = alphas[t][i] * betas[t][i] / observationSequenceScore;
+
+    return gammas;
 }
 

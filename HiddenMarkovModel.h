@@ -32,7 +32,9 @@ private:
     StochasticMatrix observationMatrix;
     StochasticRow initialState;
 
-    Matrix alphaPass(const ObservationSequence& O)
+    Matrix alphaPass(const ObservationSequence& O);
+    Matrix betaPass(const ObservationSequence& O);
+    Matrix gammaPass(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
 
 };
 
