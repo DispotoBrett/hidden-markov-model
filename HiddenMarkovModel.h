@@ -22,6 +22,9 @@ class HiddenMarkovModel
 public:
     HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, StochasticRow pi);
 
+    double scoreStateSequence(const ObservationSequence& O);
+    double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
+
     StateSequence optimalStateSequence(const ObservationSequence& O);
     
 private:

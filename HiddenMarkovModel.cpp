@@ -4,9 +4,25 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
     : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
 { }
 
+double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
+{
+    Matrix alphas = alphaPass(O);
+    return scoreStateSequence(O, alphas);
+}
+
+double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
+{
+    double score = 0;
+
+    for(double d: alphas.back())
+        score += d;
+
+    return score;
+}
+
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
-
+    
 }
 
 Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
@@ -14,10 +30,10 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
     int N = observationMatrix.size();
     int T = O.size();
 
-    Matrix alpha = Matrix(T, Row(N));
+    Matrix alphas = Matrix(T, Row(N));
 
     for(int i = 0; i < N; i++)
-        alpha[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
+        alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
 
     for(int t = 1; t < T; t++)
     {
@@ -26,13 +42,13 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
             double sum = 0;
 
             for(int j = 0; j < N; j++)
-                sum += alpha[t-1][j] * transitionMatrix[j][i];
+                sum += alphas[t-1][j] * transitionMatrix[j][i];
 
-            alpha[t][i] = sum * observationMatrix[i][O[t]];
+            alphas[t][i] = sum * observationMatrix[i][O[t]];
         }
 
     }
 
-    return alpha;
+    return alphas;
 }
 
