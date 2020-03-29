@@ -11,19 +11,25 @@ typedef std::vector<State> StateSequence;
 typedef int Observation;
 typedef std::vector<State> ObservationSequence;
 
-typedef std::vector<double> StochasticRow;
-typedef std::vector<StochasticRow> StochasticMatrix;
+typedef std::vector<double> Row;
+typedef std::vector<Row> Matrix;
 
-class HiddenMarkovModel {
+typedef Row StochasticRow;
+typedef Matrix StochasticMatrix;
+
+class HiddenMarkovModel
+{
 public:
     HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, StochasticRow pi);
 
-    StateSequence optimalStateSequence(ObservationSequence O, size_t T);
+    StateSequence optimalStateSequence(const ObservationSequence& O);
     
 private:
     StochasticMatrix transitionMatrix;
     StochasticMatrix observationMatrix;
     StochasticRow initialState;
+
+    Matrix alphaPass(const ObservationSequence& O)
 
 };
 
