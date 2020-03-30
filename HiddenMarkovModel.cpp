@@ -1,6 +1,6 @@
 #include "HiddenMarkovModel.h"
 
-HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, StochasticRow pi)
+HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi)
     : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
 { }
 
@@ -22,7 +22,34 @@ double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matr
 
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
+    Matrix alphas = alphaPass(O);
+    double score = scoreStateSequence(O, alphas);
 
+    Matrix betas = betaPass(O);
+    Matrix gammas = computeGammas(alphas, betas, score);
+
+    int T = gammas.size();
+    int N = gammas[0].size();
+    StateSequence optimalSequence = StateSequence(T);
+
+    for(int t = 0; t < T; t++)
+    {
+        double max = gammas[t][0];
+        State mostLikely = 0;
+
+        for(int i = 1; i < N; i++)
+        {
+            if(gammas[t][i] > max)
+            {
+                max = gammas[t][i];
+                mostLikely = i;
+            }
+        }
+
+        optimalSequence[t] = mostLikely;
+    }
+
+    return optimalSequence;
 }
 
 Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
@@ -78,7 +105,7 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
     return betas;
 }
 
-Matrix HiddenMarkovModel::gammaPass(const Matrix &alphas, const Matrix &betas, double observationSequenceScore)
+Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &betas, double observationSequenceScore)
 {
     int N = observationMatrix.size();
     int T = alphas.size();

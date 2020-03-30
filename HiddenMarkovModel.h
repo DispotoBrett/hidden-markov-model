@@ -14,13 +14,13 @@ typedef std::vector<State> ObservationSequence;
 typedef std::vector<double> Row;
 typedef std::vector<Row> Matrix;
 
-typedef Row StochasticRow;
-typedef Matrix StochasticMatrix;
+typedef std::vector<double> StochasticRow;
+typedef std::vector<StochasticRow> StochasticMatrix;
 
 class HiddenMarkovModel
 {
 public:
-    HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, StochasticRow pi);
+    HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi);
 
     double scoreStateSequence(const ObservationSequence& O);
     double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
@@ -34,7 +34,7 @@ private:
 
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
-    Matrix gammaPass(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
+    Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
 
 };
 
