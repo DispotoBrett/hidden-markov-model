@@ -1,8 +1,54 @@
+#include <cstdlib>
+#include <iostream>
+#include <random>
 #include "HiddenMarkovModel.h"
 
 HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi)
     : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
 { }
+
+/**
+ * Constructs a new model to be trained.
+ * @param N the number of possible states
+ * @param M the number of distinct observation symbols
+ */
+HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
+{
+    transitionMatrix = StochasticMatrix(N);
+    observationMatrix = StochasticMatrix(N);
+    initialState = StochasticRow(N);
+
+    //random number tools
+    std::uniform_real_distribution<double> randN(N - 1, N + 1);
+    std::uniform_real_distribution<double> randM(M - 1, M + 1);
+    std::default_random_engine re;
+
+    for(int i = 0; i < N; i++)
+    {
+       //Initialize transition matrix
+        StochasticRow transitionRow(N);
+        for(int j = 0; j < N; j++)
+        {
+            transitionRow[j] = 1 / randN(re);
+        }
+        transitionMatrix[i] = transitionRow;
+
+        //Initialize observation matrix
+        StochasticRow observationRow(N);
+        for(int j = 0; j < M; j++ )
+        {
+            observationRow[j] = 1 / randM(re);
+        }
+        observationMatrix[i] = observationRow;
+
+        //Initialize the initial state distribution
+        initialState[i] =  1 / randN(re);
+
+        std::cout<< initialState[i] << std::endl;
+        std::cout<< observationMatrix[i][0] << std::endl;
+        std::cout<< "The value is: " << transitionMatrix[i][0]  << std::endl;
+    }
+}
 
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
 {
@@ -10,6 +56,9 @@ double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
     return scoreStateSequence(O, alphas);
 }
 
+/**
+ * Implements "problem 1" from the class notes.
+ */
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
 {
     double score = 0;
@@ -20,6 +69,9 @@ double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matr
     return score;
 }
 
+/**
+ * Implements "problem 2" from the class notes.
+ */
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
     Matrix alphas = alphaPass(O);
@@ -117,5 +169,9 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
             gammas[t][i] = alphas[t][i] * betas[t][i] / observationSequenceScore;
 
     return gammas;
+}
+
+void HiddenMarkovModel::train(const ObservationSequence &O) {
+
 }
 

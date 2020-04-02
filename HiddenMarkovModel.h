@@ -21,9 +21,16 @@ class HiddenMarkovModel
 {
 public:
     HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi);
+    //Creates an empty model with random values for A,B, and PI
+    //N is the number of hidden states in the model,
+    //M is the number of observation symbols.
+    HiddenMarkovModel(ObservationSequence& O, int N, int M);
 
     double scoreStateSequence(const ObservationSequence& O);
     double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
+    //Trains the model
+    //Implements Baum-Welch re-estimation
+    void train(const ObservationSequence& O);
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
     
@@ -35,6 +42,9 @@ private:
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
     Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
+    Matrix computeGammas(Matrix diGammas);
+    Matrix computeDiGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
+    Matrix doTrainStep(Matrix diGammas, Matrix gammas);
 
 };
 

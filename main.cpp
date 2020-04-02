@@ -23,4 +23,6 @@ int main()
 
     for(auto i: optimal)
         std::cout << i << " ";
+
+    hmm = HiddenMarkovModel(O, 10, 10);
 }
