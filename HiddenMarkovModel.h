@@ -4,6 +4,7 @@
 #define HMM_HIDDENMARKOVMODEL_H
 #include <cstddef>
 #include <vector>
+#include <map>
 
 typedef int State;
 typedef std::vector<State> StateSequence;
@@ -16,6 +17,9 @@ typedef std::vector<Row> Matrix;
 
 typedef std::vector<double> StochasticRow;
 typedef std::vector<StochasticRow> StochasticMatrix;
+
+//For digammas
+typedef std::vector<Matrix> Order3Tensor;
 
 class HiddenMarkovModel
 {
@@ -42,10 +46,11 @@ private:
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
     Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
-    Matrix computeGammas(Matrix diGammas);
-    Matrix computeDiGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
+    Matrix computeGammas(std::map<std::pair<int,int>, double> diGammas);
+    std::pair<Matrix, Order3Tensor>
+    computeDiGammas(const Matrix& alphas, const Matrix& betas, ObservationSequence O, int t);
     Matrix doTrainStep(Matrix diGammas, Matrix gammas);
-
+    double finalAlphaPass(Matrix alphas);
 };
 
 

@@ -13,6 +13,8 @@ iostream
 -
 random
 -
+map
+-
 HiddenMarkovModel.h
 /home/brett/CLionProjects/hidden-markov-model/HiddenMarkovModel.h
 
@@ -20,5 +22,7 @@ HiddenMarkovModel.h
 cstddef
 -
 vector
+-
+map
 -
 
