@@ -15,6 +15,8 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
  */
 HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 {
+    numObservationSymbols = M;
+    observationSequence = O;
     transitionMatrix = StochasticMatrix(N);
     observationMatrix = StochasticMatrix(N);
     initialState = StochasticRow(N);
@@ -229,7 +231,40 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     return std::pair<Matrix, Order3Tensor>(gammas, digammas);
 }
 
-Matrix HiddenMarkovModel::doTrainStep(Order3Tensor diGammas, Matrix gammas)
+void HiddenMarkovModel::doTrainStep(Order3Tensor diGammas, Matrix gammas)
 {
-    return Matrix();
+    //Re-estimate pi
+    for(int i = 0; i < initialState.size(); i++)
+        initialState[i] = gammas[0][i];
+
+    //Re-estimate A
+    for(int i = 0; i < transitionMatrix.size(); i++)
+    {
+       int denom = 0;
+       for(int t = 0; t < observationMatrix.size() - 1; t++)
+           denom += gammas[t][i];
+       for(int j = 0; j < transitionMatrix.size(); j++)
+       {
+           int numer = 0;
+           for(int t = 0; t < observationMatrix.size() - 1; t++)
+               numer += diGammas[t][i][j];
+           transitionMatrix[i][j] = numer/denom;
+       }
+    }
+
+    //Re-estimate B
+    for(int i = 0; i < transitionMatrix.size(); i++)
+    {
+        int denom = 0;
+        for(int t = 0; t < observationMatrix.size() - 1; t++)
+            denom += denom + gammas[t][i];
+
+        for(int j = 0; j < numObservationSymbols; j++)
+        {
+            int numer = 0;
+            for (int t = 0; t < observationMatrix.size() - 1; t++)
+                if (observationSequence[t] == j) numer += gammas[t][i];
+            observationMatrix[j][i] = numer / denom;
+        }
+    }
 }

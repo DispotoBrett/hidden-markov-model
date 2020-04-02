@@ -42,14 +42,15 @@ private:
     StochasticMatrix transitionMatrix;
     StochasticMatrix observationMatrix;
     StochasticRow initialState;
+    ObservationSequence observationSequence;
+    int numObservationSymbols;
 
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
     Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
-    Matrix computeGammas(std::map<std::pair<int,int>, double> diGammas);
     std::pair<Matrix, Order3Tensor>
     computeDiGammas(const Matrix& alphas, const Matrix& betas, ObservationSequence O, int t);
-    Matrix doTrainStep(Order3Tensor diGammas, Matrix gammas);
+    void doTrainStep(Order3Tensor diGammas, Matrix gammas);
     double finalAlphaPass(Matrix alphas);
 };
 

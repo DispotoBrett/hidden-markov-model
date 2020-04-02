@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brett/CLionProjects/hidden-markov-model/HiddenMarkovModel.cpp
+cstdlib
+-
+iostream
+-
+random
+-
+map
+-
+HiddenMarkovModel.h
+/home/brett/CLionProjects/hidden-markov-model/HiddenMarkovModel.h
+
+/home/brett/CLionProjects/hidden-markov-model/HiddenMarkovModel.h
+cstddef
+-
+vector
+-
+map
+-
+
+/home/brett/CLionProjects/hidden-markov-model/main.cpp
+iostream
+-
+HiddenMarkovModel.h
+/home/brett/CLionProjects/hidden-markov-model/HiddenMarkovModel.h
+

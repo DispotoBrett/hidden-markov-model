@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/HMM.dir/main.cpp.o CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o  -o HMM 
