@@ -34,7 +34,7 @@ public:
     double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
     //Trains the model
     //Implements Baum-Welch re-estimation
-    void train(const ObservationSequence& O);
+    void train(const ObservationSequence& O, int maxIters);
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
     
@@ -49,7 +49,7 @@ private:
     Matrix computeGammas(std::map<std::pair<int,int>, double> diGammas);
     std::pair<Matrix, Order3Tensor>
     computeDiGammas(const Matrix& alphas, const Matrix& betas, ObservationSequence O, int t);
-    Matrix doTrainStep(Matrix diGammas, Matrix gammas);
+    Matrix doTrainStep(Order3Tensor diGammas, Matrix gammas);
     double finalAlphaPass(Matrix alphas);
 };
 
