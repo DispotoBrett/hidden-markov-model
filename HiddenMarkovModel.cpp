@@ -65,21 +65,35 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
  * Trains the model (problem 3).
  */
 void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
-    int I_DONT_KNOW_WHAT_T_SHOULD_BE = 0;
+    int t = 0;
+
+    //Compute digammas, gammas, alphas, betas
     Matrix alphas = alphaPass(O);
     Matrix betas = betaPass(O);
-    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, I_DONT_KNOW_WHAT_T_SHOULD_BE);
-
+    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
     Matrix gammas = std::get<0>(digammas_gammas);
     Order3Tensor digammas = std::get<1>(digammas_gammas);
 
+    //do training
     int iters = 0;
-    int oldLogProb = - INT32_MAX;
-
-    while(iters < maxIters)
+    double oldProb = - INT32_MAX;
+    double newProb = 0;
+    double epsilon = 0.001;
+    //Where is t incremented????........
+    while(iters < maxIters && (oldProb  - epsilon) < newProb)
     {
-        iters++;
+        iters++; t++;
+
+        //Back to step 2
+        Matrix alphas = alphaPass(O);
+        Matrix betas = betaPass(O);
+        std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
+        Matrix gammas = std::get<0>(digammas_gammas);
+        Order3Tensor digammas = std::get<1>(digammas_gammas);
+
         doTrainStep(digammas, gammas);
+
+        scoreStateSequence(O);
     }
 }
 
