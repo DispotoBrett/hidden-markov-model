@@ -45,6 +45,7 @@ private:
     void doTrainStep(Order3Tensor& diGammas, Matrix& gammas);
     double finalAlphaPass(Matrix alphas);
     void makeStochasticRow(StochasticRow& vector);
+    void update(Matrix &alphas, Matrix &betas, Order3Tensor &digammas, Matrix &gammas, const ObservationSequence &O, int t);
 };
 
 #endif //HMM_HIDDENMARKOVMODEL_H

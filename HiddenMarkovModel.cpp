@@ -68,32 +68,27 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     int t = 0;
 
     //Compute digammas, gammas, alphas, betas
-    Matrix alphas = alphaPass(O);
-    Matrix betas = betaPass(O);
-    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
-    Matrix gammas = std::get<0>(digammas_gammas);
-    Order3Tensor digammas = std::get<1>(digammas_gammas);
+    Matrix alphas, betas, gammas;
+    Order3Tensor digammas;
+
+    update(alphas, betas, digammas, gammas, O, t);
 
     //do training
     int iters = 0;
     double oldProb = - INT32_MAX;
     double newProb = 0;
     double epsilon = 0.001;
-    //Where is t incremented????........
+
+    //Where should t be incremented????........
     while(iters < maxIters && (oldProb  - epsilon) < newProb)
     {
         iters++; t++;
 
-        //Back to step 2
-        Matrix alphas = alphaPass(O);
-        Matrix betas = betaPass(O);
-        std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
-        Matrix gammas = std::get<0>(digammas_gammas);
-        Order3Tensor digammas = std::get<1>(digammas_gammas);
-
         doTrainStep(digammas, gammas);
-
         scoreStateSequence(O);
+
+        //Back to step 2
+        update(alphas, betas, digammas, gammas, O, t);
     }
 }
 
@@ -144,7 +139,6 @@ StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence&
                 mostLikely = i;
             }
         }
-
         optimalSequence[t] = mostLikely;
     }
 
@@ -172,7 +166,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
             alphas[t][i] = sum * observationMatrix[i][O[t]];
         }
-
     }
     return alphas;
 }
@@ -222,9 +215,8 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
 double HiddenMarkovModel::finalAlphaPass(Matrix alphas) {
     int returnVal = 0;
     for(int i = 0; i < alphas[0].size(); i++)
-    {
         returnVal += alphas[alphas.size() - 1][i];
-    }
+
     return 0;
 }
 
@@ -311,15 +303,20 @@ void HiddenMarkovModel::makeStochasticRow(StochasticRow& mat)
 {
     double sum = 0;
     for(int i = 0; i < mat.size(); i++)
-    {
         sum += mat[i];
-    }
+
     if(sum != 1)
     {
         double diff = (1 - sum) / mat.size();
         for(int i = 0; i < mat.size(); i++)
-        {
             mat[i] += diff;
-        }
     }
+}
+
+void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& digammas, Matrix& gammas, const ObservationSequence& O, int t) {
+    alphas = alphaPass(O);
+    betas = betaPass(O);
+    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
+    gammas = std::get<0>(digammas_gammas);
+    digammas = std::get<1>(digammas_gammas);
 }
