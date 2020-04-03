@@ -160,7 +160,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
         }
 
     }
-
     return alphas;
 }
 

@@ -1,5 +1,3 @@
-
-
 #ifndef HMM_HIDDENMARKOVMODEL_H
 #define HMM_HIDDENMARKOVMODEL_H
 #include <cstddef>
@@ -18,21 +16,16 @@ typedef std::vector<Row> Matrix;
 typedef std::vector<double> StochasticRow;
 typedef std::vector<StochasticRow> StochasticMatrix;
 
-//For digammas
 typedef std::vector<Matrix> Order3Tensor;
 
 class HiddenMarkovModel
 {
 public:
     HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi);
-    //Creates an empty model with random values for A,B, and PI
-    //N is the number of hidden states in the model,
-    //M is the number of observation symbols.
     HiddenMarkovModel(ObservationSequence& O, int N, int M);
 
     double scoreStateSequence(const ObservationSequence& O);
     double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
-    //Trains the model
     void train(const ObservationSequence& O, int maxIters);
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
@@ -53,6 +46,5 @@ private:
     double finalAlphaPass(Matrix alphas);
     void makeStochasticRow(StochasticRow& vector);
 };
-
 
 #endif //HMM_HIDDENMARKOVMODEL_H
