@@ -4,12 +4,15 @@
 #include <map>
 #include "HiddenMarkovModel.h"
 
+/**
+ * Constructs an HMM for Problems 1 and 2.
+ */
 HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi)
     : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
 { }
 
 /**
- * Constructs a new model to be trained.
+ * Constructs a new model to be trained (problem 3).
  * @param N the number of possible states
  * @param M the number of distinct observation symbols
  */
@@ -23,33 +26,44 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 
     //random number tools
     //TODO: Experiment with different distributions/ ranges
-    std::normal_distribution<double> randN(N - 1, N + 0.5);
-    std::normal_distribution<double> randM(M - 1, M + 0.5);
+    std::normal_distribution<double> randN(N,  0.01);
+    std::normal_distribution<double> randM(M,  0.01);
     std::default_random_engine re;
 
     for(int i = 0; i < N; i++)
     {
        //Initialize transition matrix
         StochasticRow transitionRow(N);
+        double sum = 0;
         for(int j = 0; j < N; j++)
         {
-            transitionRow[j] = 1 / randN(re);
+            double randNum = std::abs(randN(re));
+            transitionRow[j] = 1 / randNum;
+            sum +=  transitionRow[j];
         }
+
         transitionMatrix[i] = transitionRow;
 
         //Initialize observation matrix
         StochasticRow observationRow(N);
         for(int j = 0; j < M; j++ )
         {
-            observationRow[j] = 1 / randM(re);
+            observationRow[j] = 1 / std::abs(randM(re));
         }
         observationMatrix[i] = observationRow;
 
         //Initialize the initial state distribution
-        initialState[i] =  1 / randN(re);
+        initialState[i] =  1 / std::abs(randN(re));
+
+        makeStochasticRow(observationMatrix[i]);
+        makeStochasticRow(transitionMatrix[i]);
+        makeStochasticRow(initialState);
     }
 }
 
+/**
+ * Trains the model (problem 3).
+ */
 void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     int I_DONT_KNOW_WHAT_T_SHOULD_BE = 0;
     Matrix alphas = alphaPass(O);
@@ -69,15 +83,15 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     }
 }
 
+/**
+ * Implements "problem 1" from the class notes.
+ */
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
 {
     Matrix alphas = alphaPass(O);
     return scoreStateSequence(O, alphas);
 }
 
-/**
- * Implements "problem 1" from the class notes.
- */
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
 {
     double score = 0;
@@ -172,7 +186,6 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
             betas[t][i] = sum;
         }
     }
-
     return betas;
 }
 
@@ -190,6 +203,9 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
     return gammas;
 }
 
+/**
+ * Sums the final row of the alphas.
+ */
 double HiddenMarkovModel::finalAlphaPass(Matrix alphas) {
     int returnVal = 0;
     for(int i = 0; i < alphas[0].size(); i++)
@@ -199,6 +215,9 @@ double HiddenMarkovModel::finalAlphaPass(Matrix alphas) {
     return 0;
 }
 
+/**
+ * Computes the digammas and the gammas for problem 3.
+ */
 std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &alphas,
         const Matrix &betas, ObservationSequence O, int t)
 {
@@ -217,7 +236,8 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
             gammas[t][i] = 0;
             for(int j = 0; j <= N - 1; j++)
             {
-                digammas[t][i][j] = (alphas[t][i]* transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
+                digammas[t][i][j] = (alphas[t][i]* transitionMatrix[i][j]
+                                        * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
                 gammas[t][i] += digammas[t][i][j];
             }
        }
@@ -227,11 +247,13 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     {
         gammas[T-1][i] = alphas[T-1][i];
     }
-
     return std::pair<Matrix, Order3Tensor>(gammas, digammas);
 }
 
-void HiddenMarkovModel::doTrainStep(Order3Tensor diGammas, Matrix gammas)
+/**
+   Implements Baum-Welch re-estimation
+ */
+void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
 {
     //Re-estimate pi
     for(int i = 0; i < initialState.size(); i++)
@@ -265,6 +287,26 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor diGammas, Matrix gammas)
             for (int t = 0; t < observationMatrix.size() - 1; t++)
                 if (observationSequence[t] == j) numer += gammas[t][i];
             observationMatrix[j][i] = numer / denom;
+        }
+    }
+}
+
+/**
+ * Enforces the stochastic row property.
+ */
+void HiddenMarkovModel::makeStochasticRow(StochasticRow& mat)
+{
+    double sum = 0;
+    for(int i = 0; i < mat.size(); i++)
+    {
+        sum += mat[i];
+    }
+    if(sum != 1)
+    {
+        double diff = (1 - sum) / mat.size();
+        for(int i = 0; i < mat.size(); i++)
+        {
+            mat[i] += diff;
         }
     }
 }
