@@ -268,15 +268,16 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
     for(int i = 0; i < transitionMatrix.size(); i++)
     {
        int denom = 0;
-       for(int t = 0; t < observationMatrix.size() - 1; t++)
+       for(int t = 0; t < observationSequence.size() - 1; t++)
            denom += gammas[t][i];
 
        for(int j = 0; j < transitionMatrix.size(); j++)
        {
            int numer = 0;
-           for(int t = 0; t < observationMatrix.size() - 1; t++)
+           for(int t = 0; t < observationSequence.size() - 1; t++)
                numer += diGammas[t][i][j];
-           transitionMatrix[i][j] = numer/denom;
+           if(denom != 0)
+               transitionMatrix[i][j] = numer/denom;
        }
     }
 
@@ -284,15 +285,17 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
     for(int i = 0; i < transitionMatrix.size(); i++)
     {
         int denom = 0;
-        for(int t = 0; t < observationMatrix.size() - 1; t++)
+        for(int t = 0; t < observationSequence.size() - 1; t++)
             denom += denom + gammas[t][i];
 
         for(int j = 0; j < numObservationSymbols; j++)
         {
             int numer = 0;
-            for (int t = 0; t < observationMatrix.size() - 1; t++)
-                if (observationSequence[t] == j) numer += gammas[t][i];
-            observationMatrix[j][i] = numer / denom;
+            for (int t = 0; t < observationSequence.size() - 1; t++)
+                if (observationSequence[t] == j)
+                    numer += gammas[t][i];
+                if(denom != 0)
+                    observationMatrix[j][i] = numer / denom;
         }
     }
 }
