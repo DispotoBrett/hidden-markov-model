@@ -20,8 +20,8 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 {
     numObservationSymbols = M;
     observationSequence = O;
-    transitionMatrix = StochasticMatrix(N);
-    observationMatrix = StochasticMatrix(N);
+    transitionMatrix = StochasticMatrix(N, StochasticRow(N));
+    observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);
 
     //random number tools
@@ -229,7 +229,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     int N = observationMatrix.size();
     int T = alphas.size();
 
-    Order3Tensor digammas(T, Matrix(N , Row()));
+    Order3Tensor digammas(T, Matrix(N , Row(N)));
     Matrix gammas = Matrix(T, Row(N));
 
     double p_observation_seq = finalAlphaPass(alphas);
@@ -270,6 +270,7 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
        int denom = 0;
        for(int t = 0; t < observationMatrix.size() - 1; t++)
            denom += gammas[t][i];
+
        for(int j = 0; j < transitionMatrix.size(); j++)
        {
            int numer = 0;
