@@ -25,4 +25,5 @@ int main()
         std::cout << i << " ";
 
     hmm = HiddenMarkovModel(O, 10, 10);
+    hmm.train(O, 3); //Causes segfault
 }
