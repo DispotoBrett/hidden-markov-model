@@ -171,7 +171,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
 Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
 {
-    std::cout<< "BETA PASS: " << std::endl;
     int N = observationMatrix.size();
     int T = O.size();
 
@@ -188,15 +187,11 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
 
             for(int j = 0; j < N; j++) {
                 sum += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
-                std::cout << "(" << sum <<")->{" << transitionMatrix[i][j] << " " << observationMatrix[j][O[t + 1]] << " " << betas[t+1][j] << "}";
             }
 
             betas[t][i] = sum;
-            std::cout<< betas[t][i] << " ";
         }
-        std::cout<<std::endl;
     }
-    std::cout<< "BETA PASS END " << std::endl;
     return betas;
 }
 
@@ -248,9 +243,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
             {
                 digammas[t][i][j] = (alphas[t][i]* transitionMatrix[i][j]
                                         * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
-                std::cout<< "Components: " << alphas[t][i] << " " << transitionMatrix[i][j] << " " << betas[t+1][j] << " " << observationMatrix[j][O[t + 1]] << std::endl;
                 gammas[t][i] += digammas[t][i][j];
-                std::cout<< "DIGAMMAS: " <<  digammas[t][i][j] << std::endl;
             }
        }
     }
@@ -277,7 +270,6 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
        double denom = 0;
        for(int t = 0; t < observationSequence.size() - 1; t++){
            denom += gammas[t][i];
-           std::cout<< gammas[t][i] << " is the gamma" << std::endl;
        }
 
        for(int j = 0; j < transitionMatrix.size(); j++)
@@ -287,13 +279,7 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
                numer += diGammas[t][i][j];
            if(denom != 0) //TODO: Should never be zero, something hsa gone wrong...
                transitionMatrix[i][j] = numer/denom;
-           //(BELOW) FOR DEBUGGING ONLY-----------------------------------------------
-           if(denom == 0)
-           {
-               std::cout<< "DENOM IS ZERO" << std::endl;
-           } else std::cout<< denom << std::endl;
-           //(ABOVE) FOR DEBUGGING ONLY-----------------------------------------------
-       }
+      }
     }
 
     //Re-estimate B
