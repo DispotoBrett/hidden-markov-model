@@ -24,6 +24,6 @@ int main()
     for(auto i: optimal)
         std::cout << i << " ";
 
-    hmm = HiddenMarkovModel(O, 10, 10);
+    hmm = *new HiddenMarkovModel(O, 2, 3);
     hmm.train(O, 3); //Causes segfault
 }
