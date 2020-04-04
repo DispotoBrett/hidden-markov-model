@@ -219,7 +219,7 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
         iters++; t++;
 
         doTrainStep(digammas, gammas);
-        scoreStateSequence(alphas);
+        newProb = scoreStateSequence(alphas);
 
         //Back to step 2
         update(alphas, betas, digammas, gammas, O, t);
