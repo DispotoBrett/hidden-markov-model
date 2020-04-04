@@ -15,7 +15,7 @@ int main()
 
     StochasticRow pi = {.6, .4};
 
-    HiddenMarkovModel hmm = HiddenMarkovModel(a, b, pi);
+    HiddenMarkovModel hmm(a, b, pi);
 
     ObservationSequence O = {0, 1, 0, 2};
 

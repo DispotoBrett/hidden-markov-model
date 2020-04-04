@@ -19,13 +19,13 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
 {
     Matrix alphas = alphaPass(O);
-    return scoreStateSequence(O, alphas);
+    return scoreStateSequence(alphas);
 }
 
 /**
  * Helper function: implements "problem 1" from the class notes
  */
-double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
+double HiddenMarkovModel::scoreStateSequence(const Matrix& alphas)
 {
     double score = 0;
 
@@ -41,7 +41,7 @@ double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matr
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
     Matrix alphas = alphaPass(O);
-    double score = scoreStateSequence(O, alphas);
+    double score = scoreStateSequence(alphas);
 
     Matrix betas = betaPass(O);
     Matrix gammas = computeGammas(alphas, betas, score);
@@ -219,22 +219,11 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
         iters++; t++;
 
         doTrainStep(digammas, gammas);
-        scoreStateSequence(O, alphas);
+        scoreStateSequence(alphas);
 
         //Back to step 2
         update(alphas, betas, digammas, gammas, O, t);
     }
-}
-
-/**
- * Sums the final row of the alphas.
- */
-double HiddenMarkovModel::finalAlphaPass(Matrix alphas) {
-    int returnVal = 0;
-    for(int i = 0; i < alphas[0].size(); i++)
-        returnVal += alphas[alphas.size() - 1][i];
-
-    return 0;
 }
 
 /**
@@ -249,7 +238,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     Order3Tensor digammas(T, Matrix(N , Row(N)));
     Matrix gammas = Matrix(T, Row(N));
 
-    double p_observation_seq = finalAlphaPass(alphas);
+    double p_observation_seq = scoreStateSequence(alphas);
 
     for(int t = 0; t <= T - 2; t++)
     {
@@ -341,6 +330,7 @@ void HiddenMarkovModel::makeStochasticRow(StochasticRow& mat)
 void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& digammas, Matrix& gammas, const ObservationSequence& O, int t) {
     alphas = alphaPass(O);
     betas = betaPass(O);
+
     std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
     gammas = std::get<0>(digammas_gammas);
     digammas = std::get<1>(digammas_gammas);

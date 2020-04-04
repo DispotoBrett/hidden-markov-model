@@ -25,11 +25,11 @@ public:
     HiddenMarkovModel(ObservationSequence& O, int N, int M);
 
     double scoreStateSequence(const ObservationSequence& O);
-    double scoreStateSequence(const ObservationSequence& O, Matrix& alphas);
+    double scoreStateSequence(const Matrix& alphas);
     void train(const ObservationSequence& O, int maxIters);
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
-    
+
 private:
     StochasticMatrix transitionMatrix;
     StochasticMatrix observationMatrix;
@@ -43,7 +43,6 @@ private:
     std::pair<Matrix, Order3Tensor>
         computeDiGammas(const Matrix& alphas, const Matrix& betas, ObservationSequence O, int t);
     void doTrainStep(Order3Tensor& diGammas, Matrix& gammas);
-    double finalAlphaPass(Matrix alphas);
     void makeStochasticRow(StochasticRow& vector);
     void update(Matrix &alphas, Matrix &betas, Order3Tensor &digammas, Matrix &gammas, const ObservationSequence &O, int t);
 };
