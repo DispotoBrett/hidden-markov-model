@@ -18,6 +18,9 @@ typedef std::vector<StochasticRow> StochasticMatrix;
 
 typedef std::vector<Matrix> Order3Tensor;
 
+/**
+ * @authors Brett Dispotto, Jordan Conragan
+ */
 class HiddenMarkovModel
 {
 public:
