@@ -4,12 +4,146 @@
 #include <map>
 #include "HiddenMarkovModel.h"
 
+//-------------------PROBLEMS 1 & 2---------------------------------------
+
 /**
  * Constructs an HMM for Problems 1 and 2.
  */
 HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi)
-    : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
+        : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
 { }
+
+/**
+ * Implements "problem 1" from the class notes.
+ */
+double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
+{
+    Matrix alphas = alphaPass(O);
+    return scoreStateSequence(O, alphas);
+}
+
+/**
+ * Helper function: implements "problem 1" from the class notes
+ */
+double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
+{
+    double score = 0;
+
+    for(double d: alphas.back())
+        score += d;
+
+    return score;
+}
+
+/**
+ * Implements "problem 2" from the class notes.
+ */
+StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
+{
+    Matrix alphas = alphaPass(O);
+    double score = scoreStateSequence(O, alphas);
+
+    Matrix betas = betaPass(O);
+    Matrix gammas = computeGammas(alphas, betas, score);
+
+    int T = gammas.size();
+    int N = gammas[0].size();
+    StateSequence optimalSequence = StateSequence(T);
+
+    for(int t = 0; t < T; t++)
+    {
+        double max = gammas[t][0];
+        State mostLikely = 0;
+
+        for(int i = 1; i < N; i++)
+        {
+            if(gammas[t][i] > max)
+            {
+                max = gammas[t][i];
+                mostLikely = i;
+            }
+        }
+        optimalSequence[t] = mostLikely;
+    }
+
+    return optimalSequence;
+}
+
+/**
+ * Implements alpha pass algorithm as presented in lecture (no scaling).
+ */
+Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
+{
+    int N = observationMatrix.size();
+    int T = O.size();
+
+    Matrix alphas = Matrix(T, Row(N));
+
+    for(int i = 0; i < N; i++)
+        alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
+    for(int t = 1; t < T; t++)
+    {
+        for(int i = 0; i < N; i++)
+        {
+            double sum = 0;
+
+            for(int j = 0; j < N; j++)
+                sum += alphas[t-1][j] * transitionMatrix[j][i];
+
+            alphas[t][i] = sum * observationMatrix[i][O[t]];
+        }
+    }
+    return alphas;
+}
+
+/**
+ * Implements beta pass algorithm as presented in lecture (no scaling).
+ */
+Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
+{
+    int N = observationMatrix.size();
+    int T = O.size();
+
+    Matrix betas = Matrix(T, Row(N));
+
+    for(int i = 0; i < N; i++)
+        betas[T-1][i] = 1;
+
+    for(int t = T - 2; t >= 0; t--)
+    {
+        for(int i = 0; i < N; i++)
+        {
+            double sum = 0;
+
+            for(int j = 0; j < N; j++) {
+                sum += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
+            }
+
+            betas[t][i] = sum;
+        }
+    }
+    return betas;
+}
+
+/**
+ * Computes the gammas for dynamic programming approach of computing HMM alphas and betas.
+ */
+Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &betas, double observationSequenceScore)
+{
+    int N = observationMatrix.size();
+    int T = alphas.size();
+
+    Matrix gammas = Matrix(T, Row(N));
+
+    for(int t = 0; t < T; t++)
+        for(int i = 0; i < N; i++)
+            gammas[t][i] = alphas[t][i] * betas[t][i] / observationSequenceScore;
+
+    return gammas;
+}
+
+
+//-------------------PROBLEM 3--------------------------------------------
 
 /**
  * Constructs a new model to be trained (problem 3).
@@ -90,123 +224,6 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
         //Back to step 2
         update(alphas, betas, digammas, gammas, O, t);
     }
-}
-
-/**
- * Implements "problem 1" from the class notes.
- */
-double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
-{
-    Matrix alphas = alphaPass(O);
-    return scoreStateSequence(O, alphas);
-}
-
-double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O,  Matrix& alphas)
-{
-    double score = 0;
-
-    for(double d: alphas.back())
-        score += d;
-
-    return score;
-}
-
-/**
- * Implements "problem 2" from the class notes.
- */
-StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
-{
-    Matrix alphas = alphaPass(O);
-    double score = scoreStateSequence(O, alphas);
-
-    Matrix betas = betaPass(O);
-    Matrix gammas = computeGammas(alphas, betas, score);
-
-    int T = gammas.size();
-    int N = gammas[0].size();
-    StateSequence optimalSequence = StateSequence(T);
-
-    for(int t = 0; t < T; t++)
-    {
-        double max = gammas[t][0];
-        State mostLikely = 0;
-
-        for(int i = 1; i < N; i++)
-        {
-            if(gammas[t][i] > max)
-            {
-                max = gammas[t][i];
-                mostLikely = i;
-            }
-        }
-        optimalSequence[t] = mostLikely;
-    }
-
-    return optimalSequence;
-}
-
-Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
-{
-    int N = observationMatrix.size();
-    int T = O.size();
-
-    Matrix alphas = Matrix(T, Row(N));
-
-    for(int i = 0; i < N; i++)
-        alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
-    for(int t = 1; t < T; t++)
-    {
-        for(int i = 0; i < N; i++)
-        {
-            double sum = 0;
-
-            for(int j = 0; j < N; j++)
-                sum += alphas[t-1][j] * transitionMatrix[j][i];
-
-            alphas[t][i] = sum * observationMatrix[i][O[t]];
-        }
-    }
-    return alphas;
-}
-
-Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
-{
-    int N = observationMatrix.size();
-    int T = O.size();
-
-    Matrix betas = Matrix(T, Row(N));
-
-    for(int i = 0; i < N; i++)
-        betas[T-1][i] = 1;
-
-    for(int t = T - 2; t >= 0; t--)
-    {
-        for(int i = 0; i < N; i++)
-        {
-            double sum = 0;
-
-            for(int j = 0; j < N; j++) {
-                sum += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
-            }
-
-            betas[t][i] = sum;
-        }
-    }
-    return betas;
-}
-
-Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &betas, double observationSequenceScore)
-{
-    int N = observationMatrix.size();
-    int T = alphas.size();
-
-    Matrix gammas = Matrix(T, Row(N));
-
-    for(int t = 0; t < T; t++)
-        for(int i = 0; i < N; i++)
-            gammas[t][i] = alphas[t][i] * betas[t][i] / observationSequenceScore;
-
-    return gammas;
 }
 
 /**
@@ -318,6 +335,9 @@ void HiddenMarkovModel::makeStochasticRow(StochasticRow& mat)
     }
 }
 
+/**
+ * Recalculates alphas, betas, gammas, and digammas
+ */
 void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& digammas, Matrix& gammas, const ObservationSequence& O, int t) {
     alphas = alphaPass(O);
     betas = betaPass(O);
