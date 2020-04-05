@@ -213,7 +213,6 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     double newProb = 0;
     double epsilon = 0.001;
 
-    //Where should t be incremented????........
     while(iters < maxIters && (oldProb  - epsilon) < newProb)
     {
         iters++; t++;
