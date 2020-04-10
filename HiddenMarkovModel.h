@@ -37,17 +37,15 @@ private:
     StochasticMatrix transitionMatrix;
     StochasticMatrix observationMatrix;
     StochasticRow initialState;
-    ObservationSequence observationSequence;
-    int numObservationSymbols;
 
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
     Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
     std::pair<Matrix, Order3Tensor>
-        computeDiGammas(const Matrix& alphas, const Matrix& betas, ObservationSequence O, int t);
-    void doTrainStep(Order3Tensor& diGammas, Matrix& gammas);
+        computeDiGammas(const Matrix& alphas, const Matrix& betas, const ObservationSequence& O);
+    void doTrainStep(const ObservationSequence& O, Order3Tensor& diGammas, Matrix& gammas);
     void makeStochasticRow(StochasticRow& vector);
-    void update(Matrix &alphas, Matrix &betas, Order3Tensor &digammas, Matrix &gammas, const ObservationSequence &O, int t);
+    void update(Matrix &alphas, Matrix &betas, Order3Tensor &digammas, Matrix &gammas, const ObservationSequence &O);
 };
 
 #endif //HMM_HIDDENMARKOVMODEL_H

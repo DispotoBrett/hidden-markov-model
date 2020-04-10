@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <iostream>
+#include <cmath>
 #include <random>
 #include <map>
 #include "HiddenMarkovModel.h"
@@ -152,8 +153,6 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
  */
 HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 {
-    numObservationSymbols = M;
-    observationSequence = O;
     transitionMatrix = StochasticMatrix(N, StochasticRow(N));
     observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);
@@ -205,7 +204,7 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     Matrix alphas, betas, gammas;
     Order3Tensor digammas;
 
-    update(alphas, betas, digammas, gammas, O, t);
+    update(alphas, betas, digammas, gammas, O);
 
     //do training
     int iters = 0;
@@ -217,11 +216,11 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     {
         iters++; t++;
 
-        doTrainStep(digammas, gammas);
+        doTrainStep(O,digammas, gammas);
         newProb = scoreStateSequence(alphas);
 
         //Back to step 2
-        update(alphas, betas, digammas, gammas, O, t);
+        update(alphas, betas, digammas, gammas, O);
     }
 }
 
@@ -229,7 +228,7 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
  * Computes the digammas and the gammas for problem 3.
  */
 std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &alphas,
-        const Matrix &betas, ObservationSequence O, int t)
+        const Matrix &betas, const ObservationSequence& O)
 {
     int N = observationMatrix.size();
     int T = alphas.size();
@@ -237,33 +236,40 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     Order3Tensor digammas(T, Matrix(N , Row(N)));
     Matrix gammas = Matrix(T, Row(N));
 
-    double p_observation_seq = scoreStateSequence(alphas);
+    //double p_observation_seq = scoreStateSequence(alphas);
 
     for(int t = 0; t <= T - 2; t++)
     {
-       for(int i = 0; i <= N - 1; i++)
-       {
+        double denom = 0;
+        for(int i = 0; i <= N - 1; i++)
+            for(int j = 0; j <= N - 1; j++)
+                denom += (alphas[t][i] * transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
+
+        for(int i = 0; i <= N - 1; i++)
+        {
             gammas[t][i] = 0;
             for(int j = 0; j <= N - 1; j++)
             {
                 digammas[t][i][j] = (alphas[t][i]* transitionMatrix[i][j]
-                                        * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
+                                     * observationMatrix[j][O[t + 1]] * betas[t+1][j]) / denom;
                 gammas[t][i] += digammas[t][i][j];
             }
-       }
+        }
     }
 
+    double denom = scoreStateSequence(alphas);
     for(int i = 0; i < N - 1; i++)
     {
-        gammas[T-1][i] = alphas[T-1][i];
+        gammas[T-1][i] = alphas[T-1][i] / denom;
     }
+
     return std::pair<Matrix, Order3Tensor>(gammas, digammas);
 }
 
 /**
    Implements Baum-Welch re-estimation
  */
-void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
+void HiddenMarkovModel::doTrainStep(const ObservationSequence& O, Order3Tensor& diGammas, Matrix& gammas)
 {
     //Re-estimate pi
     for(int i = 0; i < initialState.size(); i++)
@@ -272,17 +278,17 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
     //Re-estimate A
     for(int i = 0; i < transitionMatrix.size(); i++)
     {
-       double denom = 0;
-       for(int t = 0; t < observationSequence.size() - 1; t++){
-           denom += gammas[t][i];
-       }
-
        for(int j = 0; j < transitionMatrix.size(); j++)
        {
            double numer = 0;
-           for(int t = 0; t < observationSequence.size() - 1; t++)
+           double denom = 0;
+           for(int t = 0; t < O.size() - 2; t++)
+           {
                numer += diGammas[t][i][j];
-           if(denom != 0) //TODO: Should never be zero, something hsa gone wrong...
+               denom += gammas[t][i];
+           }
+
+           if(denom != 0) //TODO: Should never be zero, something has gone wrong...
                transitionMatrix[i][j] = numer/denom;
       }
     }
@@ -290,18 +296,19 @@ void HiddenMarkovModel::doTrainStep(Order3Tensor& diGammas, Matrix& gammas)
     //Re-estimate B
     for(int i = 0; i < transitionMatrix.size(); i++)
     {
-        double denom = 0;
-        for(int t = 0; t < observationSequence.size() - 1; t++)
-            denom += denom + gammas[t][i];
-
-        for(int j = 0; j < numObservationSymbols; j++)
+        for(int j = 0; j < observationMatrix[0].size(); j++)
         {
             double numer = 0;
-            for (int t = 0; t < observationSequence.size() - 1; t++)
-                if (observationSequence[t] == j)
+            double denom = 0;
+            for (int t = 0; t < O.size() - 2; t++)
+            {
+                if (O[t] == j)
                     numer += gammas[t][i];
-                if(denom != 0)
-                    observationMatrix[i][j] = numer / denom;
+                denom += gammas[t][i];
+            }
+
+            if (denom != 0) //TODO: Should never be zero, something has gone wrong...
+                observationMatrix[i][j] = numer / denom;
         }
     }
 }
@@ -326,11 +333,11 @@ void HiddenMarkovModel::makeStochasticRow(StochasticRow& mat)
 /**
  * Recalculates alphas, betas, gammas, and digammas
  */
-void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& digammas, Matrix& gammas, const ObservationSequence& O, int t) {
+void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& digammas, Matrix& gammas, const ObservationSequence& O) {
     alphas = alphaPass(O);
     betas = betaPass(O);
 
-    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O, t);
+    std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O);
     gammas = std::get<0>(digammas_gammas);
     digammas = std::get<1>(digammas_gammas);
 }
