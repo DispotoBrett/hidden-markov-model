@@ -241,16 +241,26 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
 
     //do training
     int iters = 0;
-    double oldProb = - INT32_MAX;
-    double newProb = 0;
+    double oldLogProb = - INT32_MAX;
+    double newLogProb = 0;
     double epsilon = 0.001;
 
-    while(iters < maxIters && (oldProb  - epsilon) < newProb)
+    while(iters < maxIters && (oldLogProb  - epsilon) < newLogProb)
     {
         iters++; t++;
 
         doTrainStep(O,digammas, gammas);
-        newProb = scoreStateSequence(alphas);
+
+        //Old
+        //newLogProb = scoreStateSequence(alphas);
+
+        //New
+        newLogProb = 0;
+        for(int i = 0; i < O.size(); i++)
+        {
+            newLogProb += std::log(scalingFactors[i]);
+        }
+        newLogProb *= -1;
 
         //Back to step 2
         update(alphas, betas, digammas, gammas, O);
