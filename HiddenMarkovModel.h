@@ -37,6 +37,7 @@ private:
     StochasticMatrix transitionMatrix;
     StochasticMatrix observationMatrix;
     StochasticRow initialState;
+    std::vector<int> scalingFactors;
 
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);

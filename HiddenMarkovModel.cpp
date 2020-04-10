@@ -73,27 +73,43 @@ StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence&
 /**
  * Implements alpha pass algorithm as presented in lecture (no scaling).
  */
-Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
-{
+Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O) {
     int N = observationMatrix.size();
     int T = O.size();
 
     Matrix alphas = Matrix(T, Row(N));
 
-    for(int i = 0; i < N; i++)
+    //Compute a_0(i)
+    scalingFactors[0] = 0;
+    for (int i = 0; i < N - 1; i++)
+    {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
+        scalingFactors[0] += alphas[0][i];
+    }
+
+    //Scale the a_0(i)
+    scalingFactors[0] = 1 / scalingFactors[0];
+    for (int i = 0; i < N - 1; i++)
+    {
+        alphas[0][i] *= scalingFactors[0];
+    }
+
+    //Compute a_t(i)
     for(int t = 1; t < T; t++)
     {
-        for(int i = 0; i < N; i++)
+        scalingFactors[t] = 0;
+        for (int i = 0; i < N; i++)
         {
-            double sum = 0;
-
-            for(int j = 0; j < N; j++)
-                sum += alphas[t-1][j] * transitionMatrix[j][i];
-
-            alphas[t][i] = sum * observationMatrix[i][O[t]];
+            alphas[t][i] = 0;
+            for (int j = 0; j < N; j++)
+            {
+                alphas[t][i] += alphas[t - 1][j] * alphas[j][i];
+            }
+            alphas[t][i] *= observationMatrix[i][O[t]];
+            scalingFactors[t] += alphas[t][i];
         }
     }
+
     return alphas;
 }
 
@@ -156,6 +172,7 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
     transitionMatrix = StochasticMatrix(N, StochasticRow(N));
     observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);
+    scalingFactors = std::vector<int>(O.size());
 
     //random number tools
     //TODO: Experiment with different distributions/ ranges
@@ -199,6 +216,7 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
  */
 void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     int t = 0;
+    //if maxIters > T, then set maxIters to T, to avoid t > T, which will cause segfault
 
     //Compute digammas, gammas, alphas, betas
     Matrix alphas, betas, gammas;
