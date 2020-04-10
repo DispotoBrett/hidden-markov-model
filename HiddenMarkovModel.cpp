@@ -133,22 +133,27 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
 
     Matrix betas = Matrix(T, Row(N));
 
+    // Let beta_{T−1}(i) = 1, scaled by c_{T−1}
     for(int i = 0; i < N; i++)
-        betas[T-1][i] = 1;
+    {
+        betas[T - 1][i] = scalingFactors[T - 1];
+    }
 
+    //Beta pass
     for(int t = T - 2; t >= 0; t--)
     {
         for(int i = 0; i < N; i++)
         {
-            double sum = 0;
-
-            for(int j = 0; j < N; j++) {
-                sum += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
-            }
-
-            betas[t][i] = sum;
+           betas[t][i] = 0;
+           for(int j = 0; j < N; j++)
+           {
+               betas[t][i] += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
+           }
+           //Scale beta[t][i] with same factor as alphas[t][i]
+           betas[t][i] *= scalingFactors[t];
         }
     }
+
     return betas;
 }
 
