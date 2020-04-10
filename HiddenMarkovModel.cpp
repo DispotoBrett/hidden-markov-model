@@ -108,6 +108,13 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O) {
             alphas[t][i] *= observationMatrix[i][O[t]];
             scalingFactors[t] += alphas[t][i];
         }
+
+        //Scale a_t(i)
+        scalingFactors[t] = 1 / scalingFactors[t];
+        for(int i = 0; i < N; i++)
+        {
+            alphas[t][i] *= scalingFactors[t];
+        }
     }
 
     return alphas;
