@@ -73,7 +73,7 @@ StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence&
 }
 
 /**
- * Implements alpha pass algorithm as presented in lecture (no scaling).
+ * Implements alpha pass algorithm as presented in lecture
  */
 Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 {
@@ -264,19 +264,17 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     Order3Tensor digammas(T, Matrix(N , Row(N)));
     Matrix gammas = Matrix(T, Row(N));
 
-    //double p_observation_seq = scoreStateSequence(alphas);
-
-    for(int t = 0; t <= T - 2; t++)
+    for(int t = 0; t < T - 1; t++)
     {
         double denom = 0;
-        for(int i = 0; i <= N - 1; i++)
-            for(int j = 0; j <= N - 1; j++)
+        for(int i = 0; i < N; i++)
+            for(int j = 0; j < N ; j++)
                 denom += (alphas[t][i] * transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
 
-        for(int i = 0; i <= N - 1; i++)
+        for(int i = 0; i < N; i++)
         {
             gammas[t][i] = 0;
-            for(int j = 0; j <= N - 1; j++)
+            for(int j = 0; j < N; j++)
             {
                 digammas[t][i][j] = (alphas[t][i]* transitionMatrix[i][j]
                                      * observationMatrix[j][O[t + 1]] * betas[t+1][j]) / denom;
@@ -286,7 +284,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
     }
 
     double denom = scoreStateSequence(alphas);
-    for(int i = 0; i < N - 1; i++)
+    for(int i = 0; i < N; i++)
     {
         gammas[T-1][i] = alphas[T-1][i] / denom;
     }
@@ -310,7 +308,7 @@ void HiddenMarkovModel::doTrainStep(const ObservationSequence& O, Order3Tensor& 
        {
            double numer = 0;
            double denom = 0;
-           for(int t = 0; t < O.size() - 2; t++)
+           for(int t = 0; t < O.size() - 1; t++)
            {
                numer += diGammas[t][i][j];
                denom += gammas[t][i];
@@ -328,7 +326,7 @@ void HiddenMarkovModel::doTrainStep(const ObservationSequence& O, Order3Tensor& 
         {
             double numer = 0;
             double denom = 0;
-            for (int t = 0; t < O.size() - 2; t++)
+            for (int t = 0; t < O.size() - 1; t++)
             {
                 if (O[t] == j)
                     numer += gammas[t][i];
