@@ -12,7 +12,9 @@
  */
 HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const StochasticMatrix& B, const StochasticRow& pi)
         : transitionMatrix(StochasticMatrix(A)), observationMatrix(StochasticMatrix(B)), initialState(StochasticRow(pi))
-{ }
+{
+    scalingFactors = std::vector<double>(99); //TODO: find the actual correct size
+}
 
 /**
  * Implements "problem 1" from the class notes.
@@ -73,7 +75,8 @@ StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence&
 /**
  * Implements alpha pass algorithm as presented in lecture (no scaling).
  */
-Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O) {
+Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
+{
     int N = observationMatrix.size();
     int T = O.size();
 
@@ -103,7 +106,7 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O) {
             alphas[t][i] = 0;
             for (int j = 0; j < N; j++)
             {
-                alphas[t][i] += alphas[t - 1][j] * alphas[j][i];
+                alphas[t][i] += alphas[t - 1][j] * transitionMatrix[j][i];
             }
             alphas[t][i] *= observationMatrix[i][O[t]];
             scalingFactors[t] += alphas[t][i];
@@ -179,7 +182,7 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
     transitionMatrix = StochasticMatrix(N, StochasticRow(N));
     observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);
-    scalingFactors = std::vector<int>(O.size());
+    scalingFactors = std::vector<double>(O.size());
 
     //random number tools
     //TODO: Experiment with different distributions/ ranges
