@@ -17,25 +17,11 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
 }
 
 /**
- * Implements "problem 1" from the class notes.
- */
-double HiddenMarkovModel::scoreStateSequence(const ObservationSequence &O)
-{
-    Matrix alphas = alphaPass(O);
-    return scoreStateSequence(alphas);
-}
-
-/**
  * Helper function: implements "problem 1" from the class notes
  */
-double HiddenMarkovModel::scoreStateSequence(const Matrix& alphas)
+double HiddenMarkovModel::scoreStateSequence(const ObservationSequence& O)
 {
-    double score = 0;
-
-    for(double d: alphas.back())
-        score += d;
-
-    return score;
+    return computeLogProb(O); //Obfuscating behavior
 }
 
 /**
@@ -44,7 +30,7 @@ double HiddenMarkovModel::scoreStateSequence(const Matrix& alphas)
 StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence& O)
 {
     Matrix alphas = alphaPass(O);
-    double score = scoreStateSequence(alphas);
+    double score = scoreStateSequence(O);
 
     Matrix betas = betaPass(O);
     Matrix gammas = computeGammas(alphas, betas, score);
@@ -251,21 +237,25 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
 
         doTrainStep(O,digammas, gammas);
 
-        //Old
-        //newLogProb = scoreStateSequence(alphas);
-
         //New
-        newLogProb = 0;
+        newLogProb = computeLogProb(O);
+
+        //Back to step 2
+        update(alphas, betas, digammas, gammas, O);
+    }
+}
+
+    double HiddenMarkovModel::computeLogProb(const ObservationSequence& O)
+    {
+        double newLogProb = 0;
         for(int i = 0; i < O.size(); i++)
         {
             newLogProb += std::log(scalingFactors[i]);
         }
         newLogProb *= -1;
 
-        //Back to step 2
-        update(alphas, betas, digammas, gammas, O);
+        return newLogProb;
     }
-}
 
 /**
  * Computes the digammas and the gammas for problem 3.
@@ -298,7 +288,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
         }
     }
 
-    double denom = scoreStateSequence(alphas);
+    double denom = scoreStateSequence(O);
     for(int i = 0; i < N; i++)
     {
         gammas[T-1][i] = alphas[T-1][i] / denom;

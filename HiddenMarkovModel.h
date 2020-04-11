@@ -32,6 +32,7 @@ public:
     void train(const ObservationSequence& O, int maxIters);
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
+    double computeLogProb(const ObservationSequence &O);
 
 private:
     StochasticMatrix transitionMatrix;
@@ -47,6 +48,7 @@ private:
     void doTrainStep(const ObservationSequence& O, Order3Tensor& diGammas, Matrix& gammas);
     void makeStochasticRow(StochasticRow& vector);
     void update(Matrix &alphas, Matrix &betas, Order3Tensor &digammas, Matrix &gammas, const ObservationSequence &O);
+
 };
 
 #endif //HMM_HIDDENMARKOVMODEL_H
