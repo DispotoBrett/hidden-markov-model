@@ -18,7 +18,8 @@ int main()
     HiddenMarkovModel hmm(a, b, pi);
 
     ObservationSequence O = {0, 1, 0, 2};
-
+    double score = hmm.scoreStateSequence(O);
+    std::cout << score << std::endl;
     StateSequence optimal = hmm.optimalStateSequence(O);
 
     for(auto i: optimal)

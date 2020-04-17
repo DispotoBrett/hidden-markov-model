@@ -42,7 +42,7 @@ private:
 
     Matrix alphaPass(const ObservationSequence& O);
     Matrix betaPass(const ObservationSequence& O);
-    Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore);
+    Matrix computeGammas(const Matrix& alphas, const Matrix& betas, double ObservationSequenceScore); //TODO: remove deprecated function
     std::pair<Matrix, Order3Tensor>
         computeDiGammas(const Matrix& alphas, const Matrix& betas, const ObservationSequence& O);
     void doTrainStep(const ObservationSequence& O, Order3Tensor& diGammas, Matrix& gammas);

@@ -21,7 +21,8 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
  */
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence& O)
 {
-    return computeLogProb(O); //Obfuscating behavior
+    alphaPass(O);
+    return std::exp(computeLogProb(O)); //Obfuscating behavior
 }
 
 /**
@@ -33,7 +34,7 @@ StateSequence HiddenMarkovModel::optimalStateSequence(const ObservationSequence&
     double score = scoreStateSequence(O);
 
     Matrix betas = betaPass(O);
-    Matrix gammas = computeGammas(alphas, betas, score);
+    Matrix gammas = std::get<0>(computeDiGammas(alphas, betas, O)); //Gammas(alphas, betas, score);
 
     int T = gammas.size();
     int N = gammas[0].size();
@@ -70,7 +71,7 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
     //Compute a_0(i)
     scalingFactors[0] = 0;
-    for (int i = 0; i < N - 1; i++)
+    for (int i = 0; i < N; i++)
     {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
         scalingFactors[0] += alphas[0][i];
@@ -78,7 +79,7 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
     //Scale the a_0(i)
     scalingFactors[0] = 1 / scalingFactors[0];
-    for (int i = 0; i < N - 1; i++)
+    for (int i = 0; i < N; i++)
     {
         alphas[0][i] *= scalingFactors[0];
     }
@@ -245,17 +246,17 @@ void HiddenMarkovModel::train(const ObservationSequence &O, int maxIters) {
     }
 }
 
-    double HiddenMarkovModel::computeLogProb(const ObservationSequence& O)
+double HiddenMarkovModel::computeLogProb(const ObservationSequence &O)
+{
+    double newLogProb = 0;
+    for (int i = 0; i < O.size(); i++)
     {
-        double newLogProb = 0;
-        for(int i = 0; i < O.size(); i++)
-        {
-            newLogProb += std::log(scalingFactors[i]);
-        }
-        newLogProb *= -1;
-
-        return newLogProb;
+        newLogProb += std::log(scalingFactors[i]);
     }
+    newLogProb *= -1;
+
+    return newLogProb;
+}
 
 /**
  * Computes the digammas and the gammas for problem 3.
