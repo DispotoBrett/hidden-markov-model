@@ -181,9 +181,9 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
     std::normal_distribution<double> randN(N,  0.01);
     std::normal_distribution<double> randM(M,  0.01);
     std::default_random_engine re;
-
     for(int i = 0; i < N; i++)
     {
+
        //Initialize transition matrix
         StochasticRow transitionRow(N);
         double sum = 0;
@@ -197,11 +197,13 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
         transitionMatrix[i] = transitionRow;
 
         //Initialize observation matrix
-        StochasticRow observationRow(N);
+        StochasticRow observationRow(M);
         for(int j = 0; j < M; j++ )
         {
+
             observationRow[j] = 1 / std::abs(randM(re));
         }
+
         observationMatrix[i] = observationRow;
 
         //Initialize the initial state distribution
@@ -210,7 +212,9 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
         makeStochasticRow(observationMatrix[i]);
         makeStochasticRow(transitionMatrix[i]);
         makeStochasticRow(initialState);
+
     }
+
 }
 
 /**
