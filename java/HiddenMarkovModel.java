@@ -38,42 +38,42 @@ class HiddenMarkovModel
 		if(scalingFactors.size() == 0)
 			scalingFactors.add(0.0);
 		else
-			scalingFactors.set(0, 0.0);
+			scalingFactors.add(0, 0.0);
 
 		for (int i = 0; i < N; i++)
 		{
-		    alphas.get(0).set(i, initialState.get(i) * observationMatrix.get(i).get(O.get(0)));  //equivalent to pi_i * b_i(O_0)
-		    scalingFactors.set(0, scalingFactors.get(0) + alphas.get(0).get(i));
+		    alphas.get(0).add(i, initialState.get(i) * observationMatrix.get(i).get(O.get(0)));  //equivalent to pi_i * b_i(O_0)
+		    scalingFactors.add(0, scalingFactors.get(0) + alphas.get(0).get(i));
 		}
 	
 		//Scale the a_0(i)
-		scalingFactors.set(0, 1 / scalingFactors.get(0));
+		scalingFactors.add(0, 1 / scalingFactors.get(0));
 		for (int i = 0; i < N; i++)
 		{
-		    alphas.get(0).set(i, alphas.get(0).get(i) * scalingFactors.get(0));
+		    alphas.get(0).add(i, alphas.get(0).get(i) * scalingFactors.get(0));
 		}
 		
 		//Compute a_t(i)
 		for(int t = 1; t < T; t++)
 		{
-		    scalingFactors.set(t, 0.0);
+		    scalingFactors.add(t, 0.0);
 		    for (int i = 0; i < N; i++)
 		    {
-		        alphas.get(t).set(i, 0.0);
+		        alphas.get(t).add(i, 0.0);
 		        for (int j = 0; j < N; j++)
 		        {
-					alphas.get(t).set(i, alphas.get(t).get(i) + (alphas.get(t-1).get(j) * transitionMatrix.get(j).get(i)));
+					alphas.get(t).add(i, alphas.get(t).get(i) + (alphas.get(t-1).get(j) * transitionMatrix.get(j).get(i)));
 		        }
-		        alphas.get(t).set(i, alphas.get(t).get(i) * observationMatrix.get(i).get(O.get(t)));
+		        alphas.get(t).add(i, alphas.get(t).get(i) * observationMatrix.get(i).get(O.get(t)));
 				
-		        scalingFactors.set(t, scalingFactors.get(t) + alphas.get(t).get(i));
+		        scalingFactors.add(t, scalingFactors.get(t) + alphas.get(t).get(i));
 		    }
 		
 		    //Scale a_t(i)
-			scalingFactors.set(t, 1 / scalingFactors.get(t));
+			scalingFactors.add(t, 1 / scalingFactors.get(t));
 		    for(int i = 0; i < N; i++)
 		    {
-				alphas.get(t).set(i, alphas.get(t).get(i) * scalingFactors.get(t));
+				alphas.get(t).add(i, alphas.get(t).get(i) * scalingFactors.get(t));
 		    }
 		}
 		
@@ -94,8 +94,6 @@ class HiddenMarkovModel
 
 	public static void main(String[] args)
 	{
-		p(true);
-
     	StochasticMatrix a = new StochasticMatrix();
 		StochasticRow tmp = new StochasticRow();
 		tmp.add(0.7); tmp.add(0.3);
@@ -112,11 +110,8 @@ class HiddenMarkovModel
 		tmp.add(0.7); tmp.add( 0.2); tmp.add( 0.1);
 		b.add(tmp);
 
-
      	StochasticRow pi = new StochasticRow();
-		tmp = new StochasticRow();
-		tmp.add(0.6); tmp.add(0.4);
-		b.add(tmp);
+		pi.add(0.6); pi.add(0.4);
 
     	HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
 
@@ -124,7 +119,7 @@ class HiddenMarkovModel
 		O.add(0) ; O.add(1); O.add(0); O.add(2);
 
     	double score = hmm.scoreStateSequence(O);
-    	p(score);
+    	p("Score: " + score);
     	//ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
     	//for(Integer i: optimal)
     	//   p( i + " ");
