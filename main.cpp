@@ -25,13 +25,13 @@ int main()
 
     ObservationSequence O = {0, 1, 0, 2};
     double score = hmm.scoreStateSequence(O);
-    std::cout << score << std::endl;
+    std::cout << "Score: " << score << std::endl;
     /*StateSequence optimal = hmm.optimalStateSequence(O);
 
     for(auto i: optimal)
         std::cout << i << " ";*/
 
-
+/*
 
 
     int HEADER_SIZE = 15;
@@ -81,5 +81,5 @@ int main()
     HiddenMarkovModel hmm2(O2, 2, 27);
     hmm2.train(O2, 100);
 
-    std::cout << "finished trainign HMM";
+    std::cout << "finished trainign HMM";*/
 }

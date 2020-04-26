@@ -76,7 +76,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
         scalingFactors[0] += alphas[0][i];
     }
-
     //Scale the a_0(i)
     scalingFactors[0] = 1 / scalingFactors[0];
     for (int i = 0; i < N; i++)
@@ -256,7 +255,7 @@ double HiddenMarkovModel::computeLogProb(const ObservationSequence &O)
     for (int i = 0; i < O.size(); i++)
     {
         newLogProb += std::log(scalingFactors[i]);
-    }
+	}
     newLogProb *= -1;
 
     return newLogProb;

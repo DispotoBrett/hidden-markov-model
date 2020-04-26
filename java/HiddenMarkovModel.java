@@ -20,7 +20,7 @@ class HiddenMarkovModel
 	public double scoreStateSequence(ArrayList<Integer> O)
 	{
 		alphaPass(O);
-		return computeLogProb(O); //TODO
+		return Math.exp(computeLogProb(O)); //TODO
 	}
 
 	public ArrayList<ArrayList<Double>> alphaPass(ArrayList<Integer> O)
