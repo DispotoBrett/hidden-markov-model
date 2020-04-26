@@ -238,7 +238,7 @@ class HiddenMarkovModel
 		String line = "";
 	    ArrayList<Integer> O2 = new ArrayList<Integer>();
 	    //this should be an absolute path to corpus.dos, and A is the only starting letter of files that I am iterating through.
-	    String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
+	    String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
 		String filenames[] = new String[40];
 		for(int i = 1; i < 40; i++)
 	    {
