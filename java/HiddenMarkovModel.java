@@ -276,12 +276,95 @@ class HiddenMarkovModel
 	
 	        
 	    }
-	/*	
-	    HiddenMarkovModel hmm2(O2, 2, 27);
+	
+	    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
 	    hmm2.train(O2, 100);
 	
-	    std::cout << "finished trainign HMM";*/
-		}
+		System.out.println("finished trainign HMM");
+	}
+
+	public void train(ArrayList<Integer> O, int maxIters)
+	{
+
+	}
+
+	HiddenMarkovModel(ArrayList<Integer> O, int N, int M)
+	{
+	    transitionMat = new ArrayList<ArrayList<Double>>(N);
+		for(int i = 0; i < N; i++)
+			transitionMat.add(i, new ArrayList<Double>());
+	    
+		observationMat = new ArrayList<ArrayList<Double>>(N);
+		for(int i = 0; i < M; i++)
+			observationMat.add(i, new ArrayList<Double>());
+
+	    initialState = new ArrayList<Double>();
+		for(int i = 0; i < N; i++)
+			initialState.add(i, 0.0);
+
+		scalingFactors = new ArrayList<Double>(O.size());
+		for(int i = 0; i < O.size(); i++)
+			scalingFactors.add(i, 0.0);
+
+
+		Random rand1 = new Random(1);
+		Random rand2 = new Random(2);
+	    for(int i = 0; i < N; i++)
+	    {
+	       //Initialize transition matrix
+			ArrayList<Double> transitionRow = new ArrayList<Double>(N);
+			
+	        //double sum = 0;
+	        //for(int j = 0; j < N; j++)
+	        //{
+	        //    double randNum = std::abs(randN(re));
+	        //    transitionRow[j] = 1 / randNum;
+	        //    sum +=  transitionRow[j];
+	        //}
+	
+	        //transitionMatrix[i] = transitionRow;
+		}	
+	    /*
+	    //random number tools
+	    //TODO: Experiment with different distributions/ ranges
+	    std::normal_distribution<double> randN(N,  0.01);
+	    std::normal_distribution<double> randM(M,  0.01);
+	    std::default_random_engine re;
+	    for(int i = 0; i < N; i++)
+	    {
+	
+	       //Initialize transition matrix
+	        StochasticRow transitionRow(N);
+	        double sum = 0;
+	        for(int j = 0; j < N; j++)
+	        {
+	            double randNum = std::abs(randN(re));
+	            transitionRow[j] = 1 / randNum;
+	            sum +=  transitionRow[j];
+	        }
+	
+	        transitionMatrix[i] = transitionRow;
+	
+	        //Initialize observation matrix
+	        StochasticRow observationRow(M);
+	        for(int j = 0; j < M; j++ )
+	        {
+	
+	            observationRow[j] = 1 / std::abs(randM(re));
+	        }
+	
+	        observationMatrix[i] = observationRow;
+	
+	        //Initialize the initial state distribution
+	        initialState[i] =  1 / std::abs(randN(re));
+	
+	        makeStochasticRow(observationMatrix[i]);
+	        makeStochasticRow(transitionMatrix[i]);
+	        makeStochasticRow(initialState);
+	    }
+		*/
+	
+	}
 
 	static int returnObservation(char x)
 	{
