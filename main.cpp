@@ -76,9 +76,9 @@ int main()
         file.close();
     }
 
-/*
+
     HiddenMarkovModel hmm2(O2, 2, 27);
     hmm2.train(O2, 100);
 
-    std::cout << "finished trainign HMM";*/
+    std::cout << "finished trainign HMM";
 }
