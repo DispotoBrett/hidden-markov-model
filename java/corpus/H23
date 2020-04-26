@@ -1,0 +1,257 @@
+H23 0010  1    This broad delegation leaves within our discretion
+H23 0010  8    (subject to the always-present criterion of the public
+H23 0020  5    interest) both the determination of what degree of
+H23 0030  5    interference shall be considered excessive, and the
+H23 0040  1    methods by which such excessive interference shall
+H23 0040  8    be avoided.
+H23 0050  1    _3._
+H23 0050  1       The present proceeding is concerned with the standard
+H23 0050  9    broadcast (AM) band, from 540 kc. to 1600 kc. Whenever
+H23 0060  9    two or more standard broadcast stations operate simultaneously
+H23 0070  5    on the same or closely adjacent frequencies, each interferes
+H23 0080  4    to some extent with reception of the other. The extent
+H23 0090  5    of such interference- which may be so slight as to
+H23 0100  3    be undetectable at any point where either of the stations
+H23 0100 13    renders a usable signal, or may be so great as to virtually
+H23 0110 12    destroy the service areas of both stations- depends
+H23 0120  6    on many factors, among the principal ones being the
+H23 0130  4    distance between the stations, their respective radiated
+H23 0140  2    power, and, of particular significance here, the time
+H23 0140 10    of day. Other factors playing a part in the the extent
+H23 0150 10    of AM service and interference are the frequency involved,
+H23 0160  7    the time of year, the position of the year in the sunspot
+H23 0170  7    cycle, ground conductivity along the transmission path,
+H23 0190  3    atmospheric and manmade noise, and others. With the
+H23 0200  1    existence of these many factors, some of them variable,
+H23 0200 10    it obviously has never been and is not now possible
+H23 0210  9    for the Commission to make assignments of AM stations
+H23 0220  4    on a case-to-case basis which will insure against any
+H23 0230  3    interference in any circumstances. Rather, such assignments
+H23 0240  1    are made, as they must be, on the basis of certain
+H23 0240 12    overall rules and standards, representing to some extent
+H23 0250  7    a statistical approach to the problem, taking into
+H23 0260  5    account for each situation some of the variables (e.g.,
+H23 0270  2    power and station separations) and averaging out others
+H23 0280  1    in order to achieve the balance which must be struck
+H23 0280 11    between protection against destructive interference
+H23 0290  4    and the assignment of a number of stations large enough
+H23 0300  4    to afford optimum radio service to the Nation. An example
+H23 0310  3    of the overall standards applied is the 20-to-1 ratio
+H23 0310 14    established for the determination of that degree of
+H23 0320  8    cochannel interference which is regarded as objectionable.
+H23 0330  6    By this standard, it is determined that where two stations
+H23 0340  5    operating on the same frequency are involved, objectionable
+H23 0350  2    interference from station A exists at any point within
+H23 0360  1    the service area of station B where station A's signal
+H23 0370  1    is of an intensity one-twentieth or more of the strength
+H23 0370 12    of station B's signal at that point.
+H23 0380  5    _4._
+H23 0380  6       The 20-to-1 ratio for cochannel interference embodies
+H23 0390  3    one of the fundamental limiting principles which we
+H23 0400  2    must always take into account in AM assignments and
+H23 0400 11    allocations- that signals from a particular station
+H23 0410  9    are potential sources of objectionable interference
+H23 0420  4    over an area much greater than that within which they
+H23 0430  3    provide useful service. A second fundamental principle
+H23 0440  1    is that involved particularly in the present proceeding-
+H23 0440  9    the difference between nighttime and daytime propagation
+H23 0450  6    conditions with respect to the standard broadcast frequencies.
+H23 0460  6    This is a phenomenon familiar to all radio listeners,
+H23 0480  5    resulting from reflection of skywave signals at night
+H23 0490  2    from the ionized layer in the upper atmosphere known
+H23 0490 11    as the ionosphere. All AM stations radiate both skywave
+H23 0500  7    and groundwave signals, at all hours; but during the
+H23 0510  7    middle daytime hours these skywave radiations are not
+H23 0520  4    reflected in any substantial quantity, and during this
+H23 0530  2    portion of the day both skywave service and skywave
+H23 0530 11    interference are, in general, negligible. But during
+H23 0540  7    nighttime hours the skywave radiations are reflected
+H23 0550  4    from the ionosphere, thereby creating the possibility
+H23 0560  1    of one station's rendering service, via skywave, at
+H23 0560  9    a much greater distance than it can through its groundwave
+H23 0570  9    signal, and at the same time vastly complicating the
+H23 0580  6    interference problem because of the still greater distance
+H23 0590  4    over which these skywave signals may cause interference
+H23 0600  1    to the signals of stations on the same and closely
+H23 0600 11    adjacent frequencies. Because of the difference between
+H23 0610  7    daytime and nighttime propagation conditions, it has
+H23 0620  5    been necessary to evolve different allocation structures
+H23 0630  2    for daytime and nighttime broadcasting in the AM band,
+H23 0640  2    with many more stations operating during the day than
+H23 0640 11    at night.
+H23 0650  1    _5._
+H23 0650  2       It was recognized years ago that the transition
+H23 0650 10    from daytime to nighttime propagation conditions, and
+H23 0660  6    vice versa, is not an instantaneous process, but takes
+H23 0670  4    place over periods of time from roughly 2 hours before
+H23 0680  4    sunset until about 2 hours after sunset, and again
+H23 0680 13    from roughly 2 hours before sunrise until some 2 hours
+H23 0690 10    after sunrise. During the period of about 4 hours around
+H23 0700  8    sunset, skywave transmission conditions are building
+H23 0710  3    up until full nighttime conditions prevail; during
+H23 0720  1    the same period around sunrise, skywave transmission
+H23 0720  8    is declining, until at about 2 hours after sunrise
+H23 0730  8    it reaches a point where it becomes of little practical
+H23 0740  4    significance. However, in this case as elsewhere it
+H23 0750  2    was necessary to arrive at a single standard to be
+H23 0750 12    applied to all situations, representing an averaging
+H23 0760  6    of conditions, and thus to fix particular points in
+H23 0770  5    time which would be considered the dividing points
+H23 0780  1    between daytime and nighttime conditions. It was determined
+H23 0780  9    that the hours of sunrise and sunset, respectively,
+H23 0790  8    should be used for this purpose. Accordingly, the 1938-39
+H23 0800  6    rules adopted these hours as limitations upon the operation
+H23 0810  4    of daytime stations. Class II stations operating on
+H23 0820  3    clear channels are required to cease operation or operate
+H23 0830  1    under nighttime restrictions beginning either at local
+H23 0830  8    sunset (for daytime class II stations) or sunset at
+H23 0840  7    the location of the dominant class I station where
+H23 0850  5    located west of the class II station (for limited-time
+H23 0860  3    class II stations).
+H23 0860  6       The same restrictions apply after local sunset in
+H23 0870  5    the case of class III stations operating on regional
+H23 0880  2    channels, which after that time are required to operate
+H23 0880 11    under nighttime restrictions in order to protect each
+H23 0890  8    other. With respect to nighttime assignments, the degree
+H23 0900  6    of skywave service and interference is determined by
+H23 0910  4    skywave curves (figs. 1 and 2 of sec. 3.190 of the
+H23 0920  3    rules) giving average skywave values. These curves
+H23 0920 10    were derived by an analysis of extensive skywave measurement
+H23 0930  8    data. It was recognized that skywave signals, because
+H23 0940  5    of their reflected nature, are of great variability
+H23 0950  2    and subject to wide fluctuations in strength. For this
+H23 0960  1    reason, the more uncertain skywave service was denominated
+H23 0960  9    "secondary" in our rules, as compared to the steadier,
+H23 0970  9    more reliable groundwave "primary service", and, for
+H23 0980  5    both skywave service and skywave interference, signal
+H23 0990  3    strength is expressed in terms of percentage of time
+H23 1000  2    a particular signal-intensity level is exceeded- 50
+H23 1000 10    percent of the time for skywave service, 10 percent
+H23 1010  8    of the time for skywave interference.
+H23 1020  1    #ALLOCATION POLICIES#
+H23 1020  3    _6._
+H23 1020  4       As mentioned, the allocation of AM stations represents
+H23 1030  5    a balance between protection against interference and
+H23 1040  3    the provision of opportunity for an adequate number
+H23 1050  1    of stations. The rules and policies to be applied in
+H23 1050 11    this process of course must be based on objectives
+H23 1060  7    which represent what is to be desired if radio service
+H23 1070  4    is to be of maximum use to the Nation. Our objectives,
+H23 1080  1    as we have stated many times, are-
+H23 1080  8    _(1)_
+H23 1080  9       To provide some service to all listeners;
+H23 1090  5    _(2)_
+H23 1090  6       To provide as many choices of service to as many
+H23 1100  5    listeners as possible;
+H23 1100  8    _(3)_
+H23 1100  9       To provide service of local origin to as many listeners
+H23 1110  8    as possible. Since broadcast frequencies are very limited
+H23 1120  5    in number, these objectives are to some extent inconsistent
+H23 1130  3    in that not all of them can be fully realized, and
+H23 1140  1    to the extent that each is realized, there is a corresponding
+H23 1140 12    reduction of the possibilities for fullest achievement
+H23 1150  7    of the others. Accordingly, the Commission has recognized
+H23 1160  5    that an optimum allocation pattern for one frequency
+H23 1170  4    does not necessarily represent the best pattern for
+H23 1180  2    other frequencies, and has assigned different frequencies
+H23 1180  9    for use by different classes of stations. Some 45 frequencies
+H23 1190  9    are assigned for use primarily by dominant Class I-
+H23 1200  7    A or Class I- B clear-channel stations, designed
+H23 1210  8    to operate with adequate power and to provide service-
+H23 1220  6    both groundwave and (at night) skywave- over large
+H23 1230  5    areas and at great distances, being protected against
+H23 1240  1    interference to the degree necessary to achieve this
+H23 1240  9    objective. In dealing with these frequencies, the objective
+H23 1250  6    listed first above- provision of service to all listeners-
+H23 1260  6    was predominant; the other objectives were subordinated
+H23 1270  3    to it. The class I stations on these clear channels
+H23 1280  2    are protected to their 0.1-mv./m. groundwave contours
+H23 1290  1    against daytime cochannel interference. With respect
+H23 1290  7    to skywave service rendered at night, class I- A
+H23 1300  7    stations are the only stations permitted to operate
+H23 1310  4    in the United States on clear channels specified for
+H23 1320  2    class I- A operation, and so render skywave service
+H23 1325  1    free from cochannel interference whereever they may
+H23 1330  7    be received; class I- B stations are protected at
+H23 1340  6    night to their 0.5-mv./m. 50-percent time skywave contours
+H23 1350  4    against cochannel interference. Since the provision
+H23 1360  3    of skywave service requires adequate freedom from interference,
+H23 1370  1    only class I stations are capable of rendering skywave
+H23 1370 10    service. But nighttime operation by stations of other
+H23 1380  8    classes of course entails skywave interference to groundwave
+H23 1390  6    service, interference which is substantial unless steps
+H23 1400  5    are taken to minimize it.
+H23 1400 10    _7._
+H23 1400 11       With respect to other frequencies, these are designated
+H23 1410  8    as regional or local, and assigned for use by class
+H23 1420  7    III and class IV stations, respectively, stations
+H23 1430  2    operating generally with lower power. In the allocation
+H23 1440  1    pattern worked out for these frequencies, the provision
+H23 1440  9    of long-range service has to some extent been subordinated
+H23 1450  8    to the other two objectives- assignment of multiple
+H23 1460  6    facilities, and assignment of stations in as many communities
+H23 1470  5    as possible.
+H23 1470  7    _8._
+H23 1470  8       As mentioned, the primary allocation objective to
+H23 1480  4    be followed in the allocation of stations on clear
+H23 1490  3    channels is the provision of widespread service, free
+H23 1490 11    from destructive interference. During nighttime hours,
+H23 1500  6    because of the intense skywave propagation then prevailing,
+H23 1510  5    no large number of stations can be permitted to operate
+H23 1520  5    on one of these channels, if the wide area service
+H23 1530  2    for which these frequencies are assigned is to be rendered
+H23 1530 12    satisfactorily by the dominant stations which must
+H23 1540  7    be relied upon to render it. Therefore, under our longstanding
+H23 1550  6    allocation rules, on some of these channels no station
+H23 1560  5    other than the dominant (class I- A) station is
+H23 1570  3    permitted to operate at night, so that the I- A
+H23 1580  1    station can render service, interference free, wherever
+H23 1580  8    it can be received. On the remainder of the clear channels,
+H23 1590  8    the dominant (class I- B) stations are protected
+H23 1600  5    as described above, and the relatively small number
+H23 1610  3    of secondary (class II) stations permitted to operate
+H23 1620  1    on these channels at night are required to operate
+H23 1620 10    directionally and/or with reduced power so as to protect
+H23 1630  9    the class I stations. In the daytime, on the other
+H23 1640  7    hand, since skywave transmission is relatively inefficient,
+H23 1650  2    it is possible to assign a substantially larger number
+H23 1660  1    of stations on these channels. Additional class II
+H23 1660  9    assignments for daytime operation can be made without
+H23 1670  8    causing destructive interference to the class I stations
+H23 1680  6    or to each other, and by their operation provide additional
+H23 1690  3    service on these channels and additional local outlets
+H23 1700  2    for a large number of communities. Such additional
+H23 1700 10    daytime class II assignments are appropriate if optimum
+H23 1710  8    use is to be made of these frequencies, and the Commission
+H23 1720  7    has over the years made a large number of them. Similarly,
+H23 1730  5    on the regional channels many class III stations have
+H23 1740  3    been assigned either to operate daytime only or to
+H23 1740 12    operate nighttime with directional antennas and/or
+H23 1750  6    lower power.
+H23 1760  1    _9._
+H23 1760  1       Essentially, the question presented for decision
+H23 1760  7    in the present Daytime Skywave proceeding is whether
+H23 1770  5    our decision [in 1938-1939] to assign stations on the
+H23 1780  5    basis of daytime conditions from sunrise to sunset,
+H23 1790  1    is sound as a basis for AM allocations, or whether,
+H23 1790 11    in the light of later developments and new understanding,
+H23 1800  7    skywave transmission is of such significance during
+H23 1810  6    the hours immediately before sunset and after sunrise
+H23 1820  3    that this condition should be taken into account, and
+H23 1830  1    some stations required to afford protection to other
+H23 1830  9    stations during these hours.
+H23 1840  2    #THE HISTORY OF THE PROCEEDING#
+H23 1840  7    _10._
+H23 1840  8       The decision reached in 1938-39 was made after the
+H23 1850  9    accumulation of a large amount of data and thorough
+H23 1860  5    study thereof. Since then, there has been a notable
+H23 1870  1    increase in the number of stations and also the accumulation
+H23 1870 11    of additional data and the development of new techniques
+H23 1880  8    for using it, leading to a better understanding of
+H23 1890  6    propagation phenomena. In 1947, affidavits were filed
+H23 1900  3    with the Commission by various clear-channel stations
+H23 1910  1    alleging that extensive interference was being caused
+H23 1910  8    to the service areas of these stations during daylight
+H23 1920  7    hours, from class II stations whose signals were being
+H23 1930  5    reflected from the ionosphere so as to create skywave
+H23 1940  3    intereference.

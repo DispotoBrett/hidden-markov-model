@@ -1,0 +1,252 @@
+J07 0010  1    The Poynting-Robertson effect (Robertson, 1937; Wyatt
+J07 0010  8    and Whipple, 1950), which is a retardation of the orbital
+J07 0020  9    motion of particles by the relativistic aberration
+J07 0030  5    of the repulsive force of the impinging solar radiation,
+J07 0040  3    causes the dust to spiral into the sun in times much
+J07 0050  1    shorter than the age of the Earth. The radial velocity
+J07 0050 11    varies inversely as the particle size- a 1000-|m-diameter
+J07 0060  9    particle near the orbit of Mars would reach the sun
+J07 0070  8    in about 60 million years. Whipple (1955) extends the
+J07 0080  4    effects to include the solar-corpuscular-radiation
+J07 0090  1    pressure, which increases both the minimum particle
+J07 0090  8    size and the drag. Further, the corpuscular radiation,
+J07 0100  5    i.e., the solar-wind protons, must sputter away the
+J07 0110  5    surface atoms of the dust and cause a slow diminution
+J07 0120  2    in size, with a resultant increase in both the Poynting-Robertson
+J07 0130  1    effect and the ratio of the repulsive force to the
+J07 0130 11    gravitational force.
+J07 0140  2       The Poynting-Robertson effect causes the semi-major
+J07 0150  1    axis of orbits to diminish more rapidly than the semi-minor
+J07 0150 12    axis, with a consequent tendency toward circular orbits
+J07 0160  8    as the particles move toward the sun. Also, planetary
+J07 0170  6    gravitational attraction increases the dust concentration
+J07 0180  4    near the plane of the ecliptic as the sun is approached.
+J07 0190  2    At one astronomical unit from the sun (the Earth's
+J07 0190 11    distance) the dust orbits are probably nearly circular.
+J07 0200  8    If such is the case, the particles within a distance
+J07 0210  6    of about **f km of the Earth will have, relative to
+J07 0220  4    the Earth, a kinetic energy less than their potential
+J07 0230  1    energy and they will be captured into orbits about
+J07 0230 10    the Earth. De Jager (1955) has calculated the times
+J07 0240  7    required for these particles to reach the atmosphere
+J07 0250  5    under the influence of the Poynting-Robertson effect,
+J07 0260  2    which in this case causes the orbits to become more
+J07 0260 12    and more eccentric without changing the semi-major
+J07 0270  6    axis. This effect can give rise to a blanket of micrometeorites
+J07 0280  5    around the Earth.
+J07 0280  8       Since there is a continual loss of micrometeoritic
+J07 0290  6    material in space because of the radiation effects,
+J07 0300  3    there must be a continual replenishment: otherwise,
+J07 0310  1    micrometeorites would have disappeared from interplanetary
+J07 0310  7    space. There are several possible sources. According
+J07 0320  6    to Whipple (1955), cometary debris is sufficient to
+J07 0330  5    replenish the material spiraling into the sun, maintaining
+J07 0340  3    a fairly steady state. Asteroidal collisions are also
+J07 0350  1    thought to contribute material. It is also possible
+J07 0350  9    that some of the dust in the vicinity of the Earth
+J07 0360  9    originated from meteoritic impacts upon the moon.
+J07 0370  4    #5.3 DIRECT MEASUREMENTS OF MICROMETEORITE FLUX#
+J07 0380  1    One cannot make a very satisfactory guess about the
+J07 0380 10    micrometeorite flux in space. Even in the neighborhood
+J07 0390  8    of the Earth, where information has been obtained both
+J07 0400  5    directly and indirectly, the derived flux values vary
+J07 0410  3    by at least four orders of magnitude. This large discrepancy
+J07 0420  1    demonstrates the inadequacies of the experimental methods
+J07 0420  8    and the lack of understanding of the various phenomena
+J07 0430  8    involved. Beyond a few million kilometers from the
+J07 0440  6    Earth, but still in the region of the Earth's orbit,
+J07 0450  3    a prediction of the flux of dust is even more unreliable.
+J07 0460  1    At greater distances from the sun, the situation is
+J07 0460 10    still less certain.
+J07 0470  2       There are several sources of evidence on the micrometeorite
+J07 0480  1    environment. Direct information has been obtained from
+J07 0480  8    rockets and satellites equipped with impact sensors.
+J07 0490  7    In addition, the size distribution obtained from visual
+J07 0500  5    and radar observations of meteors may be extrapolated
+J07 0510  3    to the micrometeorite domain. From the brightness of
+J07 0520  1    the F component of the solar corona and the brightness
+J07 0520 11    of the zodiacal light, an estimate of the particle
+J07 0530  7    sizes, concentrations, and spatial distribution can
+J07 0540  3    be derived for regions of space near the ecliptic plane.
+J07 0550  2    Another important source of evidence only recently
+J07 0550  9    receiving much attention is the analysis of atmospheric
+J07 0560  8    dust for a meteoritic component. The cores of deep-sea
+J07 0570  7    sediments and content of collectors in remote regions
+J07 0580  4    are valuable in this category. The data provide a measure
+J07 0590  2    of the total mass of cosmic material incident upon
+J07 0590 11    the Earth.
+J07 0600  1       The direct evidence on the micrometeorite environment
+J07 0600  8    near the Earth is obtained from piezoelectric sensors
+J07 0610  5    (essentially microphones) and from wire gages; these
+J07 0620  6    instruments are installed on rockets, satellites, and
+J07 0630  2    space probes. Statistically, the most significant data
+J07 0630  9    have been collected from the sensors on 1958 Alpha
+J07 0640  9    (Explorer I), 1958 Delta 2 (Sputnik III), and 1959
+J07 0650  8    Eta (Vanguard III). These vehicles, with large sensitive
+J07 0660  5    areas, have collected data for long enough times to
+J07 0670  3    give reliable impact rates for the periods of exposure.
+J07 0680  1    Many other vehicles with smaller sensitive-area exposure-time
+J07 0680 10    products contribute some information.
+J07 0690  4       The impact rate on 1958 Alpha for 153 events was
+J07 0700  5    **f for particles of mass greater than **f (Dubin,
+J07 0710  1    1960); this mass threshold was derived from the detector
+J07 0710 10    calibration and an assumed impact velocity of **f.
+J07 0720  8    The data show daily and diurnal variations. Ninety
+J07 0730  3    per cent of the 153 recorded impacts occurred between
+J07 0740  2    midnight and noon, and from day to day the variation
+J07 0740 12    of the rate was as much as an order of magnitude. One
+J07 0750 10    may conclude that most of the detected micrometeoritic
+J07 0760  5    material is concentrated in orbital streams which intersect
+J07 0770  3    the Earth's orbit.
+J07 0770  6       There have been contradictory reports from 1958
+J07 0780  4    Delta 2, and the data quoted here are believed to be
+J07 0790  3    the more reliable. On May 15, a very large increase
+J07 0790 13    occurred with **f of mass between **f and **f; for
+J07 0800 10    the next two days, the impact rate was **f; and for
+J07 0810  8    the next nine days, the impact rate was less than **f
+J07 0820  5    (Nazarova, 1960). The data for the first day indicate
+J07 0830  1    a meteor stream with a very high concentration of particles
+J07 0830 11    and may have led to the high estimates of micrometeorite
+J07 0840  9    flux.
+J07 0840 10       Preliminary data from 1959 Eta give an average impact
+J07 0850  9    rate of **f for masses larger than **f for about 1000
+J07 0860  7    events in a 22-day period (LaGow and Alexander, 1960).
+J07 0870  4    The day-to-day rate varied by less than a factor of
+J07 0880  2    4.5. The data have not yet been analyzed for diurnal
+J07 0880 12    variations. Note that the mass threshold is four times
+J07 0890  9    that of 1958 Alpha and that the flux is one fifth as
+J07 0900  8    large. If one assumes that the average flux did not
+J07 0910  4    change between measurements, a mass-distribution curve
+J07 0910 11    is obtained which relates the flux of particles larger
+J07 0920  9    than a given radius to the inverse 7/2 power of the
+J07 0930  8    radius.
+J07 0930  9       Space probes have yielded little information. Pioneer
+J07 0940  5    I recorded a decrease in flux with distance from
+J07 0950  4    the Earth on the basis of 11 counts in 9 hours. With
+J07 0951  1    detectors sensitive to three mass intervals and based
+J07 0960  8    on a few counts, the second and third Russian space
+J07 0970  7    probes indicate that the flux of the smallest particles
+J07 0980  5    detected is less than that of larger ones. Being based
+J07 0990  3    on so few events, these results are of dubious validity.
+J07 1000  1       The calibration of piezoelectric sensors in terms
+J07 1000  8    of the particle parameters is very uncertain. Many
+J07 1010  6    workers believe that the response is proportional to
+J07 1020  4    the incident momentum of the particles, a relation
+J07 1030  1    deduced from laboratory results linearly extrapolated
+J07 1030  7    to meteoritic velocities. However, one must expect
+J07 1040  6    that vaporization and ejection of material by hypervelocity
+J07 1050  5    impacts would cause a deviation from a linear relationship.
+J07 1060  2    In the United States, most of the sensors are calibrated
+J07 1070  1    by dropping small spheres on their sensitive surfaces.
+J07 1070  9    The Russian experimenters claim that only a small fraction
+J07 1080  9    of the impulse from the sensors is caused by the incident
+J07 1090  9    momentum with the remainder being momentum of ejected
+J07 1100  5    material from the sensor. This "ejection" momentum
+J07 1110  2    is linearly related to the particle energy. They quote
+J07 1120  1    about the same mass threshold as that of the U.S. apparatus,
+J07 1120 12    but a momentum threshold about 40 times greater. There
+J07 1130  9    is a difference in the experimental arrangement, in
+J07 1140  6    that the U.S. microphones are attached directly to
+J07 1150  4    the vehicle skin while the Russian instruments are
+J07 1160  2    isolated from the skin. The threshold mass is derived
+J07 1160 11    from the momentum threshold with the assumption of
+J07 1170  7    a mean impact velocity of **f in the U.S. work and
+J07 1171  6    **f in the U.S.S.R. work. The threshold mass of about
+J07 1190  4    **f corresponds to a 10-|m-diameter sphere of density
+J07 1200  2    **f. However, the conversion from mass to size is unreliable,
+J07 1210  1    since many photographic meteors give evidence of a
+J07 1210  9    fluffy, loosely bound meteorite structure with densities
+J07 1220  5    as low as **f. To what extent such low density applies
+J07 1230  5    to micrometeorites is unknown. The velocity value used
+J07 1240  3    is also open to some question; if a substantial fraction
+J07 1250  1    of the dust is orbiting about the Earth, only about
+J07 1250 11    one third the above-mentioned average velocity should
+J07 1260  4    be used in deriving the mass. Zodiacal light and the
+J07 1270  4    gegenschein give some evidence for such a dust blanket,
+J07 1280  2    a phenomenon also to be expected if the dust before
+J07 1280 12    capture is in circular orbits about the sun, as indicated
+J07 1290 10    by the trend of the smaller visible meteors. The diurnal
+J07 1300  6    variation in the observed flux may be partly due to
+J07 1310  6    the dependence of the detector sensitivity on the incident
+J07 1320  2    velocity.
+J07 1320  3       The flux of micrometeorites in the neighborhood
+J07 1330  1    of the Earth can be estimated by extrapolation from
+J07 1330 10    radar and visual meteor data. A summary of meteorite
+J07 1340  8    data, prepared by Whipple (1958) on the basis of photographic,
+J07 1350  7    visual, and radar evidence, is given in Table 5-1.
+J07 1360  7    From an estimated mass of 25 g for a zero-magnitude
+J07 1370  3    meteorite, the other masses are derived with the assumption
+J07 1380  1    of a mass decrease by a factor of 2.512 for each unit
+J07 1380 13    increase in magnitude. The radius is calculated from
+J07 1390  7    the mass by assuming spheres of density **f except
+J07 1400  5    for the smallest particles, which must have a higher
+J07 1410  2    mass density to remain in the solar system in the presence
+J07 1410 13    of solar-radiation pressure. The flux values are for
+J07 1420  9    all particles with masses greater than the given mass
+J07 1430  7    and are based on an estimate of the numbers of visual
+J07 1440  4    meteors. It is assumed that the flux values increase
+J07 1450  1    by a factor of 2.512 per magnitude, in accordance with
+J07 1450 11    the opinion that the total mass flux in each unit range
+J07 1460 10    in magnitude is constant. The values agree with the
+J07 1470  6    data from 1958 Alpha and 1959 Eta. The figures in the
+J07 1480  3    next-to-last column are derived with the assumption
+J07 1480 12    of 50 per cent shielding by the Earth; hence, these
+J07 1490  9    figures apply immediately above the Earth's atmosphere.
+J07 1500  5    The unshielded flux is given in the last column; these
+J07 1510  6    figures constitute the best estimate for the flux in
+J07 1520  3    interplanetary space near the Earth. Of course, if
+J07 1520 11    there is a dust blanket around the Earth, the fluxes
+J07 1530 10    in interplanetary space should be less than the figures
+J07 1540  7    given here.
+J07 1540  9       Note that the mass scale is one to two orders of
+J07 1550  8    magnitude greater than some previously used; for example,
+J07 1560  4    Jacchia (1948) derived a scale of 0.15 g for a **f,
+J07 1570  3    zero-magnitude meteorite. The older scales were based
+J07 1570 11    on theoretical estimates of the conversion efficiency
+J07 1580  6    of kinetic energy into light. The mass scale used in
+J07 1590  7    Table 5-1 was derived on the assumption that the motion
+J07 1600  4    of the glowing trail is related to the momentum transfer
+J07 1610  2    to the trail by the meteorite, permitting the calculation
+J07 1610 11    of the mass if the velocity is known (Cook and Whipple,
+J07 1620 11    1958).
+J07 1630  1       A concentration distribution has been derived from
+J07 1630  7    radar observations sensitive to the fifteenth magnitude
+J07 1640  6    (Manning and Eshleman, 1959). Extrapolation of this
+J07 1650  4    relationship through the thirtieth magnitude covers
+J07 1660  1    the range of micrometeorites. The approximate equation
+J07 1660  8    is **f, where n is the number of **f with electron
+J07 1670  8    line-density greater than or equal to **f, and q is
+J07 1680  8    proportional to the mass of the meteorite. Therefore,
+J07 1690  2    n is inversely proportional to the radius cubed and
+J07 1700  2    in fair agreement with the inverse 7/2 power derived
+J07 1700 11    from 1958 Alpha and 1959 Eta data. At the fifteenth
+J07 1710  8    magnitude, **f, and at the twenty-fifth magnitude,
+J07 1720  2    **f. These extrapolated fluxes are about an order of
+J07 1730  2    magnitude less than the values from the satellite data
+J07 1730 11    and the figures in Whipple's table. The extrapolation
+J07 1740  7    may be in error for several reasons. The observational
+J07 1750  5    data determining the concentration distribution have
+J07 1760  3    a range of error which is magnified in the extension
+J07 1770  1    into the micrometeorite region. The solar-electromagnetic-
+J07 1770  9    and corpuscular-radiation pressure and the associated
+J07 1780  5    Poynting-Robertson effect increase in effectiveness
+J07 1790  4    as the particle size decreases and modify the distribution
+J07 1800  3    and limit sizes to larger than a few microns. Also,
+J07 1810  1    it has been suggested that the source of all or part
+J07 1810 12    of the dust may not be the same as that for visual
+J07 1820  9    or radar meteorites (Best, 1960), and the same distribution
+J07 1830  5    would not be expected.
+J07 1830  9    #5.4. INDIRECT INDICATIONS OF MICROMETEORITE FLUX#
+J07 1840  4    A measure of the total mass accretion of meteoritic
+J07 1850  3    material by the Earth is obtained from analyses of
+J07 1860  1    deep-sea sediments and dust collected in remote regions
+J07 1860 10    (Pettersson, 1960). Most meteoritic material, by the
+J07 1870  6    time it reaches the Earth's surface, has been reduced
+J07 1880  5    to dust or to spherules of ablated material in its
+J07 1890  3    passage through the atmosphere. For all meteorites,
+J07 1890 10    the average nickel content is about 2.5 per cent. This
+J07 1900  9    is much higher than the nickel content of terrestrial
+J07 1910  5    dusts and sediments and provides a basis for the determination
+J07 1920  4    of the meteoritic mass influx. Present data indicate
+J07 1930  2    an accretion of about **f tons per year over the entire
+J07 1930 13    globe, or about **f.

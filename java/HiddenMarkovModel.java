@@ -1,5 +1,6 @@
 import java.util.*;
- import java.text.DecimalFormat;
+import java.text.DecimalFormat;
+import java.io.*;
 
 //Note: TODO tags are current
 class HiddenMarkovModel
@@ -232,6 +233,59 @@ class HiddenMarkovModel
     	for(Integer i: optimal)
     	   System.out.print( i + " ");
 		p("");
+
+	    int HEADER_SIZE = 15;
+		String line = "";
+	    ArrayList<Integer> O2 = new ArrayList<Integer>();
+	    //this should be an absolute path to corpus.dos, and A is the only starting letter of files that I am iterating through.
+	    String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
+		String filenames[] = new String[40];
+		for(int i = 1; i < 40; i++)
+	    {
+	        filenames[i] = filebase;
+	        if(i < 10)
+	            filenames[i] += "0";
+	        filenames[i] += i;
+	    }
+
+		for(int j = 1; j < 40; j++)
+	    {
+			File file = new File(filenames[j]);
+			try{
+				Scanner scan = new Scanner(file);
+				while(scan.hasNextLine())
+	    	    {
+					line = scan.nextLine();
+	    	        for(int i = HEADER_SIZE; i < line.length(); i++)
+	    	        {
+	    	            char c = line.charAt(i);
+	
+	    	            if(c == ' ')
+	    	                O2.add(27);
+	    	            else
+	    	            {
+	    	                c = Character.toLowerCase(c);
+	    	                int o = returnObservation(c);
+	    	                if (o < 27 && o >= 0)
+	    	                    O2.add(o);
+	    	            }
+	    	        }
+	    	    }
+				scan.close();
+			}catch(Exception e){System.out.println("oops");}
+	
+	        
+	    }
+	/*	
+	    HiddenMarkovModel hmm2(O2, 2, 27);
+	    hmm2.train(O2, 100);
+	
+	    std::cout << "finished trainign HMM";*/
+		}
+
+	static int returnObservation(char x)
+	{
+	    return (int) x - 87;
 	}
 
 	public static void p(Object s)

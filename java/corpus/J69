@@ -1,0 +1,254 @@
+J69 0010  1    The following items may be specified in actual or symbolic
+J69 0010 11    form in the operands of those instructions which refer
+J69 0020  7    to the particular items: channel, unit, combined channel
+J69 0030  5    and unit, combined arm and file, unit record synchronizers,
+J69 0040  3    inquiry synchronizers, and alteration switches. The
+J69 0050  2    declarative operation EQU is used to equate symbolic
+J69 0050 10    names to item numbers (see page 85).
+J69 0060  7    _CONTINUATION CARDS_
+J69 0060  9       Certain Autocoder statements make provision for
+J69 0070  5    more parameters than may be contained in the operand
+J69 0080  4    (columns 21-75) of a single line on the Autocoder coding
+J69 0090  2    sheet. When this is the case, the appropriate section
+J69 0090 11    of this manual will indicate that "Continuation Cards"
+J69 0100  7    may be used. Thus, when specifically permitted, the
+J69 0110  5    operand of a given line on the Autocoder coding sheet
+J69 0120  3    may be continued in the operand of from one to four
+J69 0130  2    additional lines which immediately follow.
+J69 0130  7       The label and operation columns must be blank and
+J69 0140  7    the continuation of the operand must begin in column
+J69 0150  5    21; i.e., it must be left-justified in the operand
+J69 0160  2    column of the coding sheet. The operand need not extend
+J69 0160 12    across the entire operand column of either the header
+J69 0170  9    card or continuation cards but may end with the comma
+J69 0180  8    following any parameter. Remarks may appear to the
+J69 0190  4    right of the last parameter on each card provided they
+J69 0200  1    are separated from the operand by at least two blank
+J69 0200 11    spaces.
+J69 0200 12       Illustration of the use of continuation cards are
+J69 0210  8    included throughout the examples illustrating the various
+J69 0220  5    statements.
+J69 0220  6       If a continuation card follows a statement that
+J69 0230  6    does not permit continuation cards, the compiler will
+J69 0240  4    generate a NOP and issue an error message. Additional
+J69 0250  1    restrictions regarding the use of continuation cards
+J69 0250  8    with macro-instructions appear on page 106.
+J69 0260  5    #RESERVATION OF INDEX WORDS AND ELECTRONIC SWITCHES#
+J69 0270  3    The assignment of actual addresses to symbolic index
+J69 0280  2    word and electronic switch names occurs in Phase III
+J69 0280 11    of the Autocoder processor. The initial availability
+J69 0290  6    of index words and electronic switches is determined
+J69 0300  4    by a table which is included in the Compiler Systems
+J69 0310  2    Tape. This table originally indicates that index words
+J69 0320  1    1 through 96 and electronic switches 1 through 30 are
+J69 0320 11    available for assignment to symbolic references; index
+J69 0330  6    words 97 through 99 are not available. The initial
+J69 0340  5    setting of this table may be altered, however, as described
+J69 0350  3    in the 7070/7074 Data Processing System Bulletin "IBM
+J69 0360  2    7070/7074 Compiler System: Operating Procedure", form
+J69 0370  2    J28-6105.
+J69 0370  4       During the first pass of Phase III, references to
+J69 0380  2    the actual addresses of index words and electronic
+J69 0380 10    switches are collected and the availability table is
+J69 0390  8    updated. At the end of this pass, the table indicates
+J69 0400  7    which index words and electronic switches are not available
+J69 0410  4    for assignment to symbolic references.
+J69 0420  1       Both index words and electronic switches may have
+J69 0420  9    been made unavailable before the start of assignment
+J69 0430  6    in one of the following ways:
+J69 0440  1    _1._
+J69 0440  1       The initial setting of the availability table indicated
+J69 0440  9    that the index word or electronic switch was not available
+J69 0450  9    for assignment.
+J69 0460  1    _2._
+J69 0460  1       The one- two-digit number of the index word or electronic
+J69 0460 13    switch was used in the operand of a symbolic machine
+J69 0470 10    instruction to specify indexing or as a parameter which
+J69 0480  7    is always an index word or electronic switch, e.g.,
+J69 0490  3    @
+J69 0490  4    _3._
+J69 0490  5       The one- or two-digit number of the index word or
+J69 0500  5    electronic switch was used in the operand of an EQU
+J69 0510  1    statement, e.g., @
+J69 0510  4       When the index words or electronic switches are
+J69 0520  3    reserved because of actual usage in the statements
+J69 0530  1    described above, the position or order of the statements
+J69 0530 10    within the program is not important; any such reference
+J69 0540  7    will make the index word or electronic switch unavailable
+J69 0550  5    at the end of this pass.
+J69 0550 11       During the assignment pass of Phase III, index words
+J69 0560  9    and electronic switches are reserved as they are encountered
+J69 0570  7    during assignment. Index words and electronic switches
+J69 0580  5    may be reserved in the following ways. The first two
+J69 0590  4    methods apply to both index words and electronic switches;
+J69 0600  1    the third applies only to index words.
+J69 0600  8    _1._
+J69 0600  9       During the assignment pass, each instruction is
+J69 0610  5    examined for reference to the symbolic name of an index
+J69 0620  5    word or electronic switch. When such a reference is
+J69 0630  2    found, an actual address is assigned and the availability
+J69 0630 11    table is changed so that the assigned index word or
+J69 0640  9    switch is no longer available for later assignment.
+J69 0650  4    _2._
+J69 0650  5       If the one- or two-digit address of an index word
+J69 0660  4    or electronic switch is used or is included in the
+J69 0660 14    operand of an XRESERVE or SRESERVE statement (see
+J69 0670  8    page 99), the corresponding index word or electronic
+J69 0680  8    switch is reserved.
+J69 0690  1    _3._
+J69 0690  2       If a statement has been assigned an address in the
+J69 0690 12    index word area
+J69 0700  2    _A._
+J69 0700  3       by means of an actual label or
+J69 0700 10    _B._
+J69 0700 11       by means of an ORIGIN statement which refers to
+J69 0710  6    an actual address the corresponding index word will
+J69 0720  5    be reserved. These entries should normally appear at
+J69 0730  3    the beginning of the program or immediately following
+J69 0730 11    each LITORIGIN statement. Otherwise, symbolic names
+J69 0740  6    may have previously been assigned to these same index
+J69 0750  8    words. (This method does not apply to electronic switches.)
+J69 0760  6       The preceding methods allow efficient use of index
+J69 0770  5    words and electronic switches during a sectionalized
+J69 0780  1    or multi-phase program, particularly when used in conjunction
+J69 0790  1    with the LITORIGIN statement. Extreme caution should
+J69 0800  1    be used, however, to avoid the conflicting usage of
+J69 0800 10    an index word or electronic switch which may result
+J69 0810  5    from the assignment of more than one name or function
+J69 0820  4    to the same address.
+J69 0820  8       If the symbolic name or actual address of an index
+J69 0830  6    word or electronic switch appears or is included in
+J69 0840  2    the operand of an XRELEASE or SRELEASE statement
+J69 0850  2    (see page 101), the specified index word or electronic
+J69 0850 11    switch will again be made available, regardless of
+J69 0860  8    the method by which it was reserved. It will not, however,
+J69 0870  7    be used for symbolic assignment until all other index
+J69 0880  4    words or electronic switches have been assigned for
+J69 0890  1    the first time.
+J69 0890  4       If, at any time during the assignment pass, the
+J69 0900  2    compiler finds that there are no more index words available
+J69 0900 12    for assignment, the warning message "NO MORE INDEX
+J69 0910  7    WORDS AVAILABLE" will be placed in the object program
+J69 0920  8    listing, the table will be altered to show that index
+J69 0930  5    words 1 through 96 are available, and the assignment
+J69 0940  1    will continue as before. If the compiler finds that
+J69 0940 10    there are no more electronic switches available for
+J69 0950  7    assignment, the warning message "NO MORE ELECTRONIC
+J69 0960  4    SWITCHES AVAILABLE" will be placed in the object program
+J69 0970  4    listing, the table will be altered to show that electronic
+J69 0980  1    switches 1 through 30 are available, and assignment
+J69 0980  9    will continue as before. The resultant conflicting
+J69 0990  6    usage of index words or electronic switches may be
+J69 1000  4    avoided by reducing the number of symbolic names used,
+J69 1010  2    e.g., through the proper use of the EQU, XRELEASE,
+J69 1020  1    or SRELEASE statements.
+J69 1020  4       As noted in Appendix C, index words 97 through
+J69 1030  6    99 are never available for assignment to symbolic names
+J69 1040  4    by the compiler; also, index words 93 through 96 may
+J69 1050  3    have been made unavailable for assignment.
+J69 1050  9    #DECLARATIVE STATEMENTS#
+J69 1060  2    Autocoder declarative statements provide the processor
+J69 1070  1    with the necessary information to complete the imperative
+J69 1070  9    operations properly. Declarative statements are never
+J69 1080  6    executed in the object program and should be separated
+J69 1090  5    from the program instruction area, placed preferably
+J69 1100  2    at its beginning or end. Otherwise, special care must
+J69 1100 11    be taken to branch around them so that the program
+J69 1110 10    will not attempt to execute something in a data area
+J69 1120  6    as an instruction. If the compiler does encounter such
+J69 1130  3    statements, a warning message will be issued. 7070/7074
+J69 1140  1    Autocoder includes the following declarative statements:
+J69 1140  7    DA (Define Area), DC (Define Constant), DRDW (Define
+J69 1150  8    Record Definition Word), DSW (Define Switch), DLINE
+J69 1170  1    (Define Line), EQU (Equate), CODE, DTF (Define Tape
+J69 1180  2    File), DIOCS (Define Input/Output Control System),
+J69 1190  1    and DUF (Descriptive Entry for Unit Records). DA,
+J69 1190  9    DC, DTF, and DLINE require more than one entry.
+J69 1210  1       The DA statement is used to name and define the
+J69 1210 11    positions and length of fields within an area. The
+J69 1220  8    DC statement is used to name and enter constants into
+J69 1230  5    the object program. Since the 7070 and 7074 make use
+J69 1240  3    of record definition words (RDWS) to read, write,
+J69 1240 11    move, and otherwise examine blocks of storage, the
+J69 1250  8    DA and DC statements provide the option of generating
+J69 1260  6    RDWS automatically. When so instructed, Autocoder
+J69 1270  5    will generate one or more RDWS and assign them successive
+J69 1280  5    locations immediately preceding the area(s) with which
+J69 1290  3    they are to be associated. An RDW will be of the form
+J69 1300  2    **f, where xxxx is the starting location of the area
+J69 1300 12    and yyyy is its ending location. These addresses are
+J69 1310  8    calculated automatically by the processor.
+J69 1320  4       In some cases, it may be more advantageous to assign
+J69 1330  3    locations to RDWS associated with DA and DC areas
+J69 1340  2    in some other part of storage, i.e., not immediately
+J69 1340 11    preceding the DA or DC areas. The DRDW statement
+J69 1350  9    may be used for this purpose. The DRDW statement may
+J69 1360  9    also be used to generate an RDW defining any area
+J69 1370  7    specified by the programmer.
+J69 1380  1       As many as ten digital switches may be named and
+J69 1380 11    provided by the DSW statement for consideration by
+J69 1390  8    the SETSW and LOGIC macro-instructions. Each switch
+J69 1400  6    occupies one digit position in a word, can be set ON
+J69 1410  8    or OFF, and is considered as logically equivalent to
+J69 1420  5    an electronic switch. It cannot, however, be referred
+J69 1430  3    to by electronic switch commands, e.g., ESN, BSN,
+J69 1440  1    etc. An individual switch or the entire set of switches
+J69 1440 11    in a word may be tested or altered as desired.
+J69 1450 10       Through use of the DLINE statement, a means is
+J69 1460  7    provided for specifying both the editing of fields
+J69 1470  5    to be inserted in a print line area and the layout
+J69 1480  1    of the area itself. The area may include constant information
+J69 1480 11    supplied by the programmer. The area may also be provided
+J69 1490 10    with additional data during the running of the object
+J69 1500  8    program by means of EDMOV or MOVE macro-instructions.
+J69 1510  5       The declarative statement EQU permits the programmer
+J69 1520  5    to equate symbolic names to actual index words, electronic
+J69 1530  4    switches, arm and file numbers, tape channel and unit
+J69 1540  3    numbers, alteration switches, etc., and to equate a
+J69 1540 11    symbol to another symbol or to an actual address.
+J69 1550  9       The DIOCS, DTF, and DUF statements are used when
+J69 1560  8    required by the Input/Output Control System. DIOCS
+J69 1570  4    is used to select the major methods of processing to
+J69 1580  5    be used, and to name the index words used by IOCS.
+J69 1590  3    Each tape file must be described by Tape File Specifications,
+J69 1600  1    produced by DTFS. In addition to information related
+J69 1610  1    to the file and its records, the File Specifications
+J69 1610 10    contain subroutine locations and the location of tape
+J69 1620  7    label information. A DUF entry must be supplied for
+J69 1630  6    every unit record file describing the type of file
+J69 1640  3    and the unit record equipment to be used. The DUF
+J69 1640 13    also supplies the locations of subroutines written
+J69 1650  7    by the user that are unique to the file.
+J69 1660  5       A full description of the DIOCS, DTF, and DUF
+J69 1670  4    statements is contained in the 7070 Data Processing
+J69 1680  1    system Bulletin "IBM 7070 Input/Output Control System",
+J69 1690  1    form J28-6033-1. Brief descriptions of these three
+J69 1690 10    declarative statements and detailed descriptions of
+J69 1700  6    the formats and functions of each of the other 7070/7074
+J69 1710  7    Autocoder declarative statements follow below.
+J69 1720  2    _DIOCS- DEFINE INPUT/OUTPUT CONTROL SYSTEM_
+J69 1730  1       When the Input/Output Control System is to be used
+J69 1730  9    in a program, a DIOCS statement must be used to select
+J69 1740  8    the major methods of processing to be used. This statement
+J69 1750  6    also allows the naming of the index words used by IOCS.
+J69 1760  5    _SOURCE PROGRAM FORMAT_
+J69 1760  8       The basic format of the DIOCS statement is as follows:
+J69 1770  9    @ ANYLABEL is any symbolic label; it may be omitted.
+J69 1780  9    The entry DIOCS must be written exactly as shown.
+J69 1790  7       The first item in the operand, IOCSIXF, is used
+J69 1800  5    to specify the first IOCS index word for programs
+J69 1810  4    using tape files. This item may be a symbolic name
+J69 1820  2    or an actual one-digit or two-digit index word address
+J69 1820 13    in the range 3-94. If the first item in the operand
+J69 1830 10    is omitted, the symbolic name IOCSIXF will be assigned.
+J69 1840  5    When an actual index word or a symbolic address is
+J69 1850  4    specified, Autocoder will equate the name IOCSIXF
+J69 1860  1    to it.
+J69 1860  3       The second item in the operand, IOCSIXG, is used
+J69 1870  3    to specify the second IOCS index word for programs
+J69 1880  1    using tape files. This item may be a symbolic name
+J69 1880 11    or an actual one-digit or two-digit index word address
+J69 1890  7    in the range 3-94. If the second item in the operand
+J69 1900  5    is omitted, the symbolic name IOCSIXG will be assigned.
+J69 1910  4    When an actual index word or a symbolic address is
+J69 1920  2    specified, Autocoder will equate IOCSIXG to it.

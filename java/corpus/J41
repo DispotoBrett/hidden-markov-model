@@ -1,0 +1,239 @@
+J41 0010  1       Wage-price policies of industry are the result of
+J41 0010 10    a complex of forces- no single explanation has been
+J41 0020  6    found which applies to all cases. The purpose of this
+J41 0030  5    paper is to analyze one possible force which has not
+J41 0040  3    been treated in the literature, but which we believe
+J41 0040 12    makes a significant contribution to explaining the
+J41 0050  6    wage-price behavior of a few very important industries.
+J41 0060  4    While there may be several such industries to which
+J41 0070  3    the model of this paper is applicable, the authors
+J41 0070 12    make particular claim of relevance to the explanation
+J41 0080  7    of the course of wages and prices in the steel industry
+J41 0090  7    of the United States since World War II. Indeed, the
+J41 0100  5    apparent stiffening of the industry's attitude in the
+J41 0110  3    recent steel strike has a direct explanation in terms
+J41 0110 12    of the model here presented.
+J41 0120  4       The model of this paper considers an industry which
+J41 0130  2    is not characterized by vigorous price competition,
+J41 0130  9    but which is so basic that its wage-price policies
+J41 0140 10    are held in check by continuous critical public scrutiny.
+J41 0150  4    Where the industry's product price has been kept below
+J41 0160  5    the "profit-maximizing" and "entry-limiting" prices
+J41 0170  2    due to fears of public reaction, the profit seeking
+J41 0170 11    producers have an interest in offering little real
+J41 0180  8    resistance to wage demands. The contribution of this
+J41 0190  5    paper is a demonstration of this proposition, and an
+J41 0200  3    exploration of some of its implications.
+J41 0200  9       In order to focus clearly upon the operation of
+J41 0210  8    this one force, which we may call the effect of "public-limit
+J41 0220  6    pricing" on "key" wage bargains, we deliberately simplify
+J41 0230  4    the model by abstracting from other forces, such as
+J41 0240  3    union power, which may be relevant in an actual situation.
+J41 0240 13    For expository purposes, this is best treated as a
+J41 0250  9    model which spells out the conditions under which an
+J41 0260  7    important industry affected with the public interest
+J41 0270  3    would find it profitable to raise wages even in the
+J41 0270 13    absence of union pressures for higher wages.
+J41 0280  7       Part I below describes this abstract model by
+J41 0290  5    spelling out its assumptions. Part II discusses the
+J41 0300  3    operation of the model and derives some significant
+J41 0310  1    conclusions. Part III discusses the empirical relevance
+J41 0310  8    and policy implications of the conclusions. Part IV
+J41 0320  7    is a brief summary. The Mathematical Appendix presents
+J41 0330  4    the rigorous argument, but is best read after Part
+J41 0340  3    I in order that the assumptions underlying the equations
+J41 0350  1    may be explicit.
+J41 0350  4    #I THE ASSUMPTIONS OF THE MODEL#
+J41 0360  1    _A. THE INDUSTRY_
+J41 0360  3       The industry with which this model is concerned
+J41 0360 11    is a basic industry, producing a substantial share
+J41 0370  7    of gross national product. Price competition is lacking.
+J41 0380  5    For the purposes of setting the product price, the
+J41 0390  3    industry behaves as a single entity. In wage negotiations,
+J41 0400  1    the industry bargains as a unit with a single union.
+J41 0410  1    _B. THE DEMAND FOR THE INDUSTRY'S PRODUCT_
+J41 0410  5       We are concerned with aggregate demand for the industry's
+J41 0420  5    product. The manner in which this is shared among firms
+J41 0430  3    is taken as given. In any given time period, the aggregate
+J41 0440  1    demand for the industry's product is determined by
+J41 0440  9    two things: the price charged by the industry, and
+J41 0450  8    the level of GNP. For the purposes of this discussion,
+J41 0460  6    the problem of relative prices is encompassed in these
+J41 0470  3    two variables, since GNP includes other prices. (We
+J41 0480  2    abstract here from technological progress and assume
+J41 0480  9    that prices of all other products change proportionately.)
+J41 0490  7       The form of the industry demand function is one
+J41 0500  7    which makes quantity demanded vary inversely with the
+J41 0510  4    product price, and vary directly with the level of
+J41 0520  1    GNP.
+J41 0520  2    _C. INDUSTRY PRODUCT PRICE POLICY_
+J41 0520  7       The industry of this model is so important that
+J41 0530  7    its wage and price policies are affected with a public
+J41 0540  4    interest. Because of its importance, and because the
+J41 0550  1    lack of price competition is well recognized, the industry
+J41 0550 10    is under considerable public pressure not to raise
+J41 0560  6    its price any more than could be justified by cost
+J41 0570  5    increases. The threat of effective anti-trust action,
+J41 0580  1    provoked by "gouging the public" through price increases
+J41 0580  9    not justified by cost increases, and fears of endangering
+J41 0590  9    relations with customers, Congress, the general public
+J41 0600  6    and the press, all operate to keep price increases
+J41 0610  5    in some relation to cost increases. For the industry
+J41 0620  2    of this model, the effect of such public pressures
+J41 0620 11    in the past has been to hold the price well below the
+J41 0630 11    short-run profit-maximizing price (given the wage rate
+J41 0640  6    and the level of GNP), and even below the entry-limited
+J41 0650  5    price (but not below average cost).
+J41 0650 11       For such an industry, it is only "safe" to raise
+J41 0660 10    its price if such an increase is manifestly "justified"
+J41 0670  5    by rising costs (due to rising wages, etc.). Thus,
+J41 0680  4    if public pressure sets the effective limit to the
+J41 0690  2    price that the industry may charge, this pressure is
+J41 0690 11    itself a function of the wage rate. In this model,
+J41 0700  8    we abstract from all non-wage sources of cost changes,
+J41 0710  5    so that the "public-limit price" only rises as the
+J41 0720  4    wage rate rises. In such circumstances, it may well
+J41 0720 13    be to the advantage of the industry to allow an increase
+J41 0730 11    in the basic wage rate.
+J41 0740  2       Since marginal costs rise when the wage rate rises,
+J41 0740 11    the profit-maximizing price also rises when the public-limit
+J41 0750 10    price is elevated, and is likely to remain well above
+J41 0760  8    the latter. The entry-limiting price will also be raised
+J41 0770  6    for potential domestic competition, but unless general
+J41 0780  3    inflation permits profit margins to increase proportionately
+J41 0790  1    throughout the economy, we might expect the public-limit
+J41 0790 10    price to approach the entry-limit price. The foreign-entry-limit
+J41 0800 11    price would be approached more rapidly, since domestic
+J41 0810  7    wage-rates do not enter foreign costs directly. Where
+J41 0820  4    this approach becomes critical, the industry can be
+J41 0830  3    expected to put much emphasis on this as evidence of
+J41 0830 13    its sincerity in "resisting" the wage pressures of
+J41 0840  8    a powerful union, requesting tariff relief after it
+J41 0850  5    has "reluctantly" acceded to the union pressure.
+J41 0860  2       Whether or not it is in the industry's interest
+J41 0870  1    to allow the basic wage rate to rise obviously depends
+J41 0870 11    upon the extent to which the public-limit price rises
+J41 0880  8    in response to a basic wage increase, and the relation
+J41 0890  5    of this response to the increase in costs accompanying
+J41 0900  1    the wage increase. The extent to which the public-limit
+J41 0900 11    price is raised by a given increase in the basic wage
+J41 0910 11    rate is itself a function of three things: the passage
+J41 0920  7    of time, the level of GNP, and the size of the wage
+J41 0930  7    increase.
+J41 0930  8       We are abstracting from the fact of strikes here,
+J41 0940  6    but it should be obvious that the extent to which the
+J41 0950  3    public-limit price is raised by a given increase in
+J41 0950 13    the basic wage rate is also a function of the show
+J41 0960 10    of resistance put up by the industry. The industry
+J41 0970  4    may deliberately take a strike, not to put pressure
+J41 0980  1    on the union, but in order to "educate" the government
+J41 0980 11    and the customers of the industry. As a strike continues,
+J41 0990 10    these parties increase their pressure on the industry
+J41 1000  6    to reach an agreement. They become increasingly willing
+J41 1010  3    to accept the price increase that the industry claims
+J41 1020  2    the wage bargain would entail.
+J41 1020  7       Public indignation and resistance to wage-price
+J41 1030  5    increases is obviously much less when the increases
+J41 1040  1    are on the order of 3% per annum than when the increases
+J41 1040 13    are on the order of 3% per month. The simple passage
+J41 1050 11    of an additional eleven months' time makes the second
+J41 1060  7    3% boost more acceptable. Thus, the public-limit price
+J41 1070  5    is raised further by a given wage increase the longer
+J41 1080  3    it has been since the previous price increase. Notice,
+J41 1080 12    however, that the passage of time does not permit the
+J41 1090 10    raising of prices per se, without an accompanying wage
+J41 1100  7    increase. Similarly, higher levels of GNP do not,
+J41 1110  6    in themselves, provide grounds for raising prices,
+J41 1120  2    but they do relax some of the pressure on the industry
+J41 1120 13    so that it can raise prices higher for a given wage
+J41 1130 10    increase. This is not extended to anticipated levels
+J41 1140  5    of GNP, however- only the current level of GNP affects
+J41 1150  5    the public pressure against wage-price increases. Finally,
+J41 1160  2    since the public requires some restraint on the part
+J41 1170  1    of the companies, larger wage increases call for less
+J41 1170 10    than proportionately larger price increases (e.g.,
+J41 1180  5    if a wage increase of 5% allows a price increase of
+J41 1190  5    7%, a wage increase of 10% allows a price increase
+J41 1200  2    of something less than 14%).
+J41 1200  7    _D. INDUSTRY COSTS_
+J41 1200 10       We assume that average total unit cost in the relevant
+J41 1210 10    region of operation is constant with respect to quantity
+J41 1220  7    produced (the average cost curve is horizontal, and
+J41 1230  4    therefore is identical with the marginal cost curve),
+J41 1240  1    and is the same for every firm (and therefore for the
+J41 1240 12    industry). The level of this average cost is determined
+J41 1250  9    by factor prices, technology, and so forth. As we have
+J41 1260  7    noted, however, we are abstracting from changes in
+J41 1270  4    all determinants of this level except for changes in
+J41 1280  1    the wage rate. The level of average cost (equal to
+J41 1280 11    marginal cost) is thus strictly a function of the wage
+J41 1290  8    rate.
+J41 1300  1    _E. UNION POLICIES AND COLLECTIVE BARGAINING ISSUES_
+J41 1300  3       The single union which faces the industry does not
+J41 1310  3    restrict its membership, and there is an adequate supply
+J41 1320  1    of labor available to the firms of the industry at
+J41 1320 11    the going wage rate. The union does not regard unemployment
+J41 1330  7    of its own members as a matter of concern when setting
+J41 1340  5    its own wage policy- its concern with employment makes
+J41 1350  2    itself felt in pressure upon the government to maintain
+J41 1360  1    full employment.
+J41 1360  3       The union vigorously demands wage increases from
+J41 1370  1    productivity increases, and wage increases to offset
+J41 1370  8    cost-of-living increases, but we abstract from these
+J41 1380  7    forces here. For our present purposes we assume that
+J41 1390  5    the sole subject of bargaining is the basic wage rate
+J41 1400  2    (not including productivity improvement factors or
+J41 1400  8    cost-of-living adjustments), and it is this basic wage
+J41 1410  8    rate which determines the level of costs. Productivity
+J41 1420  5    is something of an amorphous concept and the amount
+J41 1430  3    of productivity increase in a given time period is
+J41 1430 12    not even well known to the industry, much less to the
+J41 1440 10    union or to the public. Disagreement on the amount
+J41 1450  5    of productivity increase exacerbates the problem of
+J41 1460  3    agreeing how an increase in profit margins related
+J41 1460 11    to a productivity increase should be shared. The existence
+J41 1470  7    of conflict and of vigorous union demand for an increase
+J41 1480  7    in money wages does not contradict the assumption that
+J41 1490  4    the union is willing to settle for cost-of-living and
+J41 1500  2    productivity-share increases as distinct from a cost-raising
+J41 1500 11    increase in the basic wage rate.
+J41 1510  6       We assume further that the union recognizes the
+J41 1520  3    possibility that price-level increases may offset wage-rate
+J41 1530  1    increases, and it does not entirely disregard the effect
+J41 1530 10    of price increases arising from its own wage increases
+J41 1540  8    upon the "real" wage rate. For internal political reasons,
+J41 1550  7    the union asks for (and accepts) increases in the basic
+J41 1560  5    wage rate, and would vigorously oppose a reduction
+J41 1570  3    in this rate, but the adjustment of the basic wage
+J41 1570 13    rate upwards is essentially up to the discretion of
+J41 1580  9    the companies of the industry.
+J41 1590  1       Changes in the basic wage rate are cost-raising,
+J41 1590 10    and they constitute an argument for raising prices.
+J41 1600  8    However, it is not known to either the union or the
+J41 1610  7    public precisely how much of a cost increase is caused
+J41 1620  3    by a given change in the basic wage rate, although
+J41 1620 13    the companies are presumed to have reliable estimates
+J41 1630  8    of this magnitude.
+J41 1640  1       In this model, then, the industry is presumed to
+J41 1640 10    realize that they could successfully resist a change
+J41 1650  7    in the basic wage rate, but since such a change is
+J41 1660  5    the only effective means to raising prices they may,
+J41 1670  1    in circumstances to be spelled out in Part II below,
+J41 1670 11    find it to their advantage to allow the wage rise.
+J41 1680  8    Thus, for non-negative changes in the basic wage rate,
+J41 1690  6    the industry becomes the active wage-setter, since
+J41 1700  2    any increase in the basic wage rate can occur only
+J41 1700 12    by reason of industry acquiescence. The presumption
+J41 1710  6    in the literature would appear to be that the basic
+J41 1720  6    wage rate would be unchanged in this case, on the grounds
+J41 1730  3    that it is "clearly" not in the interest of the industry
+J41 1740  1    to raise wages gratuitously. From this presumption
+J41 1740  8    it is an easy step to the conclusion that any observed
+J41 1750  8    increases in the basic wage rate must be due to union
+J41 1760  6    behavior different and more aggressive than assumed
+J41 1770  1    in our model. It is this conclusion that we challenge;
+J41 1770 11    we do so by disproving the presumption on which it
+J41 1780  9    is based.
+J41 1780 11    #II THE OPERATION OF THE MODEL#
+J41 1790  4    It is convenient to assume that the union-industry
+J41 1800  1    contract is of one year's duration.

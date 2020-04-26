@@ -1,0 +1,228 @@
+F21 0010  1       A tsunami may be started by a sea bottom slide,
+F21 0010 11    an earthquake or a volcanic eruption. The most infamous
+F21 0020  8    of all was launched by the explosion of the island
+F21 0030  5    of Krakatoa in 1883; it raced across the Pacific at
+F21 0040  2    300 miles an hour, devastated the coasts of Java and
+F21 0040 12    Sumatra with waves 100 to 130 feet high, and pounded
+F21 0050 10    the shore as far away as San Francisco.
+F21 0060  4       The ancient Greeks recorded several catastrophic
+F21 0070  1    inundations by huge waves. Whether or not Plato's tale
+F21 0070 10    of the lost continent of Atlantis is true, skeptics
+F21 0080  9    concede that the myth may have some foundation in a
+F21 0090  7    great tsunami of ancient times. Indeed, a tremendously
+F21 0100  3    destructive tsunami that arose in the Arabian Sea in
+F21 0110  2    1945 has even revived the interest of geologists and
+F21 0110 11    archaeologists in the Biblical story of the Flood.
+F21 0120  8       One of the most damaging tsunami on record followed
+F21 0130  5    the famous Lisbon earthquake of November 1, 1755; its
+F21 0140  4    waves persisted for a week and were felt as far away
+F21 0150  1    as the English coast. Tsunami are rare, however, in
+F21 0150 10    the Atlantic Ocean; they are far more common in the
+F21 0160  9    Pacific. Japan has had 15 destructive ones (eight of
+F21 0170  5    them disastrous) since 1596. The Hawaiian Islands are
+F21 0180  3    struck severely an average of once every 25 years.
+F21 0190  1       In 1707 an earthquake in Japan generated waves so
+F21 0190 10    huge that they piled into the Inland Sea; one wave
+F21 0200  7    swamped more than 1,000 ships and boats in Osaka Bay.
+F21 0210  5    A tsunami in the Hawaiian Islands in 1869 washed away
+F21 0220  3    an entire town (Ponoluu), leaving only two forlorn
+F21 0220 11    trees standing where the community had been. In 1896
+F21 0230  9    a Japanese tsunami killed 27,000 people and swept away
+F21 0240  6    10,000 homes.
+F21 0240  8       The dimensions of these waves dwarf all our usual
+F21 0250  8    standards of measurement. An ordinary sea wave is rarely
+F21 0260  5    more than a few hundred feet long from crest to crest-
+F21 0270  1    no longer than 320 feet in the Atlantic or 1,000 feet
+F21 0270 12    in the Pacific. But a tsunami often extends more than
+F21 0280  9    100 miles and sometimes as much as 600 miles from crest
+F21 0290  8    to crest. While a wind wave never travels at more than
+F21 0300  5    60 miles per hour, the velocity of a tsunami in the
+F21 0310  2    open sea must be reckoned in hundreds of miles per
+F21 0310 12    hour. The greater the depth of the water, the greater
+F21 0320  8    is the speed of the wave; Lagrange's law says that
+F21 0330  5    its velocity is equal to the square root of the product
+F21 0340  3    of the depth times the acceleration due to gravity.
+F21 0340 12    In the deep waters of the Pacific these waves reach
+F21 0350 10    a speed of 500 miles per hour.
+F21 0360  3       Tsunami are so shallow in comparison with their
+F21 0360 11    length that in the open ocean they are hardly detectable.
+F21 0370 10    Their amplitude sometimes is as little as two feet
+F21 0380  8    from trough to crest. Usually it is only when they
+F21 0390  5    approach shallow water on the shore that they build
+F21 0400  1    up to their terrifying heights. On the fateful day
+F21 0400 10    in 1896 when the great waves approached Japan, fishermen
+F21 0410  6    at sea noticed no unusual swells. Not until they sailed
+F21 0420  5    home at the end of the day, through a sea strewn with
+F21 0430  3    bodies and the wreckage of houses, were they aware
+F21 0430 12    of what had happened. The seemingly quiet ocean had
+F21 0440  8    crashed a wall of water from 10 to 100 feet high upon
+F21 0450  8    beaches crowded with bathers, drowning thousands of
+F21 0460  3    them and flattening villages along the shore.
+F21 0460 10       The giant waves are more dangerous on flat shores
+F21 0470  9    than on steep ones. They usually range from 20 to 60
+F21 0480  7    feet in height, but when they pour into a V-shaped
+F21 0490  4    inlet or harbor they may rise to mountainous proportions.
+F21 0500  1       Generally the first salvo of a tsunami is a rather
+F21 0500 11    sharp swell, not different enough from an ordinary
+F21 0510  7    wave to alarm casual observers. This is followed by
+F21 0520  5    a tremendous suck of water away from the shore as the
+F21 0530  3    first great trough arrives. Reefs are left high and
+F21 0530 12    dry, and the beaches are covered with stranded fish.
+F21 0540  8    At Hilo large numbers of people ran out to inspect
+F21 0550  7    the amazing spectacle of the denuded beach. Many of
+F21 0560  3    them paid for their curiosity with their lives, for
+F21 0560 12    some minutes later the first giant wave roared over
+F21 0570  9    the shore. After an earthquake in Japan in 1793 people
+F21 0580  6    on the coast at Tugaru were so terrified by the extraordinary
+F21 0590  4    ebbing of the sea that they scurried to higher ground.
+F21 0600  2    When a second quake came, they dashed back to the beach,
+F21 0610  1    fearing that they might be buried under landslides.
+F21 0610  9    Just as they reached the shore, the first huge wave
+F21 0620  7    crashed upon them.
+F21 0620 10       A tsunami is not a single wave but a series. The
+F21 0630 10    waves are separated by intervals of 15 minutes to an
+F21 0640  6    hour or more (because of their great length), and this
+F21 0650  3    has often lulled people into thinking after the first
+F21 0650 12    great wave has crashed that it is all over. The waves
+F21 0660 11    may keep coming for many hours. Usually the third to
+F21 0670  6    the eighth waves in the series are the biggest.
+F21 0680  2       Among the observers of the 1946 tsunami at Hilo
+F21 0680 11    was Francis P. Shepard of the Scripps Institution of
+F21 0690  9    Oceanography, one of the world's foremost marine geologists.
+F21 0700  8    He was able to make a detailed inspection of the waves.
+F21 0710  7    Their onrush and retreat, he reported, was accompanied
+F21 0720  3    by a great hissing, roaring and rattling. The third
+F21 0730  2    and fourth waves seemed to be the highest. On some
+F21 0730 12    of the islands' beaches the waves came in gently; they
+F21 0740  8    were steepest on the shores facing the direction of
+F21 0750  6    the seaquake from which the waves had come. In Hilo
+F21 0760  3    Bay they were from 21 to 26 feet high. The highest
+F21 0760 14    waves, 55 feet, occurred at Pololu Valley.
+F21 0770  7       Scientists and fishermen have occasionally seen
+F21 0780  4    strange by-products of the phenomenon. During a 1933
+F21 0790  3    tsunami in Japan the sea glowed brilliantly at night.
+F21 0790 12    The luminosity of the water is now believed to have
+F21 0800 10    been caused by the stimulation of vast numbers of the
+F21 0810  7    luminescent organism Noctiluca miliaris by the turbulence
+F21 0820  4    of the sea. Japanese fishermen have sometimes observed
+F21 0830  2    that sardines hauled up in their nets during a tsunami
+F21 0830 12    have enormously swollen stomachs; the fish have swallowed
+F21 0840  8    vast numbers of bottom-living diatoms, raised to the
+F21 0850  8    surface by the disturbance. The waves of a 1923 tsunami
+F21 0860  6    in Sagami Bay brought to the surface and battered to
+F21 0870  3    death huge numbers of fishes that normally live at
+F21 0870 12    a depth of 3,000 feet. Gratified fishermen hauled them
+F21 0880  8    in by the thousands.
+F21 0890  1       The tsunami-warning system developed since the 1946
+F21 0890  9    disaster in Hawaii relies mainly on a simple and ingenious
+F21 0900  9    instrument devised by Commander C. K. Green of the
+F21 0910  8    Coast and Geodetic Survey staff. It consists of a series
+F21 0920  6    of pipes and a pressure-measuring chamber which record
+F21 0930  3    the rise and fall of the water surface. Ordinary water
+F21 0940  1    tides are disregarded. But when waves with a period
+F21 0940 10    of between 10 and 40 minutes begin to roll over the
+F21 0950  8    ocean, they set in motion a corresponding oscillation
+F21 0960  2    in a column of mercury which closes an electric circuit.
+F21 0970  1    This in turn sets off an alarm, notifying the observers
+F21 0970 11    at the station that a tsunami is in progress. Such
+F21 0980  9    equipment has been installed at Hilo, Midway, Attu
+F21 0990  5    and Dutch Harbor. The moment the alarm goes off, information
+F21 1000  4    is immediately forwarded to Honolulu, which is the
+F21 1010  3    center of the warning system.
+F21 1010  8       This center also receives prompt reports on earthquakes
+F21 1020  5    from four Coast Survey stations in the Pacific which
+F21 1030  3    are equipped with seismographs. Its staff makes a preliminary
+F21 1040  1    determination of the epicenter of the quake and alerts
+F21 1040 10    tide stations near the epicenter for a tsunami. By
+F21 1050  9    means of charts showing wave-travel times and depths
+F21 1060  6    in the ocean at various locations, it is possible to
+F21 1070  3    estimate the rate of approach and probable time of
+F21 1070 12    arrival at Hawaii of a tsunami getting under way at
+F21 1080 10    any spot in the Pacific. The civil and military authorities
+F21 1090  6    are then advised of the danger, and they issue warnings
+F21 1100  5    and take all necessary protective steps. All of these
+F21 1110  3    activities are geared to a top-priority communication
+F21 1110 11    system, and practice tests have been held to assure
+F21 1120  9    that everything will work smoothly.
+F21 1130  2       Since the 1946 disaster there have been 15 tsunami
+F21 1140  1    in the Pacific, but only one was of any consequence.
+F21 1140 11    On November 4, 1952, an earthquake occurred under the
+F21 1150  7    sea off the Kamchatka Peninsula. At 17:07 that afternoon
+F21 1160  5    (Greenwich time) the shock was recorded by the seismograph
+F21 1170  4    alarm in Honolulu. The warning system immediately went
+F21 1180  2    into action. Within about an hour with the help of
+F21 1180 12    reports from seismic stations in Alaska, Arizona and
+F21 1190  8    California, the quake's epicenter was placed at 51
+F21 1200  6    degrees North latitude and 158 degrees East longitude.
+F21 1210  3    While accounts of the progress of the tsunami came
+F21 1220  1    in from various points in the Pacific (Midway reported
+F21 1220 10    it was covered with nine feet of water), the Hawaiian
+F21 1230  8    station made its calculations and notified the military
+F21 1240  5    services and the police that the first big wave would
+F21 1250  3    arrive at Honolulu at 23:30 Greenwich time.
+F21 1250 10       It turned out that the waves were not so high as
+F21 1260 11    in 1946. They hurled a cement barge against a freighter
+F21 1270  6    in Honolulu Harbor, knocked down telephone lines, marooned
+F21 1280  3    automobiles, flooded lawns, killed six cows. But not
+F21 1290  3    a single human life was lost, and property damage in
+F21 1290 13    the Hawaiian Islands did not exceed $800,000. There
+F21 1300  7    is little doubt that the warning system saved lives
+F21 1310  5    and reduced the damage.
+F21 1310  9       But it is plain that a warning system, however efficient,
+F21 1320  8    is not enough. In the vulnerable areas of the Pacific
+F21 1330  6    there should be restrictions against building homes
+F21 1340  3    on exposed coasts, or at least a requirement that they
+F21 1350  1    be either raised off the ground or anchored strongly
+F21 1350 10    against waves.
+F21 1360  1    ##
+F21 1360  2    The key to the world of geology is change; nothing
+F21 1360 12    remains the same. Life has evolved from simple combinations
+F21 1370  8    of molecules in the sea to complex combinations in
+F21 1380  6    man. The land, too, is changing, and earthquakes are
+F21 1390  3    daily reminders of this. Earthquakes result when movements
+F21 1400  1    in the earth twist rocks until they break. Sometimes
+F21 1400 10    this is accompanied by visible shifts of the ground
+F21 1410  7    surface; often the shifts cannot be seen, but they
+F21 1420  6    are there; and everywhere can be found scars of earlier
+F21 1430  3    breaks once deeply buried. Today's earthquakes are
+F21 1430 10    most numerous in belts where the earth's restlessness
+F21 1440  8    is presently concentrated, but scars of the past show
+F21 1450  7    that there is no part of the earth that has not had
+F21 1460  5    them.
+F21 1460  6       The effects of earthquakes on civilization have
+F21 1470  2    been widely publicized, even overemphasized. The role
+F21 1470  9    of an earthquake in starting the destruction of whole
+F21 1480  9    cities is tremendously frightening, but fire may actually
+F21 1490  6    be the principal agent in a particular disaster. Superstition
+F21 1500  3    has often blended with fact to color reports.
+F21 1510  1       We have learned from earthquakes much of what we
+F21 1510 10    now know about the earth's interior, for they send
+F21 1520  8    waves through the earth which emerge with information
+F21 1530  5    about the materials through which they have traveled.
+F21 1540  3    These waves have shown that 1,800 miles below the surface
+F21 1550  1    a liquid core begins, and that it, in turn, has a solid
+F21 1550 13    inner core.
+F21 1560  1       Earthquakes originate as far as 400 miles below
+F21 1560  9    the surface, but they do not occur at greater depths.
+F21 1570  9    Two unsolved mysteries are based on these facts. (1)
+F21 1580  6    As far down as 400 miles below the surface the material
+F21 1590  3    should be hot enough to be plastic and adjust itself
+F21 1590 13    to twisting forces by sluggish flow rather than by
+F21 1600  9    breaking, as rigid surface rocks do. (2) If earthquakes
+F21 1610  6    do occur at such depths, why not deeper?
+F21 1620  1       Knowledge gained from studying earthquake waves
+F21 1620  7    has been applied in various fields. In the search for
+F21 1630  9    oil and gas, we make similar waves under controlled
+F21 1640  5    conditions with dynamite and learn from them where
+F21 1650  3    there are buried rock structures favorable to the accumulation
+F21 1660  1    of these resources. We have also developed techniques
+F21 1660  9    for recognizing and locating underground nuclear tests
+F21 1670  6    through the waves in the ground which they generate.
+F21 1680  5       The following discussion of this subject has been
+F21 1690  3    adapted from the book Causes of Catastrophe by L. Don
+F21 1700  3    Leet.
+F21 1700  4    #THE RESTLESS EARTH AND ITS INTERIOR#
+F21 1700 10    At twelve minutes after five on the morning of Wednesday,
+F21 1710  9    April 18, 1906, San Francisco was shaken by a severe
+F21 1720  8    earthquake. A sharp tremor was followed by a jerky
+F21 1730  6    roll.

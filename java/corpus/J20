@@ -1,0 +1,220 @@
+J20 0010  1       Consider a simple, closed, plane curve C which
+J20 0010  9    is a real-analytic image of the unit circle, and which
+J20 0020  8    is given by **f. These are real analytic periodic functions
+J20 0030  6    with period T. In the following paper it is shown
+J20 0040  6    that in a certain definite sense, exactly an odd number
+J20 0050  4    of squares can be inscribed in every such curve which
+J20 0050 14    does not contain an infinite number of inscribed squares.
+J20 0060  9    This theorem is similar to the theorem of Kakutani
+J20 0070  8    that there exists a circumscribing cube around any
+J20 0080  4    closed, bounded convex set in **f. The latter theorem
+J20 0090  1    has been generalized by Yamabe and Yujobo, and Cairns
+J20 0090 10    to show that in **f there are families of such cubes.
+J20 0100 10    Here, for the case of squares inscribed in plane curves,
+J20 0110  6    we remove the restriction to convexity and give certain
+J20 0120  4    other results.
+J20 0120  6       A square inscribed in a curve C means a square
+J20 0130  5    with its four corner points on the curve, though it
+J20 0140  3    may not lie entirely in the interior of C. Indeed,
+J20 0150  1    the spiral **f, with the two endpoints connected by
+J20 0150 10    a straight line possesses only one inscribed square.
+J20 0160  5    The square has one corner point on the straight line
+J20 0170  4    segment, and does not lie entirely in the interior.
+J20 0180  1       On C, from the point P at **f to the point Q
+J20 0190  1    at **f, we construct the chord, and upon the chord
+J20 0190 11    as a side erect a square in such a way that as s approaches
+J20 0200 12    zero the square is inside C. As s increases we consider
+J20 0210  9    the two free corner points of the square, **f and **f,
+J20 0220  9    adjacent to P and Q respectively. As s approaches
+J20 0230  5    T the square will be outside C and therefore both
+J20 0240  7    **f and **f must cross C an odd number of times as
+J20 0250  7    s varies from zero to T. The points may also touch
+J20 0260  6    C without crossing.
+J20 0260  9       Suppose **f crosses C when **f. We now have certain
+J20 0270 10    squares with three corners on C. For any such square
+J20 0280  8    the middle corner of these will be called the vertex
+J20 0290  6    of the square and the corner not on the curve will
+J20 0300  3    be called the diagonal point of the square. Each point
+J20 0300 13    on C, as a vertex, may possess a finite number of
+J20 0310 11    corresponding diagonal points by the above construction.
+J20 0320  6       To each paired vertex and diagonal point there corresponds
+J20 0330  6    a unique forward corner point, i.e., the corner on
+J20 0340  5    C reached first by proceeding along C from the vertex
+J20 0350  4    in the direction of increasing t. If the vertex is
+J20 0360  3    at **f, and if the interior of C is on the left as
+J20 0370  1    one moves in the direction of increasing t, then every
+J20 0370 11    such corner can be found from the curve obtained by
+J20 0380  9    rotating C clockwise through 90` about the vertex.
+J20 0390  6    The set of intersections of **f, the rotated curve,
+J20 0400  4    with the original curve C consists of just the set
+J20 0410  3    of forward corner points on C corresponding to the
+J20 0410 12    vertex at **f, plus the vertex itself. We note that
+J20 0420 10    two such curves C and **f, cannot coincide at more
+J20 0430  7    than a finite number of points; otherwise, being analytic,
+J20 0440  4    they would coincide at all points, which is impossible
+J20 0450  3    since they do not coincide near **f.
+J20 0450 10       With each vertex we associate certain numerical
+J20 0460  6    values, namely the set of positive differences in the
+J20 0470  4    parameter t between the vertex and its corresponding
+J20 0480  1    forward corner points. For the vertex at **f, these
+J20 0480 10    values will be denoted by **f. The function f(t) defined
+J20 0490 10    in this way is multi-valued.
+J20 0500  4       We consider now the graph of the function f(t)
+J20 0510  2    on **f. We will refer to the plane of C and **f as
+J20 0520  1    the C-plane and to the plane of the graph as the f-plane.
+J20 0530  1    The graph, as a set, may have a finite number of components.
+J20 0530 13    We will denote the values of f(t) on different components
+J20 0540 10    by **f. Each point with abscissa t on the graph represents
+J20 0550 10    an intersection between C and **f. There are two types
+J20 0560  9    of such intersections, depending essentially on whether
+J20 0570  5    the curves cross at the point of intersection. An ordinary
+J20 0580  5    point will be any point of intersection A such that
+J20 0590  4    in every neighborhood of A in the C-plane, **f meets
+J20 0600  3    both the interior and the exterior of C. Any other
+J20 0610  3    point of intersection between C and **f will be called
+J20 0620  1    a tangent point. This terminology will also be applied
+J20 0620 10    to the corresponding points in the f-plane. We can
+J20 0630  9    now prove several lemmas.
+J20 0640  2    #LEMMA 1.#
+J20 0640  4    In some neighborhood in the f-plane of any ordinary
+J20 0650  3    point of the graph, the function f is a single-valued,
+J20 0660  1    continuous function.
+J20 0660  3    _PROOF._
+J20 0660  4       We first show that the function is single-valued
+J20 0680  3    in some neighborhood. With the vertex at **f in the
+J20 0680 13    C-plane we assume that **f is the parametric location
+J20 0690  9    on C of an ordinary intersection Q between C and
+J20 0700  9    **f. In the f-plane the coordinates of the corresponding
+J20 0710  9    point are **f. We know that in the C-plane both C
+J20 0720 11    and **f are analytic. In the C-plane we construct
+J20 0730  7    a set of rectangular Cartesian coordinates u, v with
+J20 0740  5    the origin at Q and such that both C and **f have
+J20 0750  8    finite slope at Q. Near Q, both curves can be represented
+J20 0760  7    by analytic functions of u. In a neighborhood of Q
+J20 0770  6    the difference between these functions is also a single-valued,
+J20 0780  7    analytic function of u. Furthermore, one can find
+J20 0790  4    a neighborhood of Q in which the difference function
+J20 0800  2    is monotone, for since it is analytic it can have only
+J20 0810  1    a finite number of extrema in any interval. Now, to
+J20 0810 11    find **f, one needs the intersection of C and **f
+J20 0820  7    near Q. But **f is just the curve **f translated without
+J20 0830  6    rotation through a small arc, for **f is always obtained
+J20 0840  5    by rotating C through exactly 90`. The arc is itself
+J20 0850  4    a segment of an analytic curve. Thus if e is sufficiently
+J20 0870  1    small, there can be only one intersection of C and
+J20 0880  1    **f near Q, for if there were more than one intersection
+J20 0880 12    for every e then the difference between C and **f
+J20 0890  9    near Q would not be a monotone function. Therefore,
+J20 0900  8    **f is single-valued near Q. It is also seen that
+J20 0910  8    **f, since the change from **f to **f is accomplished
+J20 0920  5    by a continuous translation. Thus **f is also continuous
+J20 0930  2    at **f, and in a neighborhood of **f which does not
+J20 0930 13    contain a tangent point.
+J20 0940  4       We turn now to the set of tangent points on the
+J20 0950  2    graph. This set must consist of isolated points and
+J20 0950 11    closed intervals. The fact that there can not be any
+J20 0960  9    limit points of the set except in closed intervals
+J20 0970  4    follows from the argument used in Lemma 1, namely,
+J20 0980  1    that near any tangent point in the C-plane the curves
+J20 0980 12    C and **f are analytic, and therefore the difference
+J20 0990  9    between them must be a monotone function in some neighborhood
+J20 1000  9    on either side of the tangent point. This prevents
+J20 1010  5    the occurrence of an infinite sequence of isolated
+J20 1020  3    tangent points.
+J20 1020  5    #LEMMA 2.#
+J20 1020  7    In some neighborhood of an isolated tangent point in
+J20 1030  5    the f-plane, say **f, the function **f is either double-valued
+J20 1040  4    or has no values defined, except at the tangent point
+J20 1050  2    itself, where it is single-valued.
+J20 1050  8    _PROOF._
+J20 1050  9       A tangent point Q in the C-plane occurs when C
+J20 1060  9    and **f are tangent to one another. A continuous change
+J20 1070  8    in t through an amount e results in a translation
+J20 1080  6    along an analytic arc of the curve **f. There are three
+J20 1090  5    possibilities: (a) **f remains tangent to C as it
+J20 1100  4    is translated; (b) **f moves away from C and does
+J20 1110  2    not intersect it at all for **f; (c) **f cuts across
+J20 1110 13    C and there are two ordinary intersections for every
+J20 1120  9    t in **f. The first possibility results in a closed
+J20 1130  7    interval of tangent points in the f-plane, the end
+J20 1140  7    points of which fall into category (b) or (c). In the
+J20 1150  5    second category the function **f has no values defined
+J20 1160  1    in a neighborhood **f. In the third category the function
+J20 1160 11    is double-valued in this interval. The same remarks
+J20 1170  7    apply to an interval on the other side of **f. Again,
+J20 1180  6    the analyticity of the two curves guarantee that such
+J20 1190  3    intervals exist. In the neighborhood of an end point
+J20 1190 12    of an interval of tangent points in the f-plane the
+J20 1200 10    function is two-valued or no-valued on one side, and
+J20 1210  8    is a single-valued function consisting entirely of
+J20 1220  3    tangent points on the other side.
+J20 1220  9       With the above results we can make the following
+J20 1230  8    remarks about the graph of f. First, for any value
+J20 1240  5    of t for which all values of f(t) are ordinary points
+J20 1250  4    the number of values of f(t) must be odd. For it is
+J20 1260  5    clear that the total number of ordinary intersections
+J20 1270  1    of C and **f must be even (otherwise, starting in
+J20 1270 11    the interior of C, **f could not finally return to
+J20 1280  9    the interior), and the center of rotation at t is
+J20 1290  7    the argument of the function, not a value. Therefore,
+J20 1300  3    for any value of t the number of values of f(t) is
+J20 1310  3    equal to the (finite) number of tangent points corresponding
+J20 1320  1    to the argument t plus an odd number.
+J20 1320  9    #DEFINITION.#
+J20 1320 10    The number of ordinary values of the function f(t)
+J20 1330  9    at t will be called its multiplicity at t.
+J20 1340  8    #LEMMA 3.#
+J20 1340 10    The graph of f has at least one component whose support
+J20 1350 10    is the entire interval [0,T].
+J20 1360  2    _PROOF_
+J20 1360  3       We suppose not. Then every component of the graph
+J20 1370  4    of f must be defined over a bounded sub-interval.
+J20 1380  1    Suppose **f is defined in the sub-interval **f. Now
+J20 1380 11    **f and **f must both be tangent points on the nth
+J20 1390  9    component in the f-plane; otherwise by Lemma 1 the
+J20 1400  6    component would extend beyond these points. Further,
+J20 1410  4    we see by Lemma 2 that the multiplicity of f can only
+J20 1420  4    change at a tangent point, and at such a point can
+J20 1430  1    only change by an even integer. Thus the multiplicity
+J20 1430 10    of **f for a given t must be an even number. This
+J20 1440  8    is true of all components which have such a bounded
+J20 1450  6    support. But this is a contradiction, for we know that
+J20 1460  3    the multiplicity of f(t) is odd for every t.
+J20 1470  1       We have shown that the graph of f contains at least
+J20 1470 12    one component whose inverse is the entire interval
+J20 1480  8    [0,T], and whose multiplicity is odd. There must be
+J20 1490  8    an odd number of such components, which will be called
+J20 1500  5    complete components. The remaining (incomplete) components
+J20 1510  2    all have an even number of ordinary points at any argument,
+J20 1520  1    and are defined only on a proper sub-interval of [0,T].
+J20 1530  1       We must now show that on some component of the graph
+J20 1530 12    there exist two points for which the corresponding
+J20 1540  7    diagonal points in the C-plane are on opposite sides
+J20 1550  5    of C. We again consider a fixed point P at **f and
+J20 1560  7    a variable point Q at **f on C. We erect a square
+J20 1570  6    with PQ as a side and with free corners **f and **f
+J20 1580  5    adjacent to P and Q respectively. As s varies from
+J20 1590  5    zero to T, the values of s for which **f and **f
+J20 1600  5    cross C will be denoted by **f and **f respectively.
+J20 1610  2    We have **f, plus tangent points. These s-values are
+J20 1620  2    just the ordinary values of **f.
+J20 1620  8    #LEMMA 4.#
+J20 1620 10    The values **f are the ordinary values at **f of a
+J20 1630  9    multi-valued function g(t) which has components corresponding
+J20 1640  5    to those of f(t).
+J20 1650  1    _PROOF._
+J20 1650  1       We first define a function b(t) as follows: given
+J20 1650 10    the set of squares such that each has three corners
+J20 1660 10    on C and vertex at t, b(t) is the corresponding
+J20 1670  7    set of positive parametric differences between t and
+J20 1680  5    the backward corner points. The functions f and b
+J20 1690  6    have exactly the same multiplicity at every argument
+J20 1700  4    t. Now with P fixed at **f, **f-values occur when
+J20 1710  3    the corner **f crosses C, and are among the values
+J20 1720  1    of s such that **f. The roots of this equation are
+J20 1720 12    just the ordinates of the intersections of the graph
+J20 1730  8    of b with a straight line of unit slope through **f
+J20 1740  7    in the b-plane (the plane of the graph of b). We
+J20 1750  6    define these values as **f, and define g(t) in the
+J20 1760  3    same way for each t. Thus we obtain g(t) by introducing
+J20 1770  3    an oblique g(t)-axis in the b-plane.

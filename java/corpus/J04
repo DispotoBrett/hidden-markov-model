@@ -1,0 +1,247 @@
+J04 0010  1    ##
+J04 0010  2    A proton magnetic resonance study of polycrystalline
+J04 0010  9    **f as a function of magnetic field and temperature
+J04 0020  7    is presented. **f is paramagnetic, and electron paramagnetic
+J04 0030  4    dipole as well as nuclear dipole effects lead to line
+J04 0040  4    broadening. The lines are asymmetric and over the range
+J04 0050  2    of field **f gauss and temperature **f the asymmetry
+J04 0050 11    increases with increasing **f and decreasing T. An
+J04 0060  7    isotropic resonance shift of **f to lower applied fields
+J04 0070  7    indicates a weak isotropic hyperfine contact interaction.
+J04 0080  3    The general theory of resonance shifts is used to derive
+J04 0090  2    a general expression for the second moment **f of a
+J04 0090 12    polycrystalline paramagnetic sample and is specialized
+J04 0100  6    to **f. The theory predicts a linear dependence of
+J04 0110  5    **f on **f, where |j is the experimentally determined
+J04 0120  2    Curie-Weiss constant. The experimental second moment
+J04 0130  1    **f conforms to the relation **f in agreement with
+J04 0130 10    theory. Hence, the electron paramagnetic effects (slope)
+J04 0140  5    can be separated from the nuclear effects (intercept).
+J04 0150  3    The paramagnetic dipole effects provide some information
+J04 0160  2    on the particle shapes. The nuclear dipole effects
+J04 0160 10    provide some information on the motions of the hydrogen
+J04 0170  9    nuclei, but the symmetry of the **f bond in **f remains
+J04 0180  8    in doubt.
+J04 0180 10    #INTRODUCTION#
+J04 0180 11    THE magnetic moment of an unpaired electron associated
+J04 0200  8    nearby may have a tremendous influence on the magnetic
+J04 0210  6    resonance properties of nuclei. It is important to
+J04 0220  4    consider and experimentally verify this influence since
+J04 0230  1    quantitative nuclear resonance is becoming increasingly
+J04 0230  7    used in investigations of structure. **f appeared to
+J04 0240  6    be well suited for the study of these matters, since
+J04 0250  5    it is a normal paramagnet, with three unpaired electrons
+J04 0260  2    on the chromium, its crystal structure is very simple,
+J04 0270  1    and the unknown position of the hydrogen in the strong
+J04 0270 11    **f bond provides structural interest.
+J04 0280  3       We first discuss the **f bond in **f. We then outline
+J04 0300  3    the theory of the interaction of paramagnetic dipoles
+J04 0310  1    with nuclei and show that the theory is in excellent
+J04 0310 11    agreement with experiment. Indeed it is possible to
+J04 0320  6    separate electron paramagnetic from nuclear effects.
+J04 0330  3    The information provided by the electron paramagnetic
+J04 0340  1    effects is then discussed, and finally the nuclear
+J04 0340  9    effects are interpreted in terms of various motional-modified
+J04 0350  7    models of the **f bond in **f.
+J04 0360  3    #**F BOND IN **F#
+J04 0360  7    Theoretical studies of the hydrogen bond generally
+J04 0370  2    agree that the **f bond will be linear in the absence
+J04 0370 13    of peculiarities of packing in the solid. Moreover,
+J04 0380  8    it will be asymmetric until a certain critical **f
+J04 0390  6    distance is reached, below which it will become symmetric.
+J04 0400  3    There is ample evidence from many sources that the
+J04 0410  1    **f bond in **f is symmetric. The **f distance in **f
+J04 0410 12    is 2.26 A. There is evidence, though less convincing
+J04 0420  7    than for **f, that the **f bond in nickel dimethylglyoxime
+J04 0430  5    is symmetric. Here the **f distance is 2.44 A. A number
+J04 0440  6    of semiempirical estimates by various workers lead
+J04 0450  2    to the conclusion that the **f bond becomes symmetric
+J04 0450 11    when the **f bond length is about 2.4 to 2.5 A, but
+J04 0460 11    aside from the possible example of nickel dimethylglyoxime
+J04 0480  5    there have been no convincing reports of symmetric
+J04 0490  3    **f bonds. Douglass has studied the crystal structure
+J04 0500  1    of **f by x-ray diffraction. He finds the structure
+J04 0500 11    contains an **f bond with the **f distance of **f.
+J04 0510  8    There is, then, the possibility that this **f bond
+J04 0520  4    is symmetric, although Douglass was unable to determine
+J04 0530  1    its symmetry from his x-ray data.
+J04 0530  8       Douglass found **f to be trigonal, Laue symmetry
+J04 0540  4    **f, with **f, **f. X-ray and experimental density
+J04 0550  2    showed one formula unit in the unit cell, corresponding
+J04 0550 11    to a paramagnetic ion density of **f. The x-ray data
+J04 0560  9    did not permit Douglass to determine uniquely the space
+J04 0570  6    group, but a negative test for piezoelectricity led
+J04 0580  2    him to assume a center of symmetry. Under this assumption
+J04 0590  1    the space group must be **f and the following are the
+J04 0590 12    positions of the atoms in the unit cell. **f. This
+J04 0600 10    space group requires the hydrogen bond to be symmetric.
+J04 0610  5    Douglass found powder intensity calculations and measurements
+J04 0620  3    to agree best for **f. These data lead to a structure
+J04 0630  1    in which sheets of Cr atoms lie between two sheets
+J04 0630 11    of O atoms. The O atoms in each sheet are close packed
+J04 0640 11    and each Cr atom is surrounded by a distorted octahedron
+J04 0650  8    of O atoms. The **f layers are stacked normal to the
+J04 0660  7    [111] axis with the lower oxygens of one layer directly
+J04 0670  5    above the upper oxygens of the neighboring lower layer,
+J04 0680  2    in such a manner that the repeat is every three layers.
+J04 0680 13    The separate layers are joined together by hydrogen
+J04 0690  8    bonds. A drawing of the structure is to be found in
+J04 0700  7    reference 6.
+J04 0700  9       The gross details of the structure appear reasonable.
+J04 0710  6    The structure appears to be unique among ROOH compounds,
+J04 0720  4    but is the same as that assumed by **f. The bond angles
+J04 0730  5    and distances are all within the expected limits and
+J04 0740  2    the volume per oxygen is about normal. However, the
+J04 0740 11    possible absence of a center of symmetry not only moves
+J04 0750  9    the hydrogen atom off **f, but also allows the oxygen
+J04 0760  6    atoms to become nonequivalent, with **f at **f and
+J04 0770  3    **f at **f (space group **f), where **f represents
+J04 0770 12    the oxygens on one side of the **f layers and **f those
+J04 0780 11    on the other side. However, any oxygen nonequivalence
+J04 0790  4    would shorten either the already extremely short **f
+J04 0800  3    interlayer distance of 2.55 A or the non-hydrogen-bonded
+J04 0810  1    **f interlayer interactions which are already quite
+J04 0810  8    short at 2.58 A. Hence it is difficult to conceive
+J04 0820  8    of a packing of the atoms in this material in which
+J04 0830  5    the oxygen atoms are far from geometrical equivalence.
+J04 0840  1    The only effect of lack of a center would then be to
+J04 0840 13    release the hydrogen atoms to occupy general, rather
+J04 0850  8    than special, positions along the [111] axis.
+J04 0860  5       If the **f bond is linear then there are three reasonable
+J04 0870  4    positions for the hydrogen atoms: (1) The hydrogen
+J04 0880  1    atoms are centered and hence all lie on a sheet midway
+J04 0880 12    between the oxygen sheets; (2) all hydrogen atoms lie
+J04 0890  8    on a sheet, but the sheet is closer to one oxygen sheet
+J04 0900  7    than to the other; (3) hydrogen atoms are asymmetrically
+J04 0910  3    placed, either randomly or in an ordered way, so that
+J04 0920  2    some hydrogen atoms are closer to the upper oxygen
+J04 0920 11    atoms while others are closer to the lower oxygen atoms.
+J04 0930  8    Position (2) appears to us to be unlikely in view of
+J04 0940  7    the absence of a piezoelectric effect and on general
+J04 0950  2    chemical structural grounds. A randomization of "ups"
+J04 0950  9    and "downs" is more likely than ordered "ups" and "downs"
+J04 0960 10    in position (3) since the hydrogen atoms are well separated
+J04 0970 10    and so the position of one could hardly affect the
+J04 0980  8    position of another, and also since ordered "up" and
+J04 0990  5    "down" implies a larger unit cell, for which no evidence
+J04 1000  4    exists. Therefore, the only unknown structural feature
+J04 1010  1    would appear to be whether the hydrogen atoms are located
+J04 1010 11    symmetrically (1) or asymmetrically (3).
+J04 1020  5    #EXPERIMENTAL PROCEDURES#
+J04 1030  1    _SAMPLES_
+J04 1030  1       Douglass prepared his sample of **f by thermal decomposition
+J04 1030 10    of aqueous chromic acid at 300-325`C. Dr. Douglass
+J04 1040  9    was kind enough to lend us about 5 grams of his material.
+J04 1050 10    This material proved to be unsatisfactory, since we
+J04 1060  6    could not obtain reproducible results on various portions
+J04 1070  3    of the sample. Subsequently, we learned from Douglass
+J04 1080  1    that his sample contained a few percent **f impurity.
+J04 1080 10    Since **f is ferromagnetic, we felt that any results
+J04 1090  8    obtained from the magnetically contaminated **f would
+J04 1100  4    be suspect.
+J04 1100  6       Plane suggested another preparation of **f which
+J04 1110  5    we used here. 500 ml of 1M aqueous **f with 1 g
+J04 1120  4    **f added are heated in a bomb at 170`C for 48 hours.
+J04 1130  1    A very fine, gray solid (about 15 g) is formed, water-washed
+J04 1140  1    by centrifugation, and dried at 110`C.
+J04 1140  7       Differential thermal analysis showed a very small
+J04 1150  6    endothermic reaction at 340`C and a large endothermic
+J04 1160  4    reaction at 470`C. This latter reaction is in accord
+J04 1170  3    with the reported decomposition of **f. Thermogravimetric
+J04 1170 10    analysis showed a weight loss of 1.8% centered at 337`C
+J04 1180 10    and another weight loss of 10.8% at 463`C. The expected
+J04 1200  9    weight loss for **f going to **f and **f is 10.6%.
+J04 1210  9    Mass spectrometric analysis of gases evolved upon heating
+J04 1220  5    to 410`C indicated nitrogen oxides and water vapor.
+J04 1230  4    The small reaction occurring at 337`C is probably
+J04 1240  1    caused by decomposition of occluded nitrates, and perhaps
+J04 1240  9    by a small amount of some hydrous material other than
+J04 1250  8    **f. All subsequent measurements were made on material
+J04 1260  5    which had been heated to 375`C for one hour. Emission
+J04 1270  4    spectra indicated **f calcium and all other impurities
+J04 1280  1    much lower. Chromium analysis gave 58.8% Cr as compared
+J04 1300  1    with 61.2% theory. However, **f adsorbs water from
+J04 1300  9    the atmosphere and this may account for the low chromium
+J04 1310  8    analysis and high total weight loss.
+J04 1320  2       The x-ray diffraction pattern of the material, taken
+J04 1320 11    with CuK|a radiation, indicated the presence of no
+J04 1330  8    extra lines and was in good agreement with the pattern
+J04 1340  8    of Douglass. Magnetic analyses by R. G. Meisenheimer
+J04 1350  5    of this laboratory indicated no ferromagnetic impurities.
+J04 1360  2    **f was found to be paramagnetic with three unpaired
+J04 1370  1    electron per chromium atom and a molecular susceptibility
+J04 1370  9    of **f, where **f. For exactly three unpaired electrons
+J04 1380  8    the coefficient would be 3.10. An infrared spectrum,
+J04 1390  6    obtained by H. A. Benesi and R. G. Snyder of this laboratory,
+J04 1400  7    showed bands in the positions found by Jones.
+J04 1410  4       Electron microscopic examination of the **f sample
+J04 1420  2    showed it to be composed of nearly isotropic particles
+J04 1420 11    about 0.3|m in diameter. The particles appeared rough
+J04 1430  7    and undoubtedly the single-crystal domains are smaller
+J04 1440  4    than this. The x-ray data are consistent with particle
+J04 1450  3    sizes of 1000 A or greater. We found no obvious effects
+J04 1460  2    due to preferred orientation of the crystallites in
+J04 1460 10    this sample nor would we expect to on the basis of
+J04 1470 10    the shape found from electron microscopic examination.
+J04 1480  3    #NUCLEAR MAGNETIC RESONANCE (NMR) MEASUREMENTS#
+J04 1500  1    The magnetic resonance absorption was detected by employing
+J04 1510  1    a Varian model **f broad line spectrometer and the
+J04 1510 10    associated 12-inch electromagnet system. One measurement
+J04 1520  5    at 40 Mc/sec was obtained with the Varian model **f
+J04 1530  6    unit. A bridged-T type of bridge was used in the 10-16
+J04 1540  6    Mc/sec range. The rf power level was maintained small
+J04 1550  2    enough at all times to prevent obvious line shape distortions
+J04 1560  1    by saturation effects. A modulation frequency of 40
+J04 1560  9    cps with an amplitude as small as possible, commensurate
+J04 1570  7    with reasonably good signal-to-noise quality, was used.
+J04 1580  4    Background spectra were obtained in all cases. The
+J04 1590  4    spectrometer was adjusted to minimize the amount of
+J04 1590 12    dispersion mode mixed in with the absorption signal.
+J04 1600  8       A single value of the thermal relaxation time **f
+J04 1610  7    at room temperature was measured by the progressive
+J04 1620  4    saturation method. The value of **f estimated at 470
+J04 1630  2    gauss was **f microseconds. A single measurement of
+J04 1630 10    the spin-spin relaxation time **f was obtained at 10
+J04 1640  8    Mc/sec by pulse methods. This measurement was obtained
+J04 1650  5    by W. Blumberg of the University of California, Berkeley,
+J04 1660  3    by observing the breadth of the free induction decay
+J04 1670  2    signal. The value derived was 16 microseconds.
+J04 1670  9       Field shifts were derived from the mean value of
+J04 1680  9    the resonance line, defined as the field about which
+J04 1690  6    the first moment is zero.
+J04 1690 11       Second moments of the spectra were computed by numerical
+J04 1700  8    integration. Corrections were applied for modulation
+J04 1710  5    broadening, apparatus background, and field shift.
+J04 1720  3       Spectra were obtained over the temperature range
+J04 1730  1    of 77-294`K. For the low-temperature measurements the
+J04 1730 10    sample was cooled by a cold nitrogen gas flow method
+J04 1750  8    similar to that of Andrew and Eades. The temperature
+J04 1760  4    was maintained to within about **f for the period of
+J04 1770  3    time required to make the measurement (usually about
+J04 1770 11    one hour). One sample, which had been exposed to the
+J04 1780  9    atmosphere after evacuation at 375`C, showed the presence
+J04 1790  6    of adsorbed water (about 0.3 wt %) as evidenced by
+J04 1800  6    a weak resonance line which was very narrow at room
+J04 1810  3    temperature and which disappeared, due to broadening,
+J04 1810 10    at low temperature. The data reported here are either
+J04 1820  8    from spectra from which the adsorbed water resonance
+J04 1830  5    could easily be eliminated or from spectra of samples
+J04 1840  3    evacuated and sealed off at 375`C which contain no
+J04 1850  1    adsorbed water.
+J04 1850  3       The measured powder density of the **f used here
+J04 1860  2    was about **f, approximately one-third that of the
+J04 1860 11    crystal density (**f). Such a density corresponds to
+J04 1870  7    a paramagnetic ion density of about **f.
+J04 1880  3       Spectra were obtained from a powdered sample having
+J04 1900  1    the shape of a right circular cylinder with a height-to-diameter
+J04 1900 13    ratio of 4:1. The top of the sample was nearly flat
+J04 1910 11    and the bottom hemispherical. Spectra were also obtained
+J04 1920  5    from a sample in a spherical container which was made
+J04 1930  4    by blowing a bubble on the end of a capillary glass
+J04 1940  1    tube. The bubble was filled to the top and special
+J04 1940 11    precautions were taken to prevent any sample from remaining
+J04 1950  8    in the capillary. Spectra were also obtained from a
+J04 1960  6    third sample of **f which had been diluted to three
+J04 1970  3    times its original volume with powdered, anhydrous
+J04 1970 10    alundum (**f). This sample was contained in a cylindrical
+J04 1980  9    container similar to that described above.

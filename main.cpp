@@ -31,14 +31,13 @@ int main()
     for(auto i: optimal)
         std::cout << i << " ";
 
-/*
 
 
     int HEADER_SIZE = 15;
     std::string line;
     ObservationSequence O2;
     //this should be an absolute path to corpus.dos, and A is the only starting letter of files that I am iterating through.
-    std::string filebase = "C:\\Users\\jorda\\Documents\\C++\\HMM\\Brown\\corpus.dos\\A";
+    std::string filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";;
     std::string filenames[40];
 
     for(int i = 1; i < 40; i++)
@@ -59,7 +58,7 @@ int main()
 
         while(getline(file, line))
         {
-            for(int i = HEADER_SIZE; i < line.length(); i++)
+            for(int i = HEADER_SIZE; i < line.length(); i++) //TODO Why is i redefined?
             {
                 char c = line[i];
 
@@ -77,7 +76,7 @@ int main()
         file.close();
     }
 
-
+/*
     HiddenMarkovModel hmm2(O2, 2, 27);
     hmm2.train(O2, 100);
 

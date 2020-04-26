@@ -1,0 +1,276 @@
+E30 0010  1    #GENERAL#
+E30 0010  2    How long has it been since you reviewed the objectives
+E30 0020  1    of your benefit and service program? Have you permitted
+E30 0020 10    it to become a giveaway program rather than one that
+E30 0030  8    has the goal of improved employee morale and, consequently,
+E30 0040  4    increased productivity?
+E30 0040  6       What effort do you make to assess results of your
+E30 0050 10    program? Do you measure its relation to reduced absenteeism,
+E30 0060  6    turnover, accidents, and grievances, and to improved
+E30 0070  4    quality and output?
+E30 0070  7       Have you set specific objectives for your employee
+E30 0080  5    publication? Is it reaching these goals? Is it larger
+E30 0090  5    or fancier than you really need? Are you using the
+E30 0100  2    most economical printing methods, paper, etc. Are
+E30 0100  9    there other, cheaper communications techniques that
+E30 0110  5    could be substituted?
+E30 0120  1       Has your attitude toward employee benefits encouraged
+E30 0120  8    an excess of free "government" work in your plant?
+E30 0130  8       Is your purchasing agent offering too much free-buying
+E30 0140  7    service for employees?
+E30 0150  1       When improvements are recommended in working conditions-
+E30 0150  8    such as lighting, rest rooms, eating facilities,
+E30 0160  6    air-conditioning-
+E30 0160  8    do you try to set a measure of their effectiveness
+E30 0170  8    on productivity?
+E30 0170 10       When negotiating with your union, do you make sure
+E30 0180  9    employees have a choice between new benefits and their
+E30 0190  6    cents-per-hour cost in wages.
+E30 0200  1       Can you consider restricting any additional employee
+E30 0200  8    benefits to those paid for by profit-sharing money,
+E30 0210  7    such as was done in the union contract recently signed
+E30 0220  3    by American Motors Corporation?
+E30 0220  7    #INSURANCE#
+E30 0230  1    Do your employees understand all the benefits to which
+E30 0230 10    your insurance entitles them? Are they encouraged to
+E30 0240  7    take full legal advantage of these benefits? Have you
+E30 0250  6    publicized the cents-per-hour value of the company's
+E30 0260  4    share of insurance premiums?
+E30 0260  8       When did you last compare your present premium costs
+E30 0270  7    with the costs of insurance from other sources?
+E30 0280  4       Can your insurance company aid you in reducing administrative
+E30 0290  2    costs?
+E30 0290  3       Do you try to maintain the principle of employee-contributed
+E30 0300  4    (as opposed to fully company-paid) programs?
+E30 0310  1    #HOLIDAYS, TIME OFF, OVERTIME#
+E30 0310  5    Do you protect your holiday privileges with an attendance
+E30 0320  5    requirement both before and after the holiday?
+E30 0330  1       Do you plan to limit additional holidays to area
+E30 0330 10    and/or industrial patterns?
+E30 0340  3       Have you investigated the possibility of moving
+E30 0350  3    midweek holidays forward to Monday or back to Friday
+E30 0350 12    in order to have an uninterrupted work week?
+E30 0360  8       Are you carefully policing wash-up time and rest
+E30 0370  7    periods to be certain that all other time is productive?
+E30 0380  3       Are you watching work schedules for boiler operators,
+E30 0390  2    guards, and other 24-hour-day, 7-day-week operations
+E30 0390 12    in order to minimize overtime?
+E30 0400  4       Are you careful to restrict the number of people
+E30 0410  3    on leave at one time so that your total employment
+E30 0410 13    obligation is minimized?
+E30 0420  3    #PLANT FEEDING FACILITIES#
+E30 0420  6    Have you considered using vending equipment to replace
+E30 0430  6    or reduce the number of cafeteria employees?
+E30 0440  2       What are the possibilities for operating your cafeteria
+E30 0450  2    for a single shift only and relying upon vending machines
+E30 0460  1    or prepackaged sandwiches for the second- and third-shift
+E30 0460 11    operations?
+E30 0470  1       Have you checked the cost of subcontracting your
+E30 0470  9    cafeteria operation in order to save administrative
+E30 0480  7    costs?
+E30 0480  8       Are there possibilities of having cafeteria help
+E30 0490  6    work part-time on custodial or other jobs?
+E30 0500  3       Can staggered lunch periods relieve the capacity
+E30 0510  1    strain on your feeding facilities?
+E30 0510  6       Would it be feasible to limit the menu in order
+E30 0520  6    to reduce feeding costs?
+E30 0520 10       Have you considered gradual withdrawal of subsidies
+E30 0530  5    to your in-plant feeding operation?
+E30 0540  1       Are you utilizing cafeteria space for company meetings
+E30 0550  1    or discussions?
+E30 0550  3    #RECREATION FACILITIES#
+E30 0550  5    Are your expenses in this area commensurate with the
+E30 0560  6    number of employees who benefit from your program?
+E30 0570  3       Have you audited your program recently to weed out
+E30 0580  2    those phases that draw least participation?
+E30 0580  8       Do employees contribute their share of money to
+E30 0590  7    recreational facilities?
+E30 0600  1       Have you considered delegating operational responsibility
+E30 0600  6    to your employee association and carefully restricting
+E30 0610  5    your plant's financial contribution?
+E30 0620  2       Could an employee's garden club take over partial
+E30 0630  1    care of plant grounds? Would a camera club be useful
+E30 0630 11    in taking pictures pertinent to plant safety?
+E30 0640  6       Are you spending too much money on team uniforms
+E30 0650  5    that benefit only a few employees? Are you underwriting
+E30 0660  2    expensive team trips?
+E30 0660  5       Are you utilizing vending machine proceeds to help
+E30 0670  5    pay for your program?
+E30 0670  9    #TRANSPORTATION AND PARKING#
+E30 0680  3    Do you know the trend in your cost of maintaining access
+E30 0690  1    roads and parking lots?
+E30 0690  5       If you use parking attendants, can they be replaced
+E30 0700  4    by automatic parking gates?
+E30 0700  8       Will your local bus company erect and/or maintain
+E30 0710  6    the bus stops at your plant?
+E30 0720  1       If you provide inter-plant transportation, can this
+E30 0720  9    be replaced by available public transportation? If
+E30 0730  6    you use company transportation to meet trains or to
+E30 0740  6    haul visitors, would taxis be cheaper?
+E30 0750  1       How efficient and necessary are your intra-company
+E30 0750  9    vehicles? Can they be re-scheduled? Can part-time drivers
+E30 0760  9    be assigned to other productive work?
+E30 0770  3    #PAID VACATIONS#
+E30 0770  5    Which is more economical for your plant- a vacation
+E30 0780  5    shutdown or spaced vacations that require extra employees
+E30 0790  2    for vacation fill-ins?
+E30 0790  6       Can vacations be spaced throughout the 12 months
+E30 0800  5    to minimize the number of employee fill-ins?
+E30 0810  1       Do you insist that unneeded salary employees take
+E30 0810  9    their vacations during plant shutdowns?
+E30 0820  4       What can your sales and purchasing departments do
+E30 0830  3    to curtail orders, shipments, and receipts during vacation
+E30 0840  1    shutdown periods?
+E30 0840  3    #RETIREMENT#
+E30 0840  4    Is an arbitrary retirement age of 65 actually costing
+E30 0850  6    your plant money?
+E30 0850  9       What sort of effort do you make to assure that older
+E30 0860  9    or disabled workers are fully productive? Would early
+E30 0870  4    retirement of non-productive, disabled employees reduce
+E30 0880  2    the number of make-work jobs?
+E30 0880  8       Will your union accept seniority concessions in
+E30 0890  5    assigning work for older or disabled employees?
+E30 0900  1    #MEDICAL AND HEALTH#
+E30 0900  4    Can you share medical facilities and staff with neighboring
+E30 0910  5    plants?
+E30 0910  6       If you have a full-time doctor now, can he be replaced
+E30 0920  7    with a part-time doctor or one who serves on a fee-per-case
+E30 0930  6    basis only?
+E30 0930  8       Can your plant nurse be replaced by a trained first-aid
+E30 0940  6    man who works full-time on some other assignment?
+E30 0950  1       Do you rigidly distinguish between job- and non-job-connected
+E30 0960  1    health problems and avoid treating the latter?
+E30 0960  8       Are you indiscriminantly offering unnecessary medical
+E30 0970  6    services- flu shots, sun lamp treatments, etc.?
+E30 0980  5       If you have an annual or regular physical examination
+E30 0990  3    program, is it worth what it is costing you?
+E30 1000  1    #A PROGRAM TO FIT YOUR NEEDS#
+E30 1000  7    Consider what you can afford to spend and what your
+E30 1010  6    goals are before setting up or revamping your employee
+E30 1020  1    benefit program. Too many plant officials are all too
+E30 1020 10    eager to buy a package program from an insurance company
+E30 1030  9    simply because it works for another plant.
+E30 1040  4       But even if that other plant employs the same number
+E30 1050  3    of workers and makes the same product, there are other
+E30 1050 13    facts to consider. How old is your working force? What's
+E30 1060 10    your profit margin? In what section of the country
+E30 1070  8    are you located? Are you in a rural or urban area?
+E30 1080  8    These factors can make the difference between waste
+E30 1090  3    and efficiency in any benefit program.
+E30 1090  9       Above all, don't set up extravagant fringe benefits
+E30 1100  7    just to buy employee good will. Unions stress fringe
+E30 1110  5    benefits, but the individual hourly worker prefers
+E30 1120  2    cash every time.
+E30 1120  5       Aim to balance your employee benefit package. Some
+E30 1130  3    plants go overboard on one type of fringe- say a liberal
+E30 1140  1    retirement plan- and find themselves vulnerable elsewhere.
+E30 1140  8    They're asking for union trouble.
+E30 1150  5    #COMMUNICATIONS#
+E30 1150  6    If you want credit for your employee services program,
+E30 1160  6    let your workers know what they're entitled to. Encourage
+E30 1170  4    them to exercise their benefits. This can be done by
+E30 1180  5    stories in your house organs, posters, special publications,
+E30 1185  2    letters to workers' homes as well as by word of mouth
+E30 1190  5    through your chain of command.
+E30 1190 10       Some companies find a little imagination helpful.
+E30 1200  6    Hallmark Cards, Inc., Kansas City, Mo., has a do-it-yourself
+E30 1210  8    quiz game called "Benefit Bafflers", which it distributes
+E30 1220  4    to employees. M + R Dietetic Laboratories, Inc.,
+E30 1230  2    Columbus, gives all its workers a facsimile checkbook-
+E30 1240  3    each check showing the amount the company spends on
+E30 1240 12    a particular fringe. U. S. Rubber Company, New York,
+E30 1250  8    passes out a form itemizing the value of benefits.
+E30 1260  6    The blue-collar worker thus knows his insurance package,
+E30 1270  4    for example, costs $227.72.
+E30 1270  8    #INSURANCE#
+E30 1270  9    Have the insurance company or your own accounting department
+E30 1280  9    break down the cost of your insurance package periodically.
+E30 1290  8    You may find certain coverage costing much more than
+E30 1300  6    is economically feasible, thereby alerting you to desirable
+E30 1310  4    revisions.
+E30 1310  5       Check to see if some of your benefits- such as on-the-job
+E30 1320  6    disability pay- can be put on a direct payment rather
+E30 1330  3    than an insured basis at a savings to you.
+E30 1340  1       Use deductable insurance wherever feasible. It can
+E30 1340  8    put an end to marginal claims which play havoc with
+E30 1350  6    your insurance rates. Also, beware of open-end policies,
+E30 1360  5    especially in the medical field. This will mean that
+E30 1370  2    every time there's an increase in hospital rates your
+E30 1370 11    cost will go up in like manner. Put a dollar-and-cents
+E30 1380 11    limit on benefits.
+E30 1390  1       Don't go overboard on insurance that pays benefits
+E30 1390  9    only upon death. Generally, your employee will greatly
+E30 1400  6    appreciate benefits that protect him during his working
+E30 1410  6    life or during retirement.
+E30 1410 10    #SPECIAL TIME OFF#
+E30 1420  2    In granting bereavement leaves, specify the maximum
+E30 1420  9    time off and list what the worker's relation to the
+E30 1430  9    deceased must be to qualify. Thus, you avoid headaches
+E30 1440  5    when an employee wants off for his fourth cousin's
+E30 1450  2    funeral. Also, reserve the right to demand proof of
+E30 1460  1    death despite the fact that you'll probably never use
+E30 1460 10    it.
+E30 1460 11       Coffee breaks can be a real headache if not regulated.
+E30 1470 10    Vending machines can alleviate the long hike to the
+E30 1480  8    cafeteria during the break with resulting waste of
+E30 1490  3    production time. If coffee is sold at the cafeteria,
+E30 1500  1    let a few workers in each department get it for the
+E30 1500 12    whole group. Consider installing supplemental serving
+E30 1510  4    lines in production areas. Make sure milk for the coffee
+E30 1520  6    is placed in dispensers rather than in containers,
+E30 1530  1    if you are supplying the coffee. Otherwise, you may
+E30 1530 10    be saddled with a good-size milk bill by milk drinkers.
+E30 1540 10    #RETIREMENT POLICIES#
+E30 1550  1    Keep the retirement age flexible so skilled craftsmen
+E30 1550  9    such as tool and die makers can be kept on the job
+E30 1560 10    for the convenience of the company. And so deadheads
+E30 1570  4    on the payroll can be eased out at the earliest possible
+E30 1580  2    age. Make sure you have minimum age and time-on-the-job
+E30 1580 14    requirements tied into your pension plan. Younger men
+E30 1590  8    usually don't think of pensions as an important job
+E30 1600  7    benefit factor anyhow and they're liable to change
+E30 1610  4    jobs several times before settling down.
+E30 1610 10       Choose carefully between contributory or non-contributory
+E30 1620  7    pension plans. There are two sides of a coin for this
+E30 1630 10    decision. Workers usually think more of a plan they
+E30 1640  6    contribute to. And they can at least collect the money
+E30 1650  3    they put in, plus interest, when they leave the company.
+E30 1650 13    A non-contributory plan usually won't pay off for the
+E30 1660 10    worker until he retires. Thus, there is an added incentive
+E30 1670  8    to stay on the job.
+E30 1670 13    #HOLIDAYS#
+E30 1680  1    Make sure you don't pay for holidays that occur when
+E30 1680 11    an employee would not otherwise be working. These include:
+E30 1690  8    leaves of absences, illnesses, and layoffs.
+E30 1700  4       Consider adopting a system of holidays in which
+E30 1710  3    time off is granted with an eye to minimum inconvenience
+E30 1720  1    to the operation of the plant. It's usually not too
+E30 1720 11    hard to sell workers on this as it gives them longer
+E30 1730  9    holiday periods. For example, the Friday after Thanksgiving
+E30 1740  5    can be substituted for Washington's birthday. This
+E30 1750  3    reduces the number of expensive plant shutdowns and
+E30 1760  1    startups.
+E30 1760  2       Require each employee to work his last shift both
+E30 1770  1    before and after the holiday to be eligible for pay.
+E30 1770 11    This cuts the absentee rate.
+E30 1780  2    #EATING FACILITIES#
+E30 1780  4    Consider using vending machines rather than subsidized
+E30 1790  4    cafeterias. Latest models serve hot meals at reasonable
+E30 1800  1    prices, and at a profit to you. If a concessionaire
+E30 1800 11    runs the cafeteria, keep an eye out for quality and
+E30 1810  9    price. If the soup tastes like dishwater, your employees
+E30 1820  5    won't blame the concessionaire. You'll take the rap.
+E30 1830  4       Check your cafeteria location to make sure it's
+E30 1840  2    convenient for most employees. You may save valuable
+E30 1840 10    production minutes with a change.
+E30 1850  5    #VACATIONS#
+E30 1850  6    Spread your vacation period over the widest possible
+E30 1860  5    span of time or shut the plant down for two weeks.
+E30 1870  2    This will cut the expense of vacation replacements.
+E30 1870 10    And with the shutdown method there will be no argument
+E30 1880  9    as to who gets the choice vacation dates.
+E30 1890  3       Also make sure you have reasonable requirements
+E30 1900  1    as to hours worked before a production employee is
+E30 1900 10    entitled to a vacation. You might try providing standard
+E30 1910  7    vacation time off but make the vacation pay depend
+E30 1920  5    on the number of hours worked in the previous year.

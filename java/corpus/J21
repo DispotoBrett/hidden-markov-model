@@ -1,0 +1,211 @@
+J21 0010  1    #INTRODUCTION.#
+J21 0010  2    In @1 we investigate a new series of line involutions
+J21 0020  1    in a projective space of three dimensions over the
+J21 0020 10    field of complex numbers. These are defined by a simple
+J21 0030  8    involutorial transformation of the points in which
+J21 0040  6    a general line meets a nonsingular quadric surface
+J21 0050  1    bearing a curve of symbol **f. Then in @2 we show that
+J21 0050 13    any line involution with the properties that (a) It
+J21 0060  8    has no complex of invariant lines, and (b) Its singular
+J21 0070  6    lines form a complex consisting exclusively of the
+J21 0080  3    lines which meet a twisted curve, is necessarily of
+J21 0080 12    the type discussed in @1. No generalization of these
+J21 0090  9    results to spaces of more than three dimensions has
+J21 0100  7    so far been found possible.
+J21 0100 12    #1.#
+J21 0110  1    Let Q be a nonsingular quadric surface bearing reguli
+J21 0110 10    **f and **f, and let \g be a **f curve of order k
+J21 0120 13    on Q. A general line l meets Q in two points, **f
+J21 0140 10    and **f, through each of which passes a unique generator
+J21 0150  8    of the regulus, **f, whose lines are simple secants
+J21 0160  5    of \g. On these generators let **f and **f be, respectively,
+J21 0170  4    the harmonic conjugates of **f and **f with respect
+J21 0180  1    to the two points in which the corresponding generator
+J21 0180 10    meets \g. The line **f is the image of l. Clearly,
+J21 0190 10    the transformation is involutorial.
+J21 0200  3       We observe first that no line, l, can meet its
+J21 0210  4    image except at one of its intersections with Q. For
+J21 0220  2    if it did, the plane of l and l' would contain two
+J21 0230  2    generators of **f, which is impossible. Moreover, from
+J21 0230 10    the definitive transformation of intercepts on the
+J21 0240  6    generators of **f, it is clear that the only points
+J21 0250  5    of Q at which a line can meets its image are the points
+J21 0260  4    of \g. Hence the totality of singular lines is the
+J21 0270  2    kth order complex of lines which meet \g.
+J21 0270 10       The invariant lines are the lines of the congruence
+J21 0280  9    of secants of \g, since each of these meets Q in
+J21 0290  8    two points which are invariant. The order of this congruence
+J21 0300  6    is **f, since **f secants of a curve of symbol (a,b)
+J21 0310  3    on a quadric surface pass through an arbitrary point.
+J21 0320  1    The class of the congruence is **f, since an arbitrary
+J21 0320 11    plane meets \g in k points.
+J21 0330  5       Since the complex of singular lines is of order
+J21 0340  5    k and since there is no complex of invariant lines,
+J21 0350  2    it follows from the formula **f that the order of the
+J21 0350 13    involution is **f.
+J21 0360  3       There are various sets of exceptional lines, or
+J21 0360 11    lines whose images are not unique. The most obvious
+J21 0370  9    of these is the quadratic complex of tangents to Q,
+J21 0380  6    each line of which is transformed into the entire pencil
+J21 0390  5    of lines tangent to Q at the image of the point of
+J21 0400  5    tangency of the given line. Thus pencils of tangents
+J21 0410  2    to Q are transformed into pencils of tangents. It
+J21 0410 11    is interesting that a 1:1 correspondence can be established
+J21 0420  9    between the lines of two such pencils, so that in a
+J21 0430 10    sense a unique image can actually be assigned to each
+J21 0440  5    tangent. For the lines of any plane, |p, meeting Q
+J21 0450  3    in a conic C, are transformed into the congruence
+J21 0460  1    of secants of the curve C' into which C is transformed
+J21 0470  2    in the point involution on Q. In particular, tangents
+J21 0480  1    to C are transformed into tangents to C'. Moreover,
+J21 0490  1    if **f and **f are two planes intersecting in a line
+J21 0490 12    l, tangent to Q at a point P, the two free intersections
+J21 0500 11    of the image curves **f and **f must coincide at P',
+J21 0510 11    the image of P, and at this point **f and **f must
+J21 0520 11    have a common tangent l'. Hence, thought of as a line
+J21 0530  8    in a particular plane |p, any tangent to Q has a
+J21 0540  7    unique image and moreover this image is the same for
+J21 0550  5    all planes through l.
+J21 0550  9       Each generator, |l, of **f is also exceptional,
+J21 0560  7    for each is transformed into the entire congruence
+J21 0570  3    of secants of the curve into which that generator is
+J21 0580  2    transformed by the point involution on Q. This curve
+J21 0580 11    is of symbol **f since it meets |l, and hence every
+J21 0590 10    line of **f in the **f invariant points on |l and
+J21 0600  7    since it obviously meets every line of **f in a single
+J21 0610  6    point. The congruence of its secants is therefore of
+J21 0620  2    order **f and class **f.
+J21 0620  7       A final class of exceptional lines is identifiable
+J21 0630  3    from the following considerations: Since no two generators
+J21 0640  2    of **f can intersect, it follows that their image curves
+J21 0650  1    can have no free intersections. In other words, these
+J21 0650 10    curves have only fixed intersections common to them
+J21 0660  6    all. Now the only way in which all curves of the image
+J21 0670  5    family of **f can pass through a fixed point is to
+J21 0680  2    have a generator of **f which is not a secant but a
+J21 0680 14    tangent of \g, for then any point on such a generator
+J21 0690  9    will be transformed into the point of tangency. Since
+J21 0700  6    two curves of symbol **f on Q intersect in **f points,
+J21 0710  4    it follows that there are **f lines of **f which are
+J21 0720  2    tangent to \g. Clearly, any line, l, of any bundle
+J21 0730  1    having one of these points of tangency, T, as vertex
+J21 0730 11    will be transformed into the entire pencil having the
+J21 0740  7    image of the second intersection of l and Q as vertex
+J21 0750  7    and lying in the plane determined by the image point
+J21 0760  5    and the generator of **f which is tangent to \g at
+J21 0770  3    T. A line through two of these points, **f and **f,
+J21 0780  1    will be transformed into the entire bilinear congruence
+J21 0780  9    having the tangents to \g at **f and **f as directrices.
+J21 0790 10       A conic, C, being a (1, 1) curve on Q, meets the
+J21 0800 10    image of any line of **f, which we have already found
+J21 0810  8    to be a **f curve on Q, in **f points. Hence its image,
+J21 0820  7    C', meets any line of **f in **f points. Moreover,
+J21 0830  5    C' obviously meets any line **f in a single point.
+J21 0840  4    Hence C' is a **f curve on Q. Therefore, the congruence
+J21 0850  3    of its secants, that is the image of a general plane
+J21 0860  2    field of lines, is of order **f and class **f. Finally,
+J21 0860 13    the image of a general bundle of lines is a congruence
+J21 0870 10    whose order is the order of the congruence of invariant
+J21 0880  6    lines, namely **f and whose class is the order of the
+J21 0890  5    image congruence of a general plane field of lines,
+J21 0900  1    namely **f.
+J21 0900  3    #2.#
+J21 0900  4    The preceding observations make it clear that there
+J21 0910  1    exist line involutions of all orders greater than 1
+J21 0910 10    with no complex of invariant lines and with a complex
+J21 0920  8    of singular lines consisting exclusively of the lines
+J21 0930  4    which meet a twisted curve \g. We now shall show that
+J21 0940  3    any involution with these characteristics is necessarily
+J21 0950  1    of the type we have just described.
+J21 0950  8       To do this we must first show that every line which
+J21 0960  6    meets \g in a point P meets its image at P. To see
+J21 0970  6    this, consider a general pencil of lines containing
+J21 0980  2    a general secant of \G. By (1), the image of this
+J21 0980 13    pencil is a ruled surface of order **f which is met
+J21 0990 11    by the plane of the pencil in a curve, C, of order
+J21 1000  8    **f. On C there is a **f correspondence in which the
+J21 1010  6    **f points cut from C by a general line, l, of the
+J21 1020  5    pencil correspond to the point of intersection of the
+J21 1030  3    image of l and the plane of the pencil. Since C is
+J21 1040  2    rational, this correspondence has k coincidences,
+J21 1040  8    each of which implies a line of the pencil which meets
+J21 1050 11    its image. However, since the pencil contains a secant
+J21 1060  7    of \g it actually contains only **f singular lines.
+J21 1070  4    To avoid this contradiction it is necessary that C
+J21 1080  2    be composite, with the secant of \g and a curve of
+J21 1090  1    order **f as components. Thus it follows that the secants
+J21 1090 11    of \g are all invariant. But if this is the case,
+J21 1100 10    then an arbitrary pencil of lines having a point, P,
+J21 1110  7    of \g as vertex is transformed into a ruled surface
+J21 1120  5    of order **f having **f generators concurrent at P.
+J21 1130  2    Since a ruled surface of order n with n concurrent
+J21 1131  1    generators is necessarily a cone, it follows finally
+J21 1140  8    that every line through a point, P, of \g meets its
+J21 1150  8    image at P, as asserted.
+J21 1160  1       Now consider the transformation of the lines of
+J21 1160  9    a bundle with vertex, P, on \g which is effected
+J21 1170  9    by the involution as a whole. From the preceding remarks,
+J21 1180  8    it is clear that such a bundle is transformed into
+J21 1190  4    itself in an involutorial fashion. Moreover, in this
+J21 1200  3    involution there is a cone of invariant lines of order
+J21 1200 13    **f, namely the cone of secants of \g which pass through
+J21 1210 10    P. Hence it follows that the involution within the
+J21 1220  8    bundle must be a perspective de Jonquieres involution
+J21 1230  4    of order **f and the invariant locus must have a multiple
+J21 1240  4    line of multiplicity either **f or **f. The first possibility
+J21 1250  1    requires that there be a line through P which meets
+J21 1260  1    \g in **f points; the second requires that there be
+J21 1260 11    a line through P which meets \g in **f points. In
+J21 1270  9    each case, lines of the bundles are transformed by
+J21 1280  7    involutions within the pencils they determine with
+J21 1290  3    the multiple secant. In the first case the fixed elements
+J21 1300  1    within each pencil are the multiple secant and the
+J21 1300 10    line joining the vertex, P, to the intersection of
+J21 1310  7    \g and the plane of the pencil which does not lie
+J21 1320  7    on the multiple secant. In the second, the fixed elements
+J21 1330  4    are the lines which join the vertex, P, to the two
+J21 1340  3    intersections of \g and the plane of the pencil which
+J21 1340 13    do not lie on the multiple secant. The multiple secants,
+J21 1350 10    of course, are exceptional and in each case are transformed
+J21 1360  8    into cones of order **f.
+J21 1370  1       Observations similar to these can be made at each
+J21 1370 10    point of \g. Hence \g must have either a regulus
+J21 1380  8    of **f-fold secants or a regulus of **f-fold secants.
+J21 1390  7    Moreover, if **f, no two of the multiple secants can
+J21 1400  3    intersect. For if such were the case, either the plane
+J21 1410  1    of the two lines would meet \g in more than k points
+J21 1410 13    or, alternatively, the order of the image regulus of
+J21 1420  9    the pencil determined by the two lines would be too
+J21 1430  8    high. But if no two lines of the regulus of multiple
+J21 1440  3    secants of \g can intersect, then the regulus must
+J21 1450  1    be quadratic, or in other words, \g must be either
+J21 1450 11    a **f or a **f curve on a nonsingular quadric surface.
+J21 1460  7       We now observe that the case in which \g is a **f
+J21 1470  9    curve on a quadric is impossible if the complex of
+J21 1480  4    singular lines consists exclusively of the lines which
+J21 1490  1    meet \g. For any pencil in a plane containing a **f-fold
+J21 1490 13    secant of \g has an image regulus which meets the
+J21 1500 10    plane of the pencil in **f lines, namely the images
+J21 1510  7    of the lines of the pencil which pass through the intersection
+J21 1520  4    of \g and the multiple secant, plus an additional
+J21 1530  1    component to account for the intersections of the images
+J21 1530 10    of the general lines of the pencil. However, if there
+J21 1540 10    is no additional complex of singular lines, the order
+J21 1550  6    of the image regulus of a pencil is precisely **f.
+J21 1560  3    This contradicts the preceding observations, and so,
+J21 1570  1    under the assumption of this paper we must reject the
+J21 1570 11    possibility that \g is a **f curve on a quadric surface.
+J21 1580 10       Continuing with the case in which \g is a **f curve
+J21 1590 10    on a quadric Q, we first observe that the second regulus
+J21 1600  6    of Q consists precisely of the lines which join the
+J21 1610  6    two free intersections of \g and the planes through
+J21 1620  2    any one of the multiple secants. For each of these
+J21 1620 12    lines meets Q in three points, namely two points on
+J21 1630 10    \g and one point on one of the multiple secants.
+J21 1640  8       Now consider an arbitrary line, l, meeting Q in
+J21 1650  6    two points, **f and **f. If |a is the multiple secant
+J21 1660  6    of \g which passes through **f and |b is the simple
+J21 1670  5    secant of \g which passes through **f, and if **f
+J21 1680  3    are the points in which |a meets \g, and if **f is
+J21 1680 15    the image of **f on the generator |b, it follows that
+J21 1690 11    the image of the line **f is **f.

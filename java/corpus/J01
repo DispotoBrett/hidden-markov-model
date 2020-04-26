@@ -1,0 +1,238 @@
+J01 0010  1    #1. INTRODUCTION#
+J01 0010  3    IT HAS recently become practical to use the radio emission
+J01 0020  3    of the moon and planets as a new source of information
+J01 0030  1    about these bodies and their atmospheres. The results
+J01 0030  9    of present observations of the thermal radio emission
+J01 0040  6    of the moon are consistent with the very low thermal
+J01 0050  5    conductivity of the surface layer which was derived
+J01 0060  1    from the variation in the infrared emission during
+J01 0060  9    eclipses (e.g., Garstung, 1958). When sufficiently
+J01 0070  5    accurate and complete measurements are available, it
+J01 0080  4    will be possible to set limits on the thermal and electrical
+J01 0090  3    characteristics of the surface and subsurface materials
+J01 0100  1    of the moon.
+J01 0100  4       Observations of the radio emission of a planet which
+J01 0110  2    has an extensive atmosphere will probe the atmosphere
+J01 0110 10    to a greater extent than those using shorter wave lengths
+J01 0120  8    and should in some cases give otherwise unobtainable
+J01 0130  4    information about the characteristics of the solid
+J01 0140  4    surface. Radio observations of Venus and Jupiter have
+J01 0150  1    already supplied unexpected experimental data on the
+J01 0150  8    physical conditions of these planets. The observed
+J01 0160  6    intensity of the radio emission of Venus is much higher
+J01 0170  5    than the expected thermal intensity, although the spectrum
+J01 0180  2    indicated by measurements at wave lengths near 3 cm
+J01 0180 11    and 1o cm is like that of a black body at about 6oo`
+J01 0190 13    K. This result suggests a very high temperature at
+J01 0210  7    the solid surface of the planet, although there is
+J01 0220  4    the possibility that the observed radiation may be
+J01 0240  1    a combination of both thermal and non-thermal components
+J01 0240 10    and that the observed spectrum is that of a black body
+J01 0250  9    merely by coincidence. For the case of Jupiter, the
+J01 0260  6    radio emission spectrum is definitely not like the
+J01 0270  2    spectrum of a black-body radiator, and it seems very
+J01 0270 12    likely that the radiation reaching the earth is a combination
+J01 0280  9    of thermal radiation from the atmosphere and non-thermal
+J01 0290  7    components.
+J01 0290  8       Of the remaining planets, only Mars and Saturn have
+J01 0300  7    been observed as radio sources, and not very much information
+J01 0310  6    is available. Mars has been observed twice at about
+J01 0320  4    3-cm wave length, and the intensity of the observed
+J01 0330  1    radiation is in reasonable agreement with the thermal
+J01 0330  9    radiation which might be predicted on the basis of
+J01 0340  8    the known temperature of Mars. The low intensity of
+J01 0350  5    the radiation from Saturn has limited observations,
+J01 0360  1    but again the measured radiation seems to be consistent
+J01 0360 10    with a thermal origin. No attempts to measure the radio
+J01 0370  8    emission of the remaining planets have been reported,
+J01 0380  5    and, because of their distances, small diameters, or
+J01 0390  3    low temperatures, the thermal radiation at radio wave
+J01 0390 11    lengths reaching the earth from these sources is expected
+J01 0400  9    to be of very low intensity. In spite of this, the
+J01 0410  8    very large radio reflectors and improved amplifying
+J01 0420  3    techniques which are now becoming available should
+J01 0430  1    make it possible to observe the radio emission of most
+J01 0430 11    of the planets in a few years.
+J01 0440  5       The study of the radio emission of the moon and
+J01 0450  2    planets began with the detection of the thermal radiation
+J01 0450 11    of the moon at 1.25-cm wave length by Dicke and Beringer
+J01 0460 10    (1946). This was followed by a comprehensive series
+J01 0470  6    of observations of the 1.25-cm emission of the moon
+J01 0490  5    over three lunar cycles by Piddington and Minnett (1949).
+J01 0500  2    They deduced from their measurements that the radio
+J01 0500 10    emission from the whole disk of the moon varied during
+J01 0510 10    a lunation in a roughly sinusoidal fashion; that the
+J01 0520  5    amplitude of the variation was considerably less than
+J01 0530  3    the amplitude of the variation in the infrared emission
+J01 0540  1    as measured by Pettit and Nicholson (1930) and Pettit
+J01 0540 10    (1935); and that the maximum of the radio emission
+J01 0550  9    came about 3-1/2 days after Full Moon, which is again
+J01 0570  5    in contrast to the infrared emission, which reaches
+J01 0580  1    its maximum at Full Moon. Piddington and Minnett explained
+J01 0590  1    their observations by pointing out that rocklike materials
+J01 0590  9    which are likely to make up the surface of the moon
+J01 0600  9    would be partially transparent to radio waves, although
+J01 0610  5    opaque to infrared radiation. The infrared emission
+J01 0620  2    could then be assumed to originate at the surface of
+J01 0620 12    the moon, while the radio emission originates at some
+J01 0630  8    depth beneath the surface, where the temperature variation
+J01 0640  5    due to solar radiation is reduced in amplitude and
+J01 0650  4    shifted in phase. Since the absorption of radio waves
+J01 0660  1    in rocklike material varies with wave length, it should
+J01 0660 10    be possible to sample the temperature variation at
+J01 0670  7    different depths beneath the surface and possibly detect
+J01 0680  4    changes in the structure or composition of the lunar
+J01 0690  2    surface material.
+J01 0690  4       The radio emission of a planet was first detected
+J01 0700  3    in 1955, when Burke and Franklin (1955) identified
+J01 0700 11    the origin of interference-like radio noise on their
+J01 0710  9    records at about 15 meters wave length as emission
+J01 0720  6    from Jupiter. This sporadic type of planetary radiation
+J01 0730  3    is discussed by Burke (chap. 13) and Gallet (chap.
+J01 0740  1    14). Steady radiation which was presumably of thermal
+J01 0740  9    origin was observed from Venus at 3.15 and 9.4 cm,
+J01 0750  9    and from Mars and Jupiter at 3.15 cm in 1956 (Mayer,
+J01 0760  7    McCullough, and Sloanaker, 1958a, b, c), and from Saturn
+J01 0770  6    at 3.75 cm in 1957 (Drake and Ewen, 1958). In the
+J01 0780  4    relatively short time since these early observations,
+J01 0800  1    Venus has been observed at additional wave lengths
+J01 0800  9    in the range from 0.8 to 10.2 cm, and Jupiter has
+J01 0810  8    been observed over the wave-length range from 3.03
+J01 0820  4    to 68 cm.
+J01 0820  7       The observable characteristics of planetary radio
+J01 0830  3    radiation are the intensity, the polarization, and
+J01 0830 10    the direction of arrival of the waves. The maximum
+J01 0840  9    angular diameter of any planetary disk as observed
+J01 0850  6    from the earth is about 1 minute of arc. This is much
+J01 0860  4    smaller than the highest resolution of even the very
+J01 0870  1    large reflectors now under construction, and consequently
+J01 0870  8    the radio emission of different regions of the disk
+J01 0880  7    cannot be resolved. It should be possible, however,
+J01 0890  4    to put useful limits on the diameters of the radio
+J01 0900  1    sources by observing with large reflectors or with
+J01 0900  9    interferometers. Measurements of polarization are presently
+J01 0910  6    limited by apparatus sensitivity and will remain difficult
+J01 0920  5    because of the low intensity of the planetary radiation
+J01 0930  3    at the earth. There have been few measurements specifically
+J01 0940  1    for the determination of the polarization of planetary
+J01 0940  9    radiation. The measurements made with the NRL 50-foot
+J01 0950  9    reflector, which is altitude-azimuth-mounted, would
+J01 0960  7    have shown a systematic change with local hour angle
+J01 0970  5    in the measured intensities of Venus and Jupiter if
+J01 0980  2    a substantial part of the radiation had been linearly
+J01 0980 11    polarized. Recent interferometer measurements (Radhakrishnan
+J01 0990  5    and Roberts, 1960) have shown the 960-Mc emission
+J01 1000  8    of Jupiter to be partially polarized and to originate
+J01 1020  4    in a region of larger diameter than the visible disk.
+J01 1030  2    Other than this very significant result, most of the
+J01 1030 11    information now available about the radio emission
+J01 1040  7    of the planets is restricted to the intensity of the
+J01 1050  6    radiation.
+J01 1050  7       The concept of apparent black-body temperature is
+J01 1060  5    used to describe the radiation received from the moon
+J01 1070  3    and the planets. The received radiation is compared
+J01 1070 11    with the radiation from a hypothetical black body which
+J01 1080  8    subtends the same solid angle as the visible disk of
+J01 1090  7    the planet. The apparent black-body disk temperature
+J01 1100  3    is the temperature which must be assumed for the black
+J01 1110  2    body in order that the intensity of its radiation should
+J01 1110 12    equal that of the observed radiation. The use of this
+J01 1120  9    concept does not specify the origin of the radiation,
+J01 1130  6    and only if the planet really radiates as a black body,
+J01 1140  5    will the apparent black-body temperature correspond
+J01 1150  1    to the physical temperature of the emitting material.
+J01 1150  9       The radio radiation of the sun which is reflected
+J01 1160  8    from the moon and planets should be negligible compared
+J01 1170  4    with their thermal emission at centimeter wave lengths,
+J01 1180  3    except possibly at times of exceptional outbursts of
+J01 1180 11    solar radio noise. The quiescent level of centimeter
+J01 1190  8    wave-length solar radiation would increase the average
+J01 1200  5    disk brightness temperature by less than 1` K. At
+J01 1210  5    meter wave lengths and increase of the order of 10`
+J01 1220  2    K in the average disk temperatures of the nearer planets
+J01 1220 12    would be expected. Therefore, neglecting the extreme
+J01 1240  7    outbursts, reflected solar radiation is not expected
+J01 1250  6    to cause sizable errors in the measurements of planetary
+J01 1260  3    radiation in the centimeter- and decimeter-wave-length
+J01 1270  1    range.
+J01 1270  2    #2. THE MOON#
+J01 1270  5    _2.1 OBSERVATIONS_
+J01 1270  7       Radio observations of the moon have been made over
+J01 1280  8    the range of wave lengths from 4.3 mm to 75 cm, and
+J01 1290  5    the results are summarized in Table 1. Observations
+J01 1300  1    have also been made at 1.5 mm using optical techniques
+J01 1300 11    (Sinton, 1955, 1956,; see also chap. 11). Not all the
+J01 1310 10    observers have used the same procedures or made the
+J01 1320  7    same assumptions about the lunar brightness distribution
+J01 1330  2    when reducing the data, and this, together with differences
+J01 1340  2    in the methods of calibrating the antennae and receivers,
+J01 1350  1    must account for much of the disagreement in the measured
+J01 1350 11    radio brightness temperatures.
+J01 1360  2       In the observations at 4.3 mm (Coates, 1959a),
+J01 1370  2    the diameter of the antenna beam, 6'.7, was small enough
+J01 1380  1    to allow resolution of some of the larger features
+J01 1380 10    of the lunar surface, and contour diagrams have been
+J01 1390  6    made of the lunar brightness distribution at three
+J01 1400  3    lunar phases. These observations indicate that the
+J01 1400 10    lunar maria heat up more rapidly and also cool off
+J01 1410 10    more rapidly than do the mountainous regions. Mare
+J01 1420  5    Imbrium seems to be an exception and remains cooler
+J01 1430  3    than the regions which surround it. These contour diagrams
+J01 1440  1    also suggest a rather rapid falloff in the radio brightness
+J01 1440 11    with latitude.
+J01 1450  2       Very recently, observations have been made at 8-mm
+J01 1460  1    wave length with a reflector 22 meters in diameter
+J01 1460 10    with a resultant beam width of only about 2' (Amenitskii,
+J01 1470  8    Noskova, and Salomonovich, 1960). The constant-temperature
+J01 1480  5    contours are much smoother than those observed at 4.3
+J01 1490  4    mm by Coates (1959a), and apparently the emission
+J01 1500  1    at 8 mm is not nearly so sensitive to differences
+J01 1500 11    in surface features. Such high-resolution observations
+J01 1510  6    as these are needed at several wave lengths in order
+J01 1520  5    that the radio emission of the moon can be properly
+J01 1540  1    interpreted.
+J01 1540  2       The observations of Mayer, McCullough, and Sloanaker
+J01 1550  3    at 3.15 cm and of Sloanaker at 10.3 cm have not previously
+J01 1560  1    been published and will be briefly described. Measurements
+J01 1570  1    at 3.15 cm were obtained on 11 days spread over the
+J01 1570 12    interval May 3 to June 19, 1956, using the 50-foot
+J01 1580  9    reflector at the U. S. Naval Research Laboratory in
+J01 1590  4    Washington. The half-intensity diameter of the antenna
+J01 1600  4    beam was about 9', and the angle subtended by the moon
+J01 1610  1    included the entire main beam and part of the first
+J01 1610 11    side lobes. The antenna patterns and the power gain
+J01 1620  7    at the peak of the beam were both measured (Mayer,
+J01 1630  3    McCullough, and Sloanaker, 1958b), so that the absolute
+J01 1650  2    power sensitivity of the antenna beam over the solid
+J01 1650 11    angle of the moon was known. The ratio of the measured
+J01 1660 11    antenna temperature change during a drift scan across
+J01 1670  7    the moon to the average brightness temperature of the
+J01 1680  3    moon over the antenna beam (assuming that the brightness
+J01 1690  1    temperature of the sky is negligible) was found, by
+J01 1690 10    graphical integration of the antenna directivity diagram,
+J01 1710  6    to be 0.85. The measured brightness temperature is
+J01 1720  4    a good approximation to the brightness temperature
+J01 1730  1    at the center of the lunar disk because of the narrow
+J01 1730 12    antenna beam and because the temperature distribution
+J01 1740  7    over the central portion of the moon's disk is nearly
+J01 1750  7    uniform. The result of the observations is (in ` K)
+J01 1760  5    **f where the phase angle, |qt, is measured in degrees
+J01 1770  3    from new moon and the probable errors include absolute
+J01 1780  1    as well as relative errors. This result is plotted
+J01 1780 10    along with the 8.6-mm observations of Gibson (1958)
+J01 1790  5    in figure 1, a. The variation in the 3-cm emission
+J01 1810  6    of the moon during a lunation is very much less than
+J01 1820  3    the variation in the 8.6-mm emission, as would be
+J01 1820 13    expected from the explanation of Piddington and Minnett
+J01 1830  8    (1949). In the discussion which follows, the time average
+J01 1840  6    of the radio emission will be referred to as the constant
+J01 1850  6    component, and the superimposed periodic variation
+J01 1860  2    will be called the variable component.
+J01 1860  8       The 10.3-cm observation of Sloanaker was made on
+J01 1870  7    May 20, 1958, using the 84-foot reflector at the Maryland
+J01 1880  7    Point Observatory of the U. S. Naval Research Laboratory.
+J01 1890  5    The age of the moon was about 2 days. The half-intensity
+J01 1900  5    diameter of the main lobe of the antenna was about
+J01 1910  2    18'.5, and the brightness temperature was reduced by
+J01 1910 10    assuming a Gaussian shape for the antenna beam and
+J01 1920  9    a uniformly bright disk for the moon.

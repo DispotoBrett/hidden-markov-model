@@ -1,0 +1,263 @@
+F13 0010  1    _@_
+F13 0010  2       Farming is confining. The farmer's life must be
+F13 0010 10    arranged to meet the demands of crops and livestock.
+F13 0020  9       Livestock must be tended every day, routinely. A
+F13 0030  6    slight change in the work schedule may cut the production
+F13 0040  4    of cows or chickens.
+F13 0040  8       Even if there are no livestock, the farmer cannot
+F13 0050  5    leave the farm for long periods, particularly during
+F13 0060  2    the growing season.
+F13 0060  5       The worker who lives on a farm cannot change jobs
+F13 0070  4    readily. He cannot leave the farm to take work in another
+F13 0080  3    locality on short notice; such a move may mean a loss
+F13 0080 14    of capital.
+F13 0090  2    _@_
+F13 0090  3       Hard physical labor and undesirable hours are a
+F13 0090 11    part of farm life. The farmer must get up early, and,
+F13 0100 11    at times, work late at night. Frequently he must work
+F13 0110  7    long hours in the hot sun or cold rain. No matter how
+F13 0120  5    well work is planned, bad weather or unexpected setbacks
+F13 0130  2    can cause extra work that must be caught up.
+F13 0130 11       It may not be profitable for a part-time farmer
+F13 0140  9    to own the labor-saving machinery that a full-time
+F13 0150  5    farmer can invest in profitably.
+F13 0150 10    _@_
+F13 0150 11       Production may fall far below expectations. Drought,
+F13 0160  7    hail, disease, and insects take their toll of crops.
+F13 0170  6    Sickness or loss of some of the livestock may cut into
+F13 0180  4    the owner's earnings, even into his capital.
+F13 0190  1    _@_
+F13 0190  1       Returns for money and labor invested may be small
+F13 0190 10    even in a good year.
+F13 0200  2       The high cost of land, supplies, and labor make
+F13 0200 11    it difficult to farm profitably on a part-time basis.
+F13 0210  9    Land within commuting distance of a growing city is
+F13 0230  7    usually high in price, higher if it has subdivision
+F13 0240  2    possibilities. Part-time farmers generally must pay
+F13 0240  9    higher prices for supplies than full-time farmers because
+F13 0250  9    they buy in smaller quantities. If the farm is in an
+F13 0260  8    industrial area where wages are high, farm labor costs
+F13 0270  4    will also be high.
+F13 0270  8       A part-time farmer needs unusual skill to get as
+F13 0280  6    high production per hen, per cow, or per acre as can
+F13 0290  3    be obtained by a competent full-time farmer. It will
+F13 0290 13    frequently be uneconomical for him to own the most
+F13 0300  9    up-to-date equipment. He may have to depend upon custom
+F13 0310  7    service for specialized operations, such as spraying
+F13 0320  4    or threshing, and for these, he may have to wait his
+F13 0330  1    turn. There will be losses caused by emergencies that
+F13 0330 10    arise while he is away at his off-farm job.
+F13 0340  8    _@_
+F13 0340  9       The farm may be an additional burden if the main
+F13 0350  5    job is lost. This may be true whether the farm is owned
+F13 0360  2    or rented.
+F13 0360  4       If the farm is rented, the rent must be paid. If
+F13 0370  2    it is owned, taxes must be paid, and if the place is
+F13 0370 14    not free of mortgage, there will be interest and payments
+F13 0390  2    on the principal to take care of.
+F13 0390  9    _ADVANTAGES_
+F13 0400  1       _@_
+F13 0400  1       A farm provides a wholesome and healthful environment
+F13 0400  9    for children. It gives them room to play and plenty
+F13 0410  9    of fresh air. The children can do chores adapted to
+F13 0420  5    their age and ability. Caring for a calf, a pig, or
+F13 0430  2    some chickens develops in children a sense of responsibility
+F13 0430 11    for work.
+F13 0440  2    _@_
+F13 0440  3       Part-time farming gives a measure of security if
+F13 0440 12    the regular job is lost, provided the farm is owned
+F13 0450 10    free of debt and furnishes enough income to meet fixed
+F13 0460  6    expenses and minimum living costs.
+F13 0470  1    _@_
+F13 0470  2       For some retired persons, part-time farming is a
+F13 0470 11    good way to supplement retirement income. It is particularly
+F13 0480  8    suitable for those who need to work or exercise out
+F13 0490  8    of doors for their health.
+F13 0500  1    _@_
+F13 0500  1       Generally, the same level of living costs less in
+F13 0510  7    the country than in the city. The savings are not as
+F13 0520  9    great, however, as is sometime supposed. Usually, the
+F13 0530  3    cost of food and shelter will be somewhat less on the
+F13 0540  2    farm and the cost of transportation and utilities somewhat
+F13 0540 11    more. Where schools, fire and police protection, and
+F13 0550  8    similar municipal services are of equal quality in
+F13 0560  6    city and country, real estate taxes are usually about
+F13 0570  3    the same.
+F13 0570  5    _@_
+F13 0570  6       A part-time farmer and his family can use their
+F13 0580  3    spare time profitably.
+F13 0580  6    _@_
+F13 0580  7       Some persons consider the work on a farm recreational.
+F13 0590  6    For some white-collar workers it is a welcome change
+F13 0600  3    from the regular job, and a physical conditioner.
+F13 0600 11    #LAND, LABOR, AND EQUIPMENT NEEDED#
+F13 0610  5    Part-time farming can take comparatively little land,
+F13 0620  3    labor, and equipment- or a great deal. It depends on
+F13 0630  2    the kind and the scale of the farming operation.
+F13 0630 11       General requirements for land, labor, and equipment
+F13 0640  7    are discussed below. Specific requirements for each
+F13 0650  4    of various types of enterprises are discussed on pages
+F13 0660  3    8 to 14.
+F13 0660  6    _LAND_
+F13 0660  7       Three quarters to 1 acre of good land is enough
+F13 0670  3    for raising fruits and vegetables for home use, and
+F13 0670 12    for a small flock of chickens, a cow, and two pigs.
+F13 0680 10    You could not, of course, raise feed for the livestock
+F13 0690  6    on a plot this small.
+F13 0690 11       If you want to raise feed or carry out some enterprise
+F13 0710  8    on a larger scale, you'll need more land.
+F13 0720  4       In deciding how much land you want, take into account
+F13 0730  2    the amount you'll need to bring in the income you expect.
+F13 0730 13    But consider also how much you and your family can
+F13 0740 10    keep up along with your other work. The cost of land
+F13 0750  7    and the prospects for appreciation in value may influence
+F13 0760  4    your decision. Some part-time farmers buy more land
+F13 0770  2    than they need in anticipation of suburban development.
+F13 0770 10    This is a highly speculative venture.
+F13 0780  5       Sometimes a desired acreage is offered only as part
+F13 0790  4    of a larger tract. When surplus land is not expensive
+F13 0800  1    to buy or to keep up, it is usually better to buy it
+F13 0800 14    than to buy so small an acreage that the development
+F13 0810  8    of adjoining properties might impair the residential
+F13 0820  4    value of the farm.
+F13 0820  8    _LABOR_
+F13 0820  9       If you have a year-round, full-time job you can't
+F13 0830  8    expect to grow much more than your family uses- unless
+F13 0840  4    other members of the family do a good deal of the work
+F13 0850  3    or you hire help. As a rule, part-time farmers hire
+F13 0850 14    little help.
+F13 0860  2       In deciding on the enterprises to be managed by
+F13 0860 11    family labor, compare the amount of labor that can
+F13 0870  8    be supplied by the family with the labor needs of various
+F13 0880  6    enterprises listed in table 1.
+F13 0890  1       List the number of hours the family can be expected
+F13 0890 10    to work each month. You may want to include your own
+F13 0900  8    regular vacation period if you have one. Do not include
+F13 0910  5    all your spare time or all your family's spare time-
+F13 0920  1    only what you are willing to use for farm work.
+F13 0930  1    _EQUIPMENT_
+F13 0930  1       If you are going to produce for home use only, you
+F13 0930 12    will need only hand tools. You will probably want to
+F13 0940  8    hire someone to do the plowing, however.
+F13 0950  2       For larger plantings, you'll need some kind of power
+F13 0960  1    for plowing, harrowing, disking, and cultivating. If
+F13 0960  8    you have a planting of half an acre or more you may
+F13 0970  9    want to buy a small garden tractor (available for $300
+F13 0980  4    to $500 with attachments, 1960 prices). These tractors
+F13 0990  2    are not entirely satisfactory for plowing, particularly
+F13 0990  9    on heavier soils, so you may still want to hire someone
+F13 1000 10    to do the plowing.
+F13 1010  1       Cost of power and machinery is often a serious problem
+F13 1010 11    to the small-scale farmer. If you are going to farm
+F13 1020 10    for extra cash income on a part-time basis you must
+F13 1030  7    keep in mind the needed machinery investments when
+F13 1040  2    you choose among farm enterprises.
+F13 1040  7       You can keep your machinery investment down by buying
+F13 1050  6    good secondhand machinery, by sharing the cost and
+F13 1060  4    upkeep of machinery with a neighbor, and by hiring
+F13 1070  1    someone with machinery to do certain jobs. If an expensive
+F13 1070 11    and specialized piece of machinery is needed- such
+F13 1080  7    as a spray rig, a combine, or a binder- it is better
+F13 1090  7    to pay someone with a machine to do the work.
+F13 1100  1    #SELECTING A FARM#
+F13 1100  4    Before you look for a farm you'll need to know (1)
+F13 1110  4    the kind and scale of farming you want to undertake;
+F13 1110 14    and (2) whether you want to buy or rent.
+F13 1130  8       Information on pages 8 to 14 may help you in deciding
+F13 1140  6    on the kind and scale of your farming venture.
+F13 1150  1       If you are not well acquainted with the area in
+F13 1150 11    which you wish to locate, or if you are not sure that
+F13 1160 10    you and your family will like and make a success of
+F13 1170  6    farming, usually you would do better to rent a place
+F13 1180  3    for a year or two before you buy.
+F13 1180 11       Discussed below are some of the main things to look
+F13 1190  8    for when you select a part-time farm.
+F13 1200  1    _LOCATION_
+F13 1200  2       _NEARNESS TO WORK.-_
+F13 1200  5       Choose a location within easy commuting distance
+F13 1210  3    of both the regular job and other employment opportunities.
+F13 1220  1    Then if you change jobs you won't necessarily have
+F13 1220 10    to sell the farm. The presence of alternative job opportunities
+F13 1230  9    also will make the place easier to sell if that should
+F13 1240 10    become desirable.
+F13 1250  1       Obviously the farm should be on an all-weather road.
+F13 1260  1    _NEARNESS TO MARKETS.-_
+F13 1260  1       If you grow anything to sell you will need markets
+F13 1260 11    nearby. If you plan to sell fresh vegetables or whole
+F13 1270 10    milk, for example, you should be close to a town or
+F13 1280  9    city.
+F13 1290  1    _KIND OF NEIGHBORHOOD.-_
+F13 1290  1       Look for a farm in a neighborhood of well-kept homes.
+F13 1290 12    There are slums in the country as well as in the city.
+F13 1300 10    Few rural areas are protected by zoning. A tavern,
+F13 1310  5    filling station, junk yard, rendering plant, or some
+F13 1320  3    other business may go up near enough to hurt your home
+F13 1320 14    or to hurt its value.
+F13 1330  4    _FACILITIES IN THE AREA.-_
+F13 1330  8       Check on the schools in the area, the quality of
+F13 1340  7    teaching, and the provision for transportation to and
+F13 1350  3    from them.
+F13 1350  5       Find out whether fire protection, sewage system,
+F13 1360  2    gas, water mains, and electrical lines are available
+F13 1360 10    in the locality. If these facilities are not at the
+F13 1370  9    door, getting them may cost more than you expect. You
+F13 1380  7    may have to provide them yourself or get along without
+F13 1390  4    them.
+F13 1390  5       You cannot get along without an adequate supply
+F13 1400  2    of pure water. If you are considering a part-time farm
+F13 1400 13    where the water must be provided by a well, find out
+F13 1410 11    if there is a good well on the farm or the probable
+F13 1420  7    cost of having one drilled. A pond may provide adequate
+F13 1430  3    water for livestock and garden. Pond water can be filtered
+F13 1440  1    for human use, but most part-time farmers would not
+F13 1440 11    want to go to so much trouble. The following amounts
+F13 1450  8    of water are needed per day for livestock and domestic
+F13 1460  5    uses.
+F13 1460  6    _TOPOGRAPHY AND SOIL_
+F13 1460  9       Is the land suited to the crops you intend to raise?
+F13 1470  9    If you can't tell, get help from your county agricultural
+F13 1480  6    agent or other local specialist. Soil type, drainage,
+F13 1490  4    or degree of slope can make the difference between
+F13 1500  1    good crops and poor ones. Small areas that aren't right
+F13 1500 11    for a certain crop may lie next to areas that are well
+F13 1510 10    suited to that crop.
+F13 1520  1    _THE HOUSE_
+F13 1520  2       Will the house on any part-time farm you are considering
+F13 1530  1    make a satisfactory full-time residence? How much will
+F13 1530 10    it cost to do any necessary modernizing and redecorating?
+F13 1540  7    If the house is not wired adequately for electricity
+F13 1550  5    or if plumbing or a central heating system must be
+F13 1560  4    installed, check into the cost of making these improvements.
+F13 1570  1    #BUYING A FARM#
+F13 1570  4    The value of the farm to you will depend on-
+F13 1580  1    _@_
+F13 1580  2       Its worth as a place to live.
+F13 1580  9    _@_
+F13 1580 10       The value of the products you can raise on it.
+F13 1590  8    _@_
+F13 1590  9       The possibilities of selling the property later
+F13 1600  4    on for suburban subdivision.
+F13 1600  8       Decide first what the place is worth to you and
+F13 1610  9    your family as a home in comparison with what it would
+F13 1620  5    cost to live in town. Take into account the difference
+F13 1630  1    in city and county taxes, insurance rates, utility
+F13 1630  9    rates, and the cost of travel to work.
+F13 1640  7       Next, estimate the value of possible earnings of
+F13 1650  3    the farm. To do this, set up a plan on paper for operating
+F13 1660  1    the farm. List the kind and quantity of things the
+F13 1660 11    farm can be expected to produce in an average year.
+F13 1670  8    Estimate the value of the produce at normal prices.
+F13 1680  4    The total is the probable gross income from farming.
+F13 1690  1       To find estimated net farm income, subtract estimated
+F13 1700  1    annual farming expenditures from probable gross income
+F13 1700  8    from farming. Include as expenditures an allowance
+F13 1710  5    for depreciation of farm buildings and equipment. Also
+F13 1720  4    count as an expense a charge for the labor to be contributed
+F13 1730  2    by the family. It may be hard to decide what this labor
+F13 1740  1    is worth, but charge something for it. Otherwise, you
+F13 1740 10    may pay too much for the farm and get nothing for your
+F13 1750  9    labor.
+F13 1750 10       To figure the value of the farm in terms of investment
+F13 1760  9    income, divide the estimated annual net farm income
+F13 1770  5    by the percentage that you could expect to get in interest
+F13 1780  3    if the money were invested in some other way.

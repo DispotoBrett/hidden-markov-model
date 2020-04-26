@@ -1,0 +1,247 @@
+J09 0010  1       A variety of techniques have been directed toward
+J09 0010  9    the isolation and study of blood group antibodies.
+J09 0020  7    These include low-temperature ethanol (Cohn) fractionation,
+J09 0030  4    electrophoresis, ultracentrifugation and column chromatography
+J09 0040  3    on ion exchange celluloses. Modifications of the last
+J09 0050  3    technique have been applied by several groups of investigators.
+J09 0060  1    Abelson and Rawson, using a stepwise elution scheme,
+J09 0060  9    fractionated whole sera containing ABO and Rh antibodies
+J09 0070  8    on diethylaminoethyl DEAE cellulose and carboxymethyl
+J09 0080  5    cellulose. Speer and coworkers, in a similar study
+J09 0090  7    of blood group antibodies of whole sera, used a series
+J09 0100  5    of gradients for elution from DEAE-cellulose. Fahey
+J09 0110  2    and Morrison used a single, continuous gradient at
+J09 0110 10    constant pH for the fractionation of anti-A and anti-B
+J09 0120 11    agglutinins from preisolated |g-globulin samples.
+J09 0130  6       In the present work whole sera have been fractionated
+J09 0140  8    by chromatography on DEAE-cellulose using single gradients
+J09 0150  4    similar to those described by Sober and Peterson, and
+J09 0160  6    certain chemical and serological properties of the
+J09 0170  3    fractions containing antibodies of the ABO and Rh
+J09 0180  1    systems have been described.
+J09 0180  5    #MATERIALS AND METHODS#
+J09 0190  1    _SAMPLES._
+J09 0190  1       Serum samples were obtained from normal group A,
+J09 0190  9    group B and group O donors. Three of the anti-Rh
+J09 0200 10    sera used were taken from recently sensitized individuals.
+J09 0210  5    One contained complete antibody and had a titer of
+J09 0220  6    1:512 in saline. The second contained incomplete antibody
+J09 0230  2    and showed titers of 1:256 in albumin and 1:2048 by
+J09 0240  1    the indirect Coombs test. The third, containing the
+J09 0240  9    mixed type of complete and incomplete antibodies, had
+J09 0250  5    titers of 1:256 in saline, 1:512 in albumin and 1:1024
+J09 0260  5    by the indirect Coombs test. In addition one serum
+J09 0270  3    was obtained from a donor (R. E.) who had been sensitized
+J09 0280  1    6 years previously. This serum exhibited titers of
+J09 0280  9    1:16 in albumin and 1:256 by the indirect Coombs test.
+J09 0290  8    These antibody titers were determined by reaction with
+J09 0300  6    homozygous **f red cells.
+J09 0310  1    _SEROLOGICAL TECHNIQUE._
+J09 0310  2       Anti-A and anti-B activities were determined in
+J09 0320  2    fractions from the sera of group A, group B or group
+J09 0320 13    O donors by the following tube agglutination methods.
+J09 0330  8    One drop of each sample was added to one drop of a
+J09 0340  9    2% suspension of group **f or group B red cells in
+J09 0350  6    a small **f test tube. In several instances group O
+J09 0360  3    cells were also used as controls. The red cells were
+J09 0360 13    used within 2 days after donation and were washed with
+J09 0370 10    large amounts of saline before use. The mixtures of
+J09 0380  6    sample plus cell suspension were allowed to stand at
+J09 0390  4    room temperature for 1 hr. the tubes were then centrifuged
+J09 0400  2    at 1000 rpm for 1 min and examined macroscopically
+J09 0400 11    for agglutination. For the albumin method, equal volumes
+J09 0410  8    of 30% bovine albumin, sample and 2% cells suspended
+J09 0420  7    in saline were allowed to stand at room temperature
+J09 0430  5    for 1 hr and then were centrifuged at 1000 rpm for
+J09 0440  3    1 min. All samples were tested by both the saline
+J09 0440 13    and albumin methods. The activities of fractions of
+J09 0450  8    sera containing Rh antibodies were tested by the saline,
+J09 0460  7    albumin and indirect Coombs techniques. Homozygous
+J09 0470  3    and heterozygous **f cells, **f and homozygous and
+J09 0480  2    heterozygous **f cells were used to test each sample;
+J09 0480 11    however, in the interest of clarity and conciseness
+J09 0490  6    only the results obtained with homozygous **f and homozygous
+J09 0500  5    **f cells will be presented here.
+J09 0510  1       The saline and albumin tests were performed as described
+J09 0510  9    for the ABO samples except that the mixture was incubated
+J09 0520  8    for 1 hr at 37`C before centrifugation. The saline
+J09 0530  5    tubes were saved and used for the indirect Coombs test
+J09 0540  5    in the following manner. The cells were washed three
+J09 0550  2    times with saline, anti-human serum was added, the
+J09 0550 11    cells were resuspended, and the mixture was centrifuged
+J09 0560  7    at 1000 rpm for 1 min and examined for agglutination.
+J09 0570  5    The anti-human sera used were prepared by injecting
+J09 0580  3    whole human serum into rabbits. Those antisera shown
+J09 0590  1    by immunoelectrophoresis to be of the "broad spectrum"
+J09 0590  9    type were selected for used in the present study.
+J09 0600  8       The red cells for the Rh antibody tests were used
+J09 0610  6    within 3 days after drawing except for the **f cells,
+J09 0620  5    which had been glycerolized and stored at -20`C for
+J09 0630  2    approximately 1 year. These cells were thawed at 37`C
+J09 0630 11    for 30 min and were deglycerolized by alternately
+J09 0640  7    centrifuging and mixing with descending concentrations
+J09 0650  4    of glycerol solutions (20, 18, 10, 8, 4 and 2%). The
+J09 0660  4    cells were then washed three times with saline and
+J09 0660 13    resuspended to 2% in saline.
+J09 0670  5    _CHROMATOGRAPHY._
+J09 0670  6       Blood samples were allowed to clot at room temperature
+J09 0680  7    for 3 hr, centrifuged and the serum was removed. The
+J09 0690  4    serum was measured volumetrically and subsequently
+J09 0700  1    dialyzed in the cold for at least 24 hr against three
+J09 0700 12    to four changes, approximately 750 ml each, of "starting
+J09 0710  7    buffer". This buffer, pH 8.6, was 0.005 M in **f
+J09 0720  9    and 0.039 M in tris(hydroxymethyl)-aminomethane (Tris).
+J09 0730  2    After dialysis the sample was centrifuged and the supernatant
+J09 0740  4    placed on a **f cm column of EEAE-cellulose equilibrated
+J09 0750  2    with starting buffer. The DEAE-cellulose, containing
+J09 0760  2    0.78 mEq of N/g, was prepared in our laboratory by
+J09 0770  2    the method of Peterson and Sober (7) from powdered
+J09 0770 11    cellulose, 100-230 mesh. The small amount of insoluble
+J09 0780  7    material which precipitated during dialysis was suspended
+J09 0790  5    in approximately 5 ml of starting buffer, centrifuged,
+J09 0800  2    resuspended in 2.5 ml of isotonic saline and tested
+J09 0810  1    for antibody activity.
+J09 0810  4       The chromatography was done at 6`C using gradient
+J09 0820  3    elution, essentially according to Sober and Peterson.
+J09 0830  1    The deep concave gradient employed (fig. 2) was obtained
+J09 0830 10    with a nine-chambered gradient elution device ("Varigrad",
+J09 0840  8    reference (8)) and has been described elsewhere. the
+J09 0850  8    other, a shallow concave gradient (Fig. 1), was produced
+J09 0860  6    with a so-called "cone-sphere" apparatus, the "cone"
+J09 0870  4    being a 2-liter Erlenmeyer flask and the "sphere,"
+J09 0880  4    a 2-liter round-bottom flask. Each initially contained
+J09 0890  1    1700 ml of buffer; in the sphere was starting buffer
+J09 0890 11    and in the cone was final buffer, 0.50 M in both **f
+J09 0900 12    and Tris, pH 4.1.
+J09 0910  1       A flow rate of 72 **f was used and 12 ml fractions
+J09 0910 13    were collected. Approximately 165 fractions were obtained
+J09 0920  6    from each column. These were read at 280 m|m in a
+J09 0930  9    Beckman model DU spectrophotometer and tested for
+J09 0940  4    antibody activity as described above.
+J09 0950  1    _PAPER ELECTROPHORESIS._
+J09 0950  2       For protein identification, fractions from the column
+J09 0960  2    were concentrated by pervaporation against a stream
+J09 0960  9    of air at 5`C or by negative pressure dialysis in
+J09 0970  7    an apparatus which permitted simultaneous concentration
+J09 0980  3    of the protein and dialysis against isotonic saline.
+J09 0990  2    During the latter procedure the temperature was maintained
+J09 1000  1    at 2`C by surrounding the apparatus with ice. Because
+J09 1000 10    negative pressure dialysis gave better recovery of
+J09 1010  6    proteins, permitted detection of proteins concentrated
+J09 1020  4    from very dilute solutions and was a gentler procedure,
+J09 1030  2    it was used in all but the earliest experiments.
+J09 1030 11       Paper electrophoresis was carried out on the concentrated
+J09 1040  8    samples in a Spinco model R cell using barbital buffer,
+J09 1050  7    pH 8.6, ionic strength 0.075, at room temperature
+J09 1060  5    on Whatman 3MM filter paper. Five milliamperes/cell
+J09 1070  2    were applied for 18 hr, after which the strips were
+J09 1080  2    stained with bromphenol blue and densitometry was carried
+J09 1080 10    out using a Spinco Analytrol.
+J09 1090  4       When paper electrophoresis was to be used for preparation,
+J09 1100  4    eight strips of a whole serum sample or a chromatographic
+J09 1110  1    fraction concentrated by negative pressure dialysis
+J09 1110  7    were run/chamber under the conditions described above.
+J09 1120  6    At the end of the run, the strips in the third and
+J09 1130  7    sixth positions in each chamber were dried, stained
+J09 1140  2    for 1 hr, washed and dried, while the other strips
+J09 1140 12    were maintained in a horizontal position at 1`C. The
+J09 1150  9    unstained strips were then marked, using the stained
+J09 1160  6    ones as a guide, and cut transversely so as to separate
+J09 1170  5    the various protein bands. The strip sections containing
+J09 1180  1    a given protein were pooled, eluted with 0.5 ml of
+J09 1180 11    isotonic saline, and the eluates were tested for antibody
+J09 1190  9    activity.
+J09 1200  1    _ULTRACENTRIFUGATION._
+J09 1200  1       Fractions from the column which were to be subjected
+J09 1210  1    to analytical ultracentrifugation were concentrated
+J09 1210  6    by negative pressure dialysis and dialyzed for 16 hr
+J09 1220  7    in the cold against at least 500 volumes of phosphate-buffered
+J09 1230  5    saline, pH 7.2, ionic strength 0.154. They were then
+J09 1240  4    centrifuged at 59,780 rpm for 35 to 80 min at 20`C
+J09 1250  3    in a Spinco model E ultracentrifuge at a protein concentration
+J09 1260  1    of 1.00 to 1.25%. Sedimentation coefficients were computed
+J09 1270  1    as **f values and relative amounts of the various components
+J09 1270 11    were calculated from the Schlieren patterns.
+J09 1280  5       For preparative ultracentrifugation, fractions from
+J09 1290  3    the column were concentrated by negative pressure dialysis
+J09 1300  2    to volumes of 1 ml or less, transferred to cellulose
+J09 1310  1    tubes and diluted to 12 ml with isotonic saline.
+J09 1310 10    Ultracentrifugation
+J09 1320  1    was then carried out in a Spinco model L ultracentrifuge
+J09 1320 11    at 40,000 rpm for 125 to 150 min, refrigeration being
+J09 1330 10    used throughout the run. Successive 1-ml fractions
+J09 1340  7    were then drawn off with a hypodermic syringe, starting
+J09 1350  4    at the top of the tube, and tested for agglutinin activity.
+J09 1360  2       Other methods will be described below.
+J09 1370  1    #EXPERIMENTAL AND RESULTS#
+J09 1370  4    The insoluble material which precipitated during dialysis
+J09 1380  3    against starting buffer always showed intense agglutinin
+J09 1390  1    activity, regardless of the blood group of the donor.
+J09 1390 10    With either of the gradients described, chromatography
+J09 1400  6    on DEAE-cellulose separated agglutinins of the ABO
+J09 1410  6    series into at least three regions (Figs. 1 and 2):
+J09 1420  5    one of extremely low anionic binding capacity, one
+J09 1430  2    of low anionic binding capacity and one of high anionic
+J09 1430 12    binding capacity. These have been labeled Regions 1,
+J09 1440  8    2, and 4, respectively, in Fig. 1. When the early part
+J09 1450  8    of the gradient was flattened, either by using the
+J09 1460  5    gradient shown in Fig. 2 or by allowing the "cone-sphere"
+J09 1470  1    gradient to become established more slowly, Region
+J09 1470  8    2 activity could sometimes be separated into two areas
+J09 1480  8    (donors P. J. and R. S., Fig. 1 and E. M., Fig. 2).
+J09 1490 11    The latter procedure gave rise to a small active protein
+J09 1500  9    peak (Region 1a) between Regions 1 and 2. In 2 of 15
+J09 1510  9    experiments on whole serum a region of agglutinin activity
+J09 1520  3    with intermediate anionic binding capacity was detected
+J09 1530  1    (Region 3, Fig. 1). Moreover, after concentration using
+J09 1530  9    negative pressure dialysis, agglutinin activity could
+J09 1540  6    sometimes be detected in the region designated 2a (donors
+J09 1550  7    P. J., D. A., and J. F., Fig. 1).
+J09 1560  5       Not all these regions exhibited equal agglutinating
+J09 1570  2    activity, as evidenced by titer and the extent of the
+J09 1580  1    active areas. In all cases, most of the activity lay
+J09 1580 11    in the region of high anionic binding capacity. This
+J09 1590  6    was particularly noticeable in group A and group B
+J09 1600  5    sera, in which cases activity in Regions 1 and 2 was
+J09 1610  4    usually not detectable without prior concentration
+J09 1610 10    and occasionally could not be detected at all. There
+J09 1620  8    appeared to be no difference in the distribution of
+J09 1630  5    anti-A and anti-B activity in group O serum, though
+J09 1640  4    in two group O donors (J. F. and E. M.) only one type
+J09 1650  5    of agglutinin was found in the regions of low anionic
+J09 1660  1    binding capacity (Figs. 1 and 2).
+J09 1660  7       Several samples of citrated plasma were fractionated
+J09 1670  5    in our laboratory by Method 6 of Cohn et al. These
+J09 1680  4    fractions were tested for ABO agglutinin activity,
+J09 1690  2    using fractions from group AB plasma as a control.
+J09 1700  1    As expected, most of the activity was found in Fraction
+J09 1700 11    **f, with slight activity seen in Fraction IV-1. A
+J09 1710  9    sample of Fraction **f from group O plasma was dissolved
+J09 1720  7    in starting buffer, dialyzed against this buffer and
+J09 1730  4    subjected to chromatography using the gradient shown
+J09 1740  1    in Fig. 2. Once again, both anti-A and anti-B activities
+J09 1750  1    were found in the insoluble material precipitated during
+J09 1750  9    dialysis. Similarly, both types of antibodies were
+J09 1760  7    found in three regions of the chromatographic eluate,
+J09 1770  3    having extremely low, low, and high anionic binding
+J09 1780  2    capacity, respectively (Fig. 3).
+J09 1780  6       Chromatography of whole sera revealed that the areas
+J09 1790  7    of Rh antibody activity were generally continuous
+J09 1800  2    and wide. The incomplete antibody activity appeared
+J09 1810  1    in the early part of the chromatogram; the complete,
+J09 1810 10    in the latter part. The serum containing the mixed
+J09 1820  7    type of complete and incomplete antibodies showed activity
+J09 1830  4    in both regions (Fig. 1). In all cases the activity
+J09 1840  3    against **f cells was spread over a wider area than
+J09 1840 13    that with **f cells, regardless of the type of test
+J09 1850 10    (saline, albumin, indirect Coombs) used for comparison.
+J09 1860  5    The insoluble material resulting from dialysis against
+J09 1870  4    starting buffer always showed strong activity. In fact
+J09 1880  2    agglutination of **f cells in saline could be produced
+J09 1880 11    by the insoluble material from sera containing "only"
+J09 1890  7    incomplete antibody activity. This was later known
+J09 1900  6    to be the result of concentrating the minute amount
+J09 1910  3    of complete antibody found in these sera; when the
+J09 1910 12    insoluble fraction was suspended in a volume of saline
+J09 1920  9    equal to that of the original serum sample, no complete
+J09 1930  7    antibody activity could be detected.

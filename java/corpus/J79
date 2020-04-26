@@ -1,0 +1,224 @@
+J79 0010  1    The set of all decisions is called the operating policy
+J79 0010 11    or, more simply, the policy. An optimal policy is one
+J79 0020  8    which in some sense gets the best out of the process
+J79 0030  6    as a whole by maximizing the value of the product.
+J79 0040  1    There are thus three components to an optimal design
+J79 0040 10    problem:
+J79 0050  1    _(1)_
+J79 0050  2       The specification of the state of the process stream;
+J79 0050 11    _(2)_
+J79 0060  1       The specification of the operating variables and
+J79 0060  8    the transformation they effect;
+J79 0070  3    _(3)_
+J79 0070  4       The specification of the objective function of which
+J79 0080  3    the optimization is desired. For a chemical process
+J79 0090  1    the first of these might involve the concentrations
+J79 0100  8    of the different chemical species, and the temperature
+J79 0110  5    or pressure of the stream. For the second we might
+J79 0120  4    have to choose the volume of reactor or amount of cooling
+J79 0130  1    to be supplied; the way in which the transformation
+J79 0130 10    of state depends on the operating variables for the
+J79 0140  7    main types of reactors is discussed in the next chapter.
+J79 0150  5    The objective function is some measure of the increase
+J79 0160  3    in value of the stream by processing; it is the subject
+J79 0170  1    of Chapter 4.
+J79 0170  4       The essential characteristic of an optimal policy
+J79 0180  1    when the state of the stream is transformed in a sequence
+J79 0180 12    of stages with no feedback was first isolated by Bellman.
+J79 0190  9    He recognized that whatever transformation may be effected
+J79 0200  6    in the first stage of an R-stage process, the remaining
+J79 0220  4    stages must use an optimal **f-stage policy with respect
+J79 0230  3    to the state resulting from the first stage, if there
+J79 0240  1    is to be any chance of optimizing the complete process.
+J79 0240 11    Moreover, by systematically varying the operating conditions
+J79 0250  6    in the first stage and always using the optimal **f-stage
+J79 0260  7    policy for the remaining stages, we shall eventually
+J79 0270  4    find the optimal policy for all R stages. Proceeding
+J79 0280  1    in this way, from one to two and from two to three
+J79 0280 13    stages, we may gradually build up the policy for any
+J79 0290  9    number. At each step of the calculation the operating
+J79 0300  4    variables of only one stage need be varied.
+J79 0310  1       To see how important this economy is, let us suppose
+J79 0310 11    that there are m operating variables at each stage
+J79 0320  8    and that the state is specified by n variables; then
+J79 0330  7    the search for the maximum at any one stage will require
+J79 0340  7    a number of operations of order **f (where a is some
+J79 0350  4    number not unreasonably large). To proceed from one
+J79 0360  2    stage to the next a sufficient number of feed states
+J79 0360 12    must be investigated to allow of interpolation; this
+J79 0370  6    number will be of the order of **f. If, however, we
+J79 0380  6    are seeking the optimal R-stage policy for a given
+J79 0390  4    feed state, only one search for a maximum is required
+J79 0390 14    at the final step. Thus a number of operations of the
+J79 0400 11    order of **f are required. If all the operating variables
+J79 0410  7    were varied simultaneously, **f operations would be
+J79 0420  5    required to do the same job, and as R increases this
+J79 0430  3    increases very much more rapidly than the number of
+J79 0430 12    operations required by the dynamic program. But even
+J79 0440  8    more important than this is the fact that the direct
+J79 0450  8    search by simultaneously varying all operating conditions
+J79 0460  3    has produced only one optimal policy, namely, that
+J79 0470  1    for the given feed state and R stages. In contrast,
+J79 0470 11    the dynamic program produces this policy and a whole
+J79 0480  8    family of policies for any smaller number of stages.
+J79 0490  6    If the problem is enlarged to require a complete coverage
+J79 0500  4    of feed states, **f operations are needed by the dynamic
+J79 0510  1    program and **f by the direct search. But **f is vastly
+J79 0510 12    larger than R. No optimism is more baseless than that
+J79 0520 10    which believes that the high speed of modern digital
+J79 0530  8    computers allows for use of the crudest of methods
+J79 0540  4    in searching out a result. Suppose that **f, and that
+J79 0550  2    the average operation requires only **f sec. Then
+J79 0550 10    the dynamic program would require about a minute whereas
+J79 0560  8    the direct search would take more than three millennia!
+J79 0570  5       The principle of optimality thus brings a vital
+J79 0580  4    organization into the search for the optimal policy
+J79 0580 12    of a multistage decision process. Bellman (1957) has
+J79 0590  8    annunciated in the following terms:
+J79 0600  3       "An optimal policy has the property that whatever
+J79 0610  2    the initial state and initial decision are, the remaining
+J79 0610 11    decisions must constitute an optimal policy with respect
+J79 0620  8    to the state resulting from the first decision".
+J79 0630  5       This is the principle which we will invoke in every
+J79 0640  6    case to set up a functional equation. It appears in
+J79 0650  2    a form that is admirably suited to the powers of the
+J79 0650 13    digital computer. At the same time, every device that
+J79 0660  9    can be employed to reduce the number of variables is
+J79 0670  6    of the greatest value, and it is one of the attractive
+J79 0680  3    features of dynamic programming that room is left for
+J79 0690  1    ingenuity in using the special features of the problem
+J79 0690 10    to this end.
+J79 0700  1    #2.2 THE DISCRETE DETERMINISTIC PROCESS#
+J79 0700  5    Consider the process illustrated in Fig. 2.1, consisting
+J79 0710  5    of R distinct stages. These will be numbered in the
+J79 0720  6    direction opposite to the flow of the process stream,
+J79 0730  2    so that stage r is the rth stage from the end. Let
+J79 0740  2    the state of the stream leaving stage r be denoted
+J79 0740 12    by a vector **f and the operating variables of stage
+J79 0750  8    r by **f. Thus **f denotes the state of the feed to
+J79 0760  9    the R-stage process, and **f the state of the product
+J79 0770  7    from the last stage. Each stage transforms the state
+J79 0780  3    **f of its feed to the state **f in a way that depends
+J79 0780 16    on the operating variables **f. We write this **f.
+J79 0790  9    This transformation is uniquely determined by **f and
+J79 0800  7    we therefore speak of the process as deterministic.
+J79 0810  3    In practical situations there will be restrictions
+J79 0820  1    on the admissible operating conditions, and we regard
+J79 0820  9    the vectors as belonging to a fixed and bounded set
+J79 0830  7    S. The set of vectors **f constitutes the operating
+J79 0840  4    policy or, more briefly, the policy, and a policy is
+J79 0850  3    admissible if all the **f belong to S. When the policy
+J79 0860  1    has been chosen the state of the product can be obtained
+J79 0860 12    from the state of the feed by repeated application
+J79 0870  8    of the transformation (1); thus **f. The objective
+J79 0880  5    function, which is to be maximized, is some function,
+J79 0890  2    usually piecewise continuous, of the product state.
+J79 0890  9    Let this be denoted by **f.
+J79 0900  5       An optimal policy is an admissible policy **f which
+J79 0910  3    maximizes the objective function P. The policy may
+J79 0920  1    not be unique but the maximum value of P certainly
+J79 0920 11    is, and once the policy is specified this maximum can
+J79 0930  8    be calculated by (2) and (3) as a function of the feed
+J79 0940  7    state **f. Let **f where the maximization is over all
+J79 0950  4    admissible policies **f. When it is necessary to be
+J79 0950 13    specific we say that the optimal policy is an optimal
+J79 0960 10    R-stage policy with respect to the feed state **f.
+J79 0970  8       For any choice of admissible policy **f in the first
+J79 0980  6    stage, the state of the stream leaving this stage is
+J79 0990  4    given by **f. This is the feed state of the subsequent
+J79 1000  1    **f stages which, according to the principle of optimality,
+J79 1000 10    must use an optimal **f-stage policy with respect to
+J79 1010  8    this state. This will result in a value **f of the
+J79 1020  7    objective function, and when **f is chosen correctly
+J79 1030  1    this will give **f, the maximum of the objective function.
+J79 1030 11    Thus **f where the maximization is over all admissible
+J79 1040  8    policies **f, and **f is related to **f by (5). The
+J79 1050  8    sequence of equations (6) can be solved for **f when
+J79 1060  4    **f is known, and clearly **f, the maximization being
+J79 1070  1    over all admissible **f.
+J79 1070  5       The set of equations (5), (6), and the starting
+J79 1080  2    equation (7) is of a recursive type well suited to
+J79 1080 12    programming on the digital computer. In finding the
+J79 1090  8    optimal R-stage policy from that of **f stages, only
+J79 1100  7    the function **f is needed. When **f has been found
+J79 1110  5    it may be transferred into the storage location of
+J79 1120  1    **f and the whole calculation repeated. We also see
+J79 1120 10    how the results may be presented, although if n, the
+J79 1130  8    number of state variables, is large any tabulation
+J79 1140  5    will become cumbersome. A table or set of tables may
+J79 1150  2    be set out as in Table 2.1.
+J79 1150  9       To extract the optimal R-stage policy with respect
+J79 1160  6    to the feed state **f, we enter section R of this
+J79 1170  4    table at the state **f and find immediately from the
+J79 1180  3    last column the maximum value of the objective function.
+J79 1180 12    In the third column is given the optimal policy for
+J79 1190 10    stage R, and in the fourth, the resulting state of
+J79 1200  8    the stream when this policy is used. Since by the principle
+J79 1210  5    of optimality the remaining stages use an optimal **f-stage
+J79 1220  4    policy with respect to **f, we may enter section **f
+J79 1230  1    of the table at this state **f and read off the optimal
+J79 1230 13    policy for stage **f and the resulting state **f. Proceeding
+J79 1240  8    in this way up the table we extract the complete optimal
+J79 1250  6    policy and, if it is desired, we can check on **f by
+J79 1260  6    evaluating **f at the last stage.
+J79 1260 12       It may be that the objective function depends not
+J79 1270  7    only on **f but also on **f, as when the cost of the
+J79 1280  7    operating policy is considered. A moment's reflection
+J79 1290  2    shows that the above algorithm and presentation work
+J79 1290 10    equally well in this case. A form of objective function
+J79 1300 10    that we shall often have occasion to consider is **f.
+J79 1310  7    Here V(p) represents the value of the stream in state
+J79 1320  7    p and C(q) the cost of operating the stage with conditions
+J79 1330  7    q. Hence P is the increase in value of the stream
+J79 1340  9    minus the cost of operation, that is, the net profit.
+J79 1350  5    If **f denotes the net profit from stage r and **f
+J79 1360  3    then the principle of optimality gives **f This sequence
+J79 1370  1    of equations may be started with the remark that with
+J79 1370 11    no process **f there is no profit, i.e., **f.
+J79 1380  6    #2.3 THE DISCRETE STOCHASTIC PROCESS#
+J79 1390  1    The process in which the outcome of any one stage is
+J79 1390 12    known only statistically is also of interest, although
+J79 1400  7    for chemical reactor design it is not as important
+J79 1410  6    as the deterministic process. In this case the stage
+J79 1420  3    r operating with conditions **f transforms the state
+J79 1430  1    of the stream from **f to **f, but only the probability
+J79 1430 12    distribution of **f is known. This is specified by
+J79 1440  8    a distribution function **f such that the probability
+J79 1450  4    that **f lies in some region D of the stage space
+J79 1460  2    is **f.
+J79 1460  4       We cannot now speak of maximizing the value of the
+J79 1470  3    objective function, since this function is now known
+J79 1470 11    only in a probabilistic sense. We can, however, maximize
+J79 1480  7    its expected value. For a single stage we may define
+J79 1490  7    **f where the maximization is by choice of **f. We
+J79 1500  4    thus have an optimal policy which maximizes the expected
+J79 1510  1    value of the objective function for a given **f. If
+J79 1510 11    we consider a process in which the outcome of one stage
+J79 1520  8    is known before passage to the next, then the principle
+J79 1530  5    of optimality shows that the policy in subsequent stages
+J79 1540  2    should be optimal with respect to the outcome of the
+J79 1540 12    first. Then **f, the maximization being over all admissible
+J79 1550  9    **f and the integration over the whole of stage space.
+J79 1560  7       The type of presentation of results used in the
+J79 1570  6    deterministic process may be used here, except that
+J79 1580  2    now the fourth column is redundant. The third column
+J79 1580 11    gives the optimal policy, but we must wait to see the
+J79 1590 11    outcome of stage R and enter the preceding section
+J79 1600  6    of the table at this state. The discussion of the optimal
+J79 1610  5    policy when the outcome of one stage is not known before
+J79 1620  3    passing to the next is a very much more difficult matter.
+J79 1630  1    #2.4 THE CONTINUOUS DETERMINISTIC PROCESS#
+J79 1630  6    In many cases it is not possible to divide the process
+J79 1640  6    into a finite number of discrete stages, since the
+J79 1650  3    state of the stream is transformed in a continuous
+J79 1650 12    manner through the process. We replace r, the number
+J79 1660  9    of the stage from the end of the process, by t, a
+J79 1670 10    continuous variable which measures the "distance" of
+J79 1680  5    the point considered from the end of the process. The
+J79 1690  3    word distance is used here in a rather general sense;
+J79 1700  1    it may in fact be the time that will elapse before
+J79 1700 12    the end of the process. If T is the total "length"
+J79 1710  8    of the process, its feed state may be denoted by a
+J79 1720  8    vector p(T) and the product state by p(O). p(t)
+J79 1730  5    denotes the state at any point t and q(t) the vector
+J79 1740  8    of operating variables there.

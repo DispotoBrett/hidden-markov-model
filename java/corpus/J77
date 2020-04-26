@@ -1,0 +1,273 @@
+J77 0010  1    Temperature of the wash and rinse waters is maintained
+J77 0010 10    at 85-90`F. (29-32`C.). The top rolls are loaded with
+J77 0020  9    40 lbs. Sixty lbs. loading is possible but 40 lbs.
+J77 0030  8    is adequate.
+J77 0030 10       The suds box drain is arranged at the start to deliver
+J77 0040 10    into the raised main drain pipe (thus returning suds
+J77 0050  5    to soap box) and the machine is started. The 160-ml.
+J77 0060  4    bath containing the calculated amount of detergent
+J77 0060 11    is applied slowly and directly to the running specimen.
+J77 0070  9    Washing is continued for 30 minutes or for a period
+J77 0080  8    of time sufficient to allow 100 nips or passes through
+J77 0090  4    the squeeze rolls. At the conclusion of the washing,
+J77 0100  1    8 liters of water at 90`F. (32`C.) are automatically
+J77 0100 10    metered from the rinse reservoir to the washing tubs,
+J77 0110  9    4 liters to each tub. This operation requires from
+J77 0120  5    10 to 12 minutes. During the rinsing operation the
+J77 0130  3    volume in the tubs gradually increases until overflow
+J77 0140  1    from the main drain begins. At this point the drains
+J77 0140 11    are readjusted so that the suds box drain will discharge
+J77 0150  8    directly into the waste line and the main tub drain
+J77 0160  6    is set at the 2-1/2 mark on the drain gauge. When all
+J77 0170  2    of the rinse water has passed from the reservoir to
+J77 0170 12    the tubs the main drains are lowered to permit complete
+J77 0180  8    draining of the tubs. The run is complete when all
+J77 0190  6    the water has drained off into the waste line.
+J77 0200  1       By this procedure rinsing progresses in two stages,
+J77 0200  9    first by dilution until the time when the drains are
+J77 0210 10    separated and thereafter by displacement of the soil-bearing
+J77 0220  7    liquor by clean rinse water, since soiled liquor squeezed
+J77 0230  4    from the specimens at the nip passes directly to waste
+J77 0240  3    from the suds box drains. This method of rinsing appears
+J77 0250  1    to produce maximum cleansing with minimum soil redeposition.
+J77 0250  9    #SUGGESTED EVALUATION AND CLASSIFICATION#
+J77 0260  4    Evaluation may be made on either a soil-removal or
+J77 0270  6    a grease-removal basis as desired. A reflectance-measuring
+J77 0280  1    instrument may be desirable to measure cleaning, whereas
+J77 0290  1    Soxhlet extraction is necessary to measure grease removal.
+J77 0300  1    #PURPOSE AND SCOPE#
+J77 0300  4    This test method is intended for determining the dimensional
+J77 0310  3    changes of woven or knitted fabrics, made of fibers
+J77 0310 12    other than wool, to be expected when the cloth is subjected
+J77 0320 11    to laundering procedures commonly used in the commercial
+J77 0330  7    laundry and the home. Four washing test procedures
+J77 0340  4    are established, varying in severity from very severe
+J77 0350  2    to very mild, and are intended to cover the range of
+J77 0350 13    practical washing from commercial procedure to hand
+J77 0360  7    washing. Five drying test procedures are established
+J77 0370  4    to cover the range of drying techniques used in the
+J77 0380  4    home and commercial laundry. Three methods for determining
+J77 0390  1    the dimensional restorability characteristics are established
+J77 0390  7    for those textiles which require restoration by ironing
+J77 0400  7    or wearing after laundering. These tests are not accelerated
+J77 0410  6    and must be repeated to evaluate dimensional changes
+J77 0420  3    after repeated launderings.
+J77 0420  6       Table I summarizes all of the various washing,
+J77 0430  7    drying, and restoration procedures available. The person
+J77 0440  4    using these tests must determine which combination
+J77 0450  1    of procedures is practical for any specific item in
+J77 0450 10    order to evaluate the dimensional changes of textile
+J77 0460  7    fabrics or garments after laundering procedures commonly
+J77 0470  4    used in the home or commercial laundry. It is possible
+J77 0480  4    to identify the test procedure completely with a code
+J77 0490  1    consisting of a Roman Numeral, a letter, and an Arabic
+J77 0490 11    number. For example Test III E 1 refers to a specimen
+J77 0500 10    which has been washed by procedure "III" (at 160`F.
+J77 0510  6    for a total of 60 minutes in the machine, has been
+J77 0520  6    dried in a tumble dryer by procedure "E" and has been
+J77 0530  4    subjected to restorative forces on the Tension Presser
+J77 0540  2    by procedure "1".
+J77 0540  5    #PRINCIPLE#
+J77 0540  6    A specimen or garment is washed in a cylindrical reversing
+J77 0550  7    wash wheel, dried and subjected to restorative forces
+J77 0560  4    where necessary. Temperature and time of agitation
+J77 0570  1    in the wash wheel are varied to obtain different degrees
+J77 0570 11    of severity. Drying procedures and application of restorative
+J77 0580  7    force procedures are varied to conform with end-use
+J77 0590  8    handling during home or commercial laundering. Distances
+J77 0600  3    marked on the specimen in warp and filling directions
+J77 0620  2    (or wales and courses for knitted fabrics) are measured
+J77 0620 11    before and after laundering.
+J77 0630  4    #APPARATUS AND MATERIALS#
+J77 0640  1    _WASH WHEEL- CYLINDRICAL WASH WHEEL OF THE REVERSING
+J77 0640  9    TYPE._
+J77 0640 10       The wheel (cage) is 20 to 24 inches inside diameter
+J77 0650  8    and 20 to 24 inches inside length. There are three
+J77 0660  3    fins each approximately three inches wide extending
+J77 0660 10    the full length of the inside of the wheel. One fin
+J77 0670 10    is located every 120` around the inside diameter of
+J77 0680  6    the wheel. The wash wheel rotates at a speed of 30
+J77 0690  4    revolutions per minute, making five to ten revolutions
+J77 0690 12    before reversing. The water inlets are large enough
+J77 0700  8    to permit filling the wheel to an eight-inch level
+J77 0710  7    in less than two minutes, and the outlet is large enough
+J77 0720  4    to permit discharge of this same amount of water in
+J77 0730  1    less than two minutes. The machine is equipped with
+J77 0730 10    a pipe for injecting live steam that is capable of
+J77 0740  7    raising the temperature of water at an eight-inch level
+J77 0750  5    from 110` to 140`F. (38` to 60`C.) in less than two
+J77 0760  4    minutes. The machine shall contain an opening for the
+J77 0770  1    insertion of a thermometer or other equivalent equipment
+J77 0770  9    for determining the temperature of the water during
+J77 0780  7    the washing and rinsing procedures. It is equipped
+J77 0790  4    with an outside water gauge that will indicate the
+J77 0800  1    level of the water in the wheel.
+J77 0800  8       A domestic automatic washer that will give equivalent
+J77 0810  5    results may be used. The wash wheel is the equipment
+J77 0820  2    preferred for the test.
+J77 0830  1    _PRESSING EQUIPMENT- FLAT-BED PRESS MEASURING 24 INCHES
+J77 0830  5    BY 50 INCHES OR LARGER._
+J77 0830 10       Any flat-bed press capable of pressing a specimen
+J77 0840  6    22 inches square may be used as an alternative. The
+J77 0850  3    flat-bed press is maintained at a temperature not less
+J77 0860  1    than 275`F. (135`C.).
+J77 0870  1    _DRYER- DRYER OF THE ROTARY TUMBLE TYPE, HAVING A CYLINDRICAL
+J77 0880  1    BASKET APPROXIMATELY 30 INCHES IN DIAMETER AND 24 INCHES
+J77 0890  1    IN LENGTH AND ROTATING AT APPROXIMATELY 35 R.P.M._
+J77 0890  1       The dryer is provided with a means of maintaining
+J77 0890 10    a drying temperature of 120`-160`F. (49`-71`C.), measured
+J77 0900  7    in the exhaust vent as close as possible to the drying
+J77 0910  9    chamber.
+J77 0920  1    _SCREEN DRYING RACKS- 16-MESH SCREENING (SARAN OR VELON)._
+J77 0930  1       _DRYING ROOM-FACILITIES FOR DRIP- OR LINE-DRYING._
+J77 0940  1       _EXTRACTOR- CENTRIFUGAL EXTRACTOR OF THE LAUNDRY-TYPE
+J77 0950  1    WITH A PERFORATED BASKET, APPROXIMATELY 11 INCHES DEEP
+J77 0950  3    BY 17 INCHES IN DIAMETER, WITH AN OPERATING SPEED OF
+J77 0960  1    APPROXIMATELY 1,500 R.P.M._
+J77 0970  1       _PEN AND INK, INDELIBLE- OR OTHER SUITABLE MARKING
+J77 0970  3    DEVICE._
+J77 0970  4       _MEASURING SCALE-._
+J77 0980  1       _SOAP, NEUTRAL CHIP- FED. SPEC. P S 566 OR ASTM
+J77 0990  1    D-496._
+J77 1000  1       _SOFTENER- E.G. SODIUM METAPHOSPHATE OR SODIUM
+J77 1000  7    HEXAMETAPHOSPHATE
+J77 1000  1    (IF NEEDED IN HARD WATER AREAS)._
+J77 1010  1       _DETERGENT, SYNTHETIC- ALKYLARYSULFONATE TYPE._
+J77 1020  1       _FLATIRON, ELECTRIC- APPROXIMATELY 3 LB._
+J77 1020  3       _TENSION PRESSER- CONSISTING OF A PADDED IRONING
+J77 1030  1    BOARD FROM WHICH EXTEND CLAMPING MEMBERS ON ALL FOUR
+J77 1030  9    SIDES._
+J77 1030 10       Two of the clamps are fixed to the edges of the
+J77 1040  9    board whereas two clamps travel on guide rails opposite
+J77 1050  4    the fixed clamps. The movable clamps travel on carriages
+J77 1060  2    which ride the rails and are drawn by dead-weight loading.
+J77 1070  1    Sets of weights are provided so that the load can be
+J77 1070 12    selected in the range of 1/2 to 4 pounds. A perforated
+J77 1080  9    aluminum plate, used to provide the drying surface,
+J77 1090  4    is heated by means of a flatiron. A special template
+J77 1100  1    is furnished with the apparatus to enable marking a
+J77 1100 10    specimen for a central measuring area and the fabric
+J77 1110  8    extensions to the clamps (see Fig. 2).
+J77 1130  1    _KNIT SHRINKAGE GAUGE- CONSISTING OF A SET OF 20 MOUNTING
+J77 1130  1    PINS SET IN GUIDES IN RADIAL SLOTS (FIG.1)._
+J77 1130  9       Each pin is individually sprung to a tensioning
+J77 1140  5    member which is driven outwardly in the slot. The springs
+J77 1150  5    have an extension of 1 inch at **f tension. The tensioning
+J77 1160  2    members have a common drive so that the application
+J77 1160 11    of restorative force takes place simultaneously in
+J77 1170  6    all directions in the plane of the test specimen. The
+J77 1180  6    minimum diameter of the pin frame in the collapsed
+J77 1190  2    state is 11 inches and the maximum diameter in the
+J77 1190 12    freely extended state (unloaded) is 14 inches. The
+J77 1200  8    surface of the apparatus in contact with the test specimen
+J77 1210  7    is uncluttered and polished so as to be as friction-free
+J77 1220  6    as possible.
+J77 1220  8    #TEST SPECIMENS#
+J77 1220 10    The preparation of test specimens will vary depending
+J77 1230  7    upon the type of dimensional restorability procedure
+J77 1240  3    (if any) to be used.
+J77 1240  8       Three specimens for each sample to be tested are
+J77 1250  8    required in order to arrive at a satisfactory average
+J77 1260  2    of performance. This is especially true for knitted
+J77 1270  1    fabrics.
+J77 1270  2       Specimens are allowed to reach moisture equilibrium
+J77 1270  9    with a standard atmosphere of **f and **f and then
+J77 1280 10    laid out without tension on a flat, polished surface,
+J77 1290  6    care being taken that the fabric is free from wrinkles
+J77 1300  4    or creases. Fabrics that are badly distorted in their
+J77 1310  1    unlaundered state due to faulty finishing may give
+J77 1310  9    deceptive dimensional change results when laundered
+J77 1320  5    by any procedure. This also holds true if restorative
+J77 1330  3    forces are applied. Therefore, it is recommended that
+J77 1340  1    in such cases the sample be replaced, or if used, the
+J77 1340 12    results of dimensional change or dimensional restorability
+J77 1350  5    tests be considered as indicative only.
+J77 1360  2       Generally, it is necessary to mark distances on
+J77 1370  1    a specimen (or garment) in both lengthwise and widthwise
+J77 1370 10    directions and to measure before and after laundering.
+J77 1380  7    The distances may be marked with indelible ink and
+J77 1390  5    a fine-point pen, by sewing fine threads into the fabric,
+J77 1400  3    or by a specially designed stamping machine. The marked
+J77 1400 12    distances are parallel to the respective yarns. Usually,
+J77 1410  8    the greater the original distances marked, the greater
+J77 1420  6    will be the accuracy of the test. Distances of less
+J77 1430  5    than 10 inches are not recommended.
+J77 1440  1    _WOVEN FABRICS TO BE DRIED BY PROCEDURE B (FLAT-BED
+J77 1450  1    PRESSED) OR RESTORED BY PROCEDURE 3 (HAND IRONING):_
+J77 1450  5       The specimen of fabric is a rectangle at least 22
+J77 1460  4    by 22 inches, except for cloth narrower than 22 inches,
+J77 1470  1    in which case the specimen is the entire width of the
+J77 1470 12    fabric. Three distances, each at least 18 inches, are
+J77 1480  8    measured and marked off parallel to each of the warp
+J77 1490  6    and filling directions. The distances are at least
+J77 1500  2    two inches from any edge of the specimen.
+J77 1510  1    _WOVEN OR WARP KNITTED FABRICS TO BE SUBJECTED TO RESTORATIVE
+J77 1520  1    PROCEDURE 1 (TENSION PRESSER)._
+J77 1520  1       Each specimen is at least 25 inches by 25 inches.
+J77 1520 11    Place the template (Fig. 2) on the fabric so that the
+J77 1530  9    sides of the 10 inch square cut out of the template
+J77 1540  6    are parallel to the warp and filling for woven fabrics,
+J77 1560  2    or the wales and courses for knitted fabrics, and so
+J77 1560 12    that the same amount of fabric extends beyond the edges
+J77 1570  9    of the template on all sides. Mark the specimen at
+J77 1580  6    the outer edges of the template with pen and indelible
+J77 1590  3    ink; also place three dots on the specimen at each
+J77 1600  1    side of the 10 inch square, one dot at midpoint, and
+J77 1600 12    one at approximately 1/2 inch from each corner. Measure
+J77 1610  7    and record.
+J77 1620  1    _CIRCULAR KNITTED FABRICS TO BE SUBJECTED TO RESTORATIVE
+J77 1630  1    PROCEDURE 2, (KNIT SHRINKAGE GAUGE)._
+J77 1630  2       Each specimen is approximately 16 inches square.
+J77 1630  9    The markings consist of a centrally located 10 inch
+J77 1640  8    diameter measuring circle and a 14 inch diameter circle
+J77 1650  7    of 20 dots equidistantly spaced (See Figure 1).
+J77 1660  3    _GARMENTS._
+J77 1660  4       Critical measurements in length and width directions
+J77 1670  2    should be taken before and after washing, drying, and
+J77 1670 11    restorative procedures.
+J77 1680  2    #PROCEDURE#
+J77 1680  3    _WASHING-_
+J77 1680  4       The washing procedures are summarized in Table II.
+J77 1690  7       Place the specimen in the wash wheel with sufficient
+J77 1700  7    other similar fabric to make a dry load of **f pounds.
+J77 1710  5    Start the wash wheel and note the time. Immediately
+J77 1720  1    add water at 100-105`F. (38-43`C.) to the wheel to
+J77 1720 12    a level of **f inches; this level will be increased
+J77 1730  9    by condensed steam. When this water level has been
+J77 1740  7    reached, inject steam into the wheel until the temperature
+J77 1750  3    reaches that shown in Column B of Table II. Add sufficient
+J77 1760  3    soap (and softener if required to counteract hard water)
+J77 1770  2    to furnish a good running suds, or if desired use a
+J77 1770 13    synthetic detergent.
+J77 1780  1    _TEST I_
+J77 1780  3       - Stop the wash wheel at the end of the time shown
+J77 1800  2    in Column A of Table II and drain. Refill the machine
+J77 1810  1    to a level of **f inches with water at 100-109` F.
+J77 1810 13    (38-43` C.) and start the machine. Inject steam, if
+J77 1820  8    necessary, to reach the temperature shown in Column
+J77 1830  5    D of Table II. Again stop the machine at the end
+J77 1840  4    of the time shown in Column C of Table II. This procedure
+J77 1850  3    is repeated for the second rinse, using the temperatures
+J77 1860  1    and time shown in Columns F and E of Table II.
+J77 1870  1    _TESTS II, III, AND IV._
+J77 1870  3       - Run the machine continuously until completion
+J77 1880  1    of the test. Drain off the soap solution of the suds
+J77 1880 12    cycle at such a time that the wheel has become substantially
+J77 1890  9    empty of soap and water at the end of the time shown
+J77 1900  8    in Column A of Table II, measured from the time the
+J77 1910  5    wash wheel was started. Refill the machine to a level
+J77 1920  2    of **f inches with water at 100-109` F. (38-43` C.).
+J77 1930  1    When this water level has been reached, inject steam
+J77 1930 10    until the temperature is that shown in Column D. Drain
+J77 1940  8    off the water at such a time that the wheel has become
+J77 1950  6    substantially empty of water at the end of the sum
+J77 1960  4    of the times shown in Columns A and C, measured from
+J77 1970  1    the time the wash wheel was started. Immediately refill
+J77 1970 10    to a level of **f inches with water at 100-109` F.
+J77 1980 10    (38-43` C.). When this water level has been reached
+J77 1990  7    inject steam until the temperature is that shown in
+J77 2000  4    Column F. Drain off the water at such a time that
+J77 2010  1    the wheel has become substantially empty of water at
+J77 2010 10    the end of the sum of the times shown in Columns A,
+J77 2020  9    C, and E, measured from the time the wash wheel was
+J77 2030  7    started.

@@ -1,0 +1,229 @@
+J02 0010  1    #ABSTRACT#
+J02 0010  2    Experiments were made on an electric arc applying a
+J02 0010 11    porous graphite anode cooled by a transpiring gas (Argon).
+J02 0020  9    Thus, the energy transferred from the arc to the anode
+J02 0030  9    was partly fed back into the arc. It was shown that
+J02 0040  7    by proper anode design the net energy loss of the arc
+J02 0050  4    to the anode could be reduced to approximately 15%
+J02 0050 13    of the total arc energy A detailed energy balance of
+J02 0060  9    the anode was established. The anode ablation could
+J02 0080  5    be reduced to a negligible amount. The dependence of
+J02 0090  2    the arc voltage upon the mass flow velocity of the
+J02 0090 12    transpirating gas was investigated for various arc
+J02 0100  7    lengths and currents between 100 Amp and 200 Amp.
+J02 0110  6    Qualitative observations were made and high-speed motion
+J02 0120  4    pictures were taken to study flow phenomena in the
+J02 0130  1    arc at various mass flow velocities.
+J02 0130  7    #INTRODUCTION#
+J02 0130  8    The high heat fluxes existing at the electrode surfaces
+J02 0140  7    of electric arcs necessitate extensive cooling to prevent
+J02 0150  5    electrode ablation. The cooling requirements are particularly
+J02 0160  3    severe at the anode. In free burning electric arcs,
+J02 0170  2    for instance, approximately 90% of the total arc power
+J02 0170 11    is transferred to the anode giving rise to local heat
+J02 0180  9    fluxes in excess of **f as measured by the authors-
+J02 0190  7    the exact value depending on the arc atmosphere. In
+J02 0200  3    plasma generators as currently commercially available
+J02 0210  1    for industrial use or as high temperature research
+J02 0210  9    tools often more than 50% of the total energy input
+J02 0220  7    is being transferred to the co0ling medium of the anode.
+J02 0230  5       The higher heat transfer rates at the anode compared
+J02 0240  2    with those at the cathode can be explained by the physical
+J02 0250  1    phenomena occurring in free burning arcs. In plasma
+J02 0250  9    generators the superimposed forced convection may modify
+J02 0260  6    the picture somewhat. The heat transfer to the anode
+J02 0270  5    is due to the following effects: 1. Heat of condensation
+J02 0280  3    (work function) plus kinetic energy of the electrons
+J02 0280 11    impinging on the anode. This energy transfer depends
+J02 0290  8    on the current, the temperature in the arc column,
+J02 0300  6    the anode material, and the conditions in the anode
+J02 0310  4    sheath. 2. Heat transfer by molecular conduction as
+J02 0310 12    well as by radiation from the arc column.
+J02 0320  8       The heat transfer to the anode in free burning arcs
+J02 0330  7    is enhanced by a hot gas jet flowing from the cathode
+J02 0350  3    towards the anode with velocities up **f. This phenomenon
+J02 0360  1    has been experimentally investigated in detail by Maecker
+J02 0360  9    (Ref. 1). The pressure gradient producing the jet is
+J02 0370  9    due to the nature of the magnetic field in the arc
+J02 0380  6    (rapid decrease of current density from cathode to
+J02 0390  2    the anode). Hence, the flow conditions at the anode
+J02 0390 11    of free burning arcs resemble those near a stagnation
+J02 0400  8    point.
+J02 0400  9       it is apparent from the above and from experimental
+J02 0410  7    evidence that the cooling requirements for the anode
+J02 0420  4    of free burning arcs are large compared with those
+J02 0440  2    for the cathode. The gas flow through a plasma generator
+J02 0440 12    will modify these conditions; however, the anode is
+J02 0450  7    still the part receiving the largest heat flux. An
+J02 0460  6    attempt to improve the life of the anodes or the efficiency
+J02 0470  4    of the plasma generators must, therefore, aim at a
+J02 0480  2    reduction of the anode loss. The following possibilities
+J02 0480 10    exist for achieving this: 1. The use of high voltages
+J02 0490  9    and low currents by proper design to reduce electron
+J02 0500  5    heat transfer to the anode for a given power output.
+J02 0510  3    2. Continuous motion of the arc contact area at the
+J02 0510 13    anode by flow or magnetic forces. 3. Feed back of the
+J02 0530 11    energy transferred to the anode by applying gas transpiration
+J02 0540  8    through the anode.
+J02 0550  1       The third method was, to our knowledge, successfully
+J02 0550  9    applied for the first time by C. Sheer and co-workers
+J02 0560  9    (Ref. 2). The purpose of the present study is to study
+J02 0570  7    the thermal conditions and to establish an energy balance
+J02 0580  4    for a transpiration cooled anode as well as the effect
+J02 0590  1    of blowing on the arc voltage. Gas injection through
+J02 0590 10    a porous anode (transpiration cooling) not only feeds
+J02 0600  6    back the energy transferred to the anode by the above
+J02 0610  7    mentioned processes, but also modifies the conditions
+J02 0620  1    in the arc itself. A detailed study of this latter
+J02 0620 11    phenomenon was not attempted in this paper. Argon was
+J02 0630  9    used as a blowing gas to exclude any effects of dissociation
+J02 0640  6    or chemical reaction. The anode material was porous
+J02 0650  4    graphite. Sintered porous metals should be usable in
+J02 0660  2    principle. However, technical difficulties arise by
+J02 0660  8    melting at local hot spots. The experimental arrangement
+J02 0670  6    as described below is based on the geometry of free
+J02 0680  6    burning arcs. Thus, direct comparisons can be drawn
+J02 0690  3    with free burning arcs which have been studied in detail
+J02 0690 13    during the past years and decades by numerous investigators
+J02 0700  9    (Ref. 3).
+J02 0710  1    #EXPERIMENTAL APPARATUS#
+J02 0710  3    Figures 1 to 3 show photographic and schematic views
+J02 0720  2    of the test stand and of two different models of the
+J02 0720 13    anode holder. The cathode consisted of a 1/4'' diameter
+J02 0730  9    thoriated tungsten rod attached to a water cooled copper
+J02 0740  8    tube. This tube could be adjusted in its axial direction
+J02 0750  6    by an electric drive to establish the required electrode
+J02 0760  3    spacing. The anode in figure 2 was mounted by means
+J02 0770  1    of the anode holder which was attached to a steel plug
+J02 0770 12    and disk. The transpiring gas ejected from the anode
+J02 0780  7    formed a jet directed axially towards the cathode below.
+J02 0790  5    Inflow of air from the surrounding atmosphere was prevented
+J02 0800  3    by the two disks shown in figure 2. Argon was also
+J02 0810  1    blown at low velocities (mass flow rate **f) through
+J02 0810 10    a tube coaxial with the cathode as an additional precaution
+J02 0830  7    against contamination of the arc by air. The anode
+J02 0840  6    consisted of a 1/2 inch diameter porous graphite plug,
+J02 0850  2    1/4 inch long. The graphite was National Carbon NC
+J02 0860  1    60, which has a porosity of 50% and an average pore
+J02 0860 12    size of 30 This small pore size was required to ensure
+J02 0870  8    uniformity of the flow leaving the anode. The anode
+J02 0880  5    plug (Figure 2) was inserted into a carbon anode holder.
+J02 0890  3    A shielded thermocouple was used to measure the upstream
+J02 0900  1    temperature of the transpiring gas. It was exposed
+J02 0900  9    to a high velocity gas jet. A plug and a tube with
+J02 0910  9    holes in its cylindrical walls divided the chamber
+J02 0920  3    above the porous plug into two parts. This arrangement
+J02 0930  1    had the purpose to prevent heated gas to reach the
+J02 0930 11    thermocouple by natural convection. Two pyrometers
+J02 0940  5    shown in figure 1 and 2 (Pyrometer Instrument Co. Model
+J02 0950  4    95) served for simultaneous measurement of the anode
+J02 0960  3    surface temperature and the temperature distribution
+J02 0960  9    along the anode holder. Three thermocouples were placed
+J02 0970  8    at different locations in the aluminum disk surrounding
+J02 0980  6    the anode holder to determine its temperature.
+J02 0990  2       Another anode holder used in the experiments is
+J02 0990 10    shown in figure 3. In this design the anode holder
+J02 1000 10    is water cooled and the heat losses by conduction from
+J02 1010  7    the anode were determined by measuring the temperature
+J02 1020  3    rise of the coolant. To reduce heat transfer from the
+J02 1030  2    hot has to this anode holder outside the regime of
+J02 1030 12    the arc, a carbon shield was attached tothe surface
+J02 1040  6    providing an air gap of 1/16 inch between the plate
+J02 1050  5    and the surface of the anode holder. In addition, the
+J02 1060  2    inner surface of the carbon shield was covered with
+J02 1060 11    aluminum foil to reduce radiation. Temperatures of
+J02 1070  6    the shield and of the surface of the water-cooled anode
+J02 1080  6    holder were measured by thermocouples to account for
+J02 1090  2    heat received by the coolant but not originating from
+J02 1090 11    the anode plug.
+J02 1100  2       The argon flow from commercial bottles was regulated
+J02 1110  1    by a pressure regulator and measured with a gas flow
+J02 1110 11    rator. The power source was a commercial D. C. rectifier.
+J02 1120  8    At 100 Amp the 360 cycle ripple was less than 0.5
+J02 1130  8    V (peak to peak) with a resistive load. The current
+J02 1140  4    was regulated by means of a variable resistor and measured
+J02 1150  2    with a 50 mV shunt and millivoltmeter. The arc voltage
+J02 1160  1    was measured with a voltmeter whose terminals were
+J02 1160  9    connected to the anode and cathode holders. Because
+J02 1170  5    of the falling characteristic of the rectifier, no
+J02 1180  3    ballast resistor was required for stability of operation.
+J02 1190  1    A high frequency starter was used to start the arc.
+J02 1190 11    #EXPERIMENTAL PROCEDURE AND ERROR ANALYSIS#
+J02 1210  1    _1. TRANSPIRATION COOLED ANODE WITH CARBON ANODE HOLDER_
+J02 1210  4       The anode holder shown in figure 2 was designed
+J02 1230  1    with two goals in mind. The heat losses of the holder
+J02 1230 12    were to be reduced as far as possible and they should
+J02 1240  8    be such that an accurate heat balance can be made.
+J02 1250  5    In order to reduce the number of variable parameters,
+J02 1260  1    all experiments were made with a constant arc length
+J02 1260 10    of 0.5'' and a current of 100 Amp. The argon flow
+J02 1270 10    through the porous anode was varied systematically
+J02 1280  4    between **f. and **f. The lower limit was determined
+J02 1290  3    by the fact that for smaller flow rates the arc started
+J02 1300  1    to strike to the anode holder instead of to the porous
+J02 1300 12    graphite plug and that it became highly unstable. The
+J02 1310  8    upper limit was determined by the difficulty of measuring
+J02 1320  5    the characteristic anode surface temperature (see below)
+J02 1330  3    since only a small region of the anode was struck by
+J02 1330 14    the arc. This region which had a higher temperature
+J02 1340  9    than the rest of the anode surface changed size and
+J02 1350  6    location continuously.
+J02 1350  8       For each mass flow rate the arc voltage was measured.
+J02 1360  9    To measure the surface temperature of the anode plug,
+J02 1370  6    the surface was scanned with a pyrometer. As it turned
+J02 1380  4    out, a very hot region occurred on the plug. Its temperature
+J02 1390  1    was denoted by **f. The size of this hot region was
+J02 1390 12    estimated by eye. The rest of the surface had a temperature
+J02 1400 11    which decreased towards the outer diameter of the plug.
+J02 1410  7    The mean temperature of this region was approximated
+J02 1420  3    by the temperature measured halfways between the edge
+J02 1430  2    of the hot spot and the rim of the plug. It was denoted
+J02 1430 15    by **f. The mean temperature of the surface was then
+J02 1440  9    computed according to the following relation: **f where
+J02 1450  6    x is the fraction of the plug area covered by the
+J02 1470  4    hot spot. Assuming thermal equilibrium between the
+J02 1480  1    anode surface and the transpiring argon, the gas enthalpy
+J02 1480 10    rise through the anode was calculated according to
+J02 1490  7    the relation **f whereby the specific heat of argon
+J02 1500  4    was taken as **f. This calculation results in an enthalpy
+J02 1510  2    rise which is somewhat high because it assumes a mass
+J02 1510 12    flow equally distributed over the plug cross section
+J02 1520  7    whereas in reality the mass velocity is expected to
+J02 1530  5    be smaller in the regions of higher temperatures.
+J02 1540  1       The upstream gas temperature measured with the thermocouple
+J02 1550  1    shown in figure 2 was **f. The **f values are listed
+J02 1550 12    in Table 1 together with the measured surface temperatures
+J02 1570  6    and arc voltages. Simultaneously with the anode surface
+J02 1580  5    temperature and voltage measurements pyrometer readings
+J02 1590  2    were taken along the cylindrical surface of the carbon
+J02 1590 11    anode holder as indicated on figure 2. Some of these
+J02 1600 10    temperatures are plotted in figure 4. They showed no
+J02 1610  7    marked dependence on the flow rate within the accuracy
+J02 1620  4    of these measurements. Thus, the dotted line shown
+J02 1630  1    in figure 4 was taken as typical for the temperature
+J02 1630 11    distribution for all blowing rates.
+J02 1640  4       The thermocouples in the aluminum disk shown in
+J02 1650  2    figure 2 indicated an equilibrium temperature of the
+J02 1650 10    surface of **f. This temperature was taken as environmental
+J02 1660  8    temperature to which the anode holder was exposed as
+J02 1670  7    far as radiation is concerned. It is sufficiently small
+J02 1680  4    compared with the surface temperature of the anode
+J02 1690  1    holder, to make the energy flux radiated from the environment
+J02 1690 11    toward the anode holder negligible within the accuracy
+J02 1700  8    of the present measurements. The reflection of radiation
+J02 1710  5    originating from the anode holder and reflected back
+J02 1720  4    to it by the surrounding metal surfaces should also
+J02 1730  1    be small because of the specular characteristic of
+J02 1730  9    the metal surfaces and of the specific geometry. The
+J02 1740  7    total heat loss through the anode holder included also
+J02 1750  4    the heat conducted through the base of the cylindrical
+J02 1760  1    piece into the adjacent metal parts. It was calculated
+J02 1760 10    from the temperature gradient **f at **f inch as **f.
+J02 1770  9    The total heat flux from the porous plug into the plug
+J02 1780  7    holder is thereby **f The temperature distribution
+J02 1790  2    of figure 4 gives **f for all blowing rates, assuming
+J02 1790 12    **f. The temperature dependent value of |e was taken
+J02 1800  9    from Ref. 7. The radiation loss from the anode surface
+J02 1810  9    was computed according to **f where **f is the mean
+J02 1820  7    of the fourth powers of the temperatures **f and **f
+J02 1830  3    calculated analogously to equation (1).

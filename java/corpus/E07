@@ -1,0 +1,226 @@
+E07 0010  1    THE design of a mechanical interlocking frame is much
+E07 0010 10    like a mechanical puzzle, but once understood, the
+E07 0020  6    principles can be applied to any track and signal arrangement.
+E07 0030  6    In the frame are two sets of bars which interact with
+E07 0040  4    each other to prevent the operator from making dangerous
+E07 0050  1    moves. The main set of bars are the "tappets" and one
+E07 0050 12    tappet is connected to each lever. If the lever is
+E07 0060 10    pulled to clear a signal or move a switch, the tappet
+E07 0070  7    moves a short distance lengthwise at the same time.
+E07 0080  4       Close behind the plane of the tappets are the locking
+E07 0090  1    bars. These can also move a short distance but at right
+E07 0090 12    angles to the tappets. The number of locking bars required
+E07 0100 10    depends on how many false moves must be prevented.
+E07 0110  6       In the sides of the tappets are notches with sloping
+E07 0120  5    sides, and connection between the tappets and locking
+E07 0130  2    bars consist of cams called "dogs". Two or more dogs
+E07 0130 12    are mounted on each locking bar. These slide into and
+E07 0140 10    out of the notches in the tappets as the tappets are
+E07 0150  8    moved, locking and unlocking them.
+E07 0160  1       Here's how the scheme works: Suppose the operator
+E07 0160  9    pulls the lever to clear a particular signal. This
+E07 0170  9    also pulls the tappet connected to the particular lever
+E07 0180  5    and forces any dogs seated in the notches to the side,
+E07 0190  4    thus moving one or more locking bars. The dogs on the
+E07 0200  1    other ends of these locking bars are thus forced into
+E07 0200 11    notches in other tappets. By this scheme, pulling one
+E07 0210  7    signal to clear locks all the other switch and signal
+E07 0220  5    levers in safe positions until the first signal is
+E07 0230  2    again restored to normal.
+E07 0230  6       Interlocking signals are normally at stop or "red"
+E07 0240  5    position, and a lever must be pulled to "clear" the
+E07 0250  2    signal. This is not necessarily to green, however,
+E07 0250 10    for in some situations only a yellow indication is
+E07 0260  8    given to a train to let it into the "plant".
+E07 0270  4       There are other basic rules. A turnout may have
+E07 0280  3    two levers, one to actually move the switch points,
+E07 0280 12    the other to lock the points. A signal cannot be cleared
+E07 0290 10    until all the related turnouts are properly thrown
+E07 0300  5    and locked. Such locks are nearly always used where
+E07 0310  4    the switch points "face" oncoming traffic. The lock
+E07 0320  2    insures that the points are thrown all the way with
+E07 0320 12    no chance that a wheel flange will snag on a partly
+E07 0330  9    thrown point. If the points aren't thrown all the way,
+E07 0340  5    the turnout cannot be locked, and in turn, the signal
+E07 0350  3    cannot be cleared. Generally, these locks on turnouts
+E07 0350 11    are called "facing point locks".
+E07 0360  5       Figs. 1-6 show typical arrangements of track and
+E07 0370  4    signals. Each diagram is accompanied by a "dog chart",
+E07 0380  2    a list of the levers that show which other levers any
+E07 0380 13    particular lever will lock if pulled. The lines connecting
+E07 0390  9    the wedge-shaped dogs represent the locking bars at
+E07 0400  7    right angles to the tappet bars.
+E07 0410  1       By studying the track-signal diagrams you'll note
+E07 0410  9    several other details. Derails- mechanical track devices
+E07 0420  7    that actually guide the wheels off the rails if a train
+E07 0430  9    passes a "stop" signal- are used in many instances.
+E07 0440  5    "Home" signals have two blades. The blacked-in blades
+E07 0450  2    indicate a fixed aspect- the blade does not move. As
+E07 0460  1    an engineer approaches the plant the position of the
+E07 0460 10    home signal is seen in advance when he passes the "distant"
+E07 0470 10    signal located beyond the limits of the interlocking
+E07 0480  7    plant. In some low-speed situations, the distant signal
+E07 0490  4    is fixed at caution. In other instances where there
+E07 0500  2    is no automatic block signaling, the distant has only
+E07 0500 11    green and yellow aspects.
+E07 0510  4       So much for the prototype.
+E07 0510  9       The interlocking frame we built at the MODEL RAILROADER
+E07 0520  8    workshop and then installed on Paul Larson's railroad
+E07 0530  6    follows the Fig. 1 scheme and is shown beginning in
+E07 0540  6    Fig. 7, page 65, and in the photos. Here's how it can
+E07 0550  4    be built.
+E07 0550  6    #FRAME#
+E07 0550  7    The sizes of pieces needed for the interlocking frame
+E07 0560  5    are shown in the notes within Fig. 7, most of the bars
+E07 0570  4    being 1/8'' brass in 1/4'' and 1/2'' widths. You may
+E07 0580  3    change the dimensions to suit a frame for more or fewer
+E07 0580 14    levers and locks as you wish. Our instructions assume
+E07 0590  9    you are building this particular frame, which is for
+E07 0600  7    a junction.
+E07 0600  9       When cutting the pieces, dress the ends smooth,
+E07 0610  7    and square with a smooth file or sanding disk. Start
+E07 0620  3    with the right-hand piece "B", **f, soldering it to
+E07 0630  3    the lower piece "A" of the same material but 12''
+E07 0640  1    long. Let exactly 1'' of "A" extend beyond "B" and
+E07 0650  1    use a square to check your angle to exactly 90 degrees.
+E07 0650 12       Now lay 12 pieces of **f cut 5-3/4'' long side by
+E07 0660 12    side but separated by 12 pieces of the same material
+E07 0670  8    1/2'' sq. This gives you the spacing for locating
+E07 0680  4    the left-hand piece "B". Compress the assembly when
+E07 0690  2    you make the mark to show the location for "B". Solder
+E07 0700  1    this second "B" to "A" at right angles. There should
+E07 0710  2    be 10'' between the two parallel members and each should
+E07 0710 12    be 1'' from an end of the long piece.
+E07 0720  9       Cap this assembly (with spacing bars in place) with
+E07 0730  6    a **f bar. Tack-solder all the 1/2'' sq. pieces to
+E07 0740  4    the 10'' and 12'' members. These will be drilled and
+E07 0750  2    tapped later on.
+E07 0750  5       Now cut five **f locking bar spacers (which run
+E07 0760  3    horizontally). Position these using six intermediate
+E07 0760  9    temporary **f spacers and locate the upper 12'' bar
+E07 0770  9    "A". Solder it and the five locking bar spacers to
+E07 0780  9    the frame. Now place 12 pieces 1/2'' sq. on this edge
+E07 0790  6    as we did before and space them with the 5-3/4'' long
+E07 0800  5    "tappets", as they are called. Cap with a **f bar and
+E07 0810  3    tack-solder in place. Cap the locking bar spacers with
+E07 0810 13    two **f directly under the first two "B" pieces. Remove
+E07 0820 10    all the loose spacing bars.
+E07 0830  4       Mark and center-punch all the holes required for
+E07 0840  2    screws to hold this assembly together. See Fig. 7.
+E07 0840 11    Placement of these holes is not critical, but they
+E07 0850  9    should be located so that the centers are about 1/8''
+E07 0860  6    from any edge. Drill all No. 50 and counter-drill all
+E07 0870  4    except the "A" pieces size 43. Tap the "A" pieces
+E07 0880  2    2-56.
+E07 0880  4       Now unsolder and disassemble the frame except for
+E07 0890  3    the two 12'' and the first two 3-3/4'' bars ("A" and
+E07 0900  2    "B" pieces), which are soldered together. Either lay
+E07 0910  1    the components aside in proper order or code them with
+E07 0910 11    numbers and letters so they may be replaced in their
+E07 0920  8    proper positions. Dress all surfaces with a file, cleaning
+E07 0930  5    off all solder and drilling burrs.
+E07 0940  1       Drill 20 No. 47 holes in the upper piece "A" as
+E07 0940 12    shown in Fig. 7. Tap these 3-48 for mounting the electrical
+E07 0950 11    contact later on. Note 6 and 8 lock levers don't require
+E07 0960 10    holes for contacts.
+E07 0970  1       Now reassemble the frame, using **f roundhead steel
+E07 0970  9    screws and nuts. Put the 12 tappets and some **f locking
+E07 0980  9    bar spacers in the frame to help align all the components
+E07 0990  6    before you tighten the screws. Be sure the tappets
+E07 1000  3    are not pinched by a twisted 1/2'' sq. spacer. As an
+E07 1010  2    anchor for the spring lock, insert a **f bar in the
+E07 1010 13    lower left corner of the frame as shown in Fig. 7.
+E07 1020  9    Drill a No. 43 hole through the pieces and secure with
+E07 1030  6    a 2-56 nut and screw. Drill two No. 50 holes, one in
+E07 1040  4    the insert and one in the locking bar spacer directly
+E07 1050  1    above it, and tap 2-56. Number all the tappet bars
+E07 1050 12    before removing them so they can be replaced in the
+E07 1060  8    same slots. Remove all other loose pieces and file
+E07 1070  4    the edges of the basic frame smooth. Cut five pieces
+E07 1080  1    of **f brass bar stock 3-3/4'' long. These are supporting
+E07 1080 12    members for the short locking bars. Locate their positions
+E07 1090  9    in Fig. 7 and drill No. 43 to match the corresponding
+E07 1100  8    holes in the frame. Cut off excess screw lengths and
+E07 1110  5    file flush with either frame or nut. Drill four No.
+E07 1120  3    19 and four No. 28 holes in the 12'' long "A" pieces.
+E07 1130  2    Locate the position from Fig. 7.
+E07 1130  8    #TAPPETS AND LOCKING BARS#
+E07 1140  2    Draw-file No. 1 tappet to a smooth fit in its respective
+E07 1150  1    slot and square the ends. Break the end corners with
+E07 1150 11    a slight 45 degree chamfer. Drill a No. 50 hole 1-1/4''
+E07 1160  9    from one end and tap 2-56. (See Fig. 7.) Put a 2-56
+E07 1170 10    roundhead screw into the hole, cut off the excess threads
+E07 1180  5    and file flush with the underside of the bar. To find
+E07 1190  3    the other stop screw position, insert the tappet into
+E07 1190 12    the frame and hold the screw head tight against the
+E07 1200  9    frame edge. Scribe a line across the bar on the other
+E07 1210  7    end of the tappet, 1/4'' plus half the diameter of
+E07 1220  3    the 2-56 screw head (about 5/64'') away from the frame
+E07 1230  1    edge. Total distance is about 21/64''. Tend to make
+E07 1230 10    this dimension slightly undersize so you can file the
+E07 1240  8    screw head to get exactly 1/4'' tappet movement. Drill
+E07 1250  5    a No. 50 hole, tap 2-56 and insert a roundhead 2-56
+E07 1260  5    screw as you did on the first end. Drill a No. 47 hole
+E07 1270  3    crosswise through the tappet at the position shown
+E07 1270 11    in Figs. 7 and 8. Repeat these drill and tap operations
+E07 1280 10    for each of the tappet bars.
+E07 1290  2       To each tappet except 6 and 8, solder a **f piece
+E07 1290 13    of brass and file to the tapered shape shown in Figs.
+E07 1300 11    6 and 8. These will serve as lifting pads for the electrical
+E07 1310  9    contacts.
+E07 1310 10       Fitting the locking bars and making the locking
+E07 1320  8    pieces is a rather tedious job since stop screws, tappets
+E07 1330  5    and locking bars must be removed and replaced many
+E07 1340  2    times. As the work progresses the frame and moving
+E07 1340 11    parts become a sort of Chinese puzzle where several
+E07 1350  8    pieces must be removed before the part you are working
+E07 1360  6    on is accessible. A little extra work here will pay
+E07 1370  4    off with a smooth, snug-fitting machine when you are
+E07 1370 14    finished. Each completed locking bar should remain
+E07 1380  7    in place as the work progresses to insure snug fitting.
+E07 1390  6       The order of fitting is not too important. However,
+E07 1400  4    we started with the first row of bars and worked our
+E07 1410  2    way back. Since the same method of shaping and fitting
+E07 1410 12    the dogs and notches is used throughout, we will only
+E07 1420  9    describe the construction of one locking bar. Figs.
+E07 1430  6    7 and 8 give all pertinent dimensions. All the bars
+E07 1440  4    are cut from **f brass. The lengths of each piece are
+E07 1450  1    listed at the bottom of Fig. 7. Bar "C" is 2-3/4''
+E07 1450 13    long. Draw-file the edges, square up the ends and put
+E07 1460 11    a slight chamfer on the edges so they will not snag
+E07 1470  9    in the frame.
+E07 1470 12       Fig. 8 gives the dimensions for locating the dog-pin
+E07 1480  8    holes. Center-punch and drill the No. 31 hole 7/16''
+E07 1490  6    from one end of the bar. Chuck a length of 1/8'' dia.
+E07 1500  4    drill rod into a drill press or some similar turning
+E07 1510  1    device and while it is rotating file the end square
+E07 1510 11    and then file a slight taper 1/8'' long. Cut the piece
+E07 1520  9    about 9/32'' or 5/16'' long and drive it into the No.
+E07 1530  8    31 hole drilled in the locking bar. File the bottom
+E07 1540  5    edge flush with the bar and the top 1/8'' above the
+E07 1550  3    bar. This dog will engage a notch to be cut in tappet
+E07 1550 15    3.
+E07 1560  1       Place the locking bar in proper position and insert
+E07 1560 10    tappet 3. Scribe a line through the center of the pin
+E07 1570 10    and across the face of tappet 3, parallel to piece
+E07 1580  6    "A". See the drawings for the shape of the notch.
+E07 1590  4    Scribe V-shaped lines on the bar and rough out with
+E07 1600  2    either a hack saw or a cutting disk in a hand power
+E07 1600 14    tool. We used the latter equipped with a carborundum
+E07 1610  7    disk about .020'' thick and 1'' dia. fitted on a 1/8''
+E07 1620  7    dia. mandrel. Such disks are very handy for cutting
+E07 1630  5    and shaping small parts. File to a smooth finish. A
+E07 1640  2    Barrette Swiss pattern file is handy since its triangular
+E07 1650  1    shape with only one cutting face will allow you to
+E07 1650 11    work a surface without marring an adjoining one. Endeavor
+E07 1660  6    to get the notches as much alike as possible. The notch
+E07 1670  5    should have a smooth finish so that the steel dog will
+E07 1680  3    slide easily over it. Assemble the parts in the frame
+E07 1680 13    and test the sliding action of the mating pieces. All
+E07 1690 10    matching surfaces should be checked frequently and
+E07 1700  6    mated on a cut and fit basis.
+E07 1710  1       Chuck a 2'' or 3'' piece of 1/8'' dia. drill rod
+E07 1710 12    in a drill press or electric hand tool. Fashion a sharp
+E07 1730  7    scribing point about 3/64'' long on one end, using
+E07 1740  6    Swiss pattern files. This tool can also be made with
+E07 1750  3    a lathe.

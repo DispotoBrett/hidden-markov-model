@@ -1,0 +1,245 @@
+J08 0010  1    #BIOLOGICAL WARFARE#
+J08 0010  3    Biological warfare is the intentional use of living
+J08 0020  2    microorganisms or their toxic products for the purpose
+J08 0020 10    of destroying or reducing the military effectiveness
+J08 0030  6    of man. It is the exploitation of the inherent potential
+J08 0040  5    of infectious disease agents by scientific research
+J08 0050  2    and development, resulting in the production of BW
+J08 0060  1    weapons systems. Man may also be injured secondarily
+J08 0060  9    by damage to his food crops or domestic animals.
+J08 0070  7       Biological warfare is considered to be primarily
+J08 0080  4    a strategic weapon. The major reason for this is that
+J08 0090  3    it has no quick-kill effect. The incubation period
+J08 0090 12    of infectious disease, plus a variable period of illness
+J08 0100  8    even before a lethal effect, render this weapon unsuitable
+J08 0110  5    for hand-to-hand encounter. A man can be an effective
+J08 0130  5    fighting machine throughout the incubation period of
+J08 0140  2    most infectious diseases. Thus, an enemy would probably
+J08 0140 10    use this weapon for attack on static population centers
+J08 0150  7    such as large cities.
+J08 0160  1       An important operational procedure in BW for an
+J08 0160  9    enemy would be to create an areosol or cloud of agent
+J08 0170 10    over the target area. This concept has stimulated much
+J08 0180  5    basic research concerning the behavior of particulate
+J08 0190  2    biological materials, the pathogenesis of respiratory
+J08 0190  8    infections, the medical management of such diseases
+J08 0200  7    and defense against their occurrence.
+J08 0210  2       The biological and physical properties of infectious
+J08 0220  1    particles have been studied intensively during the
+J08 0220  8    past fifteen years. Much new equipment and many unique
+J08 0230  8    techniques have been developed for the quantitative
+J08 0240  4    exposure of experimental animals to aerosols of infectious
+J08 0250  3    agents contained in particles of specified dimensional
+J08 0260  1    characteristics. Much information has been gathered
+J08 0260  7    relative to quantitative sampling and assesment techniques.
+J08 0270  5    Much of the older experimental work on respiratory
+J08 0280  4    infections was accomplished by very artificial procedures.
+J08 0290  2    The intranasal instillation of a fluid suspension of
+J08 0290 10    infectious agent in an anesthetized animal is far different
+J08 0300  9    from exposure, through natural respiration, to aerosolized
+J08 0310  6    organisms.
+J08 0310  7       The importance of particle size in such aerosols
+J08 0320  8    has been thoroughly demonstrated. The natural anatomical
+J08 0330  4    and physiological defensive features of the upper respiratory
+J08 0340  5    tract, such as the turbinates of the nose and the cilia
+J08 0350  3    of the trachea and larger bronchi, are capable of impinging
+J08 0360  1    out the larger particles to which we are ordinarily
+J08 0360 10    exposed in our daily existence. Very small particles,
+J08 0370  5    however, in a size range of 1 to 4 microns in diameter
+J08 0380  5    are capable of passing these impinging barriers and
+J08 0390  2    entering the alveolar bed of the lungs. This area is
+J08 0390 12    highly susceptible to infection. The entrance and retention
+J08 0400  7    of infectious particles in the alveoli amounts almost
+J08 0410  6    to an intratissue inoculation. The relationship between
+J08 0420  3    particle size and infectious dose is illustrated in
+J08 0430  2    Table 1.
+J08 0430  4       In considering BW defense, it must be recognized
+J08 0440  1    that a number of critical meterological parameters
+J08 0440  8    must be met for an aerosol to exhibit optimum effect.
+J08 0450  7    For example, bright sunlight is rapidly destructive
+J08 0460  4    for living microorganisms suspended in air. There are
+J08 0470  2    optimal humidity requirements for various agents when
+J08 0470  9    airborne. Neutral or inversion meteorological conditions
+J08 0480  6    are necessary for a cloud to travel along the surface.
+J08 0490  7    It will rise during lapse conditions. There are, of
+J08 0500  4    course, certain times during the 24-hour daily cycle
+J08 0510  1    when most of these conditions will be met.
+J08 0510  9       Certain other properties of small particles, in
+J08 0520  5    addition to those already mentioned in connection with
+J08 0530  3    penetration of the respiratory tract, are noteworthy
+J08 0540  1    in defense considerations. The smaller the particle
+J08 0540  8    the further it will travel downwind before settling
+J08 0550  5    out. An aerosol of such small particles. moreover,
+J08 0560  2    diffuses through structures in much the same manner
+J08 0560 10    as a gas. There may be a number of secondary effects
+J08 0570 11    resulting from diffusion through buildings such as
+J08 0580  5    widespread contamination of kitchens, restaurants,
+J08 0590  2    food stores, hospitals, etc. Depending on the organism,
+J08 0600  1    there may be multiplication in some food or beverage
+J08 0600 10    products, i.e., in milk for example. The secondary
+J08 0610  7    consequences from this could be very serious and must
+J08 0620  6    be taken into consideration in planning for defense.
+J08 0630  2       Something of the behavior of clouds of small particles
+J08 0640  1    can be illustrated by the following field trials:
+J08 0640  9       In the first trial an inert substance was disseminated
+J08 0650  8    from a boat travelling some ten miles off shore under
+J08 0660  7    appropriately selected meteorological conditions. Zinc
+J08 0670  3    cadmium sulfide in particles of 2 microns in size were
+J08 0680  1    disseminated. This material fluoresces under ultraviolet
+J08 0680  7    light which facilitates its sampling and assessment.
+J08 0690  6    Four hundred and fifty pounds was disseminated while
+J08 0700  4    the ship was traveling a distance of 156 miles.
+J08 0710  2       Figure 1 describes the results obtained in this
+J08 0710 10    trial. The particles traveled a maximum detected distance
+J08 0720  8    of some 450 miles. From these dosage isopleths it can
+J08 0730  7    be seen that an area of over 34,000 square miles was
+J08 0740  4    covered. These dosages could have been increased by
+J08 0750  2    increasing the source strength which was small in this
+J08 0750 11    case.
+J08 0760  1       The behavior of a biological aerosol, on a much
+J08 0760  9    smaller scale, is illustrated by a specific field trial
+J08 0770  6    conducted with a non-pathogenic organism. An aqueous
+J08 0780  3    suspension of the spores of B. subtilis, var. niger,
+J08 0790  2    generally known as Bacillus globigii, was aerosolized
+J08 0800  1    using commercially available nozzles. A satisfactory
+J08 0800  7    cloud was produced even though these nozzles were only
+J08 0810  7    about 5 per cent efficient in producing an initial
+J08 0820  4    cloud in the size range of 1 to 5 microns. In this
+J08 0830  1    test, 130 gallons of a suspension, having a count of
+J08 0830 11    **f organisms per ml, or a total of approximately
+J08 0840  8    **f spores, was aerosolized. The spraying operation
+J08 0850  3    was conducted from the rear deck of a small Naval vessel,
+J08 0860  2    cruising two miles off-shore and vertical to an on-sure
+J08 0860 13    breeze. Spraying continued along a two-mile course.
+J08 0870  8       This operation was started at 5:00 p.m. and lasted
+J08 0880  8    for 29 minutes. There was a slight lapse condition,
+J08 0890  5    a moderate fog, and 100 per cent relative humidity.
+J08 0900  2    A network of sampling stations had been set up on shore.
+J08 0900 13    These were located at the homes of Government employees,
+J08 0910  9    in Government Offices, buildings and reservations within
+J08 0920  6    the trial area. A rough attempt was made to characterize
+J08 0930  6    the vertical profile of the cloud by taking samples
+J08 0940  3    from outside the windows on the first, ninth, and fifteenth
+J08 0950  1    floors of a Government office building.
+J08 0950  7       All samplers were operated for a period of two hours
+J08 0960  8    except one, which was operated for four hours. In this
+J08 0970  6    instance, there was a dosage of 562 during the first
+J08 0980  2    two hours and a total dosage of 1980 for the four-hour
+J08 0980 14    period, a four-fold increase. This suggests that the
+J08 0990  9    sampling period, particularly at the more distant locations,
+J08 1000  6    should have been increased.
+J08 1010  1       As can be seen from Figure 2, an extensive area
+J08 1010 11    was covered by this aerosol. The maximum distance sampled
+J08 1020  6    was 23 miles from the source. As can be seen from these
+J08 1030  7    dosage isopleths, approximately 100 square miles was
+J08 1040  3    covered within the area sampled. It is quite likely
+J08 1040 12    that an even greater area was covered, particularly
+J08 1050  8    downwind. The dosages in the three levels of the vertical
+J08 1060  8    profile were: **f
+J08 1060 11       This was not, of course, enough sampling to give
+J08 1070  8    a satisfactory description of the vertical diffusion
+J08 1080  5    of the aerosol.
+J08 1080  8       A number of unique medical problems might be created
+J08 1090  5    when man is exposed to an infectious agent through
+J08 1100  3    the respiratory route rather than by the natural portal
+J08 1105  1    of entry. Some agents have been shown to be much more
+J08 1110 10    toxic or infectious to experimental animals when exposed
+J08 1120  6    to aerosols of optimum particle size than by the natural
+J08 1130  6    portal. Botulinal toxin, for example, is several thousand-fold
+J08 1140  3    more toxic by this route than when given per os. In
+J08 1150  2    some instances a different clinical disease picture
+J08 1150  9    may result from this route of exposure, making diagnosis
+J08 1160  7    difficult. In tularemia produced by aerosol exposure,
+J08 1170  4    one would not expect to find the classical ulcer of
+J08 1180  3    "rabbit fever" on a finger.
+J08 1180  8       An enemy would obviously choose an agent that is
+J08 1190  6    believed to be highly infectious. Agents that are known
+J08 1200  4    to cause frequent infections among laboratory workers
+J08 1210  1    such as those causing Q fever, tularemia, brucellosis,
+J08 1210  9    glanders, coccidioidomycosis, etc., belong in this
+J08 1220  6    category.
+J08 1220  7       An agent would likely be selected which would possess
+J08 1230  7    sufficient viability and virulence stability to meet
+J08 1240  4    realistic minimal logistic requirements. It is, obviously,
+J08 1250  3    a proper goal of research to improve on this property.
+J08 1260  1    In this connection it should be capable of being disseminated
+J08 1260 11    without excessive destruction. Moreover, it should
+J08 1270  6    not be so fastidious in its growth requirements as
+J08 1280  5    to make production on a militarily significant scale
+J08 1290  2    improbable.
+J08 1290  3       An aggressor would use an agent against which there
+J08 1300  3    was a minimal naturally acquired or artificially induced
+J08 1310  1    immunity in a target population. A solid immunity is
+J08 1310 10    the one effective circumstance whereby attack by a
+J08 1320  6    specific agent can be neutralized. It must be remembered,
+J08 1330  5    however, that there are many agents for which there
+J08 1340  2    is no solid immunity and a partial or low-grade immunity
+J08 1340 13    may be broken by an appropriate dose of agent.
+J08 1350  8       There is a broad spectrum of organisms from which
+J08 1360  5    selection for a specified military purpose might be
+J08 1370  3    made. An enemy might choose an acutely debilitating
+J08 1370 11    microorganism, a chronic disease producer or one causing
+J08 1380  8    a high rate of lethality.
+J08 1390  1       It is possible that certain mutational forms may
+J08 1390  9    be produced such as antibiotic resistant strains. Mutants
+J08 1400  7    may also be developed with changes in biochemical properties
+J08 1410  6    that are of importance in identification. All of these
+J08 1420  5    considerations are of critical importance in considering
+J08 1430  3    defense and medical management.
+J08 1430  7       Biological agents are, of course, highly host-specific.
+J08 1440  7    They do not destroy physical structures as is true
+J08 1450  5    of high explosives. This may be of overriding importance
+J08 1460  2    in considering military objectives.
+J08 1460  6       The question of epidemic disease merits some discussion.
+J08 1470  7    Only a limited effort has been devoted to this problem.
+J08 1480  6    Some of those who question the value of BW have assumed
+J08 1490  5    that the only potential would be in the establishment
+J08 1500  1    of epidemics. They then point out that with our present
+J08 1500 11    lack of knowledge of all the factors concerned in the
+J08 1510 10    rise and fall of epidemics, it is unlikely that a planned
+J08 1520  9    episode could be initiated. They argue further (and
+J08 1530  5    somewhat contradictorily) that our knowledge and resources
+J08 1540  3    in preventive medicine would make it possible to control
+J08 1550  1    such an outbreak of disease. this is why this approach
+J08 1550 11    to BW defense has not been given major attention.
+J08 1560  8       Our major problem is what an enemy might accomplish
+J08 1570  7    in an initial attack on a target. This, of course,
+J08 1580  3    does not eliminate from consideration for this purpose
+J08 1590  1    agents that are associated naturally with epidemic
+J08 1590  8    disease. A hypothetical example will illustrate this
+J08 1600  5    point. Let us assume that it would be possible for
+J08 1610  4    an enemy to create an aerosol of the causative agent
+J08 1620  1    of epidemic typhus (Rickettsia prowazwki) over City
+J08 1620  8    A and that a large number of cases of typhus fever
+J08 1630 10    resulted therefrom. No epidemic was initiated nor was
+J08 1640  5    one expected because the population in City A was
+J08 1650  3    not lousy. Lousiness is a prerequisite for epidemic
+J08 1650 11    typhus. In this case, then, the military objective
+J08 1660  8    was accomplished with an epidemic agent solely through
+J08 1670  6    the results secured in the initial attack. This was
+J08 1680  4    done with full knowledge that there would be no epidemic.
+J08 1690  1    On the other hand, a similar attack might have been
+J08 1690 11    made on City B whose population was known to be lousy.
+J08 1700  9    One might expect some spread of the disease in this
+J08 1710  7    case resulting in increased effectiveness of the attack.
+J08 1720  4       The major defensive problems are concerned with
+J08 1730  2    the possibility of overt military delivery of biological
+J08 1730 10    agents from appropriate disseminating devices. It should
+J08 1740  6    be no more difficult to deliver such devices than other
+J08 1750  7    weapons. The same delivery vehicles- whether they be
+J08 1760  6    airplanes, submarines or guided missiles- should be
+J08 1770  2    usable. If it is possible for an enemy to put an atomic
+J08 1770 14    bomb on a city, it should be equally possible to put
+J08 1780 10    a cloud of biological agent over that city.
+J08 1790  4       Biological agents are, moreover, suitable for delivery
+J08 1800  3    through enemy sabotage which imposes many problems
+J08 1800 10    in defense. A few obvious target areas of great importance
+J08 1810  9    might be mentioned. The air conditioning and ventilating
+J08 1820  6    systems of large buildings are subject to attack. America
+J08 1830  5    is rapidly becoming a nation that uses processed, precooked
+J08 1840  3    and even predigested foods. This is an enormous industry
+J08 1850  2    that is subject to sabotage. One must include the preparation
+J08 1860  1    of soft drinks and the processing of milk and milk
+J08 1860 11    products. Huge industries are involved also in the
+J08 1870  7    production of biological products, drugs and cosmetics
+J08 1880  4    which are liable to this type of attack.

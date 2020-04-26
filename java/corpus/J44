@@ -1,0 +1,243 @@
+J44 0010  1    How else can one explain, for example, allowing the
+J44 0010 10    survival of the right to amortize bond discount and
+J44 0020  6    premium (section 381(c)(9)), but not the right to amortize
+J44 0030  5    bond issue expenses; or allowing a deduction for payment
+J44 0040  3    of certain obligations of a transferor assumed in the
+J44 0040 12    reorganization (section 381(c)(16)), but not a deduction
+J44 0050  7    for theft losses sustained by a transferor prior to
+J44 0060  7    a reorganization but discovered after it; or requiring
+J44 0070  5    a transferor to carry over its method of depeciation
+J44 0080  1    (section 381(c)(6)), but not allowing rapid amortization
+J44 0080  8    of emergency facilities transferred in a reorganization;
+J44 0090  7    or allowing survival of a dividend carryover to a personal
+J44 0100  8    holding company (section 381(c)(14)), but not carryover
+J44 0110  5    of excess tax credits for foreign taxes?
+J44 0120  1       These items, and most of the others listed above,
+J44 0120 10    seem quite comparable to items whose right of survival
+J44 0130  9    is provided for in section 381. There does not seem
+J44 0140  6    to be any reasonable basis for distinction either in
+J44 0150  3    terms of the nature of the tax attribute or in terms
+J44 0150 14    of tax-avoidance possibilities. With respect to items
+J44 0160  8    such as these the provisions of section 381(c), viewed
+J44 0170  6    in historical perspective, suggest a rule requiring
+J44 0180  4    survival, whether the items are beneficial or detrimental
+J44 0190  1    to the surviving corporation. To this extent some stretching
+J44 0200  1    of the literal meaning of the Committee Report seems
+J44 0200 10    justified, since the literal meaning conflicts with
+J44 0210  6    the clear implication, if not the language, of the
+J44 0220  4    statute.
+J44 0220  5       It is not contended that section 381 should prescribe
+J44 0230  4    the survival of all of the transferor's tax attributes.
+J44 0240  1    Such an interpretation could not be justified by a
+J44 0240 10    construction of the statute alone; it would certainly
+J44 0250  8    violate the intention of Congress as expressed in the
+J44 0260  6    Committee Report; and in at least one instance, involving
+J44 0270  4    refund claims, it might be contrary to another provision
+J44 0280  2    of the United States Code.
+J44 0280  7    #REFUND CLAIMS#
+J44 0280  9    Section 203 of the United States Code voids an assignment
+J44 0290 10    of a claim against the Government unless made after
+J44 0300  6    it has been allowed, the amount due has been ascertained,
+J44 0310  4    and a warrant for its payment has been issued. If it
+J44 0320  3    were not for judicial development of certain exceptions,
+J44 0320 11    this section would prohibit a suit for refund by an
+J44 0330 10    acquiring corporation for taxes paid by a transferor
+J44 0340  6    corporation, even though the reorganization meets the
+J44 0350  3    requirements of section 381(a).
+J44 0350  7       A clearly recognized exception is a statutory merger
+J44 0360  6    or consolidation. The leading case, Seaboard Air Line
+J44 0370  4    Railway v. United States, held that the transferee
+J44 0380  3    could sue for a refund of taxes paid by the transferor,
+J44 0390  1    and it has been consistently followed. The Court said
+J44 0390 10    the purpose of the section was principally to spare
+J44 0400  8    the Government the embarrassment and trouble of dealing
+J44 0410  5    with several parties, one of them a stranger to the
+J44 0420  3    claim, and to prevent traffic in claims, particularly
+J44 0420 11    tenuous claims, against the Government. Neither reason,
+J44 0430  7    said the Court, applied to the case at hand; furthermore,
+J44 0440  7    Congress could not be presumed to have intended to
+J44 0450  5    obstruct mergers approved by the states. Other exceptions
+J44 0460  2    are assignments for the benefit of creditors, corporate
+J44 0460 10    dissolutions, transfers by descent, or transfers by
+J44 0470  7    subrogation. Exceptions are often classified as transfers
+J44 0480  6    by "operation of law".
+J44 0490  1       A tax-free reorganization not complying with the
+J44 0490  9    merger or consolidation statutes of the states involved
+J44 0500  6    is difficult to fit into an "operation of law" mold.
+J44 0510  4    Although it is in some ways comparable to a voluntary
+J44 0520  3    sale of assets for cash, to which section 203 quite
+J44 0520 13    clearly applies, the courts and Treasury have held
+J44 0530  8    that acquiring corporations in several types of non-taxable
+J44 0540  7    reorganizations may sue for refund of taxes paid by
+J44 0550  5    transferors. A recent case in point is Mitchell Canneries
+J44 0560  2    v. United States, in which a claim against the Government
+J44 0570  1    was transferred first from a corporation to a partnership,
+J44 0570 10    whose partners were former stockholders, and then to
+J44 0580  8    another corporation formed by the partners. Holding
+J44 0590  5    the final corporation entitled to sue on the claim,
+J44 0600  3    the Court cited the Seaboard, Novo Trading, and Roomberg
+J44 0610  1    cases for the proposition that "... transfers by operation
+J44 0620  1    of law or in conjunction with changes of corporate
+J44 0620 10    structure are not assignments prohibited by the statute".
+J44 0630  6       In an earlier case, Kingan + Co. v. United States,
+J44 0640  7    an American corporation was formed for the purpose
+J44 0650  6    of acquiring the stock of a British corporation in
+J44 0660  2    exchange for its own stock and then liquidating the
+J44 0660 11    British corporation. The anti-assignment statute was
+J44 0670  7    held not to prevent the American corporation from suing
+J44 0680  5    for a refund of taxes paid by the British corporation.
+J44 0690  2    The transaction presumably would have qualified under
+J44 0700  1    section 368(a)(1)(B) as a contractual reorganization,
+J44 0700  7    followed by a section 332 liquidation, but not under
+J44 0710  9    section 368(a)(1)(A) as a statutory merger of consolidation.
+J44 0720  7    The Court, nevertheless, relied on the Seaboard case
+J44 0730  5    and also mentioned that the shareholders of the two
+J44 0740  4    corporations were the same. In substance, said the
+J44 0740 12    Court, there was no transfer of equitable title.
+J44 0750  8       The Treasury arrives at substantially the same conclusion,
+J44 0760  6    but skirts the problem of section 203 of the United
+J44 0770  5    States Code. Revenue Ruling 54-17 provides that if
+J44 0780  3    the corporation against which a tax was assessed has
+J44 0780 12    since been liquidated by merger with a successor corporation,
+J44 0790  8    a claim for refund should be filed by the successor
+J44 0800  7    in the name and on behalf of the corporation which
+J44 0810  3    paid the tax, followed by the name of the successor
+J44 0820  1    corporation. Proper evidence of the liquidation and
+J44 0820  8    succession must also be filed. If the succession is
+J44 0830  7    a matter of public record, certificates of the Secretaries
+J44 0840  4    of State or other public officials having custody of
+J44 0850  2    the documents will suffice; if the succession is not
+J44 0850 11    of record, all documents relating to such succession,
+J44 0860  7    properly certified, are required. The former proof
+J44 0870  5    seems applicable to a statutory merger or consolidation,
+J44 0880  3    the latter to a contractual acquisition. The Ruling
+J44 0890  1    would not, however, apply to an acquisition of assets
+J44 0890 10    for cash. A recent Ruling, although rather confusing,
+J44 0900  5    cites and follows Rev. Rul. 54-17. The Ruling suggests
+J44 0910  6    also that it applies to either a statutory or contractual
+J44 0920  3    reorganization. Hence, a successor corporation in a
+J44 0930  3    C reorganization appears entitled to sue for a refund
+J44 0930 12    of taxes paid by the merged corporation despite section
+J44 0940  8    203.
+J44 0940  9       In a B reorganization, followed by a section 332
+J44 0950  7    liquidation, those cases which hold that section 203
+J44 0960  6    is inapplicable to transfers in liquidation appear
+J44 0970  2    to permit the successor corporation to sue for refund
+J44 0970 11    of taxes paid by the transferor. In fact, a cash purchase
+J44 0980 10    of a corporation's stock followed by liquidation might
+J44 0990  6    also be an effective way to transfer a claim for refund
+J44 1000  5    if the Kimbell-Diamond doctrine is not applied to eliminate
+J44 1010  4    the intermediate step.
+J44 1010  7       These results appear sound. As stated in Seaboard
+J44 1020  6    and numerous other cases, the two primary reasons for
+J44 1030  4    the enactment of section 203 of the United States Code
+J44 1040  2    were to prevent the Government from having to deal
+J44 1040 11    with more than one claimant and to prevent the assignment
+J44 1050  9    of meretricious claims on a contingent-fee basis. The
+J44 1060  7    cases have allowed transfer of claims if beneficial
+J44 1070  3    ownership is not changed. The first reason would never
+J44 1080  1    apply to a reorganization transfer which meets the
+J44 1080  9    conditions of section 381(a), which is the only type
+J44 1090  7    presently under discussion. Section 381(a) applies
+J44 1100  3    only to a transfer by liquidation of a subsidiary owned
+J44 1110  2    to the extent of at least 80 per cent, a statutory
+J44 1110 13    merger or consolidation, an acquisition of substantially
+J44 1120  5    all a corporation's assets solely in exchange for voting
+J44 1130  6    stock, or a change of identity, form, or place of organization.
+J44 1140  5    In virtually every case the transferor corporation
+J44 1150  1    is liquidated, and its former stockholders either own
+J44 1150  9    outright, or have a continuing stock interest in, the
+J44 1160  9    assets which gave rise to the tax. In these circumstances
+J44 1170  7    the possibility of multiple or conflicting claims is
+J44 1180  3    exceedingly remote. Furthermore, in a C reorganization
+J44 1190  1    the continuing interest of stockholders of the corporation
+J44 1200  1    which paid the tax must be greater than is necessary
+J44 1200 11    in a statutory merger, to which the statute is clearly
+J44 1210  7    inapplicable.
+J44 1210  8       Nor is it at all likely that a "desperate" claim
+J44 1220  8    against the Government will be assigned on a contingent-fee
+J44 1230  7    basis in the guise of a tax-free reorganization. If
+J44 1240  2    the transferor has substantial assets other than the
+J44 1250  1    claim, it seems reasonable to assume no corporation
+J44 1250  9    would be willing to acquire all of its properties in
+J44 1260  7    the dim hope of collecting a claim for refund of taxes.
+J44 1270  5    If such an unlikely transaction were to take place,
+J44 1280  1    it would more logically be accomplished by a stock
+J44 1280 10    purchase, followed by the prosecution of the claim
+J44 1290  7    by the wholly-owned subsidiary, followed by liquidation.
+J44 1300  3    In the rare case where a corporation's only substantial
+J44 1310  2    asset, or its most important one, is a claim for refund,
+J44 1310 13    perhaps its transfer should not be permitted, whether
+J44 1320  8    the reorganization takes the form of a statutory merger
+J44 1330  8    or of the acquisition of assets for stock.
+J44 1340  3       It appears, then, that although the matter is not
+J44 1350  1    dealt with in section 381(c), a successor corporation
+J44 1350  9    in a reorganization of a type specified in section
+J44 1360  7    381(a) is entitled to sue for refund of taxes paid
+J44 1370  4    by a transferor corporation. Section 203 of the United
+J44 1380  1    States Code has been interpreted as not applying to
+J44 1380 10    claims against the Government transferred in tax-free
+J44 1390  7    reorganizations. The successor corporations have been
+J44 1400  4    held entitled to sue on such claims.
+J44 1400 11    #OTHER TAX ATTRIBUTES OF THE TRANSFEROR#
+J44 1410  6    There are certain tax attributes of a corporation whose
+J44 1420  5    nature and effect might depend on the facts of the
+J44 1430  3    particular reorganization involved. For example, property
+J44 1430  9    "used in the trade or business" of a transferor corporation,
+J44 1440 10    as defined in section 1231, presumably would not retain
+J44 1450  8    its special status following a non-taxable reorganization
+J44 1460  5    if it is not so used in the business of the acquiring
+J44 1470  4    corporation. The parent of a group filing consolidated
+J44 1480  1    returns might be treated as the same corporation following
+J44 1480 10    a reorganization defined in section 368(a)(1)(F), but
+J44 1490  6    as a different corporation for this purpose after a
+J44 1500  6    tax-free acquisition by another corporation which had
+J44 1510  3    not, for example, elected to file consolidated returns
+J44 1520  1    with its own subsidiaries. Similar considerations presumably
+J44 1520  8    made it difficult to prescribe a general rule where
+J44 1530  9    the acquired and acquiring corporations have different
+J44 1540  4    methods of accounting (section 381(c)(4)) or depreciation
+J44 1550  3    (section 381(c)(6)).
+J44 1550  5       Other sections of the 1954 Internal Revenue Code
+J44 1560  7    provide for survival of certain of a transferor's tax
+J44 1570  4    attributes following a tax-free reorganization. Section
+J44 1580  2    362 requires carryover of the transferor corporation's
+J44 1580  9    basis for property transferred, and section 1223 provides
+J44 1590  8    for tacking on the transferor's holding period for
+J44 1600  6    such property to that of the transferee. Section 169
+J44 1610  3    permits a person acquiring grain-storage facilities
+J44 1620  1    to elect to continue amortization over a 60-month period.
+J44 1620 11    However, a similar privilege was not specifically provided
+J44 1630  8    in section 168 for a person acquiring emergency facilities.
+J44 1650  1    _ATTRIBUTES SIMILAR TO A LOSS CARRYOVER._
+J44 1650  2       There may be certain items which are quite similar
+J44 1660  1    to a net operating loss carryover or operating deficit
+J44 1660 10    and whose right to survive a reorganization should
+J44 1670  6    perhaps be subject to the conditions applicable to
+J44 1680  3    those items. For example, suppose another excess profits
+J44 1690  1    tax similar to prior laws is enacted, providing for
+J44 1690 10    carryover of excess profits credits. This carryover
+J44 1700  6    right has a number of things in common with a net operating
+J44 1710  6    loss carryover. It is an averaging device intended
+J44 1720  2    to ease the tax burden of fluctuating income; it is
+J44 1720 12    a tax benefit which might be of substantial value to
+J44 1730  9    a corporation which expects to have a high excess profits
+J44 1740  7    tax. Under the 1939 Code this item was permitted to
+J44 1750  4    survive a tax-free reorganization in the Stanton Brewery
+J44 1760  2    case, but only over the dissent of Judge Learned Hand,
+J44 1770  1    who wrote the majority opinion in the Sansome case,
+J44 1770 10    a leading case requiring carryover of earnings and
+J44 1780  6    profits in a non-taxable reorganization.
+J44 1790  1       Since this type of item was not in the statute when
+J44 1800  1    section 381 was enacted in 1954, one cannot say with
+J44 1800 11    certainty what effect the enactment of that section
+J44 1810  6    should have. With respect to this type of item, one
+J44 1820  5    might properly apply the language of the Committee
+J44 1830  1    Report, quoted above, which cautions against using
+J44 1830  8    section 381 as a basis for treating other tax attributes
+J44 1840  7    not mentioned therein.
+J44 1850  1       Actually, there do not presently appear to be items
+J44 1850 10    in the statute comparable to a net operating loss carryover.
+J44 1860  7    Probably the primary reason for special treatment of
+J44 1870  5    a net operating loss carryover is the unique opportunity
+J44 1880  2    it presents for tax avoidance.

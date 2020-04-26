@@ -1,0 +1,245 @@
+E25 0010  1       EVERY taxpayer is well aware of the vast size of
+E25 0010 11    our annual defense budget and most of our readers also
+E25 0020  8    realize that a large portion of these expenditures
+E25 0030  4    go for military electronics. We have noted how some
+E25 0040  2    electronic techniques, developed for the defense effort,
+E25 0040  9    have evenutally been used in commerce and industry.
+E25 0050  7    The host of novel applications of electronics to medical
+E25 0060  5    problems is far more thrilling because of their implication
+E25 0070  4    in matters concerning our health and vitality.
+E25 0080  1       When we consider the electronic industry potential
+E25 0080  8    for human betterment, the prospect is staggering. The
+E25 0090  6    author has recently studied the field of medical electronics
+E25 0100  6    and has been convinced that, in this area alone, the
+E25 0110  4    application of electronic equipment has enormous possibilities.
+E25 0120  1    The benefits electronics can bring to bio-medicine
+E25 0120  9    may be greater by far than any previous medical discovery.
+E25 0130  9    We use the term "bio-medicine" because of the close
+E25 0140  7    interrelation between biology and medical research.
+E25 0150  4       Electronics has been applied to medicine for many
+E25 0160  3    years in the form of such familiar equipment as the
+E25 0160 13    x-ray machine, the electrocardiograph, and the diathermy
+E25 0170  6    machine. Recently many doctors have installed ultrasonic
+E25 0180  5    vibration machines for deep massage of bruises, contusions,
+E25 0200  2    and simple bursitis.
+E25 0200  5       Commonly used electronic devices which are found
+E25 0210  5    in practically every hospital are closed-circuit TV
+E25 0220  2    and audio systems for internal paging and instruction,
+E25 0230  1    along with radiation counters, timers, and similar
+E25 0230  8    devices.
+E25 0240  1       In this article we will concentrate on the advances
+E25 0240 10    in the application of electronics in bio-medical research
+E25 0250  7    laboratories because this is where tomorrow's commonplace
+E25 0260  5    equipment originates. From the wealth of material and
+E25 0270  4    the wide variety of different electronic techniques
+E25 0280  1    perfected in the past few years we have selected a
+E25 0280 11    few examples which appear to be headed for use in the
+E25 0290  9    immediate future and which offer completely new tools
+E25 0300  3    in medical research.
+E25 0300  6    #ULTRAVIOLET MICROSCOPY#
+E25 0310  1    Many cells, bacteria, and other microorganisms are
+E25 0310  8    transparent to visible light and must be stained for
+E25 0320  7    microscopic investigation. This stain often disrupts
+E25 0330  3    the normal cell activity or else colors only the outside.
+E25 0340  1    A completely new insight into living cells and their
+E25 0340 10    structure will be possible by use of a new technique
+E25 0350 10    which replaces visible light with ultraviolet radiation
+E25 0360  4    and combines a microscope with a color-TV system to
+E25 0370  3    view the results.
+E25 0370  6       Fig. 1 is a simplified block diagram of the ultraviolet
+E25 0380  5    microscopy system developed at the Medical Electronics
+E25 0390  2    Center of Rockefeller Institute. By combining the talents
+E25 0400  2    of a medical man, Dr. Aterman, a biophysicist, Mr.
+E25 0401  1    Berkely, and an electronics expert, Dr. Zworykin, this
+E25 0410  8    novel technique has been developed which promises to
+E25 0420  7    open broad avenues to understanding life processes.
+E25 0430  3       Three different wavelengths of ultraviolet radiation
+E25 0440  2    are selected by the variable filters placed in front
+E25 0440 11    of the three mercury xenon lights which serve as the
+E25 0450  9    ultraviolet sources. These wavelengths are reflected
+E25 0460  5    in sequence through the specimen by the rotating mirror;
+E25 0470  3    the specimen is magnified by the microscope. Instead
+E25 0480  1    of the observer's eye the image orthicon in the TV
+E25 0480 11    camera does the "looking". The microscope and orthicon
+E25 0490  8    are both selected to operate well into the ultraviolet
+E25 0500  7    spectrum, which means that all lenses must be quartz.
+E25 0510  5       The video signal is amplified and then switched,
+E25 0520  2    in synchronism with the three ultraviolet light sources
+E25 0520 10    which are sequenced by the rotating mirror so that
+E25 0530  9    during one-twentieth of a second only one wavelength,
+E25 0540  6    corresponding to red, green, or blue, is seen. (Note:
+E25 0550  3    Because of light leakage from one ultraviolet source
+E25 0560  1    to another, the lights are switched by a commutator-like
+E25 0560 11    assembly rotated by a synchronous motor. This assembly
+E25 0570  7    also supplies a 20-cps switching gate for the electronics
+E25 0580  6    circuitry.) This is the same system as was used in
+E25 0590  5    the field-sequential color-TV system which preceded
+E25 0600  1    the present simultaneous system. Three separate amplifiers
+E25 0600  8    then drive a 21-inch tricolor tube. The result is a
+E25 0610 11    color picture of the specimen where the primary colors
+E25 0620  6    correspond to the three different ultraviolet wavelengths.
+E25 0630  2       Many of the cells and microorganisms which are transparent
+E25 0640  3    to visible light, absorb or reflect the much shorter
+E25 0670  1    wavelengths of the ultraviolet spectrum. Different
+E25 0670  7    parts of these cells sometimes absorb or reflect different
+E25 0680  6    wavelengths so that it is often possible to see internal
+E25 0690  5    portions of cells in a different color. Where the microscope
+E25 0700  4    under visible light may show only vague shadows or
+E25 0710  2    nothing at all, ultraviolet illumination and subsequent
+E25 0710  9    translation into a color TV picture reveal a wealth
+E25 0720  9    of detail.
+E25 0720 11       At the present time the research team which pioneered
+E25 0730  8    this new technique is primarily interested in advancing
+E25 0740  5    and perfecting it.
+E25 0740  8    #BREATHING- ELECTRONICALLY ANALYZED#
+E25 0750  3    The medical title of "Lobar Ventilation in Man" by
+E25 0760  4    Drs. C. J. Martin and A. C. Young, covers a brief paper
+E25 0770  4    which is one part of a much larger effort to apply
+E25 0770 15    electronics to the study of the respiratory process.
+E25 0780  8    At the University of Washington Medical School, the
+E25 0790  6    electronics group has developed the "Respiratory Gas
+E25 0800  4    Analyzer" shown in Fig. 3. This unit, affectionately
+E25 0810  2    dubbed "The Monster", can be wheeled to any convenient
+E25 0820  1    location and provides a wealth of information about
+E25 0820  9    the patient's breathing.
+E25 0830  2       In the lower center rack an 8-channel recorder indicates
+E25 0840  2    the percentage of carbon dioxide and nitrogen from
+E25 0840 10    the upper and lower lobes of one lung, the total volume
+E25 0850 10    of inhalation per breath, the flow of air from both
+E25 0860  7    lobes, and the pressure of the two lobes with respect
+E25 0870  3    to each other. Usually the patient breathes into a
+E25 0870 12    mouthpiece while walking a treadmill, standing still,
+E25 0880  7    or in some other medically significant position. From
+E25 0890  4    the resulting data the doctor can determine lung defects
+E25 0900  3    with hitherto unknown accuracy and detail.
+E25 0900  9    #HEART-MEASURING TECHNIQUES#
+E25 0910  2    The original electrocardiograph primarily indicates
+E25 0920  2    irregularities in the heartbeat, but today's techniques
+E25 0920  9    allow exact measurements of the flow of blood through
+E25 0930  9    the aorta, dimensioning of the heart and its chambers,
+E25 0940  7    and a much more detailed study of each heartbeat. For
+E25 0950  4    many of these measurements the chest must be opened,
+E25 0960  1    but the blood vessels and the heart itself remain undisturbed.
+E25 0960 11       A group of researchers at the University of Washington
+E25 0970 10    have given a paper which briefly outlines some of these
+E25 0980  9    techniques. One simple method of measuring the expansion
+E25 0990  6    of the heart is to tie a thin rubber tube, filled with
+E25 1000  4    mercury, around the heart and record the change in
+E25 1010  2    resistance as the tube is stretched. A balanced resistance
+E25 1010 11    bridge and a pen recorder are all the electronic instrumentation
+E25 1020 10    needed.
+E25 1030  1       Sonar can be used to measure the thickness of the
+E25 1030 11    heart by placing small crystal transducers at opposite
+E25 1040  6    sides of the heart or blood vessel and exciting one
+E25 1050  4    with some pulsed ultrasonic energy. The travel time
+E25 1060  2    of sound in tissue is about 1500 meters per second
+E25 1060 12    thus it takes about 16 |msec. to traverse 25 mm. of
+E25 1070  7    tissue. A sonar or radar-type of pulse generator and
+E25 1080  5    time-delay measuring system is required for body-tissue
+E25 1090  3    evaluation. In addition to the heart and aorta, successful
+E25 1100  1    measurements of liver and spleen have also been made
+E25 1100 10    by this technique. The Doppler effect, using ultrasonic
+E25 1110  6    signals, can be employed to measure the flow of blood
+E25 1120  6    without cutting into the blood vessel.
+E25 1130  1       A still more sophisticated system has been devised
+E25 1130  9    for determining the effective power of the heart itself.
+E25 1140  8    It uses both an ultrasonic dimensioning arrangement
+E25 1150  3    of the heart and a catheter carrying a thermistor inserted
+E25 1160  2    into the bloodstream. The latter measures the heat
+E25 1160 10    carried away by the bloodstream as an indication of
+E25 1170  9    the velocity of the blood flow. It is also possible
+E25 1180  6    to utilize a pressure transducer, mounted at the end
+E25 1190  4    of a catheter which is inserted into the heart's left
+E25 1200  1    ventricle, to indicate the blood pressure in the heart
+E25 1200 10    itself. This pressure measurement may be made at the
+E25 1210  7    same time that the ultrasonic dimensioning measurement
+E25 1220  2    is made. A simplified version of the instrumentation
+E25 1230  1    for this procedure is shown in Fig. 2. Outputs of the
+E25 1230 12    two systems are measured by a pulse-timing circuit
+E25 1240  9    and a resistance bridge, followed by a simple analogue
+E25 1250  6    computer which feeds a multichannel recorder. From
+E25 1260  2    this doctors can read heart rate, change in diameter,
+E25 1260 11    pressure, and effective heart power.
+E25 1270  5    #RADIO-TRANSMITTER PILLS#
+E25 1270  8    Several years ago headlines were made by a small radio
+E25 1280 10    transmitter capsule which could be swallowed by the
+E25 1290  7    patient and which would then radio internal pressure
+E25 1300  2    data to external receivers. This original capsule contained
+E25 1310  1    a battery and a transistor oscillator and was about
+E25 1310 10    1 cm. in diameter. Battery life limited the use of
+E25 1320  8    this "pill" to about 8 to 30 hours maximum.
+E25 1330  5       A refinement of this technique has been described
+E25 1340  1    by Drs. Zworykin and Farrar and Mr. Berkely of the
+E25 1340 11    Medical Electronics Center of the Rockefeller Institute.
+E25 1350  7    In this novel arrangement the "pill" is much smaller
+E25 1360  8    and contains only a resonant circuit in which the capacitor
+E25 1370  6    is formed by a pressure-sensing transducer. As shown
+E25 1380  4    in Fig. 4, an external antenna is placed over or around
+E25 1390  3    the patient and excited 3000 times a second with short
+E25 1390 13    400-kc. bursts. The energy received by the "pill" causes
+E25 1400  9    the resonant circuit to "ring" on after the burst and
+E25 1410  9    this "ringing" takes place at the resonant frequency
+E25 1420  6    of the "pill". These frequencies are amplified and
+E25 1430  4    detected by the FM receiver after each burst of transmitted
+E25 1440  3    energy and, after the "pill" has been calibrated, precise
+E25 1450  2    internal pressure indications can be obtained.
+E25 1450  8       One of the advantages of this method is that the
+E25 1460  9    "pill" can remain in the patient for several days,
+E25 1470  5    permitting observation under natural conditions. Applications
+E25 1480  2    to organs other than the gastrointestinal tract are
+E25 1490  1    planned for future experiments.
+E25 1490  5    #SONAR IN MEDICAL RESEARCH#
+E25 1490  9    One of the most gratifying applications of an important
+E25 1500  9    technique of submarine detection is in the exploration
+E25 1510  6    of the human body. Our readers are familiar with the
+E25 1520  5    principles of sonar where sound waves are sent out
+E25 1530  2    in water and the echoes then indicate submerged objects.
+E25 1530 11    Various methods of pulsing, scanning, and displaying
+E25 1540  7    these sound waves are used to detect submarines, map
+E25 1550  5    ocean floors, and even communicate under water. In
+E25 1560  2    medicine the frequencies are much higher, transducers
+E25 1560  9    and the sonar beams themselves are much smaller, and
+E25 1570  8    different scanning techniques may be used, but the
+E25 1580  6    principles involved are the same as in sonar.
+E25 1590  1       Because the body contains so much liquid, transmission
+E25 1590  9    of ultrasonic signals proceeds fairly well in muscles
+E25 1600  8    and blood vessels. Bones and cartilage transmit poorly
+E25 1610  6    and tend to reflect the ultrasonic signals. Based on
+E25 1620  4    this phenomenon, a number of investigators have used
+E25 1630  1    this method to "look through" human organs. A good
+E25 1630 10    example of the results obtainable with ultrasonic radiation
+E25 1640  7    is contained in papers presented by Dr. G. Baum who
+E25 1650  7    has explored the human eye. He can diagnose detachment
+E25 1660  4    of the retina where conventional methods indicate blindness
+E25 1670  2    due to glaucoma. The method used to scan the eye ultrasonically
+E25 1680  1    is illustrated in Fig. 6. The transducer is coupled
+E25 1680 10    to the body through a water bath, not shown. For display,
+E25 1690 10    Dr. Baum uses a portion of an **f, an airborne radar
+E25 1700  9    indicator, and then photographs the screen to obtain
+E25 1710  5    a permanent record.
+E25 1710  8       A typical "sonogram" of a human eye, together with
+E25 1720  7    a description of the anatomical parts, is shown in
+E25 1730  5    Fig. 5. The frequency used for these experiments is
+E25 1740  2    15 mc. and the transducer is a specially cut crystal
+E25 1740 12    with an epoxy lens capable of providing beam diameters
+E25 1750  7    smaller than one millimeter. The transducer itself
+E25 1760  4    moves the beam in a sector scan, just like a radar
+E25 1770  3    antenna, while the entire transducer structure is moved
+E25 1770 11    over a 90-degree arc in front of the eye to "look into"
+E25 1780 12    all corners. The total picture is only seen by the
+E25 1790  7    camera which integrates the many sector scans over
+E25 1800  3    the entire 90-degree rotation period.
+E25 1800  9       Drs. Howry and Holmes at the University of Colorado
+E25 1810  8    Medical School have applied the same sonar technique
+E25 1820  5    to other areas of soft tissue and have obtained extremely
+E25 1830  3    good results. By submerging the patient in a tub and
+E25 1840  2    rotating the transducer while the scanning goes on,
+E25 1840 10    they have been able to get cross-section views of the
+E25 1850  9    neck, as shown in Fig. 7, as well as many other hitherto
+E25 1860  6    impossible insights. As mentioned before, bone reflects
+E25 1870  3    the sound energy and in Fig. 7 the portion of the spine
+E25 1880  2    shows as the black area in the center. Arteries and
+E25 1880 12    veins are apparent by their black, blood-filled centers
+E25 1890  7    and the surrounding white walls.
+E25 1900  2       A cross-section of a normal lower human leg is shown
+E25 1900 13    in Fig. 8 with the various parts labeled.

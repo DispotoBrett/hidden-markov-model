@@ -1,0 +1,306 @@
+J73 0010  1    _ORGANIZATION:_
+J73 0010  2       In this publication measurements of interfacial
+J73 0020  1    angles of crystals are used to classify and identify
+J73 0020 10    chemical substances. T. V. Barker, who developed the
+J73 0030  7    classification-angle system, was about to begin the
+J73 0040  6    systematic compilation of the index when he died in
+J73 0050  3    1931. The compilation work was undertaken by a number
+J73 0050 12    of interested crystallographers in the Department of
+J73 0060  6    Mineralogy of the University Museum at Oxford. Since
+J73 0070  5    1948 the working headquarters has been the Department
+J73 0090  2    of Geology and Mineralogy. Numerous cooperating individuals
+J73 0100  1    in Great Britain, Holland, the United States, and Belgium
+J73 0110  1    have contributed editorially or by making calculations.
+J73 0110  8    Great interest and practical help have been given by
+J73 0120  8    the Barker Index Committee. Financial and material
+J73 0130  4    help have come from academic, governmental, and industrial
+J73 0140  2    organizations in England and Holland. Editors for Volumes
+J73 0150  1    I and II were M. W. Porter and the late R. C. Spiller,
+J73 0160  2    both of Oxford University. A third volume remains to
+J73 0160 11    be published.
+J73 0170  2    _SUBSTANCES:_
+J73 0170  3       Volume I deals with 2991 compounds belonging to
+J73 0180  3    the tetragonal, hexagonal and trigonal, and orthorhombic
+J73 0190  1    systems; and Volume II, with about 3500 monoclinic
+J73 0190  9    substances. Volume III, in preparation, will treat
+J73 0200  7    the anorthic compounds described in Groth's CHEMISCHE
+J73 0210  4    KRYSTALLOGRAPHIE.
+J73 0220  1    _PROPERTIES:_
+J73 0220  1       The Barker system is based on the use of the smallest
+J73 0220 12    number of interfacial angles necessary for indexing
+J73 0230  6    purposes. Other morphological, physical, and optical
+J73 0240  4    property values are also given.
+J73 0250  1    _SOURCES OF DATA:_
+J73 0250  3       The index is essentially a new treatment of previously
+J73 0260  1    compiled morphological data. Most of the data used
+J73 0260  9    are from Groth's CHEMISCHE KRYSTALLOGRAPHIE.
+J73 0270  3    _CRITICALITY:_
+J73 0270  4       Every calculation has been made independently by
+J73 0280  6    two workers and checked by one of the editors.
+J73 0300  1    _USE OF NOMENCLATURE, SYMBOLS, UNITS, PHYSICAL CONSTANTS:_
+J73 0300  1       Accepted crystallographic symbolism has been used;
+J73 0300  7    other symbols related to the index necessarily have
+J73 0310  8    been introduced.
+J73 0320  1    _CURRENCY:_
+J73 0320  1       This publication covers the old literature (Groth);
+J73 0320  8    there is no mechanism for keeping the volumes up to
+J73 0330 10    date.
+J73 0340  1    _FORMAT:_
+J73 0340  1       The publication form is that of clothbound books.
+J73 0340  9    The data are presented in lists and tables. Part 1
+J73 0350  7    in both volumes is labeled "Introduction and Tables".
+J73 0360  3    The tables include those for the classification angles,
+J73 0370  2    refractive indices, and melting points of the various
+J73 0370 10    types of crystals. Part 2 of Volume I and Parts 2
+J73 0380 11    and 3 of Volume II contain the crystal descriptions.
+J73 0390  6    These are grouped into sections according to the crystal
+J73 0400  5    system, and within each section compounds are arranged
+J73 0410  3    in the same order as in Groth's CHEMISCHE KRYSTALLOGRAPHIE.
+J73 0420  1    An alphabetical list of chemical and mineralogical
+J73 0420  8    names with reference numbers enables one to find a
+J73 0430  9    particular crystal description. References to the data
+J73 0440  5    sources are given in the crystal descriptions.
+J73 0450  1    _PUBLICATION AND DISTRIBUTION:_
+J73 0450  4       The BARKER INDEX is published for the Barker Index
+J73 0460  7    Committee by W. Heffer + Sons, Ltd., 3-4 Petty Cury,
+J73 0470  6    Cambridge, England. Volume I containing Parts 1 and
+J73 0480  4    2 was published in 1951; Volume II, in three parts,
+J73 0490  2    in 1956. The two volumes are available from the publisher
+J73 0500  1    for $16.80 and $28.00, respectively.
+J73 0500  6    #II-2. CRYSTAL DATA#
+J73 0510  1    _ORGANIZATION:_
+J73 0510  1       The present edition of CRYSTAL DATA was written
+J73 0520  1    by J.D.H. Donnay, the Johns Hopkins University, Baltimore,
+J73 0530  1    Md. (Part II) and Werner Nowacki, University of Berne,
+J73 0540  1    Switzerland (Part I) with the collaboration of Gabrielle
+J73 0540  9    Donnay, U. S. Geological Survey, Washington, D. C.
+J73 0550  8    Many collaborators in the United States and Switzerland
+J73 0560  7    helped in collecting and assembling data, in making
+J73 0570  6    calculations, and in editing. Support came from academic
+J73 0580  4    and industrial groups in these two countries. The Geological
+J73 0590  2    Society of America gave a grant-in-aid to complete
+J73 0590 12    the work and bore the expenses of publication. Preparation
+J73 0600  9    of a second edition is in progress under the sponsorship
+J73 0610  8    of the Crystal Data Committee of the American Crystallographic
+J73 0620  5    Association. Coeditors are J.D.H. Donnay, G. E. Cox
+J73 0630  6    of Leeds University, and Olga Kennard of the National
+J73 0640  6    Council for Medical Research, London. Financial grants
+J73 0650  3    have been received from the National Science Foundation
+J73 0660  2    and the (British) Institute of Physics for the compilation
+J73 0670  1    work and the publication costs. The continuity of the
+J73 0670 10    project is suggested by plans for an eventual third
+J73 0680  8    edition.
+J73 0680  9    _SUBSTANCES:_
+J73 0690  1       Elements, alloys, inorganic and organic compounds.
+J73 0690  6    (Metal data will not be included in the second edition,
+J73 0700  8    since these have been collected independently by W.
+J73 0710  4    B. Pearson, National Research Council, Ottawa, and
+J73 0720  3    published as A HANDBOOK OF LATTICE SPACINGS AND STRUCTURES
+J73 0730  1    OF METALS AND ALLOYS by Pergamon Press.)
+J73 0740  1    _PROPERTIES:_
+J73 0740  1       Crystallographic data resulting mainly from X-ray
+J73 0740  8    and electron diffraction measurements are presented.
+J73 0750  5    Cell dimensions, number of formula units per cell,
+J73 0760  4    space group, and specific gravity are given for all
+J73 0770  2    substances. For some substances, auxiliary properties
+J73 0770  8    such as the melting point are given.
+J73 0780  5    _SOURCES OF DATA:_
+J73 0780  8       Part I of the present edition covers the literature
+J73 0790  6    to mid-1948; Part II, up to the end of 1951. Much
+J73 0800  7    of the material comes directly from secondary sources
+J73 0810  2    such as STRUKTURBERICHT.
+J73 0810  5    _CRITICALITY:_
+J73 0810  6       The vast number of compounds to be covered, the
+J73 0820  8    limited resources to do the job, and the immediate
+J73 0830  4    need for this type of compilation precluded a thorough
+J73 0840  1    evaluation of all available data in the present edition.
+J73 0840 10    Future editions may be more critical.
+J73 0860  1    _USE OF NOMENCLATURE, SYMBOLS, UNITS, PHYSICAL CONSTANTS:_
+J73 0860  3       Since Parts I and II were prepared independently,
+J73 0870  2    the abbreviation schemes and the chemical symbols used
+J73 0880  1    differ in the two parts. The second edition should
+J73 0880 10    have greater uniformity.
+J73 0890  1    _CURRENCY:_
+J73 0890  2       A second edition is in preparation, and there are
+J73 0900  2    long range plans for a third.
+J73 0900  8    _FORMAT:_
+J73 0900  9       Data in the present edition are presented in tables
+J73 0910  6    and lists. Part I deals with the classification of
+J73 0920  4    crystalline substances by space groups and is not a
+J73 0930  3    numerical data compilation. The compounds are divided
+J73 0930 10    according to composition into seven categories. Part
+J73 0940  7    II contains determinative tables for the identification
+J73 0950  5    of crystalline substances. These are arranged according
+J73 0960  3    to crystal system. There are formula and name indexes
+J73 0970  1    covering both parts. References for Part I are given
+J73 0970 10    at the end and for Part II in the tables.
+J73 0990  1    _PUBLICATION AND DISTRIBUTION:_
+J73 0990  1       The present edition of CRYSTAL DATA (**f), published
+J73 0990  9    in 1954 as Memoir 60 of the Geological Society of America,
+J73 1000 11    is now out of print. The manuscript of the second edition
+J73 1010  9    will probably be ready by the end of 1960.
+J73 1020  6    #II-3. CRYSTAL STRUCTURES#
+J73 1030  1    _ORGANIZATION:_
+J73 1030  1       The author of CRYSTAL STRUCTURES is Ralph W.G. Wyckoff,
+J73 1040  2    University of Arizona, Tucson, Arizona. The first section
+J73 1050  1    of this publication appeared in 1948 and the last supplement
+J73 1050 11    in 1960. Though now complete, the publication is included
+J73 1060  8    in this directory because of its importance and because
+J73 1070  7    of the long-term nature of its preparation.
+J73 1080  2    _SUBSTANCES:_
+J73 1080  3       Elements, inorganic and organic compounds (no alloys).
+J73 1090  3    _PROPERTIES:_
+J73 1090  4       The data presented are derived almost entirely from
+J73 1100  4    X-ray diffraction measurements and include atomic
+J73 1110  2    coordinates, cell dimensions, and atomic and ionic
+J73 1110  9    radii.
+J73 1120  1    _SOURCES OF DATA:_
+J73 1120  3       Published literature.
+J73 1120  5    _CRITICALITY:_
+J73 1120  6       The aim was to state the results of all available
+J73 1130 10    determinations of atomic positions in crystals. Presumably
+J73 1140  5    the tabulated data are best available values. The critical
+J73 1150  4    comments in the textual sections of this publication
+J73 1160  2    are invaluable.
+J73 1170  1    _USE OF NOMENCLATURE, SYMBOLS, UNITS, PHYSICAL CONSTANTS:_
+J73 1170  3       The terminology used conforms to that of INTERNATIONALE
+J73 1180  1    TABELLEN ZUR BESTIMMUNG VON KRISTALLSTRUKTUREN.
+J73 1190  1    _CURRENCY:_
+J73 1190  1       During the years of publication, supplement and
+J73 1190  8    replacement sheets were issued periodically. Coverage
+J73 1200  6    of the literature extends through 1954 and includes
+J73 1210  5    some 1955 references. It is to be hoped that some way
+J73 1220  4    will be found to keep this important work current.
+J73 1230  1    _FORMAT:_
+J73 1230  1       The publication form is that of loose-leaf sheets
+J73 1230 10    (**f) contained in binders. The book is divided into
+J73 1240  9    chapters and in each chapter the material is grouped
+J73 1250  5    into Text, Tables, Illustrations, and Bibliography.
+J73 1260  2    Each group is paginated separately; numbers sometimes
+J73 1270  1    followed by letters are used so that insertions can
+J73 1270 10    be made. Inorganic structures are found in Chapters
+J73 1280  6    II-XII, organic structures in Chapters XIII-XV.
+J73 1290  5    Within each chapter an effort has been made to group
+J73 1300  4    together those crystals with similar structures. There
+J73 1310  1    are three indexes, i.e., an inorganic formula index,
+J73 1310  9    a mineralogical name index, and a name index to organic
+J73 1320  9    compounds.
+J73 1330  1    _PUBLICATION AND DISTRIBUTION:_
+J73 1330  3       Publisher of CRYSTAL STRUCTURES is Interscience
+J73 1340  1    Publishers, 250 Fifth Avenue, New York 1, N. Y. The
+J73 1350  1    work consists of four sections and 5 supplements. Price
+J73 1350 10    of the complete work including all necessary binders
+J73 1360  6    is $148.50.
+J73 1360  8    #II-4. DANA'S SYSTEM OF MINERALOGY#
+J73 1370  4    _ORGANIZATION:_
+J73 1370  5       Six editions of James Dwight Dana's SYSTEM appeared
+J73 1380  6    between 1837 and 1892. In 1915 Edward S. Dana, editor
+J73 1390  7    of the sixth edition, asked W. E. Ford of Yale University
+J73 1400  6    to prepare a seventh edition of his father's work.
+J73 1410  3    A number of people became involved in the preparation
+J73 1420  1    but work was slow until 1937. In that year a grant
+J73 1420 12    was obtained from the Penrose Fund of the Geological
+J73 1430  7    Society of America to finance additional full-time
+J73 1440  4    workers. Money was also advanced by the publishers,
+J73 1450  1    John Wiley + Sons, Inc. Volume I was completed in
+J73 1450 11    1941 and published in 1944. The editors of this volume
+J73 1460 10    and Volume II were the late Charles Palache, Clifford
+J73 1470  7    Frondel, and the late Harry Berman, all of Harvard
+J73 1480  5    University. Work on Volume II was begun in 1941, interrupted
+J73 1490  5    by the war in 1942, and resumed in 1945. The volume
+J73 1500  2    was completed in 1950 and published in 1951. A supplementary
+J73 1510  1    grant from the Geological Society of America helped
+J73 1510  9    finance its publication. Besides the editors there
+J73 1520  6    were many contributors in the United States and Great
+J73 1530  5    Britain to Volumes I and II. W. E. Ford, for example,
+J73 1540  5    continued to supply data on the occurrence of minerals
+J73 1550  3    until his death in 1939. Volume III is nearing completion
+J73 1560  1    and there are plans to revise Volume I. The project
+J73 1560 11    is currently supported by Harvard University.
+J73 1570  5    _SUBSTANCES:_
+J73 1570  6       Minerals.
+J73 1580  1    _PROPERTIES:_
+J73 1580  2       Crystallographic, physical, optical, and chemical
+J73 1590  1    properties. The crystallographic data given include
+J73 1590  7    interaxial angles and unit cell dimensions; the physical
+J73 1600  7    property values include hardness, melting point, and
+J73 1610  4    specific gravity.
+J73 1610  6    _SOURCES OF DATA:_
+J73 1620  1       Almost entirely original articles in journals; abstracts
+J73 1620  7    and other compilations on rare occasions when original
+J73 1630  6    papers are not available.
+J73 1640  1    _CRITICALITY:_
+J73 1640  2       All information is carefully appraised and uncertain
+J73 1650  1    facts are designated by (?). An authentic diffraction
+J73 1650  9    pattern is always obtained and optical properties are
+J73 1660  8    frequently checked.
+J73 1670  1    _USE OF NOMENCLATURE, SYMBOLS, UNITS, PHYSICAL CONSTANTS:_
+J73 1670  7       Recommendations of international authorities, such
+J73 1680  5    as the International Union of Crystallography, are
+J73 1690  4    followed. There is a complete synonymy at the beginning
+J73 1700  3    of each species description.
+J73 1700  7    _CURRENCY:_
+J73 1700  8       Currency in the usual sense cannot be maintained
+J73 1710  8    in an undertaking of this sort.
+J73 1720  1    _FORMAT:_
+J73 1720  2       The data are presented in text and tables in bound
+J73 1730  1    volumes. Volume I of the seventh edition contains
+J73 1730  9    an introduction and data for eight classes of minerals;
+J73 1740  8    Volume II contains data for forty-two classes. References
+J73 1750  6    are given at the end of each mineral description and
+J73 1760  3    a general index is given at the end of each volume.
+J73 1770  1    There will be a comprehensive index in Volume III covering
+J73 1770 11    all three volumes.
+J73 1780  3    _PUBLICATION AND DISTRIBUTION:_
+J73 1780  6       Volume I (**f) of the seventh edition of DANA'S
+J73 1790  7    SYSTEM OF MINERALOGY was published in 1944 and Volume
+J73 1800  5    II (**f) in 1951 by John Wiley + Sons, Inc., New York,
+J73 1810  4    N. Y. (The association of Wiley + Sons with the Dana
+J73 1820  4    Mineralogies dates back to 1844 when they published
+J73 1830  1    the second edition of the SYSTEM.) The two volumes
+J73 1830 10    are available from the publisher for $14.00 and $16.00,
+J73 1840  8    respectively.
+J73 1840  9    #II-5. THE GROTH INSTITUTE#
+J73 1850  4    _ORGANIZATION:_
+J73 1850  5       "The Groth Institute", which was established in
+J73 1860  5    1958, is a group activity affiliated with the Physics
+J73 1870  4    Department of The Pennsylvania State University, University
+J73 1880  2    Park, Pa. Ray Pepinsky is the Director. The Institute
+J73 1890  1    derives its name from Paul von Groth's CHEMISCHE
+J73 1890  9    KRYSTALLOGRAPHIE,
+J73 1900  1    a five-volume work which appeared between 1906 and
+J73 1900 10    1919. The resident staff is large and consists of professional
+J73 1910 10    assistants, graduate students, abstractors, librarian,
+J73 1920  5    technical editor, machine operators, secretarial help,
+J73 1930  4    and others. There are also corresponding members and
+J73 1940  3    outside advisory groups. The Air Force Office of Scientific
+J73 1950  1    Research has provided financial assistance in the early
+J73 1950  9    stages of the Institute's program.
+J73 1960  5    _SUBSTANCES:_
+J73 1960  6       All crystalline substances and other solid-state
+J73 1970  6    materials.
+J73 1970  7    _PROPERTIES:_
+J73 1970  8       The aim is to collect a very broad range of physical,
+J73 1980 11    chemical, morphological, and structural data for crystals
+J73 1990  6    on an encyclopedic scale and to seek all possible useful
+J73 2000  5    and revealing correlations of properties with internal
+J73 2010  2    structure.
+J73 2010  3    _SOURCES OF DATA:_
+J73 2010  6       The first stage of operation has centered on the
+J73 2020  5    literature imaging of critical or summarizing tabulations
+J73 2030  2    such as the Barker Index. Coverage of primary literature
+J73 2040  1    will follow. Unpublished data will be available to
+J73 2040  9    the Groth institute from cooperating groups and individuals.
+J73 2050  6    _CRITICALITY:_
+J73 2060  1       Critical evaluation of all data compiled is not
+J73 2060  8    a primary aim of this project. However, the proposed
+J73 2070  5    correlation of the many interrelated properties of
+J73 2080  3    crystals will reveal discrepancies in the recorded
+J73 2080 10    data and suggest areas for reinvestigation. In addition,
+J73 2090  8    the availability of computers will permit recalculation
+J73 2100  6    and refinement of much structural information.
+J73 2120  1    _USE OF NOMENCLATURE, SYMBOLS, UNITS, PHYSICAL CONSTANTS:_
+J73 2120  2       For punched-card or tape storage of information
+J73 2120 10    all literature values must be conformed to a common
+J73 2130  9    language. In this way a degree of unification of nomenclature,
+J73 2140  8    symbols, and units will be realized.

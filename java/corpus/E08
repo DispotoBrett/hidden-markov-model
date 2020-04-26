@@ -1,0 +1,242 @@
+E08 0010  1       Scientists say that the world and everything in
+E08 0010  9    it are based on mathematics. Without math the men who
+E08 0020  7    are continually seeking the causes of and the reasons
+E08 0030  5    for the many things that make the world go 'round would
+E08 0040  2    not have any means of analyzing, standardizing, and
+E08 0040 10    communicating the things they discover and learn. Math
+E08 0050  8    and the formulas that allow it to be applied to different
+E08 0060  8    problems are, therefore, essential to any scientific
+E08 0070  4    endeavor.
+E08 0070  5       Hot rodding is a science. It's not a science as
+E08 0080  5    involved as determining what makes the earth rotate
+E08 0090  1    on its axis or building a rocket or putting a satellite
+E08 0090 12    into orbit but it is, nevertheless, a science. But
+E08 0100  8    because science is based on mathematics doesn't mean
+E08 0110  3    that a hot rodder must necessarily be a mathematician.
+E08 0120  1    A guy can be an active and successful hot rodder for
+E08 0120 12    years without becoming even remotely involved with
+E08 0130  7    mathematical problems; however, he will have a clearer
+E08 0140  7    understanding of what he is doing and the chances are
+E08 0150  4    he will be more successful if he understands the few
+E08 0160  1    formulas that apply to rodding.
+E08 0160  6       A mathematical formula is nothing more than a pattern
+E08 0170  5    for solving a specific problem. It places the various
+E08 0180  2    factors involved in the problem in their correct order
+E08 0180 11    in relation to each other so that the influence of
+E08 0190  9    factors on each other can be computed.
+E08 0200  3       The first step in using a formula is to insert the
+E08 0210  1    numerical values of the factors involved in their correct
+E08 0210 10    positions in the formula. This changes the formula
+E08 0220  8    to an "equation". The equation is used for the mathematical
+E08 0230  7    process of solving the problem.
+E08 0240  1       Equations for rodding formulas are not complicated.
+E08 0240  8    They involve only simple mathematics that are taught
+E08 0250  7    in grammar school arithmetic classes. However, it is
+E08 0260  5    essential that the various mathematical symbols used
+E08 0270  2    in the equations be understood so that the mathematical
+E08 0270 11    processes can be done properly and in their correct
+E08 0280  9    order. They indicate simple division, multiplication,
+E08 0290  4    subtraction, and addition.
+E08 0300  1       The symbol for division is a straight line that
+E08 0300  9    separates two numbers placed one above the other. The
+E08 0310  7    lower number is always divided into the upper number:
+E08 0320  3    **f
+E08 0320  4       The symbol for multiplication is "@". It is used
+E08 0340  4    to separate two or more numbers in a row. For example:
+E08 0350  1    **f Numbers to be multiplied together may be multiplied
+E08 0350 10    in any order. The result will be the same regardless
+E08 0360  9    of the order used.
+E08 0370  1       The symbol for subtraction is the standard minus
+E08 0370  9    sign. This is nothing more than a dash. It separates
+E08 0380  8    two or more numbers. The number on the right of the
+E08 0390  6    symbol is always subtracted from the number on the
+E08 0400  2    left of the symbol. For example: **f When more than
+E08 0400 12    two figures are separated by subtraction symbols the
+E08 0410  7    subtraction must be carried out from the left to right
+E08 0420  7    if the result is to be correct. For example, for the
+E08 0430  3    problem **f, 10 from 25 equals 15, then 6 from 15 equals
+E08 0440  1    9.
+E08 0440  2       Addition is indicated by the + symbol. The symbol
+E08 0440 11    is used to separate two or more numbers. For example:
+E08 0450 10    **f Numbers separated by addition symbols may be placed
+E08 0460  7    in any order.
+E08 0460 10       When solving an equation that involves division
+E08 0470  6    as well as other steps, do all the division steps first
+E08 0490  1    to reduce those parts of the equation to their numerical
+E08 0500  2    value. Multiplication, subtraction, and addition can
+E08 0500  8    then be accomplished as they appear in the equation
+E08 0510  9    by starting at the left end of the equation and working
+E08 0520  7    toward the right. Completing the division first also
+E08 0530  4    includes those division parts that require multiplication,
+E08 0540  1    subtraction, or addition steps: **f This would be reduced
+E08 0550  1    by multiplying 8 times 6 and then dividing the product
+E08 0550 11    by 12. This part of the equation would then become
+E08 0560  7    4.
+E08 0560  8       For use in formulas, fractions should be converted
+E08 0570  4    to their decimal equivalents. The easiest way to do
+E08 0580  4    this is with a conversion chart. Charts for this purpose
+E08 0590  1    are available from many sources. They are included
+E08 0590  9    in all types of mathematical handbooks and they are
+E08 0600  5    stamped on some types of precision measuring instruments.
+E08 0610  3       The various mathematical processes can be simplified
+E08 0620  3    by carrying the results to only two or three decimal
+E08 0620 13    places. Shortening the results in this manner will
+E08 0630  8    not have any detrimental effect on the accuracy of
+E08 0640  6    the final result.
+E08 0640  9       Some formulas contain "constants". A constant is
+E08 0650  6    a number that remains the same regardless of the other
+E08 0660  5    numbers used in the formula and the resultant equation.
+E08 0670  2    It is a number without which the equation cannot be
+E08 0670 12    solved correctly.
+E08 0680  2       Rodding formulas apply to many phases of the sport.
+E08 0690  1    The answers they give can often pave the way to performance
+E08 0690 12    increases and, quite often, are necessary for completing
+E08 0700  7    entry blanks for different events. When it is needed,
+E08 0710  6    one formula is as important as another. However, some
+E08 0720  3    formulas are used more than others. We'll take them
+E08 0730  2    in the general order of their popularity.
+E08 0730  9    #ENGINE DISPLACEMENT#
+E08 0740  1    A rodder should be able to compute the displacement
+E08 0740 10    of his engine. Displacement is sometimes referred to
+E08 0750  6    as "swept volume". Most entry blanks for competitive
+E08 0760  5    events require engine displacement information because
+E08 0770  2    of class restrictions. It is good to be able to compute
+E08 0780  1    displacement so that changes in it resulting from boring
+E08 0780 10    and stroking can be computed.
+E08 0790  4       Factors involved in the displacement formula are
+E08 0800  2    the bore diameter of the engine's cylinders, the length
+E08 0800 11    of the piston stroke, the number of cylinders in the
+E08 0810  9    engine, and a constant. The constant is .7854, which
+E08 0820  6    is one-quarter of 3.1416, another constant known as
+E08 0830  3    "pi". Pi is used in formulas concerned with the dimensions
+E08 0840  1    of circles.
+E08 0840  3       Actually, the engine displacement formula is the
+E08 0850  2    standard formula for computing the volume of a cylinder
+E08 0850 11    of any type with an added factor that represents the
+E08 0860  8    number of cylinders in the engine. The cross-sectional
+E08 0870  5    area of the cylinders is determined and then the volume
+E08 0880  4    of the individual cylinders is computed by multiplying
+E08 0890  1    the area by the stroke length, which is the equivalent
+E08 0890 11    of the length of the cylinders. Multiplying the result
+E08 0900  7    by the number of cylinders in the engine gives the
+E08 0910  6    engine's total displacement.
+E08 0910  9       The formula is: **f. Dimensions in inches, and fractions
+E08 0920  8    of inches will give the displacement in cubic inches.
+E08 0930  6    Dimensions in centimeters and fractions of centimeters
+E08 0940  3    will give the displacement in cubic centimeters (cc).
+E08 0950  2    One inch equals 2.54 centimeters: one cubic inch equals
+E08 0950 11    16.38 cubic centimeters.
+E08 0960  3       For example, let's consider a standard 283 cubic
+E08 0970  3    inch Chevy V8. These engines have a cylinder diameter
+E08 0980  1    of 3-7/8 inches and a stroke length of 3 inches. The
+E08 0980 13    formula, with the fractions converted to decimals,
+E08 0990  6    becomes **f.
+E08 0990  8       To arrive at the answer, multiply the numbers together
+E08 1000  8    by starting at the left of the group and working to
+E08 1010  6    the right. The different steps will look like this:
+E08 1020  2    **f
+E08 1020  3    #COMPRESSION RATIO#
+E08 1020  5    A cylinder's compression ratio is computed by comparing
+E08 1030  5    the cylinder's volume, or its displacement, with the
+E08 1040  3    total volume of the cylinder and its combustion chamber.
+E08 1050  1    Cylinder volume can be determined mathematically but
+E08 1050  8    combustion chamber volume must be measured with a liquid.
+E08 1060  8       Cylinder volume is determined in exactly the same
+E08 1070  6    manner as for the displacement formula: **f.
+E08 1080  2       To measure the volume of one of the combustion chambers
+E08 1090  1    in the cylinder head, install the valves and spark
+E08 1090 10    plug in the chamber and support the head so that its
+E08 1100  8    gasket surface is level. Then pour water or light oil
+E08 1110  5    from a graduated beaker into the chamber to fill the
+E08 1120  2    chamber to its gasket surface. Do not overfill the
+E08 1120 11    chamber. This is possible with water and other liquids
+E08 1130  8    that have a high surface tension. Such liquids will
+E08 1140  4    rise to a considerable height above the surface around
+E08 1150  2    the chamber before they will flow out of the chamber.
+E08 1160  1       The amount of liquid poured into the chamber is
+E08 1160 10    determined by subtracting the quantity still in the
+E08 1170  6    beaker when the chamber is full from the original quantity.
+E08 1180  4    Most beakers are graduated in cubic centimeters (cc),
+E08 1190  2    making it necessary to convert the result to cubic
+E08 1190 11    inches. However, the displacement of the cylinder can
+E08 1200  8    be converted to cubic centimeters. The compression
+E08 1210  4    ratio arrived at with the formula will be the same
+E08 1220  4    regardless of whether cubic inches or cubic centimeters
+E08 1220 12    are used. The only precaution is that all volumes used
+E08 1230 10    in the formula be quoted in the same terms.
+E08 1240  6       The volume of the cylinder opening in the head gasket
+E08 1250  5    must be computed by multiplying its area in square
+E08 1260  1    inches by the gasket's thickness in thousandths of
+E08 1260  9    an inch. Sometimes it is necessary to roughly calculate
+E08 1270  7    the square inch area of the opening but the calculation
+E08 1280  4    can usually be made with sufficient accuracy that it
+E08 1290  3    won't affect the final computation. The volume of the
+E08 1290 12    opening is added to the combustion chamber volume.
+E08 1300  8       Another thing that must be taken into consideration
+E08 1310  7    is the volume of the area between the top of the piston
+E08 1320  6    and the top of the cylinder block when the piston is
+E08 1330  2    in top dead center position. Compute this volume by
+E08 1330 11    measuring the distance from the top of the block to
+E08 1340 10    the piston head as accurately as possible with a depth
+E08 1350  6    micrometer or some other precision measuring device
+E08 1360  2    and then multiply the area of the cylinder by the depth.
+E08 1360 13    The formula for this step is: **f This volume is added
+E08 1370 11    to the total volume of the combustion chamber and head
+E08 1380  7    gasket opening. The total of these three volumes is
+E08 1390  5    the "final combustion chamber volume".
+E08 1400  1       After the factors just described have been computed,
+E08 1400  9    they are applied to the following formula: **f
+E08 1410  6       For an example let's dream up an engine that has
+E08 1420  6    a final combustion chamber volume of 5 cubic inches
+E08 1430  2    and a cylinder volume of 45 cubic inches. Applying
+E08 1430 11    these figures to the formula we get the equation: **f
+E08 1440  9    The compression ratio is 10 to 1.
+E08 1450  4       This method of computing compression ratio cannot
+E08 1450 11    be used accurately for engines that have pistons with
+E08 1460  9    either domed or irregularly shaped heads. Any irregularity
+E08 1470  5    on the piston heads will make it impossible, with normal
+E08 1480  5    means, to determine the final combustion chamber volume
+E08 1490  3    because the volume displaced by the piston heads cannot
+E08 1500  1    be readily computed. The only way to determine the
+E08 1500 10    final combustion chamber volume when such pistons are
+E08 1510  7    used is by measuring it with liquid while the cylinder
+E08 1520  4    head is bolted to the cylinder block and the piston
+E08 1530  1    is in top dead center position.
+E08 1530  7    #GEAR RATIO- SPEED RELATIONSHIPS#
+E08 1540  1    There are four versions of the formula that involves
+E08 1540 10    the relationships of car speed, engine speed, rear
+E08 1550  7    axle gear ratio, and rear tire size. By using the appropriate
+E08 1560  6    version any one of these factors can be determined
+E08 1570  3    for any combination of the other three.
+E08 1570 10       To simplify the formulas a representative symbol
+E08 1580  6    is substituted for each of the factors. These are
+E08 1590  5       MPH for Car speed
+E08 1590  9       RPM for Engine crankshaft speed
+E08 1600  5       R for Rear axle gear ratio
+E08 1610  1       W for Tire size
+E08 1610  5       Tire size can be determined in several ways but
+E08 1620  4    the one that is the easiest and as accurate as any
+E08 1620 15    is by measuring the effective radius of a wheel and
+E08 1630 10    tire assembly. This is done by measuring the distance
+E08 1640  7    from the surface on which the tire is resting to the
+E08 1650  5    center of the rear axle shaft. A tire must be inflated
+E08 1660  1    to its normal hot operating pressure and the car must
+E08 1660 11    be loaded to its operating weight when this measurement
+E08 1670  7    is made. The measurement must be in inches. Any fraction
+E08 1680  7    of an inch involved in the measurement must be converted
+E08 1690  4    to a decimal equivalent to simplify the mathematics.
+E08 1700  1    When tire size is measured in this manner a constant
+E08 1700 11    of 168 is used in the formula.
+E08 1710  4       To determine car speed for a given combination of
+E08 1720  2    engine speed, gear ratio, and tire size, the formula
+E08 1720 11    is: **f For an engine speed of 5000 rpm, a gear ratio
+E08 1730 11    of 4.00 to 1, and a tire radius of 13 inches, the equation
+E08 1740  8    would look like this: **f
+E08 1750  1       To determine engine speed for a given combination
+E08 1750  9    of the other three factors the formula is: **f Using
+E08 1760  7    the same figures as for the previous example, the equation
+E08 1770  5    becomes: **f
+E08 1770  7       To determine the rear axle gear ratio for a combination
+E08 1780  8    of the other three factors, the formula is: **f Using
+E08 1790  5    the figures from the previous examples, the equation
+E08 1800  2    becomes: **f

@@ -1,0 +1,249 @@
+E35 0010  1    #NEW RULE NO. 2: DON'T BUILD FROM THE OUTSIDE IN- TRY
+E35 0010 12    TO BUILD FROM THE INSIDE OUT#
+E35 0030  4    Don't insert your components into fixed openings, they
+E35 0040  2    may or may not fit; position your components before
+E35 0040 11    you close them in. For example:
+E35 0050  5       Don't wall in your kitchen before you hang the wall
+E35 0060  5    cabinets and set the appliances. It's a lot quicker
+E35 0070  1    and easier to dimension the kitchen to fit the cabinets
+E35 0070 11    and erect the end wall after they are all in place.
+E35 0080 10       Set your bathtub before you close in the end of
+E35 0090  7    the bathroom. Don't try to wrestle a 400-lb tub **f
+E35 0100  5    through a narrow doorway.
+E35 0100  9       Finish your plumbing before you frame it in (most
+E35 0110  7    economical framing is a thin non-bearing partition
+E35 0120  2    on either side of the pipes).
+E35 0120  8       Finish installing and connecting up your furnace
+E35 0130  5    and your water heater before you wall them in. There
+E35 0140  3    is no better way to waste time than trying to install
+E35 0140 14    a furnace in a finished **f closet.
+E35 0150  7       Don't position your studs before you insert your
+E35 0160  5    windows in conventional construction; that way you
+E35 0170  2    may pay more to shim the window into place than you
+E35 0170 13    paid for the window. You can save all that shimming
+E35 0180  8    time if you set your windows in one, two, three order-
+E35 0190  6    first the stud on one side, then the window, then the
+E35 0200  3    stud on the other side.
+E35 0200  8       Install your disappearing stair (or stairs) to the
+E35 0210  6    attic and finish your overhead ducts before you drywall
+E35 0220  3    the ceiling.
+E35 0220  5       Don't close in your house until everything has been
+E35 0230  3    carried in. Last wall Bob Schmitt erects is the wall
+E35 0240  1    between the house and garage. That way he can truck
+E35 0240 11    his parts right indoors and unload them under the roof.
+E35 0250  8       No auto maker would dream of putting the head on
+E35 0260  7    the engine before he fitted the pistons in the block.
+E35 0270  4    And trailer makers, those most industrialized and therefore
+E35 0280  1    most efficient of homebuilders, say they save hundreds
+E35 0280  9    of dollars by always building from the inside out.
+E35 0290  8    #NEW RULE NO. 3 RETHINK EVERYTHING TO GET ALL THE BIG
+E35 0310  6    SAVINGS THE REVOLUTION IN MATERIALS HANDLING OFFERS
+E35 0320  2    YOU#
+E35 0320  3    This revolution is the biggest build-better-for-less
+E35 0330  1    news of all, because ...
+E35 0330  6    _1._
+E35 0330  7       It makes it easy to handle much heavier units, so
+E35 0340  3    you can plan to build with much bigger and heavier
+E35 0340 13    prefabricated components like those shown in the pictures
+E35 0350  8    alongside.
+E35 0360  1    _2._
+E35 0360  1       It makes materials handling the only construction
+E35 0360  8    cost that (like earthmoving and roadbuilding) should
+E35 0370  5    be lower today than in 1929.
+E35 0380  1    _3._
+E35 0380  1       It changes the answers to "Who should do what, and
+E35 0380 11    where"? It lessens the need for costly on-site fabrication
+E35 0390 10    and increases the chance for shop fabrication, where
+E35 0400  7    almost everything can be made better and cheaper.
+E35 0410  4    _4._
+E35 0410  5       It changes the answers on when to do what at the
+E35 0420  3    site. For example, instead of putting in your driveways
+E35 0420 12    last (as many builders do) you can now save money by
+E35 0430 11    putting them in first. Instead of closing the house
+E35 0440  6    in first (as most builders do) you can now cut your
+E35 0450  4    costs by not closing it in until you have to (see p
+E35 0460  1    121).
+E35 0460  2    _5._
+E35 0460  3       It changes the answers on builder-dealer relations.
+E35 0470  1    Not so long ago many builders were finding they could
+E35 0470 11    cut their costs by "buying direct" and short-cutting
+E35 0480  7    the dealer. But now many of these same builders are
+E35 0490  5    finding they can cut their costs more by teaming up
+E35 0500  2    with a dealer who has volume enough to afford the most
+E35 0500 13    efficient specialized equipment to deliver everything
+E35 0510  4    just where it is needed- drywall inside the house,
+E35 0520  7    siding along the sides, trusses on the walls, roofing
+E35 0530  2    on the roof, etc.
+E35 0530  6       Says Clarence Thompson: "We dealers must earn our
+E35 0540  5    mark-up by performing a service for the builder cheaper
+E35 0550  2    than he could do it himself". The revolution now under
+E35 0560  1    way in materials handling makes this much easier.
+E35 0570  1    _THE REVOLUTION IS WELL UNDER WAY, BUT MUCH MORE REMAINS
+E35 0570  9    TO BE DONE_
+E35 0570 12       Five years ago a HOUSE + HOME Round Table cosponsored
+E35 0580  8    by the Lumber Dealers' Research Council reported unhappily:
+E35 0590  5       "Only one lumber dealer in ten is equipped to handle
+E35 0600  8    unit loads; only one box car in eight has the wide
+E35 0610  6    doors needed for unit loads; only one producer in a
+E35 0620  3    hundred is equipped to package and ship unit loads;
+E35 0620 12    only one builder in a thousand is equipped to receive
+E35 0630  8    unit loads.
+E35 0630 10       "So from raw materials to finished erection the
+E35 0640  8    costs of materials handling (most of it inefficient)
+E35 0650  5    add up to one-fourth of the total construction cost
+E35 0660  2    of housing".
+E35 0660  4       "That HOUSE + HOME Round Table was the real starting
+E35 0670  5    point for today's revolution in materials handling",
+E35 0680  2    says Clarence Thompson, long chairman of the Lumber
+E35 0680 10    Dealers' Research Council. "It made our whole industry
+E35 0690  8    recognize the need for a new kind of teamwork between
+E35 0700 10    manufacturer, carrier, equipment maker, dealer, and
+E35 0710  4    builder, all working together to cut the cost of materials
+E35 0720  3    handling. Before that we lumber dealers were working
+E35 0730  1    almost single-handed on the problem".
+E35 0740  1    _HERE IS WHERE THINGS STAND TODAY:_
+E35 0740  2       _1._
+E35 0740  3       Almost all of the 3,000 lumber dealers who cater
+E35 0750  1    primarily to the new-house market and supply 90% of
+E35 0750 11    this year's new houses are mechanized. There are few
+E35 0760  7    areas left where a builder cannot find a dealer equipped
+E35 0770  5    to save him money by delivering everything at lower
+E35 0780  3    cost just where his workmen will need it.
+E35 0780 11    _2._
+E35 0780 12       Practically all bulky housing products can now be
+E35 0790  8    ordered in standard units palletized or unitized for
+E35 0800  4    mechanical handling- including lumber, asphalt shingles,
+E35 0810  2    glass block, face brick, plaster, lime, hardboard,
+E35 0810  9    gypsum wallboard and sheathing, cement, insulation
+E35 0820  6    sheathing, floor tile, acoustical tile, plaster base,
+E35 0830  4    and asbestos shingles.
+E35 0830  7    _3._
+E35 0830  8       Truck and materials-handling equipment makers now
+E35 0840  6    offer specialized units to meet almost every homebuilding
+E35 0850  5    need. For some significant new items see the pictures.
+E35 0860  4    _4._
+E35 0860  5       More than 50% of all lumber is unitized; an NLRDA
+E35 0870  3    survey found that at least 492 lumber mills will strap
+E35 0880  2    their shipments for mechanized handling. Of these,
+E35 0880  9    376 said they make no extra charge for strapping in
+E35 0890  8    standard units, because they save enough on mechanized
+E35 0900  5    carloading to offset their strapping cost. Most of
+E35 0901  3    the others will swallow their 50@ to $3 charge rather
+E35 0910  9    than lose a good customer. "With a 15,500-lb fork-lift,
+E35 0920 10    dealers can unload unitized lumber from wide-door box
+E35 0930  7    cars for 30@/mbf compared with $1.65 or more to unload
+E35 0940  7    loose lumber one piece at a time", says James Wright
+E35 0950  3    of NLRDA.
+E35 0950  5    _5._
+E35 0950  6       Lumber dealers and lumber manufacturers have agreed
+E35 0960  4    on a standard unit for unitized shipments- 48'' wide
+E35 0970  5    by a nominal 30'' high (or six McCracken packets 24''
+E35 0980  2    wide by nominal 7'' high). These units make it easy
+E35 0980 12    to load as much as 48,000 bd ft (say 120,000 lb
+E35 0990 11    in a 50' box car- much more than the average for loose-loaded
+E35 1000  9    cars.
+E35 1000 10    _6._
+E35 1000 11       The railroads have responded by adding 20,000 more
+E35 1010  8    box cars with doors 12' or wider for forklift unloading
+E35 1020  6    (a 21% increase while the total number of box cars
+E35 1030  5    was falling 6%) and by cutting their freight rates
+E35 1040  1    twice on lumber shipped in heavily loaded cars. First
+E35 1040 10    was a 1958 cut of more than 50% on that portion of
+E35 1050  9    the load in excess of 40,000 lb; later came a 1961
+E35 1060  6    cut on the West Coast (still pending elsewhere) of
+E35 1070  2    7@/cwt on 70,000 lb-plus carloads (which works out
+E35 1070 11    to more than $4/mbf on that portion of the load in
+E35 1080 11    excess of 70,000 lb).
+E35 1090  2    _7._
+E35 1090  3       More unitized lumber is being shipped on flat cars,
+E35 1100  1    and NLRDA studies show that flat cars loaded with
+E35 1100 10    the new Type 6-B floating-load method can be unloaded
+E35 1110  9    for at little at 5.4@/mbf. For long hauls these shipments
+E35 1120  6    should be protected with water-proof paper. This costs
+E35 1130  4    from 75@ to $2.30/mbf, but the cover can pay off if
+E35 1140  4    the lumber is to be stored in the open.
+E35 1150  1    _THESE CARRIERS CUT HANDLING COSTS FOR THE DEALER-
+E35 1150  7    AND THE BUILDER_
+E35 1150 10       Says NRLDA's James Wright: "Since 1958 carriers
+E35 1160  6    that move material from the yard to the job site have
+E35 1170  9    undergone more radical changes than any of the dealer's
+E35 1180  6    other equipment".
+E35 1180  8       The reason: today's components and lumber packages
+E35 1190  5    are far too bulky to be handled by a truckdriver and
+E35 1200  5    a helper. So manufacturers have pioneered a new type
+E35 1210  2    of vehicle- the self-unloading carrier. It cuts the
+E35 1210 11    lumber dealer's cost because it takes only one man-
+E35 1220  8    the driver- to unload it, and because it unloads in
+E35 1230  7    a fraction of the time and at a fraction of the cost
+E35 1240  4    of hand unloading. and it helps the builder because
+E35 1240 13    it can handle a more efficiently packaged load, can
+E35 1250  9    deliver it to the best spot (in some cases, right on
+E35 1260  7    the roof or inside the house), and never takes any
+E35 1270  3    of the builder's high-priced labor to help unload it.
+E35 1280  1       Says Wright: "Our survey shows that one third of
+E35 1280 10    the retail dealers plan to increase the mechanization
+E35 1300  7    of their materials handling in the coming two years.
+E35 1310  6    And most of the gain will be in self-unloading vehicles".
+E35 1320  2    #NEW RULE NO. 4: RESTUDY WHAT YOUR MEN DO, TO HELP
+E35 1330  3    THEM WASTE LESS OF THE TIME YOU PAY FOR#
+E35 1330 12    Half the manhours you pay for on most jobs are wasted
+E35 1340  9    because the job was not planned right, so the right
+E35 1350  4    tools were not handy at the right place at the right
+E35 1360  1    time, or the right materials were not delivered to
+E35 1360 10    the handiest spots or materials were not stacked in
+E35 1370  7    the right order for erection, or you bought cheap materials
+E35 1380  4    that took too long to fit, or your workmen had to come
+E35 1390  3    back twice to finish a job they could have done on
+E35 1390 14    one trip.
+E35 1400  1       Even "America's most efficient builder", Bob Schmitt
+E35 1410  1    of Berea, hopes to cut his labor costs another $2,000
+E35 1410 11    per house as a result of the time-+-motion studies
+E35 1420  8    now being completed on his operation by industrial
+E35 1430  3    efficiency engineers from the Stanley Works. Already
+E35 1440  1    this study has suggested ways to cut his foundation
+E35 1440 10    manhours from 170 to 105 by eliminating idle time and
+E35 1450  9    wasted motion.
+E35 1450 11       Builder Eddie Carr of Washington, past president
+E35 1460  7    of NAHB, cut his bricklaying costs $150 a house by
+E35 1470  6    adopting the "SCR masonry process" worked out after
+E35 1480  4    careful time-+-motion studies by the Structural Clay
+E35 1490  2    Products Research Foundation to help bricklayers do
+E35 1490  9    better work for less. A midwestern builder cut his
+E35 1500  9    labor costs per thousand bricks from $81 to $43.50
+E35 1510  6    by adopting this same process, cut them another $7.50
+E35 1520  2    to $36 by buying his bricks in convenient, easy-to-spot
+E35 1520 13    100-brick packages. The SCR process, with its precision
+E35 1530  8    corner-posts, its precision guide lines, its working
+E35 1540  7    level scaffold, and its hand-level brick supply takes
+E35 1550  4    eight manhours to get set, but once ready it makes
+E35 1560  3    it easy for bricklayers to lay a thousand bricks a
+E35 1560 13    day. See page 156.
+E35 1570  3       One good way to cut your labor waste is to make
+E35 1580  1    sure you are using just the right number of men in
+E35 1580 12    each crew. Reports Jim Lendrum: "By studying men on
+E35 1590  7    the job, we found that two men- a carpenter and a helper-
+E35 1600  8    can lay a floor faster than three. We found that three
+E35 1610  4    men- two carpenters and a helper- can put up wall panels
+E35 1620  2    or trusses more economically than four men- because
+E35 1620 10    four men don't make two teams; they make one inefficient
+E35 1630  9    three-men-and-a-helper team. We found that wherever
+E35 1640  6    you can use two teams on a job, five men, not four,
+E35 1650  5    is the magic number".
+E35 1650  9       No house was ever built that could not have been
+E35 1660  7    built better for less if the work had been better planned
+E35 1670  4    and the work better scheduled.
+E35 1670  9    #NEW RULE NO. 5: DON'T WASTE ANY 10@-A-MINUTE TIME
+E35 1680  9    ON GREEN LUMBER TO SAVE 3@ A STUD#
+E35 1690  3    This is the most penny-wise, pound-foolish chisel a
+E35 1690 13    builder can commit.
+E35 1700  3       Green lumber was all very well back in the days
+E35 1710  1    of wet plaster, when the framing lumber was bound to
+E35 1710 11    swell and then shrink as tons of water dried out the
+E35 1720  9    gypsum. But now that all production builders build
+E35 1730  3    with drywall and all smart builders build with panels,
+E35 1740  1    green lumber is an anachronism you cannot afford.
+E35 1740  9       Green studs cost about 65@; dry studs cost less
+E35 1750  9    than 3@ more. So if a green stud makes a carpenter
+E35 1760  7    or a drywall finisher or anybody else waste even 20
+E35 1770  3    seconds, the green stud becomes more expensive than
+E35 1770 11    a dry stud.

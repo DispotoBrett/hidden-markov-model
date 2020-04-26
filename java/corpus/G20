@@ -1,0 +1,236 @@
+G20 0010  1    It will be shown that the objectives of the cooperative
+G20 0010 11    people in an organization determine the type of network
+G20 0020  8    required, because the type of network functions according
+G20 0030  6    to the characteristics of the messages enumerated in
+G20 0040  3    Table 1. Great stress is placed on the role that the
+G20 0050  2    monitoring of information sending plays in maintaining
+G20 0050  9    the effectiveness of the network. By monitoring, we
+G20 0060  7    mean some system of control over the types of information
+G20 0070  6    sent from the various centers.
+G20 0080  1       As a word of caution, we should be aware that in
+G20 0080 11    actual practice no message is purely one of the four
+G20 0090  8    types, question, command, statement, or exclamation.
+G20 0100  3    For example, suppose a man wearing a $200 watch, driving
+G20 0110  1    a 1959 Rolls Royce, stops to ask a man on the sidewalk,
+G20 0110 13    "What time is it"? This sentence would have most of
+G20 0120 10    the characteristics of a question, but it has some
+G20 0130  8    of the characteristics of a statement because the questioner
+G20 0140  4    has conveyed the fact that he has no faith in his own
+G20 0150  3    timepiece or the one attached to his car. If the man
+G20 0150 14    on the sidewalk is surprised at this question, it has
+G20 0160  9    served as an exclamation. Also, since the man questioned
+G20 0170  6    feels a strong compulsion to answer (and thereby avoid
+G20 0180  4    the consequences of being thought queer) the question
+G20 0190  1    has assumed some measurable properties of a command.
+G20 0190  9    However, for convenience we will stick to the idea
+G20 0200  8    that information can be classified according to Table
+G20 0210  4    1. On this basis, certain extreme kinds of networks
+G20 0220  1    will be discussed for illustrative purposes.
+G20 0220  7    #NETWORKS ILLUSTRATING SOME SPECIAL TYPES OF ORGANIZATION#
+G20 0240  1    _THE COCKTAIL PARTY._
+G20 0240  1       Presumably a cocktail party is expected to fulfill
+G20 0240  9    the host's desire to get together a number of people
+G20 0250  8    who are inadequately acquainted and thereby arrange
+G20 0260  4    for bringing the level of acquaintance up to adequacy
+G20 0270  1    for future cooperative endeavors. The party is usually
+G20 0270  9    in a room small enough so that all guests are within
+G20 0280  9    sight and hearing of one another. The information is
+G20 0290  4    furnished by each of the guests, is sent by oral broadcasting
+G20 0300  3    over the air waves, and is received by the ears. Since
+G20 0310  1    the air is a continuum, the network of communication
+G20 0310 10    remains intact regardless of the positions or motions
+G20 0320  7    of the points (the people) in the net. As shown in
+G20 0330  7    Figure 1, there is a connection for communication between
+G20 0340  2    every pair of points. This, and other qualifications,
+G20 0340 10    make the cocktail party the most complete and most
+G20 0350  9    chaotic communication system ever dreamed up. All four
+G20 0360  7    types of message listed in Table 1 are permitted, although
+G20 0370  5    decorum and cocktail tradition require holding the
+G20 0380  2    commands to a minimum, while exclamations having complimentary
+G20 0390  1    intonations are more than customarily encouraged. The
+G20 0390  8    completeness of the connections provide that, for N
+G20 0400  8    people, there are **f lines of communication between
+G20 0410  5    the pairs, which can become a large number (1,225)
+G20 0420  2    for a party of fifty guests. Looking at the diagram,
+G20 0420 12    we see that **f connection lines come in to each member.
+G20 0430 11    Thus the cocktail party would appear to be the ideal
+G20 0440  8    system, but there is one weakness. In spite of the
+G20 0450  5    dreams of the host for oneness in the group, the **f
+G20 0460  2    incoming messages for each guest overload his receiving
+G20 0460 10    system beyond comprehension if N exceeds about six.
+G20 0470  7    The crowd consequently breaks up into temporary groups
+G20 0480  6    ranging in size from two to six, with a half-life for
+G20 0490  5    the cluster ranging from three to twenty minutes.
+G20 0500  1       For the occasion on which everyone already knows
+G20 0500  9    everyone else and the host wishes them to meet one
+G20 0510  9    or a few honored newcomers, then the "open house" system
+G20 0520  5    is advantageous because the honored guests are fixed
+G20 0530  3    connective points and the drifting guests make and
+G20 0530 11    break connections at the door.
+G20 0540  4    _THE RURAL COMMUNITY._
+G20 0540  7       We consider a rural community as an assemblage of
+G20 0550  6    inhabited dwellings whose configuration is determined
+G20 0560  3    by the location and size of the arable land sites necessary
+G20 0570  1    for family subsistence. We assume for this illustration
+G20 0570  9    that the size of the land plots is so great that the
+G20 0580 11    distance between dwellings is greater than the voice
+G20 0590  6    can carry and that most of the communication is between
+G20 0600  3    nearest neighbors only, as shown in Figure 2. Information
+G20 0610  1    beyond nearest neighbor is carried second-, third-,
+G20 0610 10    and fourth-hand as a distortable rumor. In Figure 2,
+G20 0620  8    the points in the network are designated by a letter
+G20 0630  5    accompanied by a number. The numbers indicate the number
+G20 0640  3    of nearest neighbors. It will be noted that point f
+G20 0650  1    has seven nearest neighbors, h and e have six, and
+G20 0650 11    p has only one, while the remaining points have intermediate
+G20 0660 10    numbers. In any social system in which communications
+G20 0670  8    have an importance comparable with that of production
+G20 0680  6    and other human factors, a point like f in Figure
+G20 0690  5    2 would (other things being equal) be the dwelling
+G20 0700  1    place for the community leader, while e and h would
+G20 0710  1    house the next most important citizens. A point like
+G20 0710 10    p gets information directly from n, but all information
+G20 0720  8    beyond n is indirectly relayed through n. The dweller
+G20 0730  8    at p is last to hear about a new cure, the slowest
+G20 0740 10    to announce to his neighbors his urgent distresses,
+G20 0750  4    the one who goes the farthest to trade, and the one
+G20 0760  2    with the greatest difficulty of all in putting over
+G20 0760 11    an idea or getting people to join him in a cooperative
+G20 0770  9    effort. Since the hazards of poor communication are
+G20 0780  5    so great, p can be justified as a habitable site only
+G20 0790  3    on the basis of unusual productivity such as is made
+G20 0800  1    available by a waterfall for milling purposes, a mine,
+G20 0800 10    or a sugar maple camp. Location theorists have given
+G20 0810  6    these matters much consideration.
+G20 0820  1    _MILITARY ORGANIZATIONS._
+G20 0820  3       The networks for military communications are one
+G20 0830  3    of the best examples of networks which not only must
+G20 0830 13    be changed with the changes in objectives but also
+G20 0840  9    must be changed with the addition of new machines of
+G20 0850  6    war. They also furnish proof that, in modern war, message
+G20 0860  4    sending must be monitored. Without monitoring, a military
+G20 0870  2    hookup becomes a noisy party. The need for monitoring
+G20 0870 11    became greater when radio was adopted for military
+G20 0880  8    signaling. Alexander the Great, who used runners as
+G20 0890  6    message carriers, did not have to worry about having
+G20 0900  2    every officer in his command hear what he said and
+G20 0900 12    having hundreds of them comment at once. As time has
+G20 0910 10    passed and science has progressed, the speed of military
+G20 0920  6    vehicles has increased, the range of missiles has been
+G20 0930  4    extended, the use of target-hunting noses on the projectiles
+G20 0940  1    has been adopted, and the range and breadth of message
+G20 0940 11    sending has increased. Next to the old problem of the
+G20 0950 10    slowness of decision making, network structure seems
+G20 0960  5    to be paramount, and without monitoring no network
+G20 0970  3    has value.
+G20 0970  5       On the parade ground the net may be similar to that
+G20 0980  3    shown in Figure 3. The monitoring is the highest and
+G20 0990  1    most restrictive of any organization in existence.
+G20 0990  8    No questions, statements, or explanations are permitted-
+G20 1000  5    only commands. Commands go only from an officer to
+G20 1010  5    the man of nearest lower rank. The same command is
+G20 1020  2    repeated as many times as there are levels in rank
+G20 1020 12    from general to corporal. All orders originate with
+G20 1030  6    the officer of highest rank and terminate with action
+G20 1040  4    of the men in the ranks. Even the officer in charge,
+G20 1050  1    be it a captain (for small display) or a general, is
+G20 1050 12    restrained by monitoring. This is done for simplicity
+G20 1060  8    of commands and to bring the hidden redundancy up to
+G20 1070  5    where misunderstanding has almost zero possibility.
+G20 1080  1    The commands are specified by the military regulations;
+G20 1080  9    are few in number, briefly worded, all different in
+G20 1090  9    sound; and are combinable into sequences which permit
+G20 1100  5    any marching maneuver that could be desired on a parade
+G20 1110  5    ground. This monitoring is necessary because, on a
+G20 1120  2    parade ground, everyone can hear too much, and without
+G20 1120 11    monitoring a confused social event would develop.
+G20 1130  7       With troops dispersed on fields of battle rather
+G20 1140  6    than on the parade ground, it may seem that a certain
+G20 1150  3    amount of monitoring is automatically enforced by the
+G20 1150 11    lines of communication. Years ago this was true, but
+G20 1160  9    with the replacement of wires or runners by radio and
+G20 1170  8    radar (and perhaps television), these restrictions
+G20 1180  2    have disappeared and now again too much is heard.
+G20 1190  1       In contrast to cocktail parties, military organizations,
+G20 1190  8    even in the field, are more formal. In the extreme
+G20 1200 10    and oversimplified example suggested in Figure 3, the
+G20 1210  6    organization is more easily understood and more predictable
+G20 1220  4    in behavior. A military organization has an objective
+G20 1230  1    chosen by the higher command. This objective is adhered
+G20 1230 10    to throughout the duration of the action. The connective
+G20 1240  8    system, or network, is tailored to meet the requirements
+G20 1250  7    of the objective, and it is therefore not surprising
+G20 1260  3    that a military body acting as a single coordinated
+G20 1270  1    unit has a different communication network than a factory,
+G20 1270 10    a college, or a rural village.
+G20 1280  5       The assumptions upon which the example shown in
+G20 1290  2    Figure 3 is based are: (a) One man can direct about
+G20 1290 13    six subordinates if the subordinates are chosen carefully
+G20 1300  7    so that they do not need too much personal coaching,
+G20 1310  6    indoctrinating, etc. (b) A message runs too great
+G20 1320  4    a risk of being distorted if it is to be relayed more
+G20 1330  1    than about six consecutive times. (c) Decisions of
+G20 1330  9    a general kind are made by the central command. And
+G20 1340  8    (d) all action of a physical kind pertinent to the
+G20 1350  4    mission is relegated to the line of men on the lower
+G20 1360  1    rank. These assumptions lead to an organization with
+G20 1360  9    one man at the top, six directly under him, six under
+G20 1370  8    each of these, and so on until there are six levels
+G20 1380  5    of personnel. The number of people acting as one body
+G20 1390  2    by this scheme gives a surprisingly large army of **f
+G20 1390 12    55,987 men.
+G20 1400  2       This organizational network would be of no avail
+G20 1400 10    if there were no regulations pertaining to the types
+G20 1410  8    of message sent. Of types of message listed in Table
+G20 1420  6    1, commands and statements are the only ones sent through
+G20 1430  4    the vertical network shown in Figure 3. A further regulation
+G20 1440  2    is that commands always go down, unaccompanied by statements,
+G20 1450  1    and statements always go up, unaccompanied by commands.
+G20 1450  9    Questions and, particularly, exclamations are usually
+G20 1460  6    channeled along informal, horizontal lines not indicated
+G20 1470  5    in Figure 3 and seldom are carried beyond the nearest
+G20 1480  4    neighbor.
+G20 1480  5       It will readily be seen that in this suggested network
+G20 1490  5    (not materially different from some of the networks
+G20 1500  2    in vogue today) greater emphasis on monitoring is implied
+G20 1500 11    than is usually put into practice. Furthermore, the
+G20 1510  8    network in Figure 3 is only the basic net through which
+G20 1520  9    other networks pertaining to logistics and the like
+G20 1530  4    are interlaced.
+G20 1530  6       Not discussed here are some military problems of
+G20 1540  4    modern times such as undersea warfare, where the surveillance,
+G20 1550  2    sending, transmitting, and receiving are all so inadequate
+G20 1560  1    that networks and decision making are not the bottlenecks.
+G20 1560 10    Such problems are of extreme interest as well as importance
+G20 1570 10    and are so much like fighting in a rain forest or guerrilla
+G20 1580  9    warfare at night in tall grass that we might have to
+G20 1590  7    re-examine primitive conflicts for what they could
+G20 1600  2    teach.
+G20 1600  3    _A TEAM FOR USEFUL RESEARCH._
+G20 1600  8       This is an unsolved problem which probably has never
+G20 1610  6    been seriously investigated, although one frequently
+G20 1620  3    hears the comment that we have insufficient specialists
+G20 1630  1    of the kind who can compete with the Germans or Swiss,
+G20 1630 12    for example, in precision machinery and mathematics,
+G20 1640  6    or the Finns in geochemistry. We hear equally fervent
+G20 1650  5    concern over the belief that we have not enough generalists
+G20 1660  4    who can see the over-all picture and combine our national
+G20 1670  3    skills and knowledge for useful purposes. This problem
+G20 1680  1    of the optimum balance in the relative numbers of generalists
+G20 1680 11    and specialists can be investigated on a communicative
+G20 1690  8    network basis. Since the difficulty of drawing the
+G20 1700  6    net is great, we will merely discuss it.
+G20 1710  2       First, we realize that a pure specialist does not
+G20 1710 11    exist. But, for practical purposes, we have people
+G20 1720  7    who can be considered as such. For example, there are
+G20 1730  5    persons who are in physical science, in the field of
+G20 1750  3    mineralogy, trained in crystallography, who use only
+G20 1750 10    X-rays, applying only the powder technique of X-ray
+G20 1760  9    diffraction, to clay minerals only, and who have spent
+G20 1770  7    the last fifteen years concentrating on the montmorillonites;
+G20 1780  4    or persons in the social sciences in the field of anthropology,
+G20 1790  4    studying the lung capacity of seven Andean Indians.
+G20 1800  2    So we see that a specialist is a man who knows more
+G20 1800 14    and more about less and less as he develops, as contrasted
+G20 1810 10    to the generalist, who knows less and less about more
+G20 1820  8    and more.

@@ -1,0 +1,229 @@
+J32 0010  1       The many linguistic techniques for reducing the
+J32 0010  8    amount of dictionary information that have been proposed
+J32 0020  6    all organize the dictionary's contents around prefixes,
+J32 0030  4    stems, suffixes, etc. A significant reduction in the
+J32 0050  3    voume of store information is thus realized, especially
+J32 0060  1    for a highly inflected language such as Russian. For
+J32 0060 10    English the reduction in size is less striking. This
+J32 0070  7    approach requires that: (1) each text word be separated
+J32 0080  6    into smaller elements to establish a correspondence
+J32 0090  1    between the occurrence and dictionary entries, and
+J32 0090  8    (2) the information retrieved from several entries
+J32 0100  5    in the dictionary be synthesized into a description
+J32 0110  4    of the particular word. The logical scheme used to
+J32 0120  2    accomplish the former influences the placement of information
+J32 0120 10    in the dictionary file. Implementation of the latter
+J32 0130  8    requires storage of information needed only for synthesis.
+J32 0140  6       We suggest the application of certain data-processing
+J32 0150  5    techniques as a solution to the problem. But first,
+J32 0160  3    we must define two terms so that their meaning will
+J32 0160 13    be clearly understood:
+J32 0170  3    _1._
+J32 0170  4       form- any unique sequence of alphabetic characters
+J32 0180  2    that can appear in a language preceded and followed
+J32 0190  1    by a space.
+J32 0190  4    _2._
+J32 0190  5       occurrence- an instance of a form in text.
+J32 0200  1       We propose a method for selecting only dictionary
+J32 0200  9    information required by the text being translated and
+J32 0210  8    a means for passing the information directly to the
+J32 0220  4    occurrences in text. We accomplish this by compiling
+J32 0230  1    a list of text forms as text is read by the computer.
+J32 0230 13    A random-storage scheme, based on the spelling of forms,
+J32 0240  8    provides an economical way to compile this text-form
+J32 0250  7    list. Dictionary forms found to match forms in the
+J32 0260  4    text list are marked. A location in the computer store
+J32 0270  1    is also named for each marked form; dictionary information
+J32 0270 10    about the form stored at this location can be retrieved
+J32 0280  9    directly by occurrences of the form in text. Finally,
+J32 0290  7    information is retrieved from the dictionary as required
+J32 0300  3    by stages of the translation process- the grammatic
+J32 0310  1    description for sentence-structure determination,
+J32 0310  6    equivalent-choice
+J32 0320  1    information for semantic analysis, and target-language
+J32 0320  8    equivalents for output construction.
+J32 0330  4       The dictionary is a form dictionary, at least in
+J32 0340  4    the sense that complete forms are used as the basis
+J32 0340 14    for matching text occurrences with dictionary entries.
+J32 0350  6    Also, the dictionary is divided into at least two parts:
+J32 0360  8    the list of dictionary forms and the file of information
+J32 0370  5    that pertains to these forms. A more detailed description
+J32 0380  2    of dictionary operations- text lookup and dictionary
+J32 0390  1    modification- give a clearer picture.
+J32 0390  5       Text lookup, as we will describe it, consists of
+J32 0400  5    three steps. The first is compiling a list of text
+J32 0410  3    forms, assigning an information cell to each, and replacing
+J32 0410 12    text occurrences with the information cell assigned
+J32 0420  7    to the form of each occurrence. For this step the computer
+J32 0430  7    memory is separated into three regions: cells in the
+J32 0440  5    W-region are used for storage of the forms in the
+J32 0450  3    text-form list; cells in the X-region and Y region
+J32 0460  1    are reserved as information cells for text forms.
+J32 0460  9       When an occurrence **f is isolated during text reading,
+J32 0470  7    a random memory address **f, the address of a cell
+J32 0480  6    in the X-region, is computed from the form of **f.
+J32 0490  3    Let **f denote the form of **f. If cell **f has not
+J32 0490 15    previously been assigned as the information cell of
+J32 0500  8    a form in the text-form list, it is now assigned as
+J32 0510  7    the information cell of **f. The form itself is stored
+J32 0520  3    in the next available cells of the W-region, beginning
+J32 0530  1    in cell **f. The address **f and the number of cells
+J32 0530 12    required to store the form are written in **f; the
+J32 0540  9    information cell **f is saved to represent the text
+J32 0550  5    occurrence. Text reading continues with the next occurrence.
+J32 0560  2       Let us assume that **f is identical to the form
+J32 0570  1    of an occurrence **f which preceded **f in the text.
+J32 0570 11    When this situation exists, the address **f will equal
+J32 0580  7    **f which was produced from **f. If **f was assigned
+J32 0590  5    as the information cell for **f, the routine can detect
+J32 0600  2    that **f is identical to **f by comparing **f with
+J32 0600 12    the form stored at location **f. The address **f is
+J32 0610  9    stored in the cell **f. When, as in this case, the
+J32 0620  6    two forms match, the address **f is saved to represent
+J32 0630  2    the occurrence **f. Text reading continues with the
+J32 0630 10    next occurrence.
+J32 0650  1       A third situation is possible. The formula for computing
+J32 0660  1    random addresses from the form of each occurrence will
+J32 0660 10    not give a distinct address for each distinct form.
+J32 0670  7    Thus, when more than one distinct form leads to a particular
+J32 0680  6    cell in the X-region, a chain of information cells
+J32 0690  3    must be created to accommodate the forms, one cell
+J32 0700  1    in the chain for each form. If **f leads to an address
+J32 0700 13    **f that is equal to the address computed from **f,
+J32 0710  7    even though **f does not match **f, the chain of information
+J32 0720  5    cells is extended from **f by storing the address of
+J32 0730  3    the next available cell in the Y-region, **f, in **f.
+J32 0731  1    The cell **f becomes the second information cell in
+J32 0740  9    the chain and is assigned as the information cell of
+J32 0750  6    **f. A third cell can be added by storing the address
+J32 0760  3    of another Y-cell in **f; similarly, as many cells
+J32 0770  1    are added as are required. Each information cell in
+J32 0770 10    the chain contains the address of the Y-cell where
+J32 0780  8    the form to which it is assigned is stored. Each cell
+J32 0790  5    except the last in the chain also contains the address
+J32 0800  3    of the Y-cell that is the next element of the chain;
+J32 0810  1    the absence of such a link in the last cell indicates
+J32 0810 12    the end of the chain. Hence, when the address **f is
+J32 0820  8    computed from **f, the cell **f and all Y-cells in
+J32 0830  5    its chain must be inspected to determine whether **f
+J32 0840  2    is already in the form list or whether it should be
+J32 0840 13    added to the form list and the chain. When the information
+J32 0850  8    cell for **f has been determined, it is saved as a
+J32 0860  6    representation of **f. Text reading continues with
+J32 0870  2    the next occurrence.
+J32 0870  5       Text reading is terminated when a pre-determined
+J32 0880  4    number of forms have been stored in the text-form list.
+J32 0890  1    This initiates the second step of glossary lookup-
+J32 0890  9    connecting the information cell of forms in the text-form
+J32 0900  9    list to dictionary forms. Each form represented by
+J32 0910  5    the dictionary is looked up in the text-form list.
+J32 0920  2    Each time a dictionary form matches a text form, the
+J32 0920 12    information cell of the matching text form is saved.
+J32 0930  9    The number of dictionary forms skipped since the last
+J32 0940  6    one matched is also saved. These two pieces of information
+J32 0950  3    for each dictionary form that is matched by a text
+J32 0960  1    form constitute the table of dictionary usage. If each
+J32 0960 10    text form is marked when matched with a dictionary
+J32 0970  7    form, the text forms not contained in the dictionary
+J32 0980  4    can be identified when all dictionary forms have been
+J32 0990  2    read. The appropriate action for handling these forms
+J32 0990 10    can be taken at that time.
+J32 1000  4       Each dictionary form is looked up in the text-form
+J32 1010  1    list by the same method used to look up a new text
+J32 1010 13    occurrence in the form list during text reading. A
+J32 1020  8    random address **f that lies within the X-region of
+J32 1030  5    memory mentioned earlier is computed from the i-th
+J32 1040  3    dictionary form. If cell **f is an information cell,
+J32 1040 12    it and any information cells in the Y-region that
+J32 1050  9    have been linked to **f each contain an address in
+J32 1060  6    the W-region where a potentially matching form is
+J32 1070  3    stored. The dictionary form is compared with each of
+J32 1070 12    these text forms. When a match is found, an entry is
+J32 1080 11    made in the table of dictionary usage. If cell **f
+J32 1090  6    is not an information cell we conclude that the i-th
+J32 1100  5    dictionary form is not in the text list.
+J32 1100 13       These two steps essentially complete the lookup
+J32 1110  7    operation. The final step merely uses the table of
+J32 1120  6    dictionary usage to select the dictionary information
+J32 1130  1    that pertains to each form matched in the text-form
+J32 1130 11    list, and uses the list of information cells recorded
+J32 1140  8    in text order to attach the appropriate information
+J32 1150  4    to each occurrence in text. The list of text forms
+J32 1160  3    in the W-region of memory and the contents of the
+J32 1160 14    information cells in the X and Y-regions are no longer
+J32 1170 11    required. Only the assignment of the information cells
+J32 1180  7    is important.
+J32 1180  9       The first stage of translation after glossary lookup
+J32 1190  8    is structural analysis of the input text. The grammatical
+J32 1200  7    description of each occurrence in the text must be
+J32 1210  5    retrieved from the dictionary to permit such an analysis.
+J32 1220  1    A description of this process will serve to illustrate
+J32 1220 10    how any type of information can be retrieved from the
+J32 1230  9    dictionary and attached to each text occurrence.
+J32 1240  5       The grammatic descriptions of all forms in the dictionary
+J32 1250  4    are recorded in a separate part of the dictionary file.
+J32 1260  2    The order is identical to the ordering of the forms
+J32 1260 12    they describe. When entries are being retrieved from
+J32 1270  7    this file, the table of dictionary usage indicates
+J32 1280  3    which entries to skip and which entries to store in
+J32 1290  2    the computer. This selection-rejection process takes
+J32 1290  9    place as the file is read. Each entry that is selected
+J32 1300  9    for storage is written into the next available cells
+J32 1310  5    of the W-region. The address of the first cell and
+J32 1320  4    the number of cells used is written in the information
+J32 1330  1    cell for the form. (The address of the information
+J32 1330 10    cell is also supplied by the table of dictionary usage.)
+J32 1340  7    When the complete file has been read, the grammatic
+J32 1350  4    descriptions for all text forms found in the dictionary
+J32 1360  1    have been stored in the W-region; the information
+J32 1360 10    cell assigned to each text form contains the address
+J32 1370  8    of the grammatic description of the form it represents.
+J32 1380  6    Hence, the description of each text occurrence can
+J32 1390  3    be retrieved by reading the list of text-ordered information-cell
+J32 1400  1    addresses and outputting the description indicated
+J32 1400  7    by the information cell for each occurrence.
+J32 1410  5       The only requirements on dictionary information
+J32 1420  3    made by the text-lookup operation are that each form
+J32 1430  2    represented by the dictionary be available for lookup
+J32 1430 10    in the text-form list and that information for each
+J32 1440  7    form be available in a sequence identical with the
+J32 1450  4    sequence of the forms. This leaves the ordering of
+J32 1460  2    entries variable. (Here an entry is a form plus the
+J32 1460 12    information that pertains to it.)
+J32 1470  5       Two very useful ways for modifying a form-dictionary
+J32 1480  1    are the addition to the dictionary of complete paradigms
+J32 1490  1    rather than single forms and the application of a single
+J32 1490 11    change to more than one dictionary form. The former
+J32 1500  7    is intended to decrease the amount of work necessary
+J32 1510  4    to extend dictionary coverage. The latter is useful
+J32 1520  1    for modifying information about some or all forms of
+J32 1520 10    a word, hence reducing the work required to improve
+J32 1530  7    dictionary contents. Applying the techniques developed
+J32 1540  4    at Harvard for generating a paradigm from a representative
+J32 1550  3    form and its classification, we can add all forms of
+J32 1560  1    a word to the dictionary at once. An extension of the
+J32 1560 12    principle would permit entering a grammatic description
+J32 1570  6    of each form. Equivalents could be assigned to the
+J32 1580  5    paradigm either at the time it is added to the dictionary
+J32 1590  2    or after the word has been studied in context. Thus,
+J32 1590 12    one can think of a dictionary entry as a word rather
+J32 1600 10    than a form.
+J32 1600 13       If all forms of a paradigm are grouped together
+J32 1610  9    within the dictionary, a considerable reduction in
+J32 1620  5    the amount of information required is possible. For
+J32 1630  2    example, the inflected forms of a word can be represented,
+J32 1640  1    insofar as regular inflection allows, by a stem and
+J32 1640 10    a set of endings to be attached. (Indeed, the set of
+J32 1650  7    endings can be replaced by the name of a set of endings.)
+J32 1660  6    The full forms can be derived from such information
+J32 1670  1    just prior to the lookup of the form in the text-form
+J32 1670 13    list. Similarly, if the equivalents for the forms of
+J32 1680  9    a word do not vary, the equivalents need be entered
+J32 1690  5    only once with an indication that they apply to each
+J32 1700  3    form. The dictionary system is in no way dependent
+J32 1700 12    upon such summarization or designed around it. When
+J32 1710  8    irregularity and variation prevent summarizing, information
+J32 1720  4    is written in complete detail. Entries are summarized
+J32 1730  3    only when by doing so the amount of information retained
+J32 1740  2    in the dictionary is reduced and the time required
+J32 1740 11    for dictionary operations is decreased.

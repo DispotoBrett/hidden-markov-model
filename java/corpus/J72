@@ -1,0 +1,274 @@
+J72 0010  1    Two metabolites (I and II) of p-aminobenzoic acid
+J72 0010 10    (PABA) which act as cofactors for the hydroxylation
+J72 0020  8    of aniline by acid-fast bacteria are biosynthesized
+J72 0030  4    from PABA. The 7 carbons of PABA are incorporated
+J72 0040  3    directly into metabolite II (as shown with both ring-labeled
+J72 0050  4    and carboxy-labeled **f). Thirty-five of the 36 carbon
+J72 0060  2    atoms arise from PABA. All 28 carbons of metabolite
+J72 0060 11    I (a product of mild acid hydrolysis of II) arise
+J72 0070 10    from PABA. Metabolite I isolated from the medium,
+J72 0080  7    however, showed a lower specific activity, which indicates
+J72 0090  4    endogenous synthesis of this metabolite.
+J72 0100  1       Vigorous acid hydrolysis of metabolite I destroyed
+J72 0100  8    the biological activity of the compound and liberated
+J72 0110  8    two aryl amines. Fragment A has been obtained in crystalline
+J72 0120  8    form as a dioxalate salt and free base. Preliminary
+J72 0130  5    evidence tentatively indicates that the molecule (metabolite
+J72 0140  3    I) is cleaved at a secondary amide bond. (N. H. Sloane;
+J72 0150  3    chemical studies are being pursued with the cooperation
+J72 0160  1    of K.G. Untch.)
+J72 0160  4    _STUDIES ON ESTERASES_
+J72 0160  7       - Research on esterases in mammalian sera was continued.
+J72 0170  8    One of the most interesting findings was the extreme
+J72 0180  5    sensitivity of plasma arylesterases to rare earth ions.
+J72 0190  4    The inhibition of the enzyme by very low concentrations
+J72 0200  1    of lanthanum ion is probably the strongest known biological
+J72 0200 10    effect of rare earth salts. Various metal ions have
+J72 0210  9    been found to protect plasma arylesterase against inactivation
+J72 0220  4    by urea and guanidine. The effects can be related to
+J72 0230  5    the structure of this -SH enzyme. The non-identity
+J72 0240  1    of serum and red blood cell arylesterase was also established.
+J72 0250  1    Furthermore, the hydrolysis of paraoxon was studied
+J72 0250  8    in mammalian sera, and it was found that it is hydrolyzed
+J72 0260 10    by albumin (or a factor attached to it) in addition
+J72 0270  5    to arylesterase. Selective inhibitors can distinguish
+J72 0280  2    the two activities. Investigations on the acceleration
+J72 0280  9    of human plasma cholinesterase were carried further.
+J72 0290  7    (E. G. Erdo^s, L. E. Boggs, C. D. Mackey)
+J72 0310  1    _BIOPHYSICAL STUDIES ON MODIFIED FIBROUS PROTEINS_
+J72 0310  4       - Electron-microscopical and physical-chemical methods
+J72 0320  2    were used to demonstrate the renaturation of heat-denatured
+J72 0330  1    collagen and ribonucleic acid. (R. V. Rice)
+J72 0330  8       A method was devised for extracting and purifying
+J72 0340  7    soluble earthworm collagen (EWC). It was observed
+J72 0350  5    that EWC macromolecules are the same diameter (15A)
+J72 0360  4    but much longer (up to several microns) than vertebrate
+J72 0370  2    tropocollagen. This unusual collagen also was shown
+J72 0370  9    to undergo a reversible thermal phase transformation.
+J72 0380  6    (R. V. Rice, M. D. Maser)
+J72 0390  3    _STUDIES ON PEPTIDES AND PEPTIDASES_
+J72 0390  8       - This investigation involved several aspects. Substance
+J72 0400  5    Z, an active urinary peptide, was purified by extraction
+J72 0410  6    in organic solvents and repeated column chromatography;
+J72 0420  3    high-voltage electrophoresis and paper chromatography
+J72 0430  1    were used in preliminary structural studies; pharmacological
+J72 0440  1    effects in vitro on isolated surviving organs and in
+J72 0440 10    vivo on blood pressure were assayed; special equipment
+J72 0460  8    required for registering respiration and for recording
+J72 0470  5    the contraction of smooth muscles under various conditions
+J72 0480  4    was developed by the Instruments Section (Victor Jackman,
+J72 0490  3    W. C. Barnes, J. F. Reiss); and enzymes which terminate
+J72 0500  3    the action of peptides such as bradykinin and perhaps
+J72 0510  1    Substance Z were studied. Experiments are in progress
+J72 0510  9    to develop ultraviolet spectrophotometric techniques
+J72 0520  4    for assaying these enzymes and for studying their sensitivity
+J72 0530  6    to metal ions. (E. G. Erdo^s, C. D. Mackey, A. G. Renfrew,
+J72 0540  7    W. B. Severs, E. M. Sloane)
+J72 0550  4    _SEED PROTEINS_
+J72 0550  6       - In a physiochemical study of seed proteins, the
+J72 0560  5    globulins of the Brazil nut have been investigated.
+J72 0570  1    In addition to the known principal globulin, excelsin,
+J72 0570  9    three other ultracentrifugally distinct components
+J72 0580  5    have been observed. A water-soluble protein of quite
+J72 0590  6    low molecular weight (ca. 10,000) has also been found
+J72 0600  4    in this system and partly characterized. (E. F. Casassa,
+J72 0610  2    H. J. Notarius)
+J72 0610  5    #CONTINUUM MECHANICS AND VISCOELASTICITY#
+J72 0620  1    _THEORY OF NON-NEWTONIAN FLUIDS_
+J72 0620  6       - On the basis of a differentiability assumption
+J72 0630  4    in function space, it is possible to prove that, for
+J72 0640  3    materials having the property that the stress is given
+J72 0640 12    by a functional of the history of the deformation gradients,
+J72 0650 10    the classical theory of infinitesimal viscoelasticity
+J72 0660  5    is valid when the deformation has been infinitesimal
+J72 0670  4    for all times in the past. By strengthening the differentiability
+J72 0680  3    assumption, it has been possible to derive second and
+J72 0690  2    higher order theories of viscoelasticity. In the second-order
+J72 0700  1    theory, one of the normal stress differences can be
+J72 0700 10    calculated from the first-order stress relaxation function.
+J72 0710  6    (B. D. Coleman with Walter Noll, Department of Mathematics,
+J72 0720  6    Carnegie Institute of Technology)
+J72 0730  1    _VISCOELASTIC MEASUREMENTS_
+J72 0730  3       - An extensive series of measurements was made on
+J72 0740  5    a high-density polyethylene in a torsion pendulum instrument
+J72 0750  2    using forced sinusoidal oscillation, free vibration,
+J72 0750  8    and creep measurements over the temperature range of
+J72 0760  8    **f to 80`C. As many as seven decades of the time
+J72 0770  9    scale were thus covered isothermally. The simple time-temperature
+J72 0780  5    equivalence valid for many amorphous systems did not
+J72 0790  4    hold here. It was possible, however, to decompose the
+J72 0800  2    compliance into a sum of a frequency-independent component
+J72 0800 11    and two viscoelastic mechanisms, each compatible with
+J72 0810  6    the Boltzmann superposition principle and with a consistent
+J72 0820  6    set of time-temperature equivalence factors. (Hershel
+J72 0830  3    Markovitz, D.J. Plazek, Haruo Nakayasu)
+J72 0840  1    #GEOCHEMISTRY#
+J72 0850  1    _TRACE ELEMENTS IN TEKTITES, METEORITES, AND RELATED
+J72 0850  1    MATERIALS_
+J72 0850  1       - The results of microanalysis of tektites (natural
+J72 0860  1    glasses of unknown origin) for gallium and germanium
+J72 0860  9    have shown that these glasses are probably produced
+J72 0870  6    from terrestrial (or less likely from lunar) matter
+J72 0880  4    by impact of a celestial body. The gallium/germanium
+J72 0890  1    ratio is higher than that for ordinary igneous, metamorphic,
+J72 0890 10    or sedimentary matter as a result of selective volatilization
+J72 0900  8    of the components of the tektite. Gallium oxide is
+J72 0910  7    less volatile than silica (the main constituent of
+J72 0920  4    tektites) and germanium oxide is more volatile. Australites
+J72 0930  1    (tektites from Australia) give the appearance of a
+J72 0930  9    second melting. In conformity with this conclusion
+J72 0940  7    a higher trace gallium content was found in the portion
+J72 0950  7    (flange) that has undergone a second melting. The silicate
+J72 0960  4    fractions of stony meteorites show gallium/germanium
+J72 0970  1    ratios similar to those of tektites because they too
+J72 0970 10    have undergone melting at some point in their histories.
+J72 0980  8       Libyan Desert silica-glass, another natural glass,
+J72 0990  4    is composed of nearly pure silica and has the same
+J72 1000  5    trace germanium content as sands in the area. The gallium
+J72 1010  1    content, however, has been enhanced five-fold. This
+J72 1010  9    glass is probably formed from Libyan Desert sands by
+J72 1020  7    comet or stony-meteorite impact.
+J72 1030  2       Nickel-iron meteorites with sufficient kinetic energy
+J72 1040  1    to produce large terrestrial-explosion craters may
+J72 1040  8    nevertheless melt only small quantities of material.
+J72 1050  5    Most of the impact energy is spent in crushing and
+J72 1060  4    fragmentation. When rapid quenching follows melting,
+J72 1070  1    impact glasses may result. These always contain metallic
+J72 1070  9    inclusions. Impact glasses not containing elemental
+J72 1080  6    nickel-iron may have been produced by stony meteorites
+J72 1090  5    or comets. No meteorites have ever been recovered from
+J72 1100  3    paleoexplosion craters, and recent craters containing
+J72 1110  1    impact glass have all been produced by metallic meteorites
+J72 1110 10    with the exception of Aouelloul crater, Adrar, Western
+J72 1120  6    Sahara Desert. This crater contains impact glass with
+J72 1130  6    no metallic inclusions and no meteoritic material has
+J72 1140  3    been recovered. (A. J. Cohen, John Anania)
+J72 1150  1    #INORGANIC CHEMISTRY#
+J72 1150  3    Preparation of a coordination compound is often accomplished
+J72 1160  2    by the simple method of reacting a metal salt with
+J72 1160 12    a ligand in a suitable solvent such as an alcohol.
+J72 1170 10    By applying this general principle, a great number
+J72 1180  5    of complex compounds of osmium, ruthenium, iridium,
+J72 1190  2    and rhenium, with triphenylphosphine, triphenylarsine,
+J72 1195  1    and triphenylstibine have been obtained in this laboratory
+J72 1200  7    during the past few years. (Lauri Vaska, E. M. Sloane,
+J72 1210  7    J. W. DiLuzio) In the absence of direct evidence to
+J72 1220  8    the contrary, decomposition of solvent alcohol and
+J72 1230  4    coordination of its fragments to the metal were not
+J72 1240  2    considered, following the above heretofore-accepted
+J72 1240  8    assumption in preparative coordination chemistry. Recent
+J72 1250  5    work with radiocarbon and deuterated alcohols as solvents,
+J72 1260  5    however, has given evidence that metal-hydrido and
+J72 1270  2    -carbonyl complexes may be readily formed by reaction
+J72 1280  1    with alcohol in some of these systems. Some of the
+J72 1280 11    previously reported compounds have thus been reformulated
+J72 1290  6    and a series of new hydrido and carbonyl compounds
+J72 1300  3    discovered, the more representative examples being
+J72 1310  1    **f, **f, **f, **f and **f (**f).
+J72 1310  8       The coordination complexes formed by transition
+J72 1320  4    metals with primary and secondary phosphines and arsines
+J72 1330  2    are being investigated (R. G. Hayter). Particular interest
+J72 1340  1    is directed towards the condensation of these ligands
+J72 1340  9    with metal halides to form substituted phosphide or
+J72 1350  7    arside complexes. During the past year, these ligands
+J72 1360  5    have yielded some unusual five-coordinate complexes
+J72 1370  1    of nickel (II) and some interesting binuclear phosphorus-bridged
+J72 1380  1    complexes of palladium (II) (see figure), as well
+J72 1380  9    as new compounds of the well-known type **f. The structures,
+J72 1390  9    properties, and reactions of these compounds are being
+J72 1400  6    studied.
+J72 1400  7       In another study chromium-substituted aluminum oxyhydroxides
+J72 1410  5    and related species, prepared homogeneously by high-temperature
+J72 1420  5    hydrolysis, are being characterized and investigated
+J72 1430  3    spectrally in the ultraviolet region with a view to
+J72 1440  2    identification and semiquantitative estimation of the
+J72 1440  8    phases formed under varying preparative conditions.
+J72 1450  5    (J. A. Laswick, N. L. Heatwole)
+J72 1460  2    #STRUCTURE AND PROPERTIES OF MACROMOLECULES#
+J72 1470  1    _ELASTICITY OF MACROMOLECULAR NETWORKS_
+J72 1470  4       - The theory of elasticity of Gaussian networks
+J72 1480  3    has been developed on a more general basis and the
+J72 1490  1    equations of state relating variables of pressure,
+J72 1490  8    volume, temperature, stress and strain have been precisely
+J72 1500  7    formulated. Simple elongation has been treated in detail.
+J72 1510  6    The various stress-temperature coefficients for constancy
+J72 1520  3    of volume and strain, constancy of pressure and strain,
+J72 1530  1    and constancy of pressure and length have been interrelated.
+J72 1530 10    The dilation accompanying elongation and the simultaneously
+J72 1540  7    developed anisotropy of compressibility have been related
+J72 1550  6    to the elongation. In continuation of these theoretical
+J72 1560  4    studies, a more precise elucidation of the effects
+J72 1570  3    of imperfections in network structure is sought. (P.
+J72 1570 11    J. Flory, C. A. J. Hoeve)
+J72 1590  1    _CHAIN CONFORMATIONS OF POLYMERIC CHAINS_
+J72 1590  1       - Recent theoretical work to calculate the dimensions
+J72 1600  1    of polymeric chains by Volkenstein and Lifson has been
+J72 1600 10    extended to include more general types of chains. The
+J72 1610  7    mean-square end-to-end distance of the polyisobutylene
+J72 1620  4    chain has been calculated in reasonable agreement with
+J72 1630  2    values deduced from viscosity data. These studies are
+J72 1630 10    being extended to different polymers to increase our
+J72 1640  8    knowledge about the hindrances to rotation around chain
+J72 1650  6    bonds. (C. A. J. Hoeve, A. A. Blumberg)
+J72 1670  1    _CRYSTALLIZATION IN POLYMERS AND COPOLYMERS_
+J72 1670  3       - The crystallization of copolymers comprising **f
+J72 1670  9    units interspersed with a minor percentage of **f is
+J72 1680  8    limited by the inability of the crystal lattice characteristic
+J72 1690  4    of the former to accommodate the bulky side group of
+J72 1700  4    the latter. Only uninterrupted sequences of the former
+J72 1710  1    are eligible for formation of crystallites. Limitations
+J72 1710  8    on the lengths of these sequences diminish the stability
+J72 1720  7    of the comparatively short crystallites which can be
+J72 1730  5    formed, and this is reflected in a broadening of the
+J72 1740  3    melting range. (Robert Chiang, J. B. Jackson, P. J.
+J72 1750  2    Flory) Carefully executed melting studies on this system
+J72 1750 10    (M. J. Richardson) permit quantitative estimation of
+J72 1760  7    the instability engendered by reduced crystallite length.
+J72 1770  6    The complex morphology of polycrystalline homopolymers
+J72 1780  3    is necessarily dependent on the same factor. Hence,
+J72 1790  2    the present studies offer a possible basis for interpretations
+J72 1800  1    in the latter field.
+J72 1800  5    _CONTRACTION OF MUSCLE_
+J72 1800  8       - Glycerinated muscle, in the presence of the physiological
+J72 1810  8    agent. (ATP) responsible for delivering energy to
+J72 1820  5    the mechanochemically active proteins of muscle, has
+J72 1830  4    been shown to undergo a contraction which is highly
+J72 1830 13    sensitive both to temperature and to solvent composition
+J72 1840  8    in mixtures of alcohols and water. Experiments carried
+J72 1850  6    out over long periods of time in order to allow establishment
+J72 1860  6    of a steady state have shown that the onset of contraction
+J72 1870  4    and its completion are confined to an interval of several
+J72 1880  2    degrees Centigrade and to a concentration range of
+J72 1880 10    only several per cent. The contraction therefore partakes
+J72 1890  7    of the character of a phase transition. While ATP
+J72 1900  6    appears to be necessary for the occurrence of contraction,
+J72 1910  4    its presence and enzymatic hydrolysis of it by the
+J72 1920  3    muscle protein myosin are not the only criteria for
+J72 1920 12    contraction. (C. A. J. Hoeve, P. J. Flory)
+J72 1940  1    _ANIONIC POLYMERIZATION_
+J72 1940  3       - One of the principal aims of anionic polymerization
+J72 1940 11    techniques is the synthesis of polymers of extremely
+J72 1950  8    narrow molecular weight distribution. A simple process
+J72 1960  5    for the preparation of nearly monodisperse polystyrene
+J72 1970  2    of predictable molecular weight has been developed.
+J72 1980  1    The preparation of such products is not new, but the
+J72 1980 11    systems heretofore employed in polymerizations have
+J72 1990  5    commanded considerable experimental skill and starting
+J72 2000  4    materials of a high purity. In the new process impurities
+J72 2010  2    present in the solvent (benzene), the monomer, and
+J72 2010 10    in the reaction system which would cause deactivation
+J72 2020  7    of propagation centers, are rendered inactive prior
+J72 2030  5    to polymerization by gradual addition of initiator,
+J72 2040  2    a mixture of butyl-lithium and telomeric styryl-lithium,
+J72 2040 11    at a temperature low enough to suppress chain growth.
+J72 2050  9    Upon completion of the purging step, additional initiator
+J72 2060  7    appropriate for the molecular weight of the sample
+J72 2070  5    desired is added, and the system is then warmed to
+J72 2080  2    the polymerization temperature, at which the reaction
+J72 2080  9    is allowed to go to completion. The predictability
+J72 2090  7    of the molecular weights was found to be within 10%
+J72 2100  6    for the polymers prepared, with **f ratios less than
+J72 2110  2    1.1.
+J72 2110  3       Contrary to observations with ethers, no apparent
+J72 2120  1    change of the reactivity of the chain ends takes place
+J72 2120 11    over considerable periods of time in benzene as solvent.

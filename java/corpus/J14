@@ -1,0 +1,252 @@
+J14 0010  1    Interestingly enough, the effect of the digitalis glycosides
+J14 0010  9    is inhibited by a high concentration of potassium in
+J14 0020  8    the incubation medium and is enhanced by the absence
+J14 0030  6    of potassium (Wolff, 1960).
+J14 0040  1    _B. ORGANIFICATION OF IODINE_
+J14 0040  3       The precise mechanism for organification of iodine
+J14 0050  1    in the thyroid is not as yet completely understood.
+J14 0050 10    However, the formation of organically bound iodine,
+J14 0060  5    mainly mono-iodotyrosine, can be accomplished in cell-free
+J14 0070  5    systems. In the absence of additions to the homogenate,
+J14 0080  2    the product formed is an iodinated particulate protein
+J14 0080 10    (Fawcett and Kirkwood, 1953; Taurog, Potter and Chaikoff,
+J14 0090  8    1955; Taurog, Potter, Tong, and Chaikoff, 1956; Serif
+J14 0100  8    and Kirkwood, 1958; De Groot and Carvalho, 1960). This
+J14 0110  8    iodoprotein does not appear to be the same as what
+J14 0120  7    is normally present in the thyroid, and there is no
+J14 0130  3    evidence so far that thyroglobulin can be iodinated
+J14 0130 11    in vitro by cell-free systems. In addition, the iodoamino
+J14 0140  9    acid formed in largest quantity in the intact thyroid
+J14 0150  6    is di-iodotyrosine. If tyrosine and a system generating
+J14 0160  5    hydrogen peroxide are added to a cell-free homogenate
+J14 0170  1    of the thyroid, large quantities of free mono-iodotyrosine
+J14 0170 10    can be formed (Alexander, 1959). It is not clear whether
+J14 0180 10    this system bears any resemblance to the in vivo iodinating
+J14 0190  9    mechanism, and a system generating peroxide has not
+J14 0200  5    been identified in thyroid tissue. On chemical grounds
+J14 0210  2    it seems most likely that iodide is first converted
+J14 0210 11    to **f and then to **f as the active iodinating species.
+J14 0220 11    In the thyroid gland it appears that proteins (chiefly
+J14 0230  7    thyroglobulin) are iodinated and that free tyrosine
+J14 0240  5    and thyronine are not iodinated. Iodination of tyrosine,
+J14 0250  2    however, is not enough for the synthesis of hormone.
+J14 0250 11    The mono- and di-iodotyrosine must be coupled to form
+J14 0260  9    tri-iodothyronine and thyroxine. The mechanism of this
+J14 0270  6    coupling has been studied in some detail with non-enzymatic
+J14 0280  4    systems in vitro and can be simulated by certain di-iodotyrosine
+J14 0290  3    analogues (Pitt-Rivers and James, 1958). There is so
+J14 0300  3    far no evidence to indicate conclusively that this
+J14 0300 11    coupling is under enzymatic control.
+J14 0310  4       The chemical nature of the iodocompounds is discussed
+J14 0320  3    below (pp. 76 et seq.).
+J14 0330  1    _C. THYROGLOBULIN SYNTHESIS_
+J14 0330  1       Little is known of the synthetic mechanisms for
+J14 0330  9    formation of thyroglobulin. Its synthesis has not been
+J14 0340  7    demonstrated in cell-free systems, nor has its synthesis
+J14 0350  5    by systems with intact thyroid cells in vitro been
+J14 0360  3    unequivocally proven. There is some reason to think
+J14 0360 11    that thyroglobulin synthesis may proceed independently
+J14 0370  5    of iodination, for in certain transplantable tumours
+J14 0380  4    of the rat thyroid containing essentially no iodinated
+J14 0390  3    thyroglobulin, a protein that appears to be thyroglobulin
+J14 0400  1    has been observed in ultracentrifuge experiments (Wolff,
+J14 0400  8    Robbins and Rall, 1959). Similar findings have been
+J14 0410  8    noted in a patient with congenital absence of the organification
+J14 0420  6    enzymes, whose thyroid tissue could only concentrate
+J14 0430  4    iodide. In addition, depending on availability of dietary
+J14 0440  3    iodine, thyroglobulin may contain varying quantities
+J14 0440  9    of iodine.
+J14 0450  2    _D. SECRETION_
+J14 0450  4       Since the circulating thyroid hormones are the amino
+J14 0460  3    acids thyroxine and tri-iodothyronine (cf. Section
+J14 0460 10    C), it is clear that some mechanism must exist in the
+J14 0470 11    thyroid gland for their release from proteins before
+J14 0480  5    secretion. The presence of several proteases and peptidases
+J14 0490  3    has been demonstrated in the thyroid. One of the proteases
+J14 0500  3    has pH optimum of about 3.7 and another of about 5.7
+J14 0510  1    (McQuillan, Stanley and Trikojus, 1954; Alpers, Robbins
+J14 0510  8    and Rall, 1955). The finding that the concentration
+J14 0520  7    of one of these proteases is increased in thyroid glands
+J14 0530  6    from TSH-treated animals suggests that this protease
+J14 0540  4    may be active in vivo. There is no conclusive evidence
+J14 0550  2    yet that either of the proteases has been prepared
+J14 0550 11    in highly purified form nor is their specificity known.
+J14 0560  8    A study of their activity on thyroglobulin has shown
+J14 0570  5    that thyroxine is not preferentially released and that
+J14 0580  3    the degradation proceeds stepwise with the formation
+J14 0590  1    of macromolecular intermediates (Alpers, Petermann
+J14 0590  6    and Rall, 1956). Besides proteolytic enzymes the thyroid
+J14 0600  6    possesses de-iodinating enzymes. A microsomal de-iodinase
+J14 0610  5    with a pH optimum of around 8, and requiring reduced
+J14 0620  2    triphosphopyridine nucleotide for activity, has been
+J14 0630  1    identified in the thyroid (Stanbury, 1957). This de-iodinating
+J14 0630 10    enzyme is effective against mono- and di-iodotyrosine,
+J14 0640  9    but does not de-iodinate thyroxine or tri-iodothyronine.
+J14 0650  5    It is assumed that the iodine released from the iodotyrosines
+J14 0660  4    remains in the iodide pool of the thyroid, where it
+J14 0670  3    is oxidised and re-incorporated into thyroglobulin.
+J14 0670 10    The thyroxine and tri-iodothyronine released by proteolysis
+J14 0680  7    and so escaping de-iodination presumably diffuse into
+J14 0690  6    the blood stream. It has been shown that thyroglobulin
+J14 0700  4    binds thyroxine, but the binding does not appear to
+J14 0710  2    be particularly strong. It has been suggested that
+J14 0710 10    the plasma thyroxine-binding proteins, which have an
+J14 0720  7    extremely high affinity for thyroxine, compete with
+J14 0730  4    thyroglobulin for thyroxine (Ingbar and Freinkel, 1957).
+J14 0740  2    _E. ANTITHYROID DRUGS_
+J14 0740  5       Antithyroid drugs are of two general types. One
+J14 0750  4    type has a small univalent anion of the
+J14 0750 12    thiocyanate-perchlorate-fluoroboride
+J14 0760  1    type. This ion inhibits thyroid hormone synthesis by
+J14 0770  2    interfering with iodide concentration in the thyroid.
+J14 0770  9    It does not appear to affect the iodinating mechanism
+J14 0780  8    as such. The other group of antithyroid agents or drugs
+J14 0790  7    is typified by thiouracil. These drugs have no effect
+J14 0800  5    on the iodide concentrating mechanism, but they inhibit
+J14 0810  2    organification. The mechanism of action of these drugs
+J14 0810 10    has not been completely worked out, but certain of
+J14 0820  8    them appear to act by reducing the oxidised form of
+J14 0830  5    iodine before it can iodinate thyroglobulin (Astwood,
+J14 0840  2    1954). On the other hand, there are a few antithyroid
+J14 0840 12    drugs of this same general type, such as resorcinol,
+J14 0850  9    possessing no reducing activity and possibly acting
+J14 0860  5    through formation of a complex with molecular iodine.
+J14 0870  2    Any of the antithyroid drugs, of either type, if given
+J14 0880  1    in large enough doses for a long period of time will
+J14 0880 12    cause goitre, owing to inhibition of thyroid hormone
+J14 0890  6    synthesis, with production of hypothyroidism. The anterior
+J14 0900  3    lobe of the pituitary then responds by an increased
+J14 0910  1    output of TSH, causing the thyroid to enlarge. The
+J14 0910 10    effect of drugs that act on the iodide-concentrating
+J14 0920  9    mechanism can be counteracted by addition of relatively
+J14 0930  5    large amounts of iodine to the diet. The antithyroid
+J14 0940  3    drugs of the thiouracil type, however, are not antagonised
+J14 0950  1    by such means. Besides those of the thiouracil and
+J14 0950 10    resorcinol types, certain antithyroid drugs have been
+J14 0960  7    found in naturally occurring foods. The most conclusively
+J14 0970  5    identified is L-5-vinyl-2-thio-oxazolidone, which was
+J14 0980  3    isolated from rutabaga (Greer, 1950). It is presumed
+J14 0990  1    to occur in other members of the Brassica family. There
+J14 0990 11    is some evidence that naturally occurring goitrogens
+J14 1000  6    may play a role in the development of goitre, particularly
+J14 1010  4    in Tasmania and Australia (Clements and Wishart, 1956).
+J14 1020  4    There it seems that the goitrogen ingested by dairy
+J14 1030  1    animals is itself inactive but is converted in the
+J14 1030 10    animal to an active goitrogen, which is then secreted
+J14 1040  6    in the milk.
+J14 1050  1    _F. DIETARY INFLUENCES_
+J14 1050  1       Besides the presence of goitrogens in the diet,
+J14 1050  9    the level of iodine itself in the diet plays a major
+J14 1060  9    role in governing the activity of the thyroid gland.
+J14 1070  5    In the experimental animal and in man gross deficiency
+J14 1080  2    in dietary iodine causes thyroid hyperplasia, hypertrophy
+J14 1080  9    and increased thyroid activity (Money, Rall and Rawson,
+J14 1100  8    1952; Stanbury, Brownell, Riggs, Perinetti, Itoiz,
+J14 1110  5    and Del Castillo, 1954). In man the normal level of
+J14 1120  7    iodine in the diet and the level necessary to prevent
+J14 1130  3    development of goitre is about 100 |mg per day. With
+J14 1140  1    lower levels, thyroid hypertrophy and increased thyroid
+J14 1140  8    blood-flow enable the thyroid to accumulate a larger
+J14 1150  8    proportion of the daily intake of iodine. Further,
+J14 1160  4    the gland is able to re-use a larger fraction of the
+J14 1170  3    thyroid hormone de-iodinated peripherally. In the presence
+J14 1170 11    of a low iodine intake, thyroglobulin labelled in vivo
+J14 1180  9    with **f is found to contain more mono-iodotyrosine
+J14 1190  6    than normal, the amounts of di-iodotyrosine and iodothyronines
+J14 1200  3    being correspondingly reduced. This appearsto result
+J14 1210  2    from both a reduced amount of the iodine substrate
+J14 1210 11    and a more rapid secretion of newly iodinated thyroglobulin.
+J14 1220  7    If the deficiency persists long enough, it is reasonable
+J14 1230  7    to suppose that the **f label will reflect the **f
+J14 1240  5    distribution in the thyroglobulin. Similar results
+J14 1250  1    might be expected from the influence of drugs or pathological
+J14 1250 11    conditions that limit iodide trapping, or organification,
+J14 1260  7    or accelerate thyroglobulin proteolysis.
+J14 1270  2    #B. THE THYROID-STIMULATING HORMONE#
+J14 1270  7    The name thyroid-stimulating hormone (TSH) has been
+J14 1280  8    given to a substance found in the anterior pituitary
+J14 1290  6    gland of all species of animal so far tested for its
+J14 1300  4    presence. The hormone has also been called thyrotrophin
+J14 1310  1    or thyrotrophic hormone. At the present time we do
+J14 1310 10    not know by what biochemical mechanism TSH acts on
+J14 1320  6    the thyroid, but for bio-assay of the hormone there
+J14 1330  5    are a number of properties by which its activity may
+J14 1340  2    be estimated, including release of iodine from the
+J14 1340 10    thyroid, increase in thyroid weight, increase in mean
+J14 1350  7    height of the follicular cells and increase in the
+J14 1360  5    thyroidal uptake of **f. Here we shall restrict discussion
+J14 1370  2    to those methods that appear sufficiently sensitive
+J14 1370  9    and precise for determining the concentration of TSH
+J14 1380  7    in blood. Brown (1959) has reviewed generally the various
+J14 1390  7    methods of assaying TSH, and the reader is referred
+J14 1400  6    to her paper for further information on the subject.
+J14 1410  3    #1. CHEMICAL CONSTITUTION AND PHYSICAL PROPERTIES OF
+J14 1410 10    PITUITARY TSH#
+J14 1420  2    As long ago as 1851 it was pointed out by Niepce (1851)
+J14 1430  1    that there is a connection between the pituitary and
+J14 1430 10    the thyroid. This connection was clarified by Smith
+J14 1440  7    and Smith (1922), who showed that saline extracts of
+J14 1450  5    fresh bovine pituitary glands could re-activate the
+J14 1460  2    atrophied thyroids of hypophysectomised tadpoles. The
+J14 1460  8    first attempts to isolate TSH came a decade later,
+J14 1470  8    when Janssen and Loeser (1931) used trichloroacetic
+J14 1480  4    acid to separate the soluble TSH from insoluble impurities.
+J14 1490  4    After their work other investigators applied salt-fractionation
+J14 1500  3    techniques to the problem, as well as fractionation
+J14 1510  1    with organic solvents, such as acetone. Albert (1949)
+J14 1510  9    has concluded that the most active preparations of
+J14 1520  7    TSH made during this period, from 1931 to 1945, were
+J14 1530  6    probably about 100 to 300 times as potent as the starting
+J14 1540  4    material. Much of this work has been reviewed by White
+J14 1550  2    (1944) and by Albert (1949). Developments up to about
+J14 1550 11    1957 have been discussed by Sonenberg (1958).
+J14 1560  6       In the last few years, the application of chromatographic
+J14 1570  5    and other modern techniques to the problem of isolating
+J14 1580  4    TSH has led to further purification (Bates and Condliffe,
+J14 1590  3    1960; Pierce, Carsten and Wynston, 1960). The most
+J14 1600  1    active preparations obtained by these two groups of
+J14 1600  9    investigators appear to be similar in potency, composition
+J14 1610  8    and physical properties.
+J14 1620  1       Two problems present themselves in considering any
+J14 1620  8    hormone in blood. First, is the circulating form of
+J14 1630  8    the hormone the same as that found in the gland where
+J14 1640  6    it is synthesised and stored? Second, what is its concentration
+J14 1650  4    in normal circumstances and in what circumstances will
+J14 1660  2    this concentration depart from the normal level and
+J14 1660 10    in which direction? It is therefore necessary to consider
+J14 1670  7    the properties of pituitary TSH if the fragmentary
+J14 1680  5    chemical information about blood TSH is to be discussed
+J14 1690  6    rationally. The importance of knowing in what chemical
+J14 1700  3    forms the hormone may exist is accentuated by the recent
+J14 1710  1    observation that there exists an abnormally long-acting
+J14 1710  9    TSH in blood drawn from many thyrotoxic patients (Adams,
+J14 1720  8    1958). Whether this abnormal TSH differs chemically
+J14 1730  5    from pituitary TSH, or is, alternatively, normal TSH
+J14 1740  5    with its period of effectiveness modified by some other
+J14 1750  4    blood constituent, cannot be decided without chemical
+J14 1760  1    study of the activity in the blood of these patients
+J14 1760 11    and a comparison of the substance responsible for the
+J14 1770  7    blood activity with pituitary TSH.
+J14 1780  2       In evaluating data on the concentration of TSH
+J14 1790  1    in blood, one must examine critically the bio-assay
+J14 1790 10    methods used to obtain them. The introduction of the
+J14 1800  8    United States Pharmacopoeia reference standard in 1952
+J14 1810  5    and the redefinition and equating of the USP and international
+J14 1820  4    units of thyroid-stimulating activity have made it
+J14 1830  3    possible to compare results published by different
+J14 1830 10    investigators since that time. We should like to re-emphasise
+J14 1840 10    the importance of stating results solely in terms of
+J14 1850  7    international units of TSH activity and of avoiding
+J14 1860  4    the re-introduction of biological units. For the most
+J14 1870  3    part, this discussion will be confined to results obtained
+J14 1870 12    since the introduction of the reference standard.
+J14 1890  1    _A. STANDARD PREPARATIONS AND UNITS OF THYROID-STIMULATING
+J14 1890  6    ACTIVITY_
+J14 1890  7       The international unit (u.), adopted to make possible
+J14 1900  6    the comparison of results from different laboratories
+J14 1910  2    (Mussett and Perry, 1955), has been defined as the
+J14 1920  1    amount of activity present in 13.5 mg of the International
+J14 1920 11    Standard Preparation. The international unit is equipotent
+J14 1930  7    with the USP unit adopted in 1952, which was defined
+J14 1940  8    as the amount of activity present in 20 mg of the
+J14 1950  7    USP reference substance.

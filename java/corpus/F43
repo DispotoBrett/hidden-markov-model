@@ -1,0 +1,223 @@
+F43 0010  1    Color was delayed until 1935, the wide screen until
+F43 0010 10    the early fifties.
+F43 0020  1       Movement itself was the chief and often the only
+F43 0020 10    attraction of the primitive movies of the nineties.
+F43 0030  8    Each film consisted of fifty feet, which gives a running
+F43 0040  6    time of about one minute on the screen. As long as
+F43 0050  4    audiences came to see the movement, there seemed little
+F43 0050 13    reason to adventure further. Motion-picture exhibitions
+F43 0060  7    took place in stores in a general atmosphere like that
+F43 0070  7    of the penny arcade which can still be found in such
+F43 0080  6    urban areas as Times Square. Brief snips of actual
+F43 0090  2    events were shown: parades, dances, street scenes.
+F43 0090  9    The sensational and frightening enjoyed popularity:
+F43 0100  5    a train rushes straight at the audience, or a great
+F43 0110  6    wave threatens to break over the seats. An early Edison
+F43 0120  3    production was The Execution of Mary, Queen of Scots.
+F43 0130  1    The unfortunate queen mounted the scaffold; the headsman
+F43 0130  9    swung his axe; the head dropped off; end of film. An
+F43 0140 11    early film by a competitor of the Wizard of Menlo Park
+F43 0150  9    simply showed a long kiss performed by two actors of
+F43 0160  6    the contemporary stage.
+F43 0160  9       In the field of entertainment there is no spur to
+F43 0170  8    financial daring so effective as audience boredom,
+F43 0180  4    and the first decade of the new device was not over
+F43 0190  1    before audiences began staying away in large numbers
+F43 0190  9    from the simple-minded, one-minute shows. In response,
+F43 0200  6    the industry allowed the discovery of the motion picture
+F43 0210  5    as a form of fiction and thus gave the movies the essential
+F43 0220  3    form they have had to this day. Despite the sheer beauty
+F43 0230  2    and spectacle of numerous documentaries, art films,
+F43 0230  9    and travelogues, despite the impressive financial success
+F43 0240  6    of such a recent development as Cinerama, the movies
+F43 0250  5    are at heart a form of fiction, like the play, the
+F43 0260  3    novel, or the short story. Moreover, the most artistically
+F43 0270  1    successful of the nonfiction films have invariably
+F43 0270  8    borrowed the narrative form from the fiction feature.
+F43 0280  6    Thus such great American documentaries as The River
+F43 0290  4    and The Plow That Broke the Plains were composed as
+F43 0300  4    visual stories rather than as illustrated lectures.
+F43 0310  1    The discovery that movies are a form of fiction was
+F43 0310 11    made in the early years of this century and it was
+F43 0320  8    made chiefly by two men, a French magician, Georges
+F43 0330  3    Melies, and an American employee of Edison, Edwin S.
+F43 0340  2    Porter. Of the two, Porter is justly the better known,
+F43 0340 12    for he went far beyond the vital finding of fiction
+F43 0350 10    for films to take the first step toward fashioning
+F43 0360  5    a language of film, toward making the motion picture
+F43 0370  2    the intricate, efficient time machine that it has remained
+F43 0380  1    since, even in the most inept hands.
+F43 0380  8    #NARRATIVE TIME AND FILM TIME#
+F43 0390  1    Melies, however, out of his professional instincts
+F43 0390  8    as a magician, discovered and made use of a number
+F43 0400  8    of illusionary techniques that remain part of the vocabulary
+F43 0410  5    of film. One of these is the "dissolve", which makes
+F43 0420  3    possible a visually smooth transition from scene to
+F43 0420 11    scene. As the first scene begins to fade, the succeeding
+F43 0430 10    scene begins to appear. For a moment or two, both scenes
+F43 0440 10    are present simultaneously, one growing weaker, one
+F43 0450  5    growing stronger. In a series of fairy tales and fantasies,
+F43 0460  3    Melies demonstrated that the film is superbly equipped
+F43 0470  1    to tell a straightforward story, with beginning, middle
+F43 0470  9    and end, complications, resolutions, climaxes, and
+F43 0480  4    conclusions. Immediately, the film improved and it
+F43 0490  5    improved because in narrative it found a content based
+F43 0500  2    on time to complement its own unbreakable connection
+F43 0500 10    with time. Physically, a movie is possible because
+F43 0510  7    a series of images is projected one at a time at such
+F43 0520  7    a speed that the eye "remembers" the one that has gone
+F43 0530  4    before even as it registers the one now appearing.
+F43 0530 13    Linking the smoothly changing images together, the
+F43 0540  7    eye itself endows them with the illusion of movement.
+F43 0550  6    The "projection" time of painting and sculpture is
+F43 0560  4    highly subjective, varying from person to person and
+F43 0570  1    even varying for a given person on different occasions.
+F43 0570 10    So is the time of the novel. The drama in the theater
+F43 0580  9    and the concert in the hall both have a fixed time,
+F43 0590  6    but the time is fixed by the director and the players,
+F43 0600  2    the conductor and the instrumentalists, subject, therefore,
+F43 0610  1    to much variation, as record collectors well know.
+F43 0610  9    The time of the motion picture is fixed absolutely.
+F43 0620  5    The film consists of a series of still, transparent
+F43 0630  2    photographs, or "frames", 35-mm.-wide. Each frame comes
+F43 0640  2    between the light and the lens and is individually
+F43 0640 11    projected on the screen, at the rate, for silent movies,
+F43 0650 10    of 16 frames per second, and, for sound films, 24 frames
+F43 0660  7    per second. This is the rate of projection; it is also
+F43 0670  4    the rate of photographing. Time is built into the motion
+F43 0680  3    picture, which cannot exist without time. Now time
+F43 0680 11    is also the concern of the fictional narrative, which
+F43 0690  8    is, at its simplest, the story of an action with, usually,
+F43 0700  8    a beginning, a middle, and an end- elements which demand
+F43 0710  6    time as the first condition for their existence. The
+F43 0720  2    "moving" picture of the train or the wave coming at
+F43 0720 12    the audience is, to be sure, more intense than a still
+F43 0730 11    picture of the same subject, but the difference is
+F43 0740  6    really one of degree; the cinematic element of time
+F43 0750  4    is merely used to increase the realism of an object
+F43 0750 14    which would still be reasonably realistic in a still
+F43 0760  9    photo. In narrative, time is essential, as it is in
+F43 0770  8    film. Almost everything about the movies that is peculiarly
+F43 0780  5    of the movies derives from a tension created and maintained
+F43 0790  3    between narrative time and film time. This discovery
+F43 0800  1    of Melies was vastly more important than his sometimes
+F43 0800 10    dazzling, magician's tricks produced on film.
+F43 0810  6       It was Porter, however, who produced the very first
+F43 0820  6    movie whose name has lived on through the half century
+F43 0830  3    of film history that has since ensued. The movie was
+F43 0830 13    The Great Train Robbery and its effects on the young
+F43 0840 10    industry and art were all but incalculable. Overnight,
+F43 0850  7    for one thing, Porter's film multiplied the standard
+F43 0860  5    running time of movies by ten. The Great Train Robbery
+F43 0870  4    is a one-reel film. One reel- from eight to twelve
+F43 0880  2    minutes- became the standard length from the year of
+F43 0880 11    Robbery, 1903, until Griffith shattered that limit
+F43 0890  7    forever with Birth of a Nation in 1915. The reel itself
+F43 0900  8    became and still is the standard of measure for the
+F43 0910  5    movies.
+F43 0910  6       The material of the Porter film is simplicity itself;
+F43 0920  4    much of it has continued to be used over the years
+F43 0930  2    and the heart of it- good guys and bad guys in the
+F43 0930 14    old West- pretty well dominated television toward the
+F43 0940  9    end of the 1950's. A band of robbers enters a railroad
+F43 0950  7    station, overpowers and ties up the telegraph operator,
+F43 0960  3    holds up the train and escapes. A posse is formed and
+F43 0970  2    pursues the robbers, who, having made their escape,
+F43 0970 10    are whooping it up with some wild, wild women in a
+F43 0980 10    honky-tonk hide-out. The robbers run from the hide-out,
+F43 0990  6    take cover in a wooded declivity, and are shot dead
+F43 1000  2    by the posse. As a finale is appended a close-up of
+F43 1000 14    one of the band taking aim and firing his revolver
+F43 1010  8    straight at the audience.
+F43 1020  1       All this is simple enough, but in telling the story
+F43 1020 11    Porter did two important things that had not been done
+F43 1030  9    before. Each scene is shot straight through, as had
+F43 1040  5    been the universal custom, from a camera fixed in a
+F43 1050  3    single position, but in the outdoor scenes, especially
+F43 1050 11    in the capture and destruction of the outlaws, Porter's
+F43 1060  8    camera position breaks, necessarily, with the camera
+F43 1070  6    position standard until then, which had been, roughly,
+F43 1080  4    that of a spectator in a center orchestra seat at a
+F43 1090  2    play. The plane of the action in the scene is not parallel
+F43 1090 14    with the plane of the film in the camera or on the
+F43 1100 11    screen. If the change, at first sight, seems minor,
+F43 1110  5    we may recall that it took the Italian painters about
+F43 1120  2    two hundred years to make an analogous change, and
+F43 1120 11    the Italian painters, by universal consent, were the
+F43 1130  7    most brilliant group of geniuses any art has seen.
+F43 1140  6    In that apparently simple shift Porter opened the way
+F43 1150  4    to the sensitive use of the camera as an instrument
+F43 1150 14    of art as well as a mechanical recording device.
+F43 1160  9       He did more than that. He revealed the potential
+F43 1170  6    value of the "cut" as the basic technique in the art
+F43 1180  5    of the film. Cutting, of course, takes place automatically
+F43 1190  1    in the creation of a film. The meaning of the word
+F43 1190 12    is quite physical, to begin with. The physical film
+F43 1200  8    is cut with a knife at the end of one complete sequence,
+F43 1210  6    and the cut edge is joined physically, by cement, to
+F43 1220  4    the cut edge of the beginning of the next sequence.
+F43 1220 14    If, as a home movie maker, you shoot the inevitable
+F43 1230 10    footage of your child taking its first steps, you have
+F43 1240  7    merely recorded an historical event. If, in preparing
+F43 1250  4    that shot for the inevitable showing to your friends,
+F43 1260  1    you interrupt the sequence to paste in a few frames
+F43 1260 11    of the child's grandmother watching this event, you
+F43 1270  6    have begun to be an artist in film; you are employing
+F43 1280  5    the basic technique of film; you are cutting.
+F43 1290  1       This is what Porter did. As the robbers leave the
+F43 1290 11    looted train, the film suddenly cuts back to the station,
+F43 1300 10    where the telegrapher's little daughter arrives with
+F43 1310  5    her father's dinner pail only to find him bound on
+F43 1320  6    the floor. She dashes around in alarm. The two events
+F43 1330  2    are taking place at the same time. Time and space have
+F43 1330 13    both become cinematic. We leap from event to event-
+F43 1340  8    including the formation of the posse- even though the
+F43 1350  7    events, in "reality" are taking place not in sequence
+F43 1360  5    but simultaneously, and not near each other but at
+F43 1370  2    a considerable distance.
+F43 1370  5       The "chase" as a standard film device probably dates
+F43 1380  4    from The Great Train Robbery, and there is a reason
+F43 1390  4    for the continued popularity of the device. The chase
+F43 1390 13    in itself is a narrative; it presumes both speed and
+F43 1400 10    urgency and it demands cutting- both from pursued to
+F43 1410  5    pursuer and from stage to stage of the journey of both.
+F43 1420  6    The simple, naked idea of one man chasing another is
+F43 1430  2    of its nature better fitted for the film than it is
+F43 1430 13    for any other form of fiction. The cowboy films, the
+F43 1440  8    cops and robbers films, and the slapstick comedy films
+F43 1450  5    culminating in an insane chase are not only catering
+F43 1460  3    to what critics may assume to be a vulgar taste for
+F43 1460 14    violence; these films and these sequences are also
+F43 1470  8    seeking out- instinctively or by design- the peculiarly
+F43 1480  6    cinematic elements of narrative.
+F43 1490  1    #THE CREATOR OF THE ART OF THE FILM: D.W.GRIFFITH#
+F43 1490 10    There still remained the need for one great film artist
+F43 1500 10    to explore the full potential of the new form and to
+F43 1510  8    make it an art. The man was D.W. Griffith. When he
+F43 1520  4    came to the movies- more or less by accident- they
+F43 1530  4    were still cheap entertainment capable of enthralling
+F43 1530 11    the unthinking for an idle few minutes. In about seven
+F43 1540  9    years Griffith either invented or first realized the
+F43 1550  6    possibilities of virtually every resource at the disposal
+F43 1560  4    of the film maker. Before he was forty Griffith had
+F43 1570  2    created the art of the film.
+F43 1570  8       Not that there had not been attempts, mostly European,
+F43 1580  4    to do exactly that. But in general the European efforts
+F43 1590  2    to make an art of the entertainment had ignored the
+F43 1590 12    slowly emerging language of the film itself. Staggeringly
+F43 1600  8    condensed versions of famous novels and famous plays
+F43 1610  7    were presented. Great actors and actresses- the most
+F43 1620  5    notable being Sarah Bernhardt- were hired to repeat
+F43 1630  3    their stage performances before the camera. In all
+F43 1630 11    of this extensive and expensive effort, the camera
+F43 1640  7    was downgraded to the status of recording instrument
+F43 1650  4    for art work produced elsewhere by the actor or by
+F43 1660  3    the author. The phonograph today, for all its high
+F43 1660 12    fidelity and stereophonic sound, is precisely what
+F43 1670  7    the early art purveyors in the movies wished to make
+F43 1680  6    of the camera. Not surprisingly, this approach did
+F43 1690  2    not work. The effort produced a valuable record of
+F43 1690 11    stage techniques in the early years of the century
+F43 1700  8    and some interesting records of great theater figures
+F43 1710  5    who would otherwise be only names. But no art at all
+F43 1720  3    was born of the art effort in the early movies.

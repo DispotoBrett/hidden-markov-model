@@ -1,0 +1,251 @@
+G30 0010  1    Copernicus did not question it, Ptolemy could not.
+G30 0010  9    Given the conceptual context within which ancient thought
+G30 0020  6    thrived, how could anyone have questioned this principle?
+G30 0030  4    The reasons for this are partly observational, partly
+G30 0040  2    philosophical, and reinforced by other aesthetic and
+G30 0050  1    cultural factors.
+G30 0050  3       First, the observational reasons. The obvious natural
+G30 0060  2    fact to ancient thinkers was the diurnal rotation of
+G30 0060 11    the heavens. Not only did constellations like Draco,
+G30 0070  8    Cepheus, and Cassiopeia spin circles around the pole,
+G30 0080  6    but stars which were not circumpolar rose and set at
+G30 0090  5    the same place on the horizon each night. Nor did a
+G30 0100  2    constellation's stars vary in brightness during the
+G30 0100  9    course of their nocturnal flights. The conclusion-
+G30 0110  5    the distances of the constellations did not vary and
+G30 0120  5    their paths were circular. Moreover, the sun's path
+G30 0130  2    over earth described a segment of a great circle; this
+G30 0130 12    was clear from the contour of the shadow traced by
+G30 0140 10    a gnomon before and after noon.
+G30 0150  2       As early as the VIth century B.C. the earth was
+G30 0160  2    seen to be spherical. Ships disappear hull-first over
+G30 0160 11    the horizon; approaching shore their masts appeared
+G30 0170  6    first. Earth, being at the center of the universe,
+G30 0180  6    would have the same shape as the latter; so, e.g. did
+G30 0190  4    Aristotle argue, although this may not be an observational
+G30 0200  1    reason in favor of circularity. The discoid shapes
+G30 0200  9    of sun and moon were also felt to indicate the shape
+G30 0210 11    of celestial things.
+G30 0220  1       In light of all this, one would require special
+G30 0220 10    reasons for saying that the paths of the heavenly bodies
+G30 0230  9    were other than circular. Why, for example, should
+G30 0240  5    the ancients have supposed the diurnal rotation of
+G30 0250  2    the heavens to be elliptical? Or oviform? Or angular?
+G30 0260  1    There were no reasons for such suppositions then. This,
+G30 0260 10    conjoined with the considerations above, made the circular
+G30 0270  8    motions of heavenly bodies appear an almost directly
+G30 0280  6    observed fact.
+G30 0280  8       Additional philosophical considerations, advanced
+G30 0290  3    notably by Aristotle, supported further the circularity
+G30 0300  3    principle. By distinguishing superlunary (celestial)
+G30 0310  1    and sublunary (terrestrial) existence, and reinforcing
+G30 0310  7    this with the four-element physics of Empedocles, Aristotle
+G30 0320  8    came to speak of the stars as perfect bodies, which
+G30 0330  7    moved in only a perfect way, viz. in a perfect circle.
+G30 0340  5       Now what is perfect motion? It must, apparently,
+G30 0350  2    be motion without termini. Because motion which begins
+G30 0350 10    and ends at discrete places would (e.g. for Aristotle)
+G30 0360  9    be incomplete. Circular motion, however, since it is
+G30 0370  7    eternal and perfectly continuous, lacks termini. It
+G30 0380  4    is never motion towards something. Only imcomplete,
+G30 0390  1    imperfect things move towards what they lack. Perfect,
+G30 0390  9    complete entities, if they move at all, do not move
+G30 0400 10    towards what they lack. They move only in accordance
+G30 0410  6    with what is in their natures. Thus, circular motion
+G30 0420  2    is itself one of the essential characteristics of completely
+G30 0430  1    perfect celestial existence.
+G30 0430  4       To return now to the four-element physics, a mixture
+G30 0440  4    of muddy, frothy water will, when standing in a jar,
+G30 0450  3    separate out with earth at the bottom, water on top,
+G30 0450 13    and the air on top of that. A candle alight in the
+G30 0460 11    air directs its flame and smoke upwards. This gives
+G30 0470  5    a clue to the cosmical order of elements. Thus earth
+G30 0480  3    has fallen to the center of the universe. It is covered
+G30 0480 14    (partly) with water, air is atop of that. Pure fire
+G30 0490 10    (the stars) is in the heavens. When combined with the
+G30 0500  7    metaphysical notion that pure forms of this universe
+G30 0510  4    are best appreciated when least embodied in a material
+G30 0520  1    substratum, it becomes clear that while earth will
+G30 0520  9    be dross on a scale of material-formal ratios, celestial
+G30 0530  7    bodies will be of a subtle, quickened, ethereal existence,
+G30 0540  4    in whose embodiment pure form will be the dominant
+G30 0550  3    component and matter will be absent or remain subsidiary.
+G30 0560  1       The stars constitute an order of existence different
+G30 0560  9    from what we encounter on earth. This is clear when
+G30 0570  9    one distinguishes the types of motion appropriate to
+G30 0580  5    both regions. A projectile shot up from earth returns
+G30 0590  2    rectlinearly to its 'natural' place of rest. But the
+G30 0600  1    natural condition for the heavenly bodies is neither
+G30 0600  9    rest, nor rectilinear motion. Being less encumbered
+G30 0610  5    by material embodiments they partake more of what is
+G30 0620  5    divine. Their motion will be eternal and perfect.
+G30 0630  1       Let us re-examine the publicized contrasts between
+G30 0630  9    Ptolemaic and Copernican astronomy. Bluntly, there
+G30 0640  6    never was a Ptolemaic system of astronomy. Copernicus'
+G30 0650  4    achievement was to have invented systematic astronomy.
+G30 0660  3    The Almagest and the Hypotheses outline Ptolemy's conception
+G30 0670  3    of his own task as the provision of computational tables,
+G30 0680  2    independent calculating devices for the prediction
+G30 0690  1    of future planetary perturbations. Indeed, in the Halma
+G30 0690  9    edition of Theon's presentation of the Hypotheses there
+G30 0700  6    is a chart setting out (under six distinct headings)
+G30 0710  6    otherwise unrelated diagrams for describing the planetary
+G30 0720  3    motions. No attempt is made by Ptolemy to weld into
+G30 0730  2    a single scheme (a la Aristotle), these independent
+G30 0730 10    predicting-machines. They all have this in common:
+G30 0740  7    the earth is situated near the center of the deferent.
+G30 0750  7    But that one should superimpose all these charts, run
+G30 0760  4    a pin through the common point, and then scale each
+G30 0770  1    planetary deferent larger and smaller (to keep the
+G30 0770  9    epicycles from 'bumping'), this is contrary to any
+G30 0780  6    intention Ptolemy ever expresses. He might even suppose
+G30 0790  5    the planets to move at infinity. Ptolemy's problem
+G30 0800  2    is to forecast where, against the inverted bowl of
+G30 0800 11    night, some particular light will be found at future
+G30 0810  8    times. His problem concerns longitudes, latitudes,
+G30 0820  3    and angular velocities. The distances of these points
+G30 0830  2    of light is a problem he cannot master, beyond crude
+G30 0830 12    conjectures as to the orderings of the planetary orbits
+G30 0840  9    viewed outward from earth. But none of this has prevented
+G30 0850  7    scientists, philosophers, and even historians of science,
+G30 0860  4    from speaking of the Ptolemaic system, in contrast
+G30 0870  2    to the Copernican. This is a mistake. It is engendered
+G30 0870 12    by confounding the Aristotelian cosmology in the Almagest
+G30 0880  8    with the geocentric astronomy.
+G30 0890  3       Ptolemy recurrently denies that he could ever explain
+G30 0900  3    planetary motion. This is what necessitates the nonsystematic
+G30 0910  1    character of his astronomy. So when textbooks, like
+G30 0910  9    that of Baker set out drawings of the 'Ptolemaic System',
+G30 0920 10    complete with earth in the center and the seven heavenly
+G30 0930 10    bodies epicyclically arranged on their several deferents,
+G30 0940  5    we have nothing but a misleading XXth-century idea
+G30 0950  2    of what never existed historically.
+G30 0950  7       It is the chief merit in Copernicus' work that all
+G30 0960  9    his planetary calculations are interdependent. He cannot,
+G30 0970  5    e.g. compute the retrograde arc traveled by Mars, without
+G30 0980  6    also making suppositions about the earth's own motion.
+G30 0990  4    He cannot describe eclipses without entertaining some
+G30 1000  2    form of a three-body problem. In Ptolemaic terms, however,
+G30 1010  9    eclipses and retrograde motion were phenomena simpliciter,
+G30 1020  7    to be explained directly as possible resultants of
+G30 1030  6    epicyclical combinations. In a systematic astronomy,
+G30 1040  3    like that of Copernicus, retrogradations become part
+G30 1050  2    of the conceptual structure of the system; they are
+G30 1050 11    no longer a puzzling aspect of intricately variable,
+G30 1060  7    local planetary motions.
+G30 1070  1       Another contrast stressed when discussing Ptolemaic
+G30 1070  7    vs. Copernican astronomy, turns on the idea of simplicity.
+G30 1080  9    It is often stated that Copernican astronomy is 'simpler'
+G30 1090  7    than Ptolemaic. Some even say that this is the reason
+G30 1100  9    for the ultimate acceptance of the former. Thus, Margenau
+G30 1110  5    remarks: "A large number of unrelated epicycles was
+G30 1120  3    needed to explain the observations, but otherwise the
+G30 1130  1    [Ptolemaic] system served well and with quantitative
+G30 1130  8    precision. Copernicus, by placing the sun at the center
+G30 1140  8    of the planetary universe, was able to reduce the number
+G30 1150  7    of epicycles from eighty-three to seventeen. Historical
+G30 1160  2    records indicate that Copernicus was unaware of the
+G30 1170  1    fundamental aspects of his so-called 'revolution',
+G30 1170  8    unaware perhaps of its historical importance, he rested
+G30 1180  7    content with having produced a simpler scheme for prediction.
+G30 1190  6    As an illustration of the principle of simplicity the
+G30 1200  4    heliocentric discovery has a peculiar appeal because
+G30 1210  1    it allows simplicity to be arithmetized; it involves
+G30 1210  9    a reduction in the number of epicycles from eighty-three
+G30 1220  9    to seventeen".
+G30 1230  1       Without careful qualification this can be misleading.
+G30 1230  8    If in any one calculation Ptolemy had had to invoke
+G30 1240  7    83 epicycles all at once, while Copernicus never required
+G30 1250  5    more than one third this number, then (in the sense
+G30 1260  4    obvious to Margenau) Ptolemaic astronomy would be simpler
+G30 1270  1    than Copernican. But no single planetary problem ever
+G30 1270  9    required of Ptolemy more than six epicycles at one
+G30 1280  9    time. This, of course, results from the non-systematic,
+G30 1290  5    'cellular' character of Ptolemaic theory. Calculations
+G30 1300  3    within the Copernican framework always raised questions
+G30 1310  1    about planetary configurations. These could be met
+G30 1310  8    only by considering the dynamical elements of several
+G30 1320  6    planets at one time. This is more ambitious than Ptolemy
+G30 1330  6    is ever required to be when he faces his isolated problems.
+G30 1340  4    Thus, in no ordinary sense of 'simplicity' is the Ptolemaic
+G30 1350  4    theory simpler than the Copernican. The latter required
+G30 1360  1    juggling several elements simultaneously. This was
+G30 1360  7    not simpler but much more difficult than exercises
+G30 1370  7    within Ptolemy's astronomy.
+G30 1380  1       Analogously, anyone who argues that Einstein's theory
+G30 1380  8    of gravitation is simpler than Newton's, must say rather
+G30 1390  9    more to explain how it is that the latter is mastered
+G30 1400  9    by student-physicists, while the former can be managed
+G30 1410  6    (with difficulty) only by accomplished experts.
+G30 1420  1       In a sense, Einstein's theory is simpler than Newton's,
+G30 1430  1    and there is a corresponding sense in which Copernicus'
+G30 1430 10    theory is simpler than Ptolemy's. But 'simplicity'
+G30 1440  7    here refers to systematic simplicity. The number of
+G30 1450  6    primitive ideas in systematically-simple theories is
+G30 1460  3    reduced to a minimum. The axioms required to make the
+G30 1470  3    theoretical machinery operate are set out tersely and
+G30 1470 11    powerfully, so that all permissible operations within
+G30 1480  7    the theory can be traced rigorously back to these axioms,
+G30 1490  6    rules, and primitive notions. This characterizes Euclid's
+G30 1500  3    formulation of geometry, but not Ptolemy's astronomy.
+G30 1510  2    There are in the Almagest no rules for determining
+G30 1520  1    in advance whether a new epicycle will be required
+G30 1520 10    for dealing with abberations in lunar, solar, or planetary
+G30 1530  7    behavior. The strongest appeal of the Copernican formulation
+G30 1540  6    consisted in just this: ideally, the justification
+G30 1550  3    for dealing with special problems in particular ways
+G30 1560  2    is completely set out in the basic 'rules' of the theory.
+G30 1560 13    The lower-level hypotheses are never 'ad hoc', never
+G30 1570  9    introduced ex post facto just to sweep up within the
+G30 1580  9    theory some recalcitrant datum. Copernicus, to an extent
+G30 1590  5    unachieved by Ptolemy, approximated to Euclid's vision.
+G30 1600  3    De Revolutionibus is not just a collection of facts
+G30 1610  2    and techniques. It is an organized system of these
+G30 1610 11    things. Solving astronomical problems requires, for
+G30 1620  5    Copernicus, not a random search of unrelated tables,
+G30 1630  4    but a regular employment of the rules defining the
+G30 1640  2    entire discipline.
+G30 1640  4       Hence, noting the simplicity achieved in Copernicus'
+G30 1650  3    formulation does not provide another reason for the
+G30 1660  2    acceptance of De Revolutionibus, another reason beyond
+G30 1660  9    its systematic superiority. It provides exactly the
+G30 1670  7    same reason.
+G30 1680  1       1543 A.D. is often venerated as the birthday of
+G30 1680 10    the scientific revolution. It is really the funeral
+G30 1690  7    day of scholastic science. Granted, the cosmological,
+G30 1700  3    philosophical, and cultural reverberations initiated
+G30 1710  2    by the De Revolutionibus were felt with increasing
+G30 1710 10    violence during the 300 years to follow. But, considered
+G30 1720  9    within technical astronomy, a different pattern can
+G30 1730  6    be traced.
+G30 1730  8       In what does the dissatisfaction of Copernicus-the-astronomer
+G30 1740  6    consist? What in the Almagest draws his fire? Geocentricism
+G30 1750  6    per se? No. The formal displacement of the geocentric
+G30 1760  6    principle far from being Copernicus' primary concern,
+G30 1770  3    was introduced only to resolve what seemed to him intolerable
+G30 1780  4    in orthodox astronomy, namely, the 'unphysical' triplication
+G30 1790  2    of centric reference-points: one center from which
+G30 1800  1    the planet's distances were calculated, another around
+G30 1800  8    which planetary velocities were computed, and still
+G30 1810  6    a third center (the earth) from which the observations
+G30 1820  4    originated. This arrangement was for Copernicus literally
+G30 1830  2    monstrous: "With [the Ptolemaists] it is as though
+G30 1840  1    an artist were to gather the hands, feet, head and
+G30 1840 11    other members for his images from divers models, each
+G30 1850  8    part excellently drawn, but not related to a single
+G30 1860  5    body; and since they in no way match each other, the
+G30 1870  2    result would be a monster rather than a man".
+G30 1870 11       Copernicus required a systematically integrated,
+G30 1880  5    physically intelligible astronomy. His objective was,
+G30 1890  4    essentially, to repair those aspects of orthodox astronomy
+G30 1900  2    responsible for its deficiencies in achieving these
+G30 1900  9    ends. That such deficiencies existed within Ptolemy's
+G30 1910  7    theory was not discovered de novo by Copernicus. The
+G30 1920  7    critical, rigorous examinations of Nicholas of Cusa
+G30 1930  5    and Nicholas of Oresme provided the context (a late
+G30 1940  3    medieval context) for Nicholas Copernicus' own work.
+G30 1950  1    The latter looked backward upon inherited deficiencies.
+G30 1950  8    Without abandoning too much, Copernicus sought to make
+G30 1960  7    orthodox astronomy systematically and mechanically
+G30 1970  3    acceptable. He did not think himself to be firing the
+G30 1980  3    first shot of an intellectual revolution.

@@ -1,0 +1,262 @@
+H24 0010  1    If you elect to use the Standard Deduction or the Tax
+H24 0010 12    Table, and later find you should have itemized your
+H24 0020  8    deductions, you may do so by filing an amended return
+H24 0030  5    within the time prescribed for filing a claim for refund.
+H24 0040  3    See You May Claim a Refund, Page 135. The same is true
+H24 0050  3    if you have itemized your deductions and later decide
+H24 0050 12    you should have used the Standard Deduction or Tax
+H24 0060  8    Table. The words amended return should be plainly written
+H24 0070  6    across the top of such return.
+H24 0080  1    _WHEN AND WHERE TO FILE_
+H24 0080  6       April 15 is usually the final date for filing income
+H24 0090  4    tax returns for most people because they use the calendar
+H24 0100  1    year ending on December 31. If you use a fiscal year,
+H24 0100 12    a year ending on the last day of any month other than
+H24 0110 10    December, your return is due on or before the 15th
+H24 0120  7    day of the 4th month after the close of your tax year.
+H24 0130  3    _SATURDAY, SUNDAY, OR HOLIDAY._
+H24 0130  7       If the last day (due date) for performing any act
+H24 0140  6    for tax purposes, such as filing a return or making
+H24 0150  4    a tax payment, etc., falls on Saturday, Sunday, or
+H24 0160  2    a legal holiday, you may perform that act on the next
+H24 0160 13    succeeding day which is not a Saturday, Sunday, or
+H24 0170  8    legal holiday. Since April 15, 1962, is on Sunday your
+H24 0180  6    return for the calendar year 1961 will be timely filed
+H24 0190  3    if it is filed on or before Monday, April 16, 1962.
+H24 0200  1       IF YOU MAIL A RETURN or tax payment, you must place
+H24 0200 12    it in the mails in ample time to reach the district
+H24 0210 11    director on or before the due date.
+H24 0220  4    _DECLARATION OF ESTIMATED TAX._
+H24 0220  8       If you were required to file a declaration of estimated
+H24 0230  7    tax for the calendar year 1961, it is not necessary
+H24 0240  5    to pay the fourth installment otherwise due on January
+H24 0250  1    15, 1962, if you file your income tax return Form 1040,
+H24 0250 12    and pay your tax in full for the calendar year 1961
+H24 0260 10    by January 31, 1962. The filing of an original or amended
+H24 0270  7    declaration, otherwise due on January 15, 1962, is
+H24 0280  4    also waived, if you file your Form 1040 for 1961 and
+H24 0290  1    pay the full tax by January 31, 1962. Farmers, for
+H24 0290 11    these purposes, have until February 15, 1962, to file
+H24 0300  8    Form 1040 and pay the tax in full for the calendar
+H24 0310  5    year 1961. Fiscal year taxpayers have until the last
+H24 0320  2    day of the first month following the close of the fiscal
+H24 0320 13    year (farmers until the 15th day of the 2d month).
+H24 0330  9    See Chapter 38.
+H24 0340  1       Nonresident aliens living in Canada or Mexico who
+H24 0340  8    earn wages in the United States may be subject to withholding
+H24 0350  9    of tax on their wages, the same as if they were citizens
+H24 0360  8    of the United States. Their United States tax returns
+H24 0370  5    are due April 16, 1962. However, if their United States
+H24 0380  3    income is not subject to the withholding of tax on
+H24 0380 13    wages, their returns are due June 15, 1962, if they
+H24 0390 10    use a calendar year, or the 15th day of the 6th month
+H24 0400  9    after the close of their fiscal year.
+H24 0410  1    _NONRESIDENT ALIENS IN PUERTO RICO._
+H24 0410  6       If you are a nonresident alien and a resident of
+H24 0420  6    Puerto Rico, your return is also due June 15, 1962,
+H24 0430  3    or the 15th day of the 6th month after the close of
+H24 0430 15    your fiscal year.
+H24 0440  2       IF A TAXPAYER DIES, the executor, administrator,
+H24 0450  1    or legal representative must file the final return
+H24 0450  9    for the decedent on or before the 15th day of the 4th
+H24 0460 10    month following the close of the deceased taxpayer's
+H24 0470  4    normal tax year. Suppose John Jones, who, for 1960,
+H24 0480  3    filed on the basis of a calendar year, died June 20,
+H24 0480 14    1961. His return for the period January 1 to June 20,
+H24 0490 11    1961, is due April 16, 1962.
+H24 0500  3       The return for a decedent may also serve as a claim
+H24 0510  1    for refund of an overpayment of tax. In such a case,
+H24 0510 12    Form 1310 should be completed and attached to the return.
+H24 0520  8    This form may be obtained from the local office of
+H24 0530  6    your district director.
+H24 0530  9       RETURNS OF ESTATES OR TRUSTS are due on or before
+H24 0540 10    the 15th day of the 4th month after the close of the
+H24 0550  8    tax year.
+H24 0560  1    _EXTENSIONS OF TIME FOR FILING._
+H24 0560  2       Under unusual circumstances a resident individual
+H24 0560  8    may be granted an extension of time to file a return.
+H24 0570 10    You may apply for such an extension by filing Form
+H24 0580  6    2688, Application For Extension Of Time To File, with
+H24 0590  5    the District Director of Internal Revenue for your
+H24 0600  3    district, or you may make your application in a letter.
+H24 0600 13    Your application must include the following information:
+H24 0610  7    (1) your reasons for requesting an extension, (2) whether
+H24 0620  7    you filed timely income tax returns for the 3 preceding
+H24 0630  6    years, and (3) whether you were required to file an
+H24 0640  4    estimated return for the year, and if so whether you
+H24 0640 14    did file and have paid the estimated tax payments on
+H24 0650  9    or before the due dates. Any failure to file timely
+H24 0660  6    returns or make estimated tax payments when due must
+H24 0670  4    be fully explained. Extensions are not granted as a
+H24 0670 13    matter of course, and the reasons for your request
+H24 0680  9    must be substantial. If you are unable to sign the
+H24 0690  7    request, because of illness or other good cause, another
+H24 0700  3    person who stands in close personal or business relationship
+H24 0710  1    to you may sign the request on your behalf, stating
+H24 0710 11    the reason why you are unable to sign. You should make
+H24 0720 10    any request for an extension early so that if it is
+H24 0730  7    refused, your return may still be on time. See also
+H24 0740  3    Interest on Unpaid Taxes, below.
+H24 0750  1    _EXTENSIONS WHILE ABROAD._
+H24 0750  2       Citizens of the United States who, on April 15,
+H24 0750 11    are not in the United States or Puerto Rico, are allowed
+H24 0760 10    an extension of time until June 15 for filing the return
+H24 0770  9    for the preceding calendar year. An extension of 2
+H24 0780  6    months beyond the regular due date for filing is also
+H24 0790  3    available to taxpayers making returns for a fiscal
+H24 0790 11    year.
+H24 0800  1    _ALASKA AND HAWAII._
+H24 0800  3       Taxpayers residing or traveling in Alaska are also
+H24 0810  1    allowed this extension of time for filing, but those
+H24 0810 10    residing or traveling in Hawaii are not allowed this
+H24 0820  7    automatic extension.
+H24 0830  1       Military or Naval Personnel on duty in Alaska or
+H24 0830 10    outside the United States and Puerto Rico are also
+H24 0840  9    allowed this automatic extension of time for filing
+H24 0850  6    their returns.
+H24 0850  8       You must attach a statement to your return, if you
+H24 0860  8    take advantage of this automatic extension, showing
+H24 0880  3    that you were in Alaska or were outside the United
+H24 0890  1    States or Puerto Rico on April 15 or other due date.
+H24 0900  1    _INTEREST ON UNPAID TAXES._
+H24 0900  4       Interest at the rate of 6% a year must be paid on
+H24 0910  2    taxes that are not paid on or before their due date.
+H24 0910 13    Such interest must be paid even though an extension
+H24 0920  8    of time for filing is granted.
+H24 0930  1    _WHEN PAYMENT IS DUE._
+H24 0930  5       If your computation on Form 1040 or Form 1040A
+H24 0940  3    shows you owe additional tax, it should be remitted
+H24 0950  1    with your return unless you owe less than $1, in which
+H24 0950 12    case it is forgiven. If payment is by cash, you should
+H24 0960  8    ask for a receipt. If you file Form 1040A and the
+H24 0970  5    District Director computes your tax, you will be sent
+H24 0980  4    a bill if additional tax is due. This bill should be
+H24 0980 15    paid within 30 days.
+H24 0990  4    _PAYMENT BY CHECK OR MONEY ORDER._
+H24 0990 10       Whether the check is certified or uncertified, the
+H24 1000  7    tax is not paid until the check is paid. If the check
+H24 1010  6    is not good and the April 15 or other due date deadline
+H24 1020  2    elapses, additions to the tax may be incurred. Furthermore,
+H24 1030  1    a bad check may subject the maker to certain penalties.
+H24 1030 11    All checks and money orders should be made payable
+H24 1040  8    to Internal Revenue Service.
+H24 1050  1    _REFUNDS._
+H24 1050  2       An overpayment of income and social security taxes
+H24 1060  1    entitles you to a refund unless you indicate on the
+H24 1060 11    return that the overpayment should be applied to your
+H24 1070  7    succeeding year's estimated tax.
+H24 1080  2       If you file Form 1040A and the District Director
+H24 1090  1    computes your tax, any refund to which you are entitled
+H24 1090 11    will be mailed to you.
+H24 1100  4       If you file a Form 1040, you should indicate in
+H24 1110  2    the place provided that there is an overpayment of
+H24 1110 11    tax and the amount you want refunded and the amount
+H24 1120  8    you want credited against your estimated tax.
+H24 1130  3       Refunds of less than $1 will not be made unless
+H24 1140  2    you attach a separate application to your return requesting
+H24 1140 11    such a refund.
+H24 1150  3    _WHERE TO FILE._
+H24 1150  6       Send your return to the Director of Internal Revenue
+H24 1160  4    for the district in which you have your legal residence
+H24 1170  1    or principal place of business. If you have neither
+H24 1170 10    a legal residence nor a principal place of business
+H24 1180  7    in any internal revenue district, your return should
+H24 1190  4    be filed with the District Director of Internal Revenue,
+H24 1200  2    Baltimore 2, Md. If your principal place of abode
+H24 1210  1    for the tax year is outside the United States (including
+H24 1210 11    Alaska and Hawaii), Puerto Rico, or the Virgin Islands
+H24 1220  9    and you have no legal residence or principal place
+H24 1230  5    of business in any internal revenue district in the
+H24 1240  4    United States, you should file your return with the
+H24 1250  1    Office of International Operations, Internal Revenue
+H24 1250  7    Service, Washington 25, D.C.
+H24 1260  3    _ADJUSTED GROSS INCOME_
+H24 1260  6       The deductions allowed in determining Adjusted Gross
+H24 1270  6    Income put all taxpayers on a comparable basis. It
+H24 1280  5    is the amount you enter on line 9, page 1 of Form 1040.
+H24 1290  2    Some deductions are subtracted from Gross Income to
+H24 1290 10    determine Adjusted Gross Income. Other deductions are
+H24 1300  7    subtracted only from Adjusted Gross Income in arriving
+H24 1310  7    at Taxable Income.
+H24 1320  1       TO COMPUTE YOUR ADJUSTED GROSS INCOME you total
+H24 1320  9    all items of income. (See Chapter 6.) From this amount
+H24 1330  9    deduct the items indicated below.
+H24 1340  2       Businessmen deduct all ordinary and necessary expenses
+H24 1350  2    attributable to a trade or business.
+H24 1360  1    _RENTS OR ROYALTIES._
+H24 1360  1       If you hold property for the production of rents
+H24 1360 10    or royalties you subtract, in computing Adjusted Gross
+H24 1370  6    Income, ordinary and necessary expenses and certain
+H24 1380  4    other deductions attributable to the property. (See
+H24 1390  2    Chapter 15.)
+H24 1390  4       Outside salesmen deduct all expenses attributable
+H24 1400  2    to earning a salary, commission, or other compensation.
+H24 1410  1    (See Chapter 10.)
+H24 1410  4       Employees deduct expenses of travel, meals and lodging
+H24 1420  4    while away from home in connection with the performance
+H24 1430  1    of their services as employees. They also deduct transportation
+H24 1440  1    expenses incurred in connection with the performance
+H24 1440  8    of services as employees even though they are not away
+H24 1450  7    from home. (See Chapter 12.) If your employer reimburses
+H24 1460  5    you for expenses incurred, you deduct such expenses
+H24 1470  2    if they otherwise qualify. (See Chapter 10.)
+H24 1470  9       Sick pay, if included in your Gross Income, is deducted
+H24 1480 10    in arriving at Adjusted Gross Income. If your sick
+H24 1490  8    pay is not included in your Gross Income, you may not
+H24 1500  6    deduct it. (See Chapter 9.)
+H24 1510  1    _INCOME FROM ESTATES AND TRUSTS._
+H24 1510  5       If you are a life tenant, you deduct allowable depreciation
+H24 1520  2    and depletion. If you are an income beneficiary of
+H24 1530  1    property held in trust or an heir, legatee, or devisee,
+H24 1530 11    you may deduct allowable depreciation and depletion,
+H24 1540  5    if not deductible by the estate or trust.
+H24 1550  3       Deductible losses on sales or exchanges of property
+H24 1560  2    are allowable in determining your Adjusted Gross Income.
+H24 1560 10    (See Chapter 20.)
+H24 1570  3    _50% OF CAPITAL GAINS._
+H24 1570  7       You also deduct 50% of the excess of net long-term
+H24 1580  8    capital gains over net short-term capital losses in
+H24 1590  3    determining Adjusted Gross Income. (See Chapter 24.)
+H24 1600  1    _OTHER DEDUCTIONS._
+H24 1600  3       Certain other deductions are not allowed in determining
+H24 1610  2    Adjusted Gross Income. They may be claimed only by
+H24 1610 11    itemizing them on page 2 of Form 1040. These deductions
+H24 1620 10    may not be claimed if you elect to use the Standard
+H24 1630  8    Deduction or tax Table. (See Chapters 30 through 37.)
+H24 1640  5    #2. MINORS MINORS MUST ALSO FILE RETURNS IF THEY EARN
+H24 1650  4    $600 OR MORE DURING THE YEAR.#
+H24 1650 10    A MINOR IS subject to tax on his own earnings even
+H24 1660  8    though his parent may, under local law, have the right
+H24 1670  5    to them and might actually have received the money.
+H24 1680  1    His income is not required to be included in the return
+H24 1680 12    of his parent.
+H24 1690  1       A MINOR CHILD IS ALLOWED A PERSONAL EXEMPTION of
+H24 1700  2    $600 on his own return regardless of how much money
+H24 1700 12    he may earn.
+H24 1710  1    _EXEMPTION ALSO ALLOWED PARENT._
+H24 1710  4       If your child is under 19 or is a student you may
+H24 1720  4    also claim an exemption for him if he qualifies as
+H24 1720 14    your dependent, even though he earns $600 or more.
+H24 1730  9    See Chapter 5.
+H24 1740  1    _EXAMPLE._
+H24 1740  1       Your 16 year old son earned $720 in 1961. You spent
+H24 1740 12    $800 for his support. Since he had gross income of
+H24 1750  9    $600 or more, he must file a return in which he may
+H24 1760  7    claim an exemption deduction of $600. Since you contributed
+H24 1770  3    more than half of his support, you may also claim an
+H24 1780  1    exemption for him on your return.
+H24 1780  7    _HE MAY GET A TAX REFUND._
+H24 1780 13       A minor who has gross income of less than $600 is
+H24 1790 11    entitled to a refund if income tax was withheld from
+H24 1800  6    his wages. Generally, the refund may be obtained by
+H24 1810  3    filing Form 1040A accompanied by the withholding statement
+H24 1820  1    (Form W-2). If he had income other than wages subject
+H24 1820 12    to withholding, he may be required to file Form 1040.
+H24 1830 10    See Chapter 1.
+H24 1840  1       IF YOUR CHILD WORKS FOR YOU, you may deduct reasonable
+H24 1850  1    wages you paid to him for services he rendered in your
+H24 1850 12    business. You may deduct these payments even though
+H24 1860  8    your child uses the money to purchase his own clothing
+H24 1870  5    or other necessities which you are normally obligated
+H24 1880  2    to furnish him, and even though you may be entitled
+H24 1880 12    to his services.
