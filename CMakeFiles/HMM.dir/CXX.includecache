@@ -28,11 +28,3 @@ vector
 map
 -
 
-/home/brett/Projects/hidden-markov-model/main.cpp
-iostream
--
-fstream
--
-HiddenMarkovModel.h
-/home/brett/Projects/hidden-markov-model/HiddenMarkovModel.h
-

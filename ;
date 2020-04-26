@@ -132,6 +132,7 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
            betas[t][i] = 0;
            for(int j = 0; j < N; j++)
            {
+               std::cout<<betas[t+1][j]<<std::endl;; 
                betas[t][i] += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
            }
            //Scale beta[t][i] with same factor as alphas[t][i]
@@ -278,6 +279,7 @@ std::pair<Matrix, Order3Tensor>HiddenMarkovModel::computeDiGammas(const Matrix &
         for(int i = 0; i < N; i++)
             for(int j = 0; j < N ; j++)
                 denom += (alphas[t][i] * transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t+1][j]);
+		std::cout<<denom<<std::endl;
 
         for(int i = 0; i < N; i++)
         {

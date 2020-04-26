@@ -26,10 +26,10 @@ int main()
     ObservationSequence O = {0, 1, 0, 2};
     double score = hmm.scoreStateSequence(O);
     std::cout << "Score: " << score << std::endl;
-    /*StateSequence optimal = hmm.optimalStateSequence(O);
+    StateSequence optimal = hmm.optimalStateSequence(O);
 
     for(auto i: optimal)
-        std::cout << i << " ";*/
+        std::cout << i << " ";
 
 /*
 
