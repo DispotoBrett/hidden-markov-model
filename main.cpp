@@ -9,7 +9,7 @@ Observation returnObservation(char x)
 
 int main()
 {
-    StochasticMatrix a = {
+/*    StochasticMatrix a = {
             {.7, .3},
             {.4, .6}
     };
@@ -31,7 +31,7 @@ int main()
     for(auto i: optimal)
         std::cout << i << " ";
 
-
+	*/
 
     int HEADER_SIZE = 15;
     std::string line;

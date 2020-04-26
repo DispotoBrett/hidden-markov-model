@@ -70,6 +70,8 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
     //Compute a_0(i)
     scalingFactors[0] = 0;
+	std::cout<< initialState.size() <<" is the InitalState size. " <<std::endl;
+	std::cout<< N <<" is N. " <<std::endl;
     for (int i = 0; i < N; i++)
     {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
@@ -191,14 +193,12 @@ HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
             transitionRow[j] = 1 / randNum;
             sum +=  transitionRow[j];
         }
-
         transitionMatrix[i] = transitionRow;
 
         //Initialize observation matrix
         StochasticRow observationRow(M);
         for(int j = 0; j < M; j++ )
         {
-
             observationRow[j] = 1 / std::abs(randM(re));
         }
 

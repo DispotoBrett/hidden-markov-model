@@ -1,9 +1,6 @@
 import java.util.*;
 import java.text.DecimalFormat;
 import java.io.*;
-import java.util.concurrent.ThreadLocalRandom;
-
-
 
 //Note: TODO tags are current
 class HiddenMarkovModel
@@ -14,7 +11,6 @@ class HiddenMarkovModel
 	ArrayList<Double> scalingFactors;
 	ArrayList<ArrayList<Double>> gammas;
 	ArrayList<ArrayList<ArrayList<Double>>> digammas;
-	int M, N;
 
 	public HiddenMarkovModel(ArrayList<ArrayList<Double>> A, ArrayList<ArrayList<Double>> B, ArrayList<Double> pi)
 	{
@@ -26,26 +22,24 @@ class HiddenMarkovModel
 
 	public double scoreStateSequence(ArrayList<Integer> O)
 	{
-		N = O.size();
 		alphaPass(O);
 		return Math.exp(computeLogProb(O));
 	}
 
 	public ArrayList<ArrayList<Double>> alphaPass(ArrayList<Integer> O)
 	{
-		//int N = observationMat.size();
+		int N = observationMat.size();
 		int T = O.size();
 		
 		ArrayList<ArrayList<Double>> alphas = new ArrayList<ArrayList<Double>>(T);
 
-		for(int i = 0; i < T; i++){
-			alphas.add(new ArrayList<Double>());
-		}		
+		for(int i = 0; i < T; i++)
+			alphas.add(new ArrayList<Double>(T));
+		
+		
 		//Compute a_0(i)
 		scalingFactors.add(0, 0.0);
 
-		System.out.println(N + " is N");
-		System.out.println(initialState.size() + " is initialState.size()");
 		for (int i = 0; i < N; i++)
 		{
 		    alphas.get(0).add(i, initialState.get(i) * observationMat.get(i).get(O.get(0)));  //equivalent to pi_i * b_i(O_0)
@@ -100,14 +94,13 @@ class HiddenMarkovModel
 
 	public ArrayList<Integer> optimalStateSequence(ArrayList<Integer> O)
 	{
-		N = O.size(); // If causes err remove TODO
 		ArrayList<ArrayList<Double>> alphas = alphaPass(O);
 		double score = scoreStateSequence(O);
 		ArrayList<ArrayList<Double>> betas = betaPass(O);
 		computeDiGammas(alphas, betas, O);
 
 		int T = gammas.size();
-		N = gammas.get(0).size();
+		int N = gammas.get(0).size();
 		ArrayList<Integer> optimalSequence = new ArrayList<Integer>(T);
 
 		for(int t = 0; t < T; t++)
@@ -131,18 +124,18 @@ class HiddenMarkovModel
 	void computeDiGammas(ArrayList<ArrayList<Double>> alphas,ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O )
 	{
 		
-		N = observationMat.size();
+		int N = observationMat.size();
 	    int T = alphas.size();
 
-		digammas = new ArrayList<ArrayList<ArrayList<Double>>>(T);
-		gammas = new ArrayList<ArrayList<Double>>(T);
+		digammas = new ArrayList<ArrayList<ArrayList<Double>>>();
+		gammas = new ArrayList<ArrayList<Double>>();
 		for(int i = 0; i < T; i++)
 		{
-			digammas.add(i, new ArrayList<ArrayList<Double>>(N));
-			gammas.add(i, new ArrayList<Double>(N)); //TODO What is the correct size?
+			digammas.add(i, new ArrayList<ArrayList<Double>>());
+			gammas.add(i, new ArrayList<Double>());
 			for(int j = 0; j < N; j++)
 			{
-				digammas.get(i).add(j, new ArrayList<Double>(N));
+				digammas.get(i).add(j, new ArrayList<Double>());
 				gammas.get(i).add(j, 0.0);
 				for(int k = 0; k < N; k++)
 					digammas.get(i).get(j).add(0, 0.0);
@@ -175,7 +168,7 @@ class HiddenMarkovModel
 
 	ArrayList<ArrayList<Double>> betaPass(ArrayList<Integer> O)
 	{
-	    //N = observationMat.size();
+	    int N = observationMat.size();
 	    int T = O.size();
 	
 	    ArrayList<ArrayList<Double>> betas = new ArrayList<ArrayList<Double>>(T);
@@ -210,7 +203,7 @@ class HiddenMarkovModel
 
 	public static void main(String[] args)
 	{
-    	/*ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
+    	ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
 		ArrayList<Double> tmp = new ArrayList<Double>();
 		tmp.add(0.7); tmp.add(0.3);
 		a.add(tmp);
@@ -240,7 +233,7 @@ class HiddenMarkovModel
     	for(Integer i: optimal)
     	   System.out.print( i + " ");
 		p("");
-*/
+
 	    int HEADER_SIZE = 15;
 		String line = "";
 	    ArrayList<Integer> O2 = new ArrayList<Integer>();
@@ -268,8 +261,8 @@ class HiddenMarkovModel
 	    	        {
 	    	            char c = line.charAt(i);
 	
-	    	            if(c == ' ') //TODO TODO
-	    	                O2.add(26); //TODO I CHANGED TO 26 (used to be 27 -- thorws out of bounds ex)?
+	    	            if(c == ' ')
+	    	                O2.add(27);
 	    	            else
 	    	            {
 	    	                c = Character.toLowerCase(c);
@@ -293,21 +286,11 @@ class HiddenMarkovModel
 
 	public void train(ArrayList<Integer> O, int maxIters)
 	{
-		ArrayList<ArrayList<Double>> alphas = null, betas = null;
-		update(alphas, betas, O);
-	}
 
-	public void update(ArrayList<ArrayList<Double>> alphas, ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O)
-	{
-		alphas = alphaPass(O);	
-		betas = betaPass(O);
-		computeDiGammas(alphas, betas, O);
 	}
 
 	HiddenMarkovModel(ArrayList<Integer> O, int N, int M)
 	{
-		this.N = N;
-		this.M = M;
 	    transitionMat = new ArrayList<ArrayList<Double>>(N);
 		for(int i = 0; i < N; i++)
 			transitionMat.add(i, new ArrayList<Double>());
@@ -333,42 +316,58 @@ class HiddenMarkovModel
 			ArrayList<Double> transitionRow = new ArrayList<Double>(N);
 			
 	        double sum = 0;
+			System.out.println("N" + N);
 	        for(int j = 0; j < N; j++)
 	        {
-				double randNum = ThreadLocalRandom.current().nextDouble(((1.0/N) - 0.0001 ), ((1.0/N) + 0.0001 ));
+				double randNum = Math.abs(((1/N) - 0.01 ) + (((1/N) + 0.01 ) - ((1/N) - 0.01)) * Math.abs(rand1.nextDouble()));
+				p(randNum);
 				transitionRow.add(j, randNum);
 	            sum +=  transitionRow.get(j);
 	        }
-			transitionMat.set(i, transitionRow);
-
-			//Initialize observation matrix
-	        ArrayList<Double>  observationRow = new ArrayList<Double>(M);
+			System.out.println("sum: " + sum);
+	
+	        //transitionMatrix[i] = transitionRow;
+		}	
+	    /*
+	    //random number tools
+	    //TODO: Experiment with different distributions/ ranges
+	    std::normal_distribution<double> randN(N,  0.01);
+	    std::normal_distribution<double> randM(M,  0.01);
+	    std::default_random_engine re;
+	    for(int i = 0; i < N; i++)
+	    {
+	
+	       //Initialize transition matrix
+	        StochasticRow transitionRow(N);
+	        double sum = 0;
+	        for(int j = 0; j < N; j++)
+	        {
+	            double randNum = std::abs(randN(re));
+	            transitionRow[j] = 1 / randNum;
+	            sum +=  transitionRow[j];
+	        }
+	
+	        transitionMatrix[i] = transitionRow;
+	
+	        //Initialize observation matrix
+	        StochasticRow observationRow(M);
 	        for(int j = 0; j < M; j++ )
 	        {
-				double randNum = ThreadLocalRandom.current().nextDouble(((1.0/M) - 0.0001 ), ((1.0/M) + 0.0001 ));
-	            observationRow.add(j, randNum);
-	        }
-	        observationMat.add(i, observationRow);
-
-			initialState.set(i, ThreadLocalRandom.current().nextDouble(((1.0/N) - 0.0001 ), ((1.0/N) + 0.0001 )));
-			makeStochasticRow(observationMat.get(i));
-	        makeStochasticRow(transitionMat.get(i));
-	        makeStochasticRow(initialState);
-		}	
-	}
 	
-	public void makeStochasticRow(ArrayList<Double> mat)
-	{
-		double sum = 0;
-    	for(int i = 0; i < mat.size(); i++)
-    	    sum += mat.get(i);
-
-    	if(sum != 1)
-    	{
-    	    double diff = (1 - sum) / mat.size();
-    	    for(int i = 0; i < mat.size(); i++)
-    	        mat.set(i, mat.get(i) + diff);
-    	}
+	            observationRow[j] = 1 / std::abs(randM(re));
+	        }
+	
+	        observationMatrix[i] = observationRow;
+	
+	        //Initialize the initial state distribution
+	        initialState[i] =  1 / std::abs(randN(re));
+	
+	        makeStochasticRow(observationMatrix[i]);
+	        makeStochasticRow(transitionMatrix[i]);
+	        makeStochasticRow(initialState);
+	    }
+		*/
+	
 	}
 
 	static int returnObservation(char x)
