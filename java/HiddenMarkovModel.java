@@ -314,13 +314,13 @@ class HiddenMarkovModel
 	       //Initialize transition matrix
 			ArrayList<Double> transitionRow = new ArrayList<Double>(N);
 			
-	        //double sum = 0;
-	        //for(int j = 0; j < N; j++)
-	        //{
+	        double sum = 0;
+	        for(int j = 0; j < N; j++)
+	        {
 	        //    double randNum = std::abs(randN(re));
 	        //    transitionRow[j] = 1 / randNum;
 	        //    sum +=  transitionRow[j];
-	        //}
+	        }
 	
 	        //transitionMatrix[i] = transitionRow;
 		}	
