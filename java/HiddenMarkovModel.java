@@ -80,14 +80,10 @@ class HiddenMarkovModel
 	public double computeLogProb(ArrayList<Integer> O)
 	{
     	double newLogProb = 0;
-		System.out.print("Scaling Factors: ");
 		for (int i = 0; i < O.size(); i++)
 		{
 		    newLogProb += Math.log(scalingFactors.get(i));
-			DecimalFormat f = new DecimalFormat("##.00");
-			System.out.print(f.format(scalingFactors.get(i)) + ", ");
 		}
-		p(null);
 		newLogProb *= -1;
 
     	return newLogProb;
