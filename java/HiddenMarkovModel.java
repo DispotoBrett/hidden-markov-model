@@ -8,6 +8,8 @@ class HiddenMarkovModel
 	ArrayList<ArrayList<Double>> observationMat;
 	ArrayList<Double> initialState;
 	ArrayList<Double> scalingFactors;
+	ArrayList<ArrayList<Double>> gammas;
+	ArrayList<ArrayList<ArrayList<Double>>> digammas;
 
 	public HiddenMarkovModel(ArrayList<ArrayList<Double>> A, ArrayList<ArrayList<Double>> B, ArrayList<Double> pi)
 	{
@@ -20,7 +22,7 @@ class HiddenMarkovModel
 	public double scoreStateSequence(ArrayList<Integer> O)
 	{
 		alphaPass(O);
-		return Math.exp(computeLogProb(O)); //TODO
+		return Math.exp(computeLogProb(O));
 	}
 
 	public ArrayList<ArrayList<Double>> alphaPass(ArrayList<Integer> O)
@@ -89,6 +91,115 @@ class HiddenMarkovModel
     	return newLogProb;
 	}
 
+	public ArrayList<Integer> optimalStateSequence(ArrayList<Integer> O)
+	{
+		ArrayList<ArrayList<Double>> alphas = alphaPass(O);
+		double score = scoreStateSequence(O);
+		ArrayList<ArrayList<Double>> betas = betaPass(O);
+		computeDiGammas(alphas, betas, O);
+
+		int T = gammas.size();
+		int N = gammas.get(0).size();
+		ArrayList<Integer> optimalSequence = new ArrayList<Integer>(T);
+
+		for(int t = 0; t < T; t++)
+    	{
+    	    double max = gammas.get(t).get(0);
+    	    int mostLikely = 0;
+
+    	    for(int i = 1; i < N; i++)
+    	    {
+    	        if(gammas.get(t).get(i) > max)
+    	        {
+    	            max = gammas.get(t).get(i);
+    	            mostLikely = i;
+    	        }
+    	    }
+    	    optimalSequence.add(t, mostLikely);
+    	}
+		return  optimalSequence;
+	}
+
+	void computeDiGammas(ArrayList<ArrayList<Double>> alphas,ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O )
+	{
+		
+		int N = observationMat.size();
+	    int T = alphas.size();
+
+		digammas = new ArrayList<ArrayList<ArrayList<Double>>>();
+		gammas = new ArrayList<ArrayList<Double>>();
+		for(int i = 0; i < T; i++)
+		{
+			digammas.add(i, new ArrayList<ArrayList<Double>>());
+			gammas.add(i, new ArrayList<Double>());
+			for(int j = 0; j < N; j++)
+			{
+				digammas.get(i).add(j, new ArrayList<Double>());
+				gammas.get(i).add(j, 0.0);
+				for(int k = 0; k < N; k++)
+					digammas.get(i).get(j).add(0, 0.0);
+			}
+		}
+	
+	    for(int t = 0; t < T - 1; t++)
+	    {
+	        double denom = 0;
+	        for(int i = 0; i < N; i++)
+	            for(int j = 0; j < N ; j++)
+					denom += (alphas.get(t).get(i) * transitionMat.get(i).get(j) * observationMat.get(j).get(O.get(t + 1)) * betas.get(t+1).get(j));
+
+	        for(int i = 0; i < N; i++)
+	        {
+				gammas.get(t).set(i, 0.0);
+	            for(int j = 0; j < N; j++)
+	            {
+					digammas.get(t).get(i).add(j, (alphas.get(t).get(i) * transitionMat.get(i).get(j) * observationMat.get(j).get(O.get(t+1)) * betas.get(t+1).get(j)) / denom);
+					gammas.get(t).set(i, gammas.get(t).get(i) + digammas.get(t).get(i).get(j));
+	            }
+	        }
+	    }
+
+	
+	    double denom = scoreStateSequence(O);
+	    for(int i = 0; i < N; i++)
+			gammas.get(T - 1).set(i , alphas.get(T - 1).get(i) / denom);
+	}
+
+	ArrayList<ArrayList<Double>> betaPass(ArrayList<Integer> O)
+	{
+	    int N = observationMat.size();
+	    int T = O.size();
+	
+	    ArrayList<ArrayList<Double>> betas = new ArrayList<ArrayList<Double>>(T);
+		for(int i = 0; i < T; i++)
+			betas.add(new ArrayList<Double>());
+
+	    for(int i = 0; i < N; i++)
+	    {
+			betas.get(T - 1).add(i, scalingFactors.get(T - 1));
+	    }
+	    //Beta pass
+	    for(int t = T - 2; t >= 0; t--)
+	    {
+	        for(int i = 0; i < N; i++)
+	        {
+			   betas.get(t).add(i,0.0);
+
+	           for(int j = 0; j < N; j++)
+	           {
+				   betas.get(t).set(i, betas.get(t).get(i) + 
+						   (transitionMat.get(i).get(j) * 
+							observationMat.get(j).get(O.get(t + 1)) * 
+							betas.get(t + 1).get(j)));
+	           }
+    	         //Scale beta[t][i] with same factor as alphas[t][i]
+				 betas.get(t).set(i, betas.get(t).get(i) * scalingFactors.get(t));
+			}
+		}
+
+    	return betas;
+	}
+
 	public static void main(String[] args)
 	{
     	ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
@@ -117,9 +228,10 @@ class HiddenMarkovModel
 
     	double score = hmm.scoreStateSequence(O);
     	p("Score: " + score);
-    	//ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
-    	//for(Integer i: optimal)
-    	//   p( i + " ");
+    	ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
+    	for(Integer i: optimal)
+    	   System.out.print( i + " ");
+		p("");
 	}
 
 	public static void p(Object s)
