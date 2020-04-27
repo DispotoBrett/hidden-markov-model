@@ -227,9 +227,11 @@ class HiddenMarkovModel {
     }
 
     HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
-    hmm2.train(O2, 100);
+    hmm2.prettyPrint();
 
+    hmm2.train(O2, 100);
     System.out.println("finished trainign HMM");
+    hmm2.prettyPrint();
   }
 
   public void train(ArrayList<Integer> O, int maxIters) {
@@ -250,10 +252,10 @@ class HiddenMarkovModel {
       doTrainStep(O);
 
       // New
-      // newLogProb = computeLogProb(O);
+      newLogProb = computeLogProb(O);
 
       // Back to step 2
-      // update(alphas, betas, digammas, gammas, O);
+      update(alphas, betas, O);
     }
   }
 
@@ -340,7 +342,7 @@ class HiddenMarkovModel {
       // makeStochasticRow(initialState);
     }
   }
-
+  
   public void makeStochasticRow(ArrayList<Double> mat) {
     double sum = 0;
     for (int i = 0; i < mat.size(); i++) sum += mat.get(i);
@@ -358,6 +360,25 @@ class HiddenMarkovModel {
   public static void p(Object s) {
     if (s == null) p("");
     else System.out.println(s);
+  }
+
+  public void prettyPrint()
+  {
+    p("TransitionMatrix: ");
+    for(int i = 0; i < transitionMat.length; i++)
+    {
+      for(int j = 0; j < transitionMat[i].length; j++)
+        System.out.print(transitionMat[i][j] + ", ");
+      p("");
+    }
+
+    p("ObservationMatrix: ");
+    for(int i = 0; i < observationMat.length; i++)
+    {
+      for(int j = 0; j < observationMat[i].length; j++)
+        System.out.print(observationMat[i][j] + ", ");
+      p("");
+    }
   }
 }
 
