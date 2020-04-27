@@ -6,7 +6,7 @@ parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
 MAX_UNIQUE_OPCODES = 32
 MAX_FAMILIES = 5
-TRAIN_SIZE = 1000 #temporary value for quick testing
+TRAIN_SIZE = 200000
 VALIDATION_SIZE = int(TRAIN_SIZE * .2)
 TEST_SIZE = int(TRAIN_SIZE * .1)
 
@@ -24,7 +24,7 @@ def convert_file_to_symbol_arr(file_path, symbol_dict):
 def count_opcodes():
     for family in os.scandir(opcode_dir):
         if family.is_dir():
-            print('Working on family ' + family.name)
+            print('Counting opcodes in family ' + family.name)
             num_opcodes = dict()
             for virus_file in os.scandir(family):
                 if virus_file.is_file() and virus_file.name.endswith('.txt'):
@@ -36,13 +36,13 @@ def count_opcodes():
                                 num_opcodes[opcode] = 0
 
                             num_opcodes[opcode] += 1
-            print(len(num_opcodes.keys()))
+
             np.save(opcode_dir + '/' + family.name + '/' + 'num_opcodes.npy', num_opcodes)
 
 def popular_opcodes(unique_opcodes):
     for family in os.scandir(opcode_dir):
         if family.is_dir():
-            print('Working on family ' + family.name)
+            print('Sorting opcode popularity in family ' + family.name)
             num_opcodes = np.load(opcode_dir + '/' + family.name + '/' + 'num_opcodes.npy', allow_pickle=True).item()
             opcodes = list(num_opcodes.keys())
 
@@ -55,7 +55,7 @@ def largest_families():
     num_files = dict()
     for family in os.scandir(opcode_dir):
         if family.is_dir():
-            print('Working on family ' + family.name)
+            print('sorting by family: ' + family.name)
 
             num_files[family.name] = len([file for file in os.scandir(family)])
 
@@ -66,9 +66,11 @@ def largest_families():
 def setup_processed_dataset():
     with open(opcode_dir + '/' + 'preprocessed_families.txt', 'w') as preprocessed_families:
         sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
+
         for i in range(MAX_FAMILIES):
 
             family_name = sorted_families[i]
+            print('Processing family ' + family_name)
             family_dir = opcode_dir + '/' + family_name
             symbol_dict = np.load(opcode_dir + '/' + family_name + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
 
@@ -101,10 +103,11 @@ def setup_processed_dataset():
             np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'val.txt', X=val_arr, fmt=format)
             np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test.txt', X=test_arr, fmt=format)
 
-#count_opcodes()
-#popular_opcodes(MAX_UNIQUE_OPCODES)
-#largest_families()
+count_opcodes()
+popular_opcodes(MAX_UNIQUE_OPCODES)
+largest_families()
 setup_processed_dataset()
+
 
 
 
