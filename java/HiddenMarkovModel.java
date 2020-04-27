@@ -380,6 +380,81 @@ class HiddenMarkovModel {
       p("");
     }
   }
+  
+  //---------------------- File IO Stuff ----------------------\\
+  public void saveToFile(String filename)
+	{
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(filename)))
+		{
+			String pi = rowToString(initialState);
+			writer.append(pi);
+			
+			String A = "\n";
+			for(double[] row: transitionMat)
+				A += rowToString(row) + ";";
+			writer.append(A);
+			
+			String B = "\n";
+			for(double[] row: observationMat)
+				B += rowToString(row) + ";";
+			writer.append(B);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	private String rowToString(double[] row)
+	{
+		String result = "";
+		for(double element: row)
+		{
+			if(!result.isEmpty())
+				result += ",";
+			result += String.valueOf(element);
+		}
+		return result;	
+	}
+	
+	public static HiddenMarkovModel loadFromFile(String filename)
+	{
+		try
+		{
+			Scanner in = new Scanner(new File(filename));
+			double[] pi = stringToRow(in.nextLine());
+			
+			int N = pi.length;
+			double[][] A = new double[N][];
+			String[] splitA = in.nextLine().split(";");
+			for(int i = 0; i < N; i++)
+				A[i] = stringToRow(splitA[i]);
+			
+			double[][] B = new double[N][];
+			String[] splitB = in.nextLine().split(";");
+			for(int i = 0; i < N; i++)
+				B[i] = stringToRow(splitB[i]);
+			
+			return new HiddenMarkovModel(A, B, pi);
+			
+		} catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+			
+			return null;
+		}
+	}
+	
+	private static double[] stringToRow(String input)
+	{
+		String[] split = input.split(",");
+		double[] result = new double[split.length];
+		
+		for(int i = 0; i < split.length; i++)
+		
+			result[i] = Double.parseDouble(split[i]);
+		
+		return result;
+	}
 }
 
 // some typedefs
