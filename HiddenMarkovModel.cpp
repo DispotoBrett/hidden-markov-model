@@ -22,15 +22,9 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence& O)
 {
     alphaPass(O);
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
     double logProb = computeLogProb(O);
     std::cout<< "LogProb:" << logProb << std::endl;
     return std::exp(logProb); //Obfuscating behavior
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-    return std::exp(computeLogProb(O)); //Obfuscating behavior
-=======
-    return std::exp(computeLogProb(O)); //Obfuscating behavior
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
 }
 
 /**
@@ -73,29 +67,16 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 {
     int N = observationMatrix.size();
     int T = O.size();
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-	std::cout<<  "enter alphapass. \nO.size() ==" << O.size() << "\nobservationMat.size() ==" << observationMatrix.size() << std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
 
     Matrix alphas = Matrix(T, Row(N));
 
     //Compute a_0(i)
     scalingFactors[0] = 0;
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
 
 			std::cout<<N<<std::endl;
 			std::cout<<alphas.size()<<std::endl;
 			std::cout<<alphas[0].size()<<std::endl;
 
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-	std::cout<< initialState.size() <<" is the InitalState size. " <<std::endl;
-	std::cout<< N <<" is N. " <<std::endl;
-=======
-	std::cout<< initialState.size() <<" is the InitalState size. " <<std::endl;
-	std::cout<< T <<" is T. " <<std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
     for (int i = 0; i < N; i++)
     {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
@@ -109,11 +90,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
     }
 
     //Compute a_t(i)
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-	std::cout<< "Enter Loop. The valueof T == " << T<<std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
     for(int t = 1; t < T; t++)
     {
         scalingFactors[t] = 0;
@@ -135,11 +111,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
             alphas[t][i] *= scalingFactors[t];
         }
     }
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-	std::cout<< "Leave T Loop " << false<<std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
 
     return alphas;
 }
@@ -161,27 +132,11 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
     }
 
     //Beta pass
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-	std::cout<< "TransitionMatrix size: "<<transitionMatrix.size()<<std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
     for(int t = T - 2; t >= 0; t--)
     {
         for(int i = 0; i < N; i++)
         {
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-			std::cout<<"N: " <<N<<std::endl;
-			std::cout<<"i: " <<i<<std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
            betas[t][i] = 0;
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-			   //std::cout<< "TRANSMATSIZE:" << transitionMatrix[i].size() << std::endl;
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
            for(int j = 0; j < N; j++)
            {
                betas[t][i] += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);
@@ -221,13 +176,6 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
  */
 HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 {
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
-	std::cout<< "M is: " << M << std::endl;
-	std::cout<< "N is: " << N << std::endl;
-
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
     transitionMatrix = StochasticMatrix(N, StochasticRow(N));
     observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);
@@ -310,19 +258,9 @@ double HiddenMarkovModel::computeLogProb(const ObservationSequence &O)
     double newLogProb = 0;
     for (int i = 0; i < O.size(); i++)
     {
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
 			std::cout<< i << ": " << scalingFactors[i] << std::endl;
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-=======
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
         newLogProb += std::log(scalingFactors[i]);
-<<<<<<< /home/brett/Documents/hidden-markov-model/HiddenMarkovModel_LOCAL_17918.cpp
     }
-||||||| ./HiddenMarkovModel_BASE_17918.cpp
-	}
-=======
-	}
->>>>>>> ./HiddenMarkovModel_REMOTE_17918.cpp
     newLogProb *= -1;
 
     return newLogProb;
