@@ -228,7 +228,7 @@ class HiddenMarkovModel {
     computeDiGammas(alphas, betas, O);
   }
 
-  HiddenMarkovModel(ArrayList<Integer> O, int N, int M) {
+  HiddenMarkovModel(ArrayList<Integer> O, int N, int M, int seed) {
     this.N = N;
     this.M = M;
     transitionMat = new double[N][N];
@@ -239,8 +239,7 @@ class HiddenMarkovModel {
     scalingFactors = new double[O.size()];
     for (int i = 0; i < O.size(); i++) scalingFactors[i] = 0.0;
 
-    Random rand1 = new Random(1);
-    Random rand2 = new Random(2);
+    Random rand1 = new Random(seed);
     for (int i = 0; i < N; i++) {
       // Initialize transition matrix
       double[] transitionRow = new double[N];
@@ -454,7 +453,7 @@ class HiddenMarkovModel {
       }
     }
 
-    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
+    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27, 0);
     hmm2.prettyPrint();
 
     hmm2.train(O2, 100);
