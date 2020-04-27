@@ -65,13 +65,14 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 {
     int N = observationMatrix.size();
     int T = O.size();
+	std::cout<<  "enter alphapass. \nO.size() ==" << O.size() << "\nobservationMat.size() ==" << observationMatrix.size() << std::endl;
 
     Matrix alphas = Matrix(T, Row(N));
 
     //Compute a_0(i)
     scalingFactors[0] = 0;
 	std::cout<< initialState.size() <<" is the InitalState size. " <<std::endl;
-	std::cout<< N <<" is N. " <<std::endl;
+	std::cout<< T <<" is T. " <<std::endl;
     for (int i = 0; i < N; i++)
     {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
@@ -85,9 +86,12 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
     }
 
     //Compute a_t(i)
+	std::cout<< "Enter Loop. The valueof T == " << T<<std::endl;
     for(int t = 1; t < T; t++)
     {
         scalingFactors[t] = 0;
+		std::cout<<"N is: " << N<<std::endl;;
+		std::cout<<"t is: " << t<<std::endl;;
         for (int i = 0; i < N; i++)
         {
             alphas[t][i] = 0;
@@ -106,6 +110,7 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
             alphas[t][i] *= scalingFactors[t];
         }
     }
+	std::cout<< "Leave T Loop " << false<<std::endl;
 
     return alphas;
 }
@@ -171,6 +176,9 @@ Matrix HiddenMarkovModel::computeGammas(const Matrix &alphas, const Matrix &beta
  */
 HiddenMarkovModel::HiddenMarkovModel(ObservationSequence& O, int N, int M)
 {
+	std::cout<< "M is: " << M << std::endl;
+	std::cout<< "N is: " << N << std::endl;
+
     transitionMatrix = StochasticMatrix(N, StochasticRow(N));
     observationMatrix = StochasticMatrix(N, StochasticRow(M));
     initialState = StochasticRow(N);

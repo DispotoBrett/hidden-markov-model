@@ -4,7 +4,7 @@
 
 Observation returnObservation(char x)
 {
-    return (int)x - 87;
+    return (int)x - 97;
 }
 
 int main()
@@ -76,7 +76,7 @@ int main()
         file.close();
     }
 
-
+	std::cout<<O2.size()<<std::endl;
     HiddenMarkovModel hmm2(O2, 2, 27);
     hmm2.train(O2, 100);
 
