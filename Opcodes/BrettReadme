@@ -1,0 +1,5 @@
+For preprocessing, put all of the folders of families found in Malicia (txt Opcodes) in this directory.
+Or, better yet, just extract Malicia  (txt Opcodes).zip and rename the directory to Opcodes.
+Or you could just change opcode_dir to match your system, whatever works for you.
+
+*** I would recommend adding everything in that directory to Gitignore because we both have all of the opcodes and the preprocessing is fast (and I'm not sure how much the professor would like us uploading this dataset to a public repo ***
