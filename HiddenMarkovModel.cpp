@@ -90,8 +90,6 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
     for(int t = 1; t < T; t++)
     {
         scalingFactors[t] = 0;
-		std::cout<<"N is: " << N<<std::endl;;
-		std::cout<<"t is: " << t<<std::endl;;
         for (int i = 0; i < N; i++)
         {
             alphas[t][i] = 0;
@@ -132,11 +130,15 @@ Matrix HiddenMarkovModel::betaPass(const ObservationSequence& O)
     }
 
     //Beta pass
+	std::cout<< "TransitionMatrix size: "<<transitionMatrix.size()<<std::endl;
     for(int t = T - 2; t >= 0; t--)
     {
         for(int i = 0; i < N; i++)
         {
+			std::cout<<"N: " <<N<<std::endl;
+			std::cout<<"i: " <<i<<std::endl;
            betas[t][i] = 0;
+			   //std::cout<< "TRANSMATSIZE:" << transitionMatrix[i].size() << std::endl;
            for(int j = 0; j < N; j++)
            {
                betas[t][i] += (transitionMatrix[i][j] * observationMatrix[j][O[t + 1]] * betas[t + 1][j]);

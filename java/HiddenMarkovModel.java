@@ -31,29 +31,28 @@ class HiddenMarkovModel
 		return Math.exp(computeLogProb(O));
 	}
 
+
+	int gN;
 	public ArrayList<ArrayList<Double>> alphaPass(ArrayList<Integer> O)
 	{
-		p("enter alphapass. \nO.size() ==" + O.size() + "\nobservationMat.size() ==" + observationMat.size());
 		int N = observationMat.size();
+		gN = N;
 		int T = O.size();
 		
 		ArrayList<ArrayList<Double>> alphas = new ArrayList<ArrayList<Double>>(T);
 
-		p("ENTER LOOP 0");
 		for(int i = 0; i < T; i++){
 			if(i < alphas.size())
 				alphas.set(i, new ArrayList<Double>());
 			else
 				alphas.add(i, new ArrayList<Double>());
 		}		
-		p("LEAVE LOOP 0");
 		//Compute a_0(i)
 		scalingFactors.add(0, 0.0);
 
 		System.out.println(T + " is T");
 		System.out.println(initialState.size() + " is initialState.size()");
 		System.out.println("N IS-----------"+N);
-		p("ENTER LOOP A");
 		for (int i = 0; i < N; i++)
 		{
 		    alphas.get(0).add(i, 
@@ -63,26 +62,19 @@ class HiddenMarkovModel
 					get(O.get(0)));  //equivalent to pi_i * b_i(O_0)
 		    scalingFactors.set(0, scalingFactors.get(0) + alphas.get(0).get(i));
 		}
-		p("LEAVE LOOP A");
 
 		//Scale the a_0(i)
 		scalingFactors.set(0, 1 / scalingFactors.get(0));
-		p("ENTER LOOP C");
 		for (int i = 0; i < N; i++)
 		{
 		    alphas.get(0).set(i, alphas.get(0).get(i) * scalingFactors.get(0));
 
 		}
-		p("LEAVE LOOP C");
 		
 		//Compute a_t(i)
-		p("ENTER LOOP B");
-		p("T IS: " + T);
-		p("ENTER LOOP");
 		for(int t = 1; t < T; t++){
 		
 		}
-		p("LEAVE LOOP");
 		for(int t = 1; t < T; t++)
 		{
 			if(scalingFactors.size() < t)
@@ -90,40 +82,27 @@ class HiddenMarkovModel
 			else
 			   	scalingFactors.add(0.0);
 
-//		p("\tENTER LOOP 1");
-	p("N is: " + N);
-	p("t is: " + t);
-				for (int i = 0; i < N; i++)
-		    {
-//		        alphas.get(t).add(i, 0.0);
-//		p("\t\tENTER LOOP 1a");
-//		        for (int j = 0; j < N; j++)
-//		        {
-//					alphas.get(t).set(i, alphas.get(t).get(i) + (alphas.get(t-1).get(j) * transitionMat.get(j).get(i)));
-//		        }
-//		p("\t\tLEAVE LOOP 1a");
-//		        alphas.get(t).set(i, alphas.get(t).get(i) * observationMat.get(i).get(O.get(t)));
-//				
-//		        scalingFactors.set(t, scalingFactors.get(t) + alphas.get(t).get(i));
+  			for (int i = 0; i < N; i++)
+  	    {
+		        alphas.get(t).add(i, 0.0);
+		        for (int j = 0; j < N; j++)
+		        {
+					alphas.get(t).set(i, alphas.get(t).get(i) + (alphas.get(t-1).get(j) * transitionMat.get(j).get(i)));
+		        }
+		        alphas.get(t).set(i, alphas.get(t).get(i) * observationMat.get(i).get(O.get(t)));
+				
+		        scalingFactors.set(t, scalingFactors.get(t) + alphas.get(t).get(i));
 		    }
-	//	p("\tLEAVE LOOP 1");
-	//	
-	//	    //Scale a_t(i)
-	//	p("\tENTER LOOP 2");
-	//		scalingFactors.set(t, 1 / scalingFactors.get(t));
-	//	    for(int i = 0; i < N; i++)
-	//	    {
-	//			alphas.get(t).set(i, alphas.get(t).get(i) * scalingFactors.get(t));
-	//	    }
-	//	p("\tLEAVE LOOP 2" + new java.util.Date());
+		
+		    //Scale a_t(i)
+			scalingFactors.set(t, 1 / scalingFactors.get(t));
+		    for(int i = 0; i < N; i++)
+		    {
+				alphas.get(t).set(i, alphas.get(t).get(i) * scalingFactors.get(t));
+		    }
 		}
-		////////////////////////////////////////REMOVE?////////////////////
-		if(T > 100)
-			System.exit(-1);
-		////////////////////////////////////////REMOVE?////////////////////
-		p("LEAVE LOOP B");
 	
-		p("LEAVING");	
+		
 		return alphas;
 	}
 
@@ -184,7 +163,7 @@ class HiddenMarkovModel
 				if(digammas.get(i).size() < j)
 					digammas.get(i).set(j, new ArrayList<Double>(N));
 				else
-					digammas.get(i).add(j, new ArrayList<Double>(N));
+					digammas.get(i).add(j, new ArrayList<Double>());
 				if(gammas.get(i).size() < j)
 					gammas.get(i).set(j, 0.0);
 				else
@@ -197,15 +176,16 @@ class HiddenMarkovModel
 						digammas.get(i).get(j).set(0, 0.0);
 			}
 		}
-	
+
 	    for(int t = 0; t < T - 1; t++)
 	    {
 	        double denom = 0;
-	        for(int i = 0; i < N; i++)
-	            for(int j = 0; j < M ; j++)
+	        for(int i = 0; i < N; i++){
+	            for(int j = 0; j < N ; j++){
+					ArrayList<Double> ii = transitionMat.get(i);
 					denom += (alphas.get(t).
 							get(i) * 
-							transitionMat.get(i).
+							ii.
 							get(j) * 
 							observationMat.get(j).
 							get(
@@ -213,11 +193,13 @@ class HiddenMarkovModel
 							betas.
 							get(t+1).
 							get(j));
+				}
+			}
 
 	        for(int i = 0; i < N; i++)
 	        {
 				gammas.get(t).set(i, 0.0);
-	            for(int j = 0; j < M; j++)
+	            for(int j = 0; j < N; j++)
 	            {
 					digammas.get(t).get(i).add(j, (alphas.get(t).get(i) * transitionMat.get(i).get(j) * observationMat.get(j).get(O.get(t+1)) * betas.get(t+1).get(j)) / denom);
 					gammas.get(t).set(i, gammas.get(t).get(i) + digammas.get(t).get(i).get(j));
@@ -252,15 +234,14 @@ class HiddenMarkovModel
 	    //Beta pass
 	    for(int t = T - 2; t >= 0; t--)
 	    {
-	        for(int i = 0; i < N; i++)
+	        for(int i = 0; i < gN; i++)
 	        {
 			   betas.get(t).add(i,0.0);
-
-	           for(int j = 0; j < M; j++)
+	           for(int j = 0; j < transitionMat.get(i).size(); j++)
 	           {
 				   betas.get(t).set(i, betas.get(t).get(i) + 
-						   (transitionMat.get(i).
-							get(j) * 
+						   (transitionMat.get(i)
+							.get(j) * 
 							observationMat.get(j).get(O.get(t + 1)) * 
 							betas.get(t + 1).get(j)));
 	           }
@@ -274,7 +255,7 @@ class HiddenMarkovModel
 
 	public static void main(String[] args)
 	{
-    	ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
+    	/*ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
 		ArrayList<Double> tmp = new ArrayList<Double>();
 		tmp.add(0.7); tmp.add(0.3);
 		a.add(tmp);
@@ -304,7 +285,7 @@ class HiddenMarkovModel
     	for(Integer i: optimal)
     	   System.out.print( i + " ");
 		p("");
-
+*/
 	    int HEADER_SIZE = 15;
 		String line = "";
 	    ArrayList<Integer> O2 = new ArrayList<Integer>();
@@ -348,8 +329,6 @@ class HiddenMarkovModel
 	
 	        
 	    }
-		p("\n\n\n\n\n\n\n\n\n------------START TRAINNG_________");
-		p("O2.size() == " +  O2.size());	
 	    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
 		System.out.println("starting trainign HMM");
 	    hmm2.train(O2, 100);
@@ -359,14 +338,77 @@ class HiddenMarkovModel
 
 	public void train(ArrayList<Integer> O, int maxIters)
 	{
-		p("enter train()");
+		int t = 0;
 		ArrayList<ArrayList<Double>> alphas = null, betas = null;
 		update(alphas, betas, O);
+
+   		//do training
+   		int iters = 0;
+   		double oldLogProb = Integer.MIN_VALUE;
+   		double newLogProb = 0;
+   		double epsilon = 0.001;
+
+   		while(iters < maxIters && (oldLogProb  - epsilon) < newLogProb)
+   		{
+   		    iters++; t++;
+
+   		    doTrainStep(O);
+
+   		    //New
+   		    //newLogProb = computeLogProb(O);
+
+   		    //Back to step 2
+   		    update(alphas, betas, O);
+ 		}
+	}
+
+	public void doTrainStep(ArrayList<Integer> O)
+	{
+    	////Re-estimate pi
+    	//for(int i = 0; i < initialState.size(); i++)
+    	//    initialState[i] = gammas[0][i];
+
+    	////Re-estimate A
+    	//for(int i = 0; i < transitionMatrix.size(); i++)
+    	//{
+    	//   for(int j = 0; j < transitionMatrix.size(); j++)
+    	//   {
+    	//       double numer = 0;
+    	//       double denom = 0;
+    	//       for(int t = 0; t < O.size() - 1; t++)
+    	//       {
+    	//           numer += diGammas[t][i][j];
+    	//           denom += gammas[t][i];
+    	//       }
+
+    	//       if(denom != 0) //TODO: Should never be zero, something has gone wrong...
+    	//           transitionMatrix[i][j] = numer/denom;
+    	//  }
+    	//}
+
+    	////Re-estimate B
+    	//for(int i = 0; i < transitionMatrix.size(); i++)
+    	//{
+    	//    for(int j = 0; j < observationMatrix[0].size(); j++)
+    	//    {
+    	//        double numer = 0;
+    	//        double denom = 0;
+    	//        for (int t = 0; t < O.size() - 1; t++)
+    	//        {
+    	//            if (O[t] == j)
+    	//                numer += gammas[t][i];
+    	//            denom += gammas[t][i];
+    	//        }
+
+    	//        if (denom != 0) //TODO: Should never be zero, something has gone wrong...
+    	//            observationMatrix[i][j] = numer / denom;
+    	//    }
+    	//}
+
 	}
 
 	public void update(ArrayList<ArrayList<Double>> alphas, ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O)
 	{
-		p("enter update");
 		alphas = alphaPass(O);	
 		betas = betaPass(O);
 		computeDiGammas(alphas, betas, O);
@@ -376,8 +418,6 @@ class HiddenMarkovModel
 	{
 		this.N = N;
 		this.M = M;
-		p("M:"+M);
-		p("N:"+N);
 
 	    transitionMat = new ArrayList<ArrayList<Double>>(N);
 		for(int i = 0; i < N; i++)
