@@ -357,6 +357,10 @@ class HiddenMarkovModel {
     return (int) x - 87;
   }
 
+  static char returnSymbol(int x) {
+    return (char) (x + 87);
+  }
+
   public static void p(Object s) {
     if (s == null) p("");
     else System.out.println(s);
@@ -376,7 +380,7 @@ class HiddenMarkovModel {
     for(int i = 0; i < observationMat.length; i++)
     {
       for(int j = 0; j < observationMat[i].length; j++)
-        System.out.print(observationMat[i][j] + ", ");
+        System.out.print(returnSymbol((char)j) + ": " +observationMat[i][j] + ", ");
       p("");
     }
   }
