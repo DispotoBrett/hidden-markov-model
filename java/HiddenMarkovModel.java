@@ -101,7 +101,7 @@ class HiddenMarkovModel
 	{
 		double[][] alphas = alphaPass(O);
 		double score = scoreStateSequence(O);
-		ArrayList<ArrayList<Double>> betas = betaPass(O);
+		double[][] betas = betaPass(O);
 		computeDiGammas(alphas, betas, O);
 
 		int T = gammas.length;
@@ -125,7 +125,7 @@ class HiddenMarkovModel
 		return  optimalSequence;
 	}
 
-	void computeDiGammas(double[][] alphas,ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O )
+	void computeDiGammas(double[][] alphas, double[][] betas, ArrayList<Integer> O )
 	{
 		
 		N = observationMat.length;
@@ -139,14 +139,14 @@ class HiddenMarkovModel
 	        double denom = 0;
 	        for(int i = 0; i < N; i++)
 	            for(int j = 0; j < N ; j++)
-					denom += (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t + 1))] * betas.get(t+1).get(j));
+					denom += (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t + 1))] * betas[i+1][j]);
 
 	        for(int i = 0; i < N; i++)
 	        {
 				gammas[t][i] = 0.0;
 	            for(int j = 0; j < N; j++)
 	            {
-					digammas[t][i][j] = (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t+1))] * betas.get(t+1).get(j)) / denom;
+					digammas[t][i][j] = (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t+1))] * betas[i+1][j]) / denom;
 					gammas[t][i] += digammas[t][i][j];
 	            }
 	        }
@@ -158,35 +158,32 @@ class HiddenMarkovModel
 			gammas[T - 1][i] = alphas[T -1][i] / denom;
 	}
 
-	ArrayList<ArrayList<Double>> betaPass(ArrayList<Integer> O)
+	double[][] betaPass(ArrayList<Integer> O)
 	{
 	    //N = observationMat.size();
 	    int T = O.size();
 	
-	    ArrayList<ArrayList<Double>> betas = new ArrayList<ArrayList<Double>>(T);
-		for(int i = 0; i < T; i++)
-			betas.add(new ArrayList<Double>());
+	    double betas[][] = new double[T][N];
 
 	    for(int i = 0; i < N; i++)
 	    {
-			betas.get(T - 1).add(i, scalingFactors[T - 1]);
+			betas[T-1][i] =  scalingFactors[T - 1];
 	    }
 	    //Beta pass
 	    for(int t = T - 2; t >= 0; t--)
 	    {
 	        for(int i = 0; i < N; i++)
 	        {
-			   betas.get(t).add(i,0.0);
+			   betas[t][i] = 0.0;
 
 	           for(int j = 0; j < N; j++)
 	           {
-				   betas.get(t).set(i, betas.get(t).get(i) + 
-						   (transitionMat[i][j] * 
+				   betas[t][i] +=   (transitionMat[i][j] * 
 							observationMat[j][(O.get(t + 1))] * 
-							betas.get(t + 1).get(j)));
+							betas[t+1][j]);
 	           }
     	         //Scale beta[t][i] with same factor as alphas[t][i]
-				 betas.get(t).set(i, betas.get(t).get(i) * scalingFactors[t]);
+				 betas[t][i] *=  scalingFactors[t];
 			}
 		}
 
@@ -220,7 +217,7 @@ class HiddenMarkovModel
     		for(Integer i: optimal)
     		   System.out.print( i + " ");
 		p("");
-/*	    int HEADER_SIZE = 15;
+	    int HEADER_SIZE = 15;
 		String line = "";
 	    ArrayList<Integer> O2 = new ArrayList<Integer>();
 	    //this should be an absolute path to corpus.dos, and A is the only starting letter of files that I am iterating through.
@@ -267,18 +264,18 @@ class HiddenMarkovModel
 	    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
 	    hmm2.train(O2, 100);
 	
-		System.out.println("finished trainign HMM");*/
+		System.out.println("finished trainign HMM");
 	}
 
 	public void train(ArrayList<Integer> O, int maxIters)
 	{
-		ArrayList<ArrayList<Double>> betas = null;
- 		double[][] alphas = null;
+		double[][] alphas = null,  betas = null;
+;
 
 		update(alphas, betas, O);
 	}
 
-	public void update(double[][] alphas, ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O)
+	public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O)
 	{
 		alphas = alphaPass(O);	
 		betas = betaPass(O);

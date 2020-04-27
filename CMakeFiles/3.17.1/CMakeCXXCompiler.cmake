@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/c++")
+set(CMAKE_CXX_COMPILER "/bin/gcc")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "9.2.1")
@@ -19,11 +19,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/usr/bin/ar")
-set(CMAKE_CXX_COMPILER_AR "/usr/bin/gcc-ar")
-set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/usr/bin/gcc-ranlib")
-set(CMAKE_LINKER "/usr/bin/ld")
+set(CMAKE_AR "/bin/ar")
+set(CMAKE_CXX_COMPILER_AR "/bin/gcc-ar")
+set(CMAKE_RANLIB "/bin/ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/bin/gcc-ranlib")
+set(CMAKE_LINKER "/bin/ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -83,6 +83,6 @@ endif()
 
 
 set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/9;/usr/include/c++/9/x86_64-redhat-linux;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/usr/include")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-redhat-linux/9;/usr/lib64;/lib64;/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

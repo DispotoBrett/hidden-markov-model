@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/brett/Projects/hidden-markov-model/HiddenMarkovModel.cpp
+/home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp
 cstdlib
 -
 iostream
@@ -18,9 +18,9 @@ random
 map
 -
 HiddenMarkovModel.h
-/home/brett/Projects/hidden-markov-model/HiddenMarkovModel.h
+/home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.h
 
-/home/brett/Projects/hidden-markov-model/HiddenMarkovModel.h
+/home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.h
 cstddef
 -
 vector

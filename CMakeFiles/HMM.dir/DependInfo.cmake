@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/brett/Projects/hidden-markov-model/HiddenMarkovModel.cpp" "/home/brett/Projects/hidden-markov-model/CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o"
-  "/home/brett/Projects/hidden-markov-model/main.cpp" "/home/brett/Projects/hidden-markov-model/CMakeFiles/HMM.dir/main.cpp.o"
+  "/home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp" "/home/brett/Projects/hidden-markov-model-2/CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o"
+  "/home/brett/Projects/hidden-markov-model-2/main.cpp" "/home/brett/Projects/hidden-markov-model-2/CMakeFiles/HMM.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
