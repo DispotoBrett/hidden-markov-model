@@ -22,7 +22,9 @@ HiddenMarkovModel::HiddenMarkovModel(const StochasticMatrix& A, const Stochastic
 double HiddenMarkovModel::scoreStateSequence(const ObservationSequence& O)
 {
     alphaPass(O);
-    return std::exp(computeLogProb(O)); //Obfuscating behavior
+    double logProb = computeLogProb(O);
+    std::cout<< "LogProb:" << logProb << std::endl;
+    return std::exp(logProb); //Obfuscating behavior
 }
 
 /**
@@ -70,8 +72,11 @@ Matrix HiddenMarkovModel::alphaPass(const ObservationSequence& O)
 
     //Compute a_0(i)
     scalingFactors[0] = 0;
-	std::cout<< initialState.size() <<" is the InitalState size. " <<std::endl;
-	std::cout<< N <<" is N. " <<std::endl;
+
+			std::cout<<N<<std::endl;
+			std::cout<<alphas.size()<<std::endl;
+			std::cout<<alphas[0].size()<<std::endl;
+
     for (int i = 0; i < N; i++)
     {
         alphas[0][i] = initialState[i] * observationMatrix[i][O[0]]; //equivalent to pi_i * b_i(O_0)
@@ -253,8 +258,9 @@ double HiddenMarkovModel::computeLogProb(const ObservationSequence &O)
     double newLogProb = 0;
     for (int i = 0; i < O.size(); i++)
     {
+			std::cout<< i << ": " << scalingFactors[i] << std::endl;
         newLogProb += std::log(scalingFactors[i]);
-	}
+    }
     newLogProb *= -1;
 
     return newLogProb;

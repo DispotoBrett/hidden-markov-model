@@ -8,90 +8,89 @@ import java.util.concurrent.ThreadLocalRandom;
 //Note: TODO tags are current
 class HiddenMarkovModel
 {
-	ArrayList<ArrayList<Double>> transitionMat;
-	ArrayList<ArrayList<Double>> observationMat;
-	ArrayList<Double> initialState;
-	ArrayList<Double> scalingFactors;
-	ArrayList<ArrayList<Double>> gammas;
-	ArrayList<ArrayList<ArrayList<Double>>> digammas;
+	double[][] transitionMat;
+	double[][] observationMat;
+	double[] initialState;
+	double[] scalingFactors;
+	double[][] gammas;
+	double[][][] digammas;
 	int M, N;
 
-	public HiddenMarkovModel(ArrayList<ArrayList<Double>> A, ArrayList<ArrayList<Double>> B, ArrayList<Double> pi)
+	public HiddenMarkovModel(double[][] A, double[][] B, double[] pi)
 	{
 		transitionMat = A;
+		this.N = A.length;
 		observationMat = B;
+		this.M = B[0].length;
 		initialState = pi;
-		scalingFactors = new ArrayList<Double>(99);
+		scalingFactors = new double[99];
 	}
 
 	public double scoreStateSequence(ArrayList<Integer> O)
 	{
-		N = O.size();
+		//N = O.size(); TODO???
 		alphaPass(O);
-		return Math.exp(computeLogProb(O));
+		double logProb = computeLogProb(O);
+		return Math.exp(logProb);
 	}
 
-	public ArrayList<ArrayList<Double>> alphaPass(ArrayList<Integer> O)
+	public double[][] alphaPass(ArrayList<Integer> O)
 	{
 		//int N = observationMat.size();
 		int T = O.size();
-		
-		ArrayList<ArrayList<Double>> alphas = new ArrayList<ArrayList<Double>>(T);
+	
+			
+		double[][] alphas = new double[T][N];
 
-		for(int i = 0; i < T; i++){
-			alphas.add(new ArrayList<Double>());
-		}		
 		//Compute a_0(i)
-		scalingFactors.add(0, 0.0);
-
-		System.out.println(N + " is N");
-		System.out.println(initialState.size() + " is initialState.size()");
+		scalingFactors[0] = 0;
 		for (int i = 0; i < N; i++)
 		{
-		    alphas.get(0).add(i, initialState.get(i) * observationMat.get(i).get(O.get(0)));  //equivalent to pi_i * b_i(O_0)
-		    scalingFactors.set(0, scalingFactors.get(0) + alphas.get(0).get(i));
+		    alphas[0][i] = 
+			    initialState[i] * 
+			    observationMat[i][O.get(0)]; //equivalent to pi_i * b_i(O_0)
+		    scalingFactors[0] += alphas[0][i];
 		}
 		//Scale the a_0(i)
-		scalingFactors.set(0, 1 / scalingFactors.get(0));
+		scalingFactors[0] = 1 / scalingFactors[0];
 		for (int i = 0; i < N; i++)
 		{
-		    alphas.get(0).set(i, alphas.get(0).get(i) * scalingFactors.get(0));
-
+		    alphas[0][i] *= scalingFactors[0];
 		}
 		
 		//Compute a_t(i)
 		for(int t = 1; t < T; t++)
 		{
-		    scalingFactors.add(t, 0.0);
+		    scalingFactors[t] = 0;
 		    for (int i = 0; i < N; i++)
 		    {
-		        alphas.get(t).add(i, 0.0);
+		        alphas[t][i] = 0;
 		        for (int j = 0; j < N; j++)
 		        {
-					alphas.get(t).set(i, alphas.get(t).get(i) + (alphas.get(t-1).get(j) * transitionMat.get(j).get(i)));
+		            alphas[t][i] += alphas[t - 1][j] * transitionMat[j][i];
 		        }
-		        alphas.get(t).set(i, alphas.get(t).get(i) * observationMat.get(i).get(O.get(t)));
-				
-		        scalingFactors.set(t, scalingFactors.get(t) + alphas.get(t).get(i));
+		        alphas[t][i] *= observationMat[i][O.get(t)];
+		        scalingFactors[t] += alphas[t][i];
 		    }
 		
 		    //Scale a_t(i)
-			scalingFactors.set(t, 1 / scalingFactors.get(t));
+		    scalingFactors[t] = 1 / scalingFactors[t];
 		    for(int i = 0; i < N; i++)
 		    {
-				alphas.get(t).set(i, alphas.get(t).get(i) * scalingFactors.get(t));
+		        alphas[t][i] *= scalingFactors[t];
 		    }
 		}
 		
 		return alphas;
+
 	}
 
 	public double computeLogProb(ArrayList<Integer> O)
 	{
-    	double newLogProb = 0;
+    		double newLogProb = 0;
 		for (int i = 0; i < O.size(); i++)
 		{
-		    newLogProb += Math.log(scalingFactors.get(i));
+		    newLogProb += Math.log(scalingFactors[i]);
 		}
 		newLogProb *= -1;
 
@@ -100,26 +99,24 @@ class HiddenMarkovModel
 
 	public ArrayList<Integer> optimalStateSequence(ArrayList<Integer> O)
 	{
-		N = O.size(); // If causes err remove TODO
-		ArrayList<ArrayList<Double>> alphas = alphaPass(O);
+		double[][] alphas = alphaPass(O);
 		double score = scoreStateSequence(O);
 		ArrayList<ArrayList<Double>> betas = betaPass(O);
 		computeDiGammas(alphas, betas, O);
 
-		int T = gammas.size();
-		N = gammas.get(0).size();
+		int T = gammas.length;
 		ArrayList<Integer> optimalSequence = new ArrayList<Integer>(T);
 
 		for(int t = 0; t < T; t++)
     	{
-    	    double max = gammas.get(t).get(0);
+    	    double max = gammas[t][0];
     	    int mostLikely = 0;
 
     	    for(int i = 1; i < N; i++)
     	    {
-    	        if(gammas.get(t).get(i) > max)
+    	        if(gammas[t][i] > max)
     	        {
-    	            max = gammas.get(t).get(i);
+    	            max = gammas[t][i];
     	            mostLikely = i;
     	        }
     	    }
@@ -128,41 +125,29 @@ class HiddenMarkovModel
 		return  optimalSequence;
 	}
 
-	void computeDiGammas(ArrayList<ArrayList<Double>> alphas,ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O )
+	void computeDiGammas(double[][] alphas,ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O )
 	{
 		
-		N = observationMat.size();
-	    int T = alphas.size();
+		N = observationMat.length;
+	    	int T = alphas.length;
 
-		digammas = new ArrayList<ArrayList<ArrayList<Double>>>(T);
-		gammas = new ArrayList<ArrayList<Double>>(T);
-		for(int i = 0; i < T; i++)
-		{
-			digammas.add(i, new ArrayList<ArrayList<Double>>(N));
-			gammas.add(i, new ArrayList<Double>(N)); //TODO What is the correct size?
-			for(int j = 0; j < N; j++)
-			{
-				digammas.get(i).add(j, new ArrayList<Double>(N));
-				gammas.get(i).add(j, 0.0);
-				for(int k = 0; k < N; k++)
-					digammas.get(i).get(j).add(0, 0.0);
-			}
-		}
+		digammas = new double[T][N][N];
+		gammas = new double[T][N];
 	
 	    for(int t = 0; t < T - 1; t++)
 	    {
 	        double denom = 0;
 	        for(int i = 0; i < N; i++)
 	            for(int j = 0; j < N ; j++)
-					denom += (alphas.get(t).get(i) * transitionMat.get(i).get(j) * observationMat.get(j).get(O.get(t + 1)) * betas.get(t+1).get(j));
+					denom += (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t + 1))] * betas.get(t+1).get(j));
 
 	        for(int i = 0; i < N; i++)
 	        {
-				gammas.get(t).set(i, 0.0);
+				gammas[t][i] = 0.0;
 	            for(int j = 0; j < N; j++)
 	            {
-					digammas.get(t).get(i).add(j, (alphas.get(t).get(i) * transitionMat.get(i).get(j) * observationMat.get(j).get(O.get(t+1)) * betas.get(t+1).get(j)) / denom);
-					gammas.get(t).set(i, gammas.get(t).get(i) + digammas.get(t).get(i).get(j));
+					digammas[t][i][j] = (alphas[t][i] * transitionMat[i][j] * observationMat[j][(O.get(t+1))] * betas.get(t+1).get(j)) / denom;
+					gammas[t][i] += digammas[t][i][j];
 	            }
 	        }
 	    }
@@ -170,7 +155,7 @@ class HiddenMarkovModel
 	
 	    double denom = scoreStateSequence(O);
 	    for(int i = 0; i < N; i++)
-			gammas.get(T - 1).set(i , alphas.get(T - 1).get(i) / denom);
+			gammas[T - 1][i] = alphas[T -1][i] / denom;
 	}
 
 	ArrayList<ArrayList<Double>> betaPass(ArrayList<Integer> O)
@@ -184,7 +169,7 @@ class HiddenMarkovModel
 
 	    for(int i = 0; i < N; i++)
 	    {
-			betas.get(T - 1).add(i, scalingFactors.get(T - 1));
+			betas.get(T - 1).add(i, scalingFactors[T - 1]);
 	    }
 	    //Beta pass
 	    for(int t = T - 2; t >= 0; t--)
@@ -196,12 +181,12 @@ class HiddenMarkovModel
 	           for(int j = 0; j < N; j++)
 	           {
 				   betas.get(t).set(i, betas.get(t).get(i) + 
-						   (transitionMat.get(i).get(j) * 
-							observationMat.get(j).get(O.get(t + 1)) * 
+						   (transitionMat[i][j] * 
+							observationMat[j][(O.get(t + 1))] * 
 							betas.get(t + 1).get(j)));
 	           }
     	         //Scale beta[t][i] with same factor as alphas[t][i]
-				 betas.get(t).set(i, betas.get(t).get(i) * scalingFactors.get(t));
+				 betas.get(t).set(i, betas.get(t).get(i) * scalingFactors[t]);
 			}
 		}
 
@@ -210,38 +195,32 @@ class HiddenMarkovModel
 
 	public static void main(String[] args)
 	{
-    	/*ArrayList<ArrayList<Double>> a = new ArrayList<ArrayList<Double>>();
-		ArrayList<Double> tmp = new ArrayList<Double>();
-		tmp.add(0.7); tmp.add(0.3);
-		a.add(tmp);
-		tmp = new ArrayList<Double>();
-		tmp.add(0.4); tmp.add( 0.6);
-		a.add(tmp);
+    	    	  double[][] a = {
+    	          {.7, .3},
+    	          {.4, .6}
+    	  	  };
 
-     	ArrayList<ArrayList<Double>> b = new ArrayList<ArrayList<Double>>();
-		tmp = new ArrayList<Double>();
-		tmp.add(0.1); tmp.add(0.4); tmp.add(0.5);
-		b.add(tmp);
-		tmp = new ArrayList<Double>();
-		tmp.add(0.7); tmp.add( 0.2); tmp.add( 0.1);
-		b.add(tmp);
+    	  	  double[][] b = {
+    	  	          {.1, .4, .5},
+    	  	          {.7, .2, .1}
+    	  	  };
 
-     	ArrayList<Double> pi = new ArrayList<Double>();
-		pi.add(0.6); pi.add(0.4);
+    		 double[] pi = {.6, .4};
 
-    	HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
 
-    	ArrayList<Integer> O = new ArrayList<Integer>();
+		
+		HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
+
+    		ArrayList<Integer> O = new ArrayList<Integer>();
 		O.add(0) ; O.add(1); O.add(0); O.add(2);
 
-    	double score = hmm.scoreStateSequence(O);
-    	p("Score: " + score);
-    	ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
-    	for(Integer i: optimal)
-    	   System.out.print( i + " ");
+    		double score = hmm.scoreStateSequence(O);
+    		p("Score: " + score);
+    		ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
+    		for(Integer i: optimal)
+    		   System.out.print( i + " ");
 		p("");
-*/
-	    int HEADER_SIZE = 15;
+/*	    int HEADER_SIZE = 15;
 		String line = "";
 	    ArrayList<Integer> O2 = new ArrayList<Integer>();
 	    //this should be an absolute path to corpus.dos, and A is the only starting letter of files that I am iterating through.
@@ -288,16 +267,18 @@ class HiddenMarkovModel
 	    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
 	    hmm2.train(O2, 100);
 	
-		System.out.println("finished trainign HMM");
+		System.out.println("finished trainign HMM");*/
 	}
 
 	public void train(ArrayList<Integer> O, int maxIters)
 	{
-		ArrayList<ArrayList<Double>> alphas = null, betas = null;
+		ArrayList<ArrayList<Double>> betas = null;
+ 		double[][] alphas = null;
+
 		update(alphas, betas, O);
 	}
 
-	public void update(ArrayList<ArrayList<Double>> alphas, ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O)
+	public void update(double[][] alphas, ArrayList<ArrayList<Double>> betas, ArrayList<Integer> O)
 	{
 		alphas = alphaPass(O);	
 		betas = betaPass(O);
@@ -308,21 +289,15 @@ class HiddenMarkovModel
 	{
 		this.N = N;
 		this.M = M;
-	    transitionMat = new ArrayList<ArrayList<Double>>(N);
-		for(int i = 0; i < N; i++)
-			transitionMat.add(i, new ArrayList<Double>());
+	   	transitionMat = new double[N][N];
+	    	observationMat = new double[N][M];
 	    
-		observationMat = new ArrayList<ArrayList<Double>>(N);
-		for(int i = 0; i < M; i++)
-			observationMat.add(i, new ArrayList<Double>());
 
-	    initialState = new ArrayList<Double>();
-		for(int i = 0; i < N; i++)
-			initialState.add(i, 0.0);
+	    	initialState = new double[N];
 
-		scalingFactors = new ArrayList<Double>(O.size());
+		scalingFactors = new double[O.size()];
 		for(int i = 0; i < O.size(); i++)
-			scalingFactors.add(i, 0.0);
+			scalingFactors[i] = 0.0;
 
 
 		Random rand1 = new Random(1);
@@ -330,30 +305,31 @@ class HiddenMarkovModel
 	    for(int i = 0; i < N; i++)
 	    {
 	       //Initialize transition matrix
-			ArrayList<Double> transitionRow = new ArrayList<Double>(N);
+			double[] transitionRow = new double[N];
 			
 	        double sum = 0;
 	        for(int j = 0; j < N; j++)
 	        {
 				double randNum = ThreadLocalRandom.current().nextDouble(((1.0/N) - 0.0001 ), ((1.0/N) + 0.0001 ));
-				transitionRow.add(j, randNum);
-	            sum +=  transitionRow.get(j);
+				transitionRow[j] = randNum;
+	            		sum +=  transitionRow[j];
 	        }
-			transitionMat.set(i, transitionRow);
+			transitionMat[i] = transitionRow;
 
 			//Initialize observation matrix
-	        ArrayList<Double>  observationRow = new ArrayList<Double>(M);
+	        double[]  observationRow = new double[M];
 	        for(int j = 0; j < M; j++ )
 	        {
 				double randNum = ThreadLocalRandom.current().nextDouble(((1.0/M) - 0.0001 ), ((1.0/M) + 0.0001 ));
-	            observationRow.add(j, randNum);
-	        }
-	        observationMat.add(i, observationRow);
+	            observationRow[j] = randNum;
 
-			initialState.set(i, ThreadLocalRandom.current().nextDouble(((1.0/N) - 0.0001 ), ((1.0/N) + 0.0001 )));
-			makeStochasticRow(observationMat.get(i));
-	        makeStochasticRow(transitionMat.get(i));
-	        makeStochasticRow(initialState);
+	        }
+	        observationMat[i] = observationRow;
+
+			initialState[i] = ThreadLocalRandom.current().nextDouble(((1.0/N) - 0.0001 ), ((1.0/N) + 0.0001 ));
+		//makeStochasticRow(observationMat[i)];
+	        //makeStochasticRow(transitionMat[i]);
+	        //makeStochasticRow(initialState);
 		}	
 	}
 	
