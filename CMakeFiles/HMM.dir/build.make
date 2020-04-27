@@ -80,28 +80,28 @@ include CMakeFiles/HMM.dir/flags.make
 CMakeFiles/HMM.dir/main.cpp.o: CMakeFiles/HMM.dir/flags.make
 CMakeFiles/HMM.dir/main.cpp.o: main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/Projects/hidden-markov-model-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HMM.dir/main.cpp.o"
-	/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HMM.dir/main.cpp.o -c /home/brett/Projects/hidden-markov-model-2/main.cpp
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HMM.dir/main.cpp.o -c /home/brett/Projects/hidden-markov-model-2/main.cpp
 
 CMakeFiles/HMM.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HMM.dir/main.cpp.i"
-	/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/Projects/hidden-markov-model-2/main.cpp > CMakeFiles/HMM.dir/main.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/Projects/hidden-markov-model-2/main.cpp > CMakeFiles/HMM.dir/main.cpp.i
 
 CMakeFiles/HMM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HMM.dir/main.cpp.s"
-	/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/Projects/hidden-markov-model-2/main.cpp -o CMakeFiles/HMM.dir/main.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/Projects/hidden-markov-model-2/main.cpp -o CMakeFiles/HMM.dir/main.cpp.s
 
 CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o: CMakeFiles/HMM.dir/flags.make
 CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o: HiddenMarkovModel.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/brett/Projects/hidden-markov-model-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o"
-	/bin/gcc  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o -c /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.o -c /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp
 
 CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.i"
-	/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp > CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp > CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.i
 
 CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.s"
-	/bin/gcc $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp -o CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/brett/Projects/hidden-markov-model-2/HiddenMarkovModel.cpp -o CMakeFiles/HMM.dir/HiddenMarkovModel.cpp.s
 
 # Object files for target HMM
 HMM_OBJECTS = \

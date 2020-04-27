@@ -9,7 +9,7 @@ Observation returnObservation(char x)
 
 int main()
 {
-/*    StochasticMatrix a = {
+    StochasticMatrix a = {
             {.7, .3},
             {.4, .6}
     };
@@ -25,7 +25,6 @@ int main()
     StateSequence optimal = hmm.optimalStateSequence(O);
     for(auto i: optimal)
         std::cout << i << " ";
-	*/
 
     int HEADER_SIZE = 15;
     std::string line;
@@ -72,7 +71,10 @@ int main()
 
 
     HiddenMarkovModel hmm2(O2, 2, 27);
+    hmm2.prettyPrint();
     hmm2.train(O2, 100);
 
     std::cout << "finished trainign HMM";
+
+    hmm2.prettyPrint();
 }

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/bin/gcc")
+set(CMAKE_CXX_COMPILER "/bin/c++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "9.2.1")
@@ -83,6 +83,6 @@ endif()
 
 
 set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/9;/usr/include/c++/9/x86_64-redhat-linux;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-redhat-linux/9/include;/usr/local/include;/usr/include")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-redhat-linux/9;/usr/lib64;/lib64;/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

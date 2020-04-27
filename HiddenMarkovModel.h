@@ -33,6 +33,7 @@ public:
 
     StateSequence optimalStateSequence(const ObservationSequence& O);
     double computeLogProb(const ObservationSequence &O);
+    void prettyPrint();
 
 private:
     StochasticMatrix transitionMatrix;

@@ -321,9 +321,13 @@ void HiddenMarkovModel::doTrainStep(const ObservationSequence& O, Order3Tensor& 
                numer += diGammas[t][i][j];
                denom += gammas[t][i];
            }
+           std::cout<<transitionMatrix[i][j]<<" ..Before"<<std::endl;
 
-           if(denom != 0) //TODO: Should never be zero, something has gone wrong...
+           std::cout<<"numer: "<< numer<<std::endl;
+           std::cout<<"denom: "<< denom<<std::endl;
+           if(denom != 0 && numer != nan && denom != nan) //TODO: Should never be zero, something has gone wrong...
                transitionMatrix[i][j] = numer/denom;
+           std::cout<<transitionMatrix[i][j]<<" ..After"<<std::endl;
       }
     }
 
@@ -374,4 +378,15 @@ void HiddenMarkovModel::update(Matrix& alphas, Matrix& betas, Order3Tensor& diga
     std::pair<Matrix, Order3Tensor> digammas_gammas = computeDiGammas(alphas, betas, O);
     gammas = std::get<0>(digammas_gammas);
     digammas = std::get<1>(digammas_gammas);
+}
+
+void HiddenMarkovModel::prettyPrint()
+{
+  std::cout<<"Transition: "<<std::endl;
+  for(int i = 0; i < transitionMatrix.size(); i++)
+  {
+    for(int j = 0; j < transitionMatrix[i].size(); j++)
+      std::cout<<transitionMatrix[i][j]<<", ";
+      std::cout<<std::endl;
+  }
 }
