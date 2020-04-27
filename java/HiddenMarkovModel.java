@@ -270,9 +270,73 @@ class HiddenMarkovModel
 	public void train(ArrayList<Integer> O, int maxIters)
 	{
 		double[][] alphas = null,  betas = null;
-;
-
 		update(alphas, betas, O);
+
+		 //do training
+		int iters = 0;
+		int t = 0;
+		double oldLogProb = Integer.MIN_VALUE;
+		double newLogProb = 0;
+		double epsilon = 0.001;
+		
+		while(iters < maxIters && (oldLogProb  - epsilon) < newLogProb)
+		{
+		    iters++; t++;
+		
+		    doTrainStep(O);
+		
+		    //New
+		    //newLogProb = computeLogProb(O);
+		
+		    //Back to step 2
+		    //update(alphas, betas, digammas, gammas, O);
+		}
+	}
+
+	public void doTrainStep(ArrayList<Integer> O)
+	{
+/////////////////////////////////////////
+    //Re-estimate pi
+    for(int i = 0; i < initialState.length; i++)
+        initialState[i] = gammas[0][i];
+
+    //Re-estimate A
+    for(int i = 0; i < transitionMat.length; i++)
+    {
+       for(int j = 0; j < transitionMat.length; j++)
+       {
+           double numer = 0;
+           double denom = 0;
+           for(int t = 0; t < O.size()- 1; t++)
+           {
+               numer += digammas[t][i][j];
+               denom += gammas[t][i];
+           }
+
+           if(denom != 0) //TODO: Should never be zero, something has gone wrong...
+               transitionMat[i][j] = numer/denom;
+      }
+    }
+
+    //Re-estimate B
+    for(int i = 0; i < transitionMat.length; i++)
+    {
+        for(int j = 0; j < observationMat[0].length; j++)
+        {
+            double numer = 0;
+            double denom = 0;
+            for (int t = 0; t < O.size() - 1; t++)
+            {
+                if (O.get(t) == j)
+                    numer += gammas[t][i];
+                denom += gammas[t][i];
+            }
+
+            if (denom != 0) //TODO: Should never be zero, something has gone wrong...
+                observationMat[i][j] = numer / denom;
+        }
+    }
+/////////////////////////////////////////
 	}
 
 	public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O)
