@@ -282,7 +282,7 @@ class HiddenMarkovModel
 		while(iters < maxIters && (oldLogProb  - epsilon) < newLogProb)
 		{
 		    iters++; t++;
-		
+
 		    doTrainStep(O);
 		
 		    //New
@@ -295,7 +295,6 @@ class HiddenMarkovModel
 
 	public void doTrainStep(ArrayList<Integer> O)
 	{
-/////////////////////////////////////////
     //Re-estimate pi
     for(int i = 0; i < initialState.length; i++)
         initialState[i] = gammas[0][i];
@@ -336,7 +335,6 @@ class HiddenMarkovModel
                 observationMat[i][j] = numer / denom;
         }
     }
-/////////////////////////////////////////
 	}
 
 	public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O)
