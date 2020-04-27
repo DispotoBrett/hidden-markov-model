@@ -162,78 +162,6 @@ class HiddenMarkovModel {
     return betas;
   }
 
-  public static void main(String[] args) {
-    double[][] a = {
-      {.7, .3},
-      {.4, .6}
-    };
-
-    double[][] b = {
-      {.1, .4, .5},
-      {.7, .2, .1}
-    };
-
-    double[] pi = {.6, .4};
-
-    HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
-
-    ArrayList<Integer> O = new ArrayList<Integer>();
-    O.add(0);
-    O.add(1);
-    O.add(0);
-    O.add(2);
-
-    double score = hmm.scoreStateSequence(O);
-    p("Score: " + score);
-    ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
-    for (Integer i : optimal) System.out.print(i + " ");
-    p("");
-    int HEADER_SIZE = 15;
-    String line = "";
-    ArrayList<Integer> O2 = new ArrayList<Integer>();
-    // this should be an absolute path to corpus.dos, and A is the only starting letter of files
-    // that I am iterating through.
-    // String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
-    String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
-    String filenames[] = new String[40];
-    for (int i = 1; i < 40; i++) {
-      filenames[i] = filebase;
-      if (i < 10) filenames[i] += "0";
-      filenames[i] += i;
-    }
-
-    for (int j = 1; j < 40; j++) {
-      File file = new File(filenames[j]);
-      try {
-        Scanner scan = new Scanner(file);
-        while (scan.hasNextLine()) {
-          line = scan.nextLine();
-          for (int i = HEADER_SIZE; i < line.length(); i++) {
-            char c = line.charAt(i);
-
-            if (c == ' ') // TODO TODO
-            O2.add(26); // TODO I CHANGED TO 26 (used to be 27 -- thorws out of bounds ex)?
-            else {
-              c = Character.toLowerCase(c);
-              int o = returnObservation(c);
-              if (o < 27 && o >= 0) O2.add(o);
-            }
-          }
-        }
-        scan.close();
-      } catch (Exception e) {
-        System.out.println("oops");
-      }
-    }
-
-    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
-    hmm2.prettyPrint();
-
-    hmm2.train(O2, 100);
-    System.out.println("finished trainign HMM");
-    hmm2.prettyPrint();
-  }
-
   public void train(ArrayList<Integer> O, int maxIters) {
     double[][] alphas = null, betas = null;
     update(alphas, betas, O);
@@ -337,19 +265,19 @@ class HiddenMarkovModel {
 
       initialState[i] =
           ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.0001), ((1.0 / N) + 0.0001));
-      // makeStochasticRow(observationMat[i)];
-      // makeStochasticRow(transitionMat[i]);
-      // makeStochasticRow(initialState);
+      makeStochasticRow(observationMat[i]);
+      makeStochasticRow(transitionMat[i]);
+      makeStochasticRow(initialState);
     }
   }
   
-  public void makeStochasticRow(ArrayList<Double> mat) {
+  public void makeStochasticRow(double[] mat) {
     double sum = 0;
-    for (int i = 0; i < mat.size(); i++) sum += mat.get(i);
+    for (int i = 0; i < mat.length; i++) sum += mat[i];
 
     if (sum != 1) {
-      double diff = (1 - sum) / mat.size();
-      for (int i = 0; i < mat.size(); i++) mat.set(i, mat.get(i) + diff);
+      double diff = (1 - sum) / mat.length;
+      for (int i = 0; i < mat.length; i++) mat[i] += diff;
     }
   }
 
@@ -454,12 +382,83 @@ class HiddenMarkovModel {
 		double[] result = new double[split.length];
 		
 		for(int i = 0; i < split.length; i++)
-		
 			result[i] = Double.parseDouble(split[i]);
 		
 		return result;
 	}
-}
 
-// some typedefs
-class Order3Tensor extends ArrayList<ArrayList<ArrayList<Double>>> {}
+
+  //---------------------- File IO Stuff ----------------------\\
+
+  public static void main(String[] args) {
+    double[][] a = {
+      {.7, .3},
+      {.4, .6}
+    };
+
+    double[][] b = {
+      {.1, .4, .5},
+      {.7, .2, .1}
+    };
+
+    double[] pi = {.6, .4};
+
+    HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
+
+    ArrayList<Integer> O = new ArrayList<Integer>();
+    O.add(0);
+    O.add(1);
+    O.add(0);
+    O.add(2);
+
+    double score = hmm.scoreStateSequence(O);
+    p("Score: " + score);
+    ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
+    for (Integer i : optimal) System.out.print(i + " ");
+    p("");
+    int HEADER_SIZE = 15;
+    String line = "";
+    ArrayList<Integer> O2 = new ArrayList<Integer>();
+    // this should be an absolute path to corpus.dos, and A is the only starting letter of files
+    // that I am iterating through.
+    // String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
+    String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
+    String filenames[] = new String[40];
+    for (int i = 1; i < 40; i++) {
+      filenames[i] = filebase;
+      if (i < 10) filenames[i] += "0";
+      filenames[i] += i;
+    }
+
+    for (int j = 1; j < 40; j++) {
+      File file = new File(filenames[j]);
+      try {
+        Scanner scan = new Scanner(file);
+        while (scan.hasNextLine()) {
+          line = scan.nextLine();
+          for (int i = HEADER_SIZE; i < line.length(); i++) {
+            char c = line.charAt(i);
+
+            if (c == ' ') // TODO TODO
+            O2.add(26); // TODO I CHANGED TO 26 (used to be 27 -- thorws out of bounds ex)?
+            else {
+              c = Character.toLowerCase(c);
+              int o = returnObservation(c);
+              if (o < 27 && o >= 0) O2.add(o);
+            }
+          }
+        }
+        scan.close();
+      } catch (Exception e) {
+        System.out.println("oops");
+      }
+    }
+
+    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27);
+    hmm2.prettyPrint();
+
+    hmm2.train(O2, 100);
+    System.out.println("finished trainign HMM");
+    hmm2.prettyPrint();
+  }
+}
