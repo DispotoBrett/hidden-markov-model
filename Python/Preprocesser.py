@@ -6,7 +6,7 @@ parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
 MAX_UNIQUE_OPCODES = 32
 MAX_FAMILIES = 5
-TRAIN_SIZE = 1000
+TRAIN_SIZE = 500000
 VALIDATION_SIZE = int(TRAIN_SIZE * .2)
 TEST_SIZE = int(TRAIN_SIZE * .1)
 
@@ -113,7 +113,7 @@ def setup_processed_dataset():
             j = 0
             for family_name2 in sorted_families:
 
-                if not family_name2 == family_name and j < MAX_FAMILIES:
+                if not family_name2 == family_name and j < MAX_FAMILIES-1:
                     j += 1
                     print(family_name2)
                     family_dir2 = opcode_dir + '/' + family_name2
@@ -131,6 +131,7 @@ def setup_processed_dataset():
                             else:
                                 break
 
+                    print(family_name, "test ", j, ", num elements ", test2_elements)
                     np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test' + str(j) + '.txt', X=test2_arr, fmt=format)
 
 
