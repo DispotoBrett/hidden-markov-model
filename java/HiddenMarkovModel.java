@@ -26,47 +26,53 @@ class HiddenMarkovModel {
     return logProb;
   }
 
+  
+
   public double[][] alphaPass(ArrayList<Integer> O) {
-    // int N = observationMat.size();
-    int T = O.size();
+	  // int N = observationMat.size();
+	  int T = O.size();
 
-    double[][] alphas = new double[T][N];
+	  double[][] alphas = new double[T][N];
 
-    // Compute a_0(i)
-    scalingFactors[0] = 0;
-    for (int i = 0; i < N; i++) {
-      alphas[0][i] = initialState[i] * observationMat[i][O.get(0)]; // equivalent to pi_i * b_i(O_0)
-      scalingFactors[0] += alphas[0][i];
-    }
-    // Scale the a_0(i)
-    scalingFactors[0] = 1 / scalingFactors[0];
-    for (int i = 0; i < N; i++) {
-      alphas[0][i] *= scalingFactors[0];
-    }
+	  // Compute a_0(i)
+	  scalingFactors[0] = 0;
+	  for (int i = 0; i < N; i++) {
+		  alphas[0][i] = initialState[i] * observationMat[i][O.get(0)]; // equivalent to pi_i * b_i(O_0)
+		  scalingFactors[0] += alphas[0][i];
+	  }
+	  // Scale the a_0(i)
+	  scalingFactors[0] = 1 / scalingFactors[0];
+	  for (int i = 0; i < N; i++) {
+		  alphas[0][i] *= scalingFactors[0];
+	  }
 
-    // Compute a_t(i)
-    for (int t = 1; t < T; t++) {
-      scalingFactors[t] = 0;
-      for (int i = 0; i < N; i++) {
-        alphas[t][i] = 0;
-        for (int j = 0; j < N; j++) {
-          alphas[t][i] += alphas[t - 1][j] * transitionMat[j][i];
-        }
-        alphas[t][i] *= observationMat[i][O.get(t)];
-        scalingFactors[t] += alphas[t][i];
-      }
+	  // Compute a_t(i)
+	  for (int t = 1; t < T; t++) {
+		  scalingFactors[t] = 0;
+		  for (int i = 0; i < N; i++) {
+			  alphas[t][i] = 0;
+			  for (int j = 0; j < N; j++) {
+				  alphas[t][i] += alphas[t - 1][j] * transitionMat[j][i];
+			  }
+			  alphas[t][i] *= observationMat[i][O.get(t)];
+			  scalingFactors[t] += alphas[t][i];
+		  }
 
-      // Scale a_t(i)
-      scalingFactors[t] = 1 / scalingFactors[t];
-      for (int i = 0; i < N; i++) {
-        alphas[t][i] *= scalingFactors[t];
-      }
-    }
+		  // Scale a_t(i)
+		  scalingFactors[t] = 1 / scalingFactors[t];
+		  for (int i = 0; i < N; i++) {
+			  alphas[t][i] *= scalingFactors[t];
+		  }
+	  }
 
-    return alphas;
+	  return alphas;
   }
 
+  
+  
+
   public double computeLogProb(ArrayList<Integer> O) {
+	 
     double newLogProb = 0;
     for (int i = 0; i < O.size(); i++) {
       newLogProb += Math.log(scalingFactors[i]);
@@ -75,6 +81,8 @@ class HiddenMarkovModel {
 
     return newLogProb;
   }
+
+  
 
   public ArrayList<Integer> optimalStateSequence(ArrayList<Integer> O) {
     double[][] alphas = alphaPass(O);
@@ -100,181 +108,206 @@ class HiddenMarkovModel {
     return optimalSequence;
   }
 
+  
+
   void computeDiGammas(double[][] alphas, double[][] betas, ArrayList<Integer> O) {
 
-    N = observationMat.length;
-    int T = alphas.length;
+	  N = observationMat.length;
+	  int T = alphas.length;
 
-    digammas = new double[T][N][N];
-    gammas = new double[T][N];
+	  digammas = new double[T][N][N];
+	  gammas = new double[T][N];
 
-    for (int t = 0; t < T - 1; t++) {
-      double denom = 0;
-      for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++)
-          denom +=
-              (alphas[t][i]
-                  * transitionMat[i][j]
-                  * observationMat[j][(O.get(t + 1))]
-                  * betas[t + 1][j]);
+	  for (int t = 0; t < T - 1; t++) {
+		  double denom = 0;
+		  for (int i = 0; i < N; i++)
+			  for (int j = 0; j < N; j++)
+				  denom +=
+				  (alphas[t][i]
+						  * transitionMat[i][j]
+						  * observationMat[j][(O.get(t + 1))]
+						  * betas[t + 1][j]);
 
-      for (int i = 0; i < N; i++) {
-        gammas[t][i] = 0.0;
-        for (int j = 0; j < N; j++) {
-          digammas[t][i][j] =
-              (alphas[t][i]
-                      * transitionMat[i][j]
-                      * observationMat[j][(O.get(t + 1))]
-                      * betas[t + 1][j])
-                  / denom;
-          gammas[t][i] += digammas[t][i][j];
-        }
-      }
-    }
+		  for (int i = 0; i < N; i++) {
+			  gammas[t][i] = 0.0;
+			  for (int j = 0; j < N; j++) {
+				  digammas[t][i][j] =
+						  (alphas[t][i]
+						  * transitionMat[i][j]
+						  * observationMat[j][(O.get(t + 1))]
+						  * betas[t + 1][j])
+						  / denom;
+				  gammas[t][i] += digammas[t][i][j];
+			  }
+		  }
+	  }
 
-    double denom = scoreStateSequence(O);
-    for (int i = 0; i < N; i++) gammas[T - 1][i] = alphas[T - 1][i] / denom;
+	  double denom = 0;
+	  for(int i = 0; i < N; i++)
+		  denom += alphas[T-1][i];
+	  
+	  for (int i = 0; i < N; i++) gammas[T - 1][i] = alphas[T - 1][i] / denom;
   }
+
+  
 
   double[][] betaPass(ArrayList<Integer> O) {
-    // N = observationMat.size();
-    int T = O.size();
+	  // N = observationMat.size();
+	  int T = O.size();
 
-    double betas[][] = new double[T][N];
+	  double betas[][] = new double[T][N];
 
-    for (int i = 0; i < N; i++) {
-      betas[T - 1][i] = scalingFactors[T - 1];
-    }
-    // Beta pass
-    for (int t = T - 2; t >= 0; t--) {
-      for (int i = 0; i < N; i++) {
-        betas[t][i] = 0.0;
+	  for (int i = 0; i < N; i++) {
+		  betas[T - 1][i] = scalingFactors[T - 1];
+	  }
+	  // Beta pass
+	  for (int t = T - 2; t >= 0; t--) {
+		  for (int i = 0; i < N; i++) {
+			  betas[t][i] = 0.0;
 
-        for (int j = 0; j < N; j++) {
-          betas[t][i] +=
-              (transitionMat[i][j] * observationMat[j][(O.get(t + 1))] * betas[t + 1][j]);
-        }
-        // Scale beta[t][i] with same factor as alphas[t][i]
-        betas[t][i] *= scalingFactors[t];
-      }
-    }
+			  for (int j = 0; j < N; j++) {
+				  betas[t][i] +=
+						  (transitionMat[i][j] * observationMat[j][(O.get(t + 1))] * betas[t + 1][j]);
+			  }
+			  // Scale beta[t][i] with same factor as alphas[t][i]
+			  betas[t][i] *= scalingFactors[t];
+		  }
+	  }
 
-    return betas;
+	  return betas;
   }
+
+  
 
   public void train(ArrayList<Integer> O, int maxIters)
   {
 	train(O, O, maxIters);  
   }
   
+
   public void train(ArrayList<Integer> O, ArrayList<Integer> validation, int maxIters) {
-    double[][] alphas = null, betas = null;
-    update(alphas, betas, O);
+	  double[][] alphas = null, betas = null;
+	  update(alphas, betas, O);
 
-    // do training
-    int iters = 0;
-    int t = 0;
-    double oldLogProb = Integer.MIN_VALUE;
-    double newLogProb = 0;
-    double epsilon = 0.001;
-
-    while (iters < maxIters && (oldLogProb - epsilon) < newLogProb) {
-      iters++;
-      t++;
-
-      doTrainStep(O);
-
-      // New
-      newLogProb = computeLogProb(validation);
-
-      // Back to step 2
-      update(alphas, betas, O);
-    }
+	  // do training
+	  int iters = 0;
+	  double oldLogProb = -Double.MAX_VALUE;
+	  double newLogProb = -Double.MAX_VALUE;
+	  double epsilon = 100;
+	  
+	  do
+	  {
+		  iters++;
+		  update(alphas, betas, O);
+		  doTrainStep(O);
+		  
+		  oldLogProb = newLogProb;
+		  newLogProb = computeLogProb(validation);
+		  
+	  } while (iters < maxIters && (oldLogProb + epsilon) < newLogProb);
+	  
+	  System.out.println("Training done, Iterations = " + iters);
   }
 
+  
   public void doTrainStep(ArrayList<Integer> O) {
-    // Re-estimate pi
-    for (int i = 0; i < initialState.length; i++) initialState[i] = gammas[0][i];
+	  // Re-estimate pi
+	  for (int i = 0; i < N; i++) 
+		  initialState[i] = gammas[0][i];
 
-    // Re-estimate A
-    for (int i = 0; i < transitionMat.length; i++) {
-      for (int j = 0; j < transitionMat.length; j++) {
-        double numer = 0;
-        double denom = 0;
-        for (int t = 0; t < O.size() - 1; t++) {
-          numer += digammas[t][i][j];
-          denom += gammas[t][i];
-        }
+	  // Re-estimate A
+	  for (int i = 0; i < N; i++) {
+		  for (int j = 0; j < N; j++) {
+			  double numer = 0;
+			  double denom = 0;
+			  for (int t = 0; t < O.size() - 1; t++) 
+			  {
+				  numer += digammas[t][i][j];
+				  denom += gammas[t][i];
+			  }
 
-        if (denom != 0) //Should never be zero, something has gone wrong...
-        transitionMat[i][j] = numer / denom;
-      }
-    }
+			  if (denom != 0) //Should never be zero, something has gone wrong...
+				  transitionMat[i][j] = numer / denom;
+			  else
+				  System.out.println("Denom is 0, something has gone wrong");
+		  }
+	  }
 
-    // Re-estimate B
-    for (int i = 0; i < transitionMat.length; i++) {
-      for (int j = 0; j < observationMat[0].length; j++) {
-        double numer = 0;
-        double denom = 0;
-        for (int t = 0; t < O.size() - 1; t++) {
-          if (O.get(t) == j) numer += gammas[t][i];
-          denom += gammas[t][i];
-        }
+	  // Re-estimate B
+	  for (int i = 0; i < N; i++) {
+		  for (int j = 0; j < M; j++) {
+			  double numer = 0;
+			  double denom = 0;
+			  for (int t = 0; t < O.size() - 1; t++) 
+			  {
+				  if (O.get(t) == j) 
+					  numer += gammas[t][i];
+				  
+				  denom += gammas[t][i];
+			  }
 
-        if (denom != 0) //Should never be zero, something has gone wrong...
-        observationMat[i][j] = numer / denom;
-      }
-    }
+			  if (denom != 0) //Should never be zero, something has gone wrong...
+				  observationMat[i][j] = numer / denom;
+			  else
+				  System.out.println("Denom is 0, something has gone wrong");
+		  }
+	  }
   }
 
-  public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O) {
+  
+  //*angrily coughs up a lung* It means stupid in Armenian
+  public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O) 
+  {
     alphas = alphaPass(O);
     betas = betaPass(O);
     computeDiGammas(alphas, betas, O);
   }
 
-  HiddenMarkovModel(ArrayList<Integer> O, int N, int M, int seed) {
-    this.N = N;
-    this.M = M;
-    transitionMat = new double[N][N];
-    observationMat = new double[N][M];
 
-    initialState = new double[N];
+  public HiddenMarkovModel(ArrayList<Integer> O, int N, int M, int seed) {
+	  this.N = N;
+	  this.M = M;
+	  transitionMat = new double[N][N];
+	  observationMat = new double[N][M];
 
-    scalingFactors = new double[O.size()];
-    for (int i = 0; i < O.size(); i++) scalingFactors[i] = 0.0;
+	  initialState = new double[N];
 
-    Random rand1 = new Random(seed);
-    for (int i = 0; i < N; i++) {
-      // Initialize transition matrix
-      double[] transitionRow = new double[N];
+	  scalingFactors = new double[O.size()];
+	  for (int i = 0; i < O.size(); i++) scalingFactors[i] = 0.0;
 
-      double sum = 0;
-      for (int j = 0; j < N; j++) {
-        double randNum =
-            ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.0001), ((1.0 / N) + 0.0001));
-        transitionRow[j] = randNum;
-        sum += transitionRow[j];
-      }
-      transitionMat[i] = transitionRow;
+	  Random rand1 = new Random(seed);
+	  for (int i = 0; i < N; i++) {
+		  // Initialize transition matrix
+		  double[] transitionRow = new double[N];
 
-      // Initialize observation matrix
-      double[] observationRow = new double[M];
-      for (int j = 0; j < M; j++) {
-        double randNum =
-            ThreadLocalRandom.current().nextDouble(((1.0 / M) - 0.0001), ((1.0 / M) + 0.0001));
-        observationRow[j] = randNum;
-      }
-      observationMat[i] = observationRow;
+		  double sum = 0;
+		  for (int j = 0; j < N; j++) {
+			  double randNum =
+					  ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.01), ((1.0 / N) + 0.01));
+			  transitionRow[j] = randNum;
+			  sum += transitionRow[j];
+		  }
+		  transitionMat[i] = transitionRow;
 
-      initialState[i] =
-          ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.0001), ((1.0 / N) + 0.0001));
-      makeStochasticRow(observationMat[i]);
-      makeStochasticRow(transitionMat[i]);
-      makeStochasticRow(initialState);
-    }
+		  // Initialize observation matrix
+		  double[] observationRow = new double[M];
+		  for (int j = 0; j < M; j++) {
+			  double randNum =
+					  ThreadLocalRandom.current().nextDouble(((1.0 / M) - 0.01), ((1.0 / M) + 0.01));
+			  observationRow[j] = randNum;
+		  }
+		  observationMat[i] = observationRow;
+
+		  initialState[i] =
+				  ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.01), ((1.0 / N) + 0.01));
+		  makeStochasticRow(observationMat[i]);
+		  makeStochasticRow(transitionMat[i]);
+		  makeStochasticRow(initialState);
+	  }
   }
   
+  
+  //-------------------------- If you made it to here, you've gone too far ---------------------------------------------------\\
   public void makeStochasticRow(double[] mat) {
     double sum = 0;
     for (int i = 0; i < mat.length; i++) sum += mat[i];
@@ -394,7 +427,7 @@ class HiddenMarkovModel {
 
   //---------------------- File IO Stuff ----------------------\\
 
-  public static void main(String[] args) {
+  /*public static void main(String[] args) {
     double[][] a = {
       {.7, .3},
       {.4, .6}
@@ -425,8 +458,8 @@ class HiddenMarkovModel {
     ArrayList<Integer> O2 = new ArrayList<Integer>();
     // this should be an absolute path to corpus.dos, and A is the only starting letter of files
     // that I am iterating through.
-    // String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
-    String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
+     String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
+    //String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
     String filenames[] = new String[40];
     for (int i = 1; i < 40; i++) {
       filenames[i] = filebase;
@@ -464,5 +497,5 @@ class HiddenMarkovModel {
     hmm2.train(O2, 100);
     System.out.println("finished trainign HMM");
     hmm2.prettyPrint();
-  }
+  }*/
 }

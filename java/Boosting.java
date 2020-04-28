@@ -44,10 +44,11 @@ public class Boosting
 			ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
 			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
 			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, 2);
+			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, 0);
 			System.out.println("HMM for " + family);
-			hmm.train(train, validate, 200);
+			hmm.train(train, validate, 100);
 			hmm.prettyPrint();
+			System.out.println("Training Score = " + hmm.scoreStateSequence(train));
 			System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
 			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
 			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2) + "\n");
