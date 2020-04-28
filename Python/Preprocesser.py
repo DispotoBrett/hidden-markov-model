@@ -6,9 +6,10 @@ parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
 MAX_UNIQUE_OPCODES = 32
 MAX_FAMILIES = 5
-TRAIN_SIZE = 200000
+TRAIN_SIZE = 1000
 VALIDATION_SIZE = int(TRAIN_SIZE * .2)
 TEST_SIZE = int(TRAIN_SIZE * .1)
+
 
 def convert_file_to_symbol_arr(file_path, symbol_dict):
     symbols = []
@@ -20,6 +21,7 @@ def convert_file_to_symbol_arr(file_path, symbol_dict):
                 symbols.append(symbol_dict.get(opcode, MAX_UNIQUE_OPCODES))
 
     return symbols
+
 
 def count_opcodes():
     for family in os.scandir(opcode_dir):
@@ -39,6 +41,7 @@ def count_opcodes():
 
             np.save(opcode_dir + '/' + family.name + '/' + 'num_opcodes.npy', num_opcodes)
 
+
 def popular_opcodes(unique_opcodes):
     for family in os.scandir(opcode_dir):
         if family.is_dir():
@@ -48,8 +51,9 @@ def popular_opcodes(unique_opcodes):
 
             if len(opcodes) > 0:
                 opcodes.sort(reverse=True, key=lambda s: num_opcodes[s])
-                opcode_symbol = dict([(opcodes[i],i) for i in range(min(len(opcodes), unique_opcodes))])
+                opcode_symbol = dict([(opcodes[i], i) for i in range(min(len(opcodes), unique_opcodes))])
                 np.save(opcode_dir + '/' + family.name + '/' + 'opcode_symbol.npy', opcode_symbol)
+
 
 def largest_families():
     num_files = dict()
@@ -62,6 +66,7 @@ def largest_families():
     families = list(num_files.keys())
     families.sort(reverse=True, key=lambda f: num_files[f])
     np.save(opcode_dir + '/' + 'sorted_families.npy', np.asarray(families))
+
 
 def setup_processed_dataset():
     with open(opcode_dir + '/' + 'preprocessed_families.txt', 'w') as preprocessed_families:
@@ -82,6 +87,8 @@ def setup_processed_dataset():
             val_elements = 0
             test_arr = np.empty(TEST_SIZE)
             test_elements = 0
+            test2_arr = np.empty(TEST_SIZE)
+            test2_elements = 0
 
             for virus in os.scandir(family_dir):
                 symbols = convert_file_to_symbol_arr(virus.path, symbol_dict)
@@ -103,9 +110,33 @@ def setup_processed_dataset():
             np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'val.txt', X=val_arr, fmt=format)
             np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test.txt', X=test_arr, fmt=format)
 
-count_opcodes()
-popular_opcodes(MAX_UNIQUE_OPCODES)
-largest_families()
+            j = 0
+            for family_name2 in sorted_families:
+
+                if not family_name2 == family_name and j < MAX_FAMILIES:
+                    j += 1
+                    print(family_name2)
+                    family_dir2 = opcode_dir + '/' + family_name2
+                    test2_arr = np.empty(TEST_SIZE)
+                    test2_elements = 0
+
+                    for virus in os.scandir(family_dir2):
+                        symbols = convert_file_to_symbol_arr(virus.path, symbol_dict)
+
+                        for symbol in symbols:
+
+                            if test2_elements < TEST_SIZE:
+                                test2_arr[test2_elements] = symbol
+                                test2_elements += 1
+                            else:
+                                break
+
+                    np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test' + str(j) + '.txt', X=test2_arr, fmt=format)
+
+
+#count_opcodes()
+#popular_opcodes(MAX_UNIQUE_OPCODES)
+#largest_families()
 setup_processed_dataset()
 
 
