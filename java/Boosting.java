@@ -46,7 +46,7 @@ public class Boosting
 			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
 			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, 1);
 			System.out.println("HMM for " + family);
-			hmm.train(train, 200);
+			hmm.train(train, validate, 200);
 			hmm.prettyPrint();
 			System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
 			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));

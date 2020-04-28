@@ -23,7 +23,7 @@ class HiddenMarkovModel {
   public double scoreStateSequence(ArrayList<Integer> O) {
     alphaPass(O);
     double logProb = computeLogProb(O);
-    return Math.exp(logProb);
+    return logProb;
   }
 
   public double[][] alphaPass(ArrayList<Integer> O) {
@@ -162,25 +162,30 @@ class HiddenMarkovModel {
     return betas;
   }
 
-  public void train(ArrayList<Integer> O, int maxIters) {
+  public void train(ArrayList<Integer> O, int maxIters)
+  {
+	train(O, O, maxIters);  
+  }
+  
+  public void train(ArrayList<Integer> O, ArrayList<Integer> validation, int maxIters) {
     double[][] alphas = null, betas = null;
     update(alphas, betas, O);
 
     // do training
     int iters = 0;
     int t = 0;
-    double oldLogProb = Integer.MIN_VALUE;
+    double oldLogProb = Integer.MAX_VALUE;
     double newLogProb = 0;
     double epsilon = 0.001;
 
-    while (iters < maxIters && (oldLogProb - epsilon) < newLogProb) {
+    while (iters < maxIters && (oldLogProb - epsilon) > newLogProb) {
       iters++;
       t++;
 
       doTrainStep(O);
 
       // New
-      newLogProb = computeLogProb(O);
+      newLogProb = computeLogProb(validation);
 
       // Back to step 2
       update(alphas, betas, O);
