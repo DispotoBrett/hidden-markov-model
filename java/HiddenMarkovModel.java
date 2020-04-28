@@ -174,11 +174,11 @@ class HiddenMarkovModel {
     // do training
     int iters = 0;
     int t = 0;
-    double oldLogProb = Integer.MAX_VALUE;
+    double oldLogProb = Integer.MIN_VALUE;
     double newLogProb = 0;
     double epsilon = 0.001;
 
-    while (iters < maxIters && (oldLogProb - epsilon) > newLogProb) {
+    while (iters < maxIters && (oldLogProb - epsilon) < newLogProb) {
       iters++;
       t++;
 
