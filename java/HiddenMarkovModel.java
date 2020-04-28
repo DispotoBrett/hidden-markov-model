@@ -116,7 +116,7 @@ class HiddenMarkovModel {
               (alphas[t][i]
                   * transitionMat[i][j]
                   * observationMat[j][(O.get(t + 1))]
-                  * betas[i + 1][j]);
+                  * betas[t + 1][j]);
 
       for (int i = 0; i < N; i++) {
         gammas[t][i] = 0.0;
@@ -125,7 +125,7 @@ class HiddenMarkovModel {
               (alphas[t][i]
                       * transitionMat[i][j]
                       * observationMat[j][(O.get(t + 1))]
-                      * betas[i + 1][j])
+                      * betas[t + 1][j])
                   / denom;
           gammas[t][i] += digammas[t][i][j];
         }
