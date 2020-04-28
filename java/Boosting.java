@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class Boosting
 {
+	public static int MAX_UNIQUE_OPCODES = 32;
 	public static ArrayList<Integer> getObservationSequenceFromFile(String filename)
 	{
 		ArrayList<Integer> sequence = new ArrayList<>();
@@ -42,7 +43,14 @@ public class Boosting
 			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
 			ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
 			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-			
+			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
+			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, 1);
+			System.out.println("HMM for " + family);
+			hmm.train(test, 200);
+			hmm.prettyPrint();
+			System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
+			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
+			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(validate) + "\n");
 		}
 		
 		System.out.print("Loading done");

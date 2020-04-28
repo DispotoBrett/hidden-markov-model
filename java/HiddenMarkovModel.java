@@ -281,11 +281,11 @@ class HiddenMarkovModel {
   }
 
   static int returnObservation(char x) {
-    return (int) x - 87;
+    return (int) x - 97;
   }
 
   static char returnSymbol(int x) {
-    return (char) (x + 87);
+    return (char) (x + 97);
   }
 
   public static void p(Object s) {
