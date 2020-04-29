@@ -87,8 +87,6 @@ def setup_processed_dataset():
             val_elements = 0
             test_arr = np.empty(TEST_SIZE)
             test_elements = 0
-            test2_arr = np.empty(TEST_SIZE)
-            test2_elements = 0
 
             for virus in os.scandir(family_dir):
                 symbols = convert_file_to_symbol_arr(virus.path, symbol_dict)
@@ -122,7 +120,6 @@ def setup_processed_dataset():
 
                     for virus in os.scandir(family_dir2):
                         symbols = convert_file_to_symbol_arr(virus.path, symbol_dict)
-
                         for symbol in symbols:
 
                             if test2_elements < TEST_SIZE:
@@ -131,14 +128,30 @@ def setup_processed_dataset():
                             else:
                                 break
 
-                    print(family_name, "test", j + ',', "num elements", test2_elements)
+                    print(family_name, "test", str(j) + ',', "num elements", test2_elements)
                     np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test' + str(j) + '.txt', X=test2_arr, fmt=format)
 
 
+def test_correct_incorrect():
+    sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
+
+    for i in range(MAX_FAMILIES):
+        family_name = sorted_families[i]
+        print('Correct/Incorrect family ' + family_name)
+        family_dir = opcode_dir + '/' + family_name
+        symbol_dict = np.load(opcode_dir + '/' + family_name + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
+        correct_symbols = convert_file_to_symbol_arr(family_dir + '/' + 'test_correct.txt', symbol_dict)
+        incorrect_symbols = convert_file_to_symbol_arr(family_dir + '/' + 'test_incorrect.txt', symbol_dict)
+
+        format = '%d'
+        np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'proc_correct.txt', X=correct_symbols, fmt=format)
+        np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'proc_incorrect.txt', X=incorrect_symbols, fmt=format)
+
 #count_opcodes()
 #popular_opcodes(MAX_UNIQUE_OPCODES)
-largest_families()
+#largest_families()
 setup_processed_dataset()
+test_correct_incorrect()
 
 
 
