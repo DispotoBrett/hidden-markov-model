@@ -38,7 +38,8 @@ public class Boosting
 		
 		
 		//testManyFamilies(processedFamilies, opcodeDir);
-		testOneFamily(processedFamilies.get(2), opcodeDir, 5);
+		//testOneFamily(processedFamilies.get(2), opcodeDir, 5);
+		testCorrectIncorrect(processedFamilies.get(0), opcodeDir);
 		
 		System.out.print("Testing done");
 	}
@@ -86,6 +87,26 @@ public class Boosting
 			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
 			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2) + "\n");
 			hmm.saveToFile(String.format(datasetFiles, "hmm" + i + ".txt"));
+		}
+	}
+	
+	public static void testCorrectIncorrect(String family, String opcodeDir)
+	{
+		String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
+		String correctFile = opcodeDir + "/" + family + "/proc_correct.txt";
+		String incorrectFile = opcodeDir + "/" + family + "/proc_incorrect.txt";
+		
+		ArrayList<Integer> correct = getObservationSequenceFromFile(correctFile);
+		ArrayList<Integer> incorrect = getObservationSequenceFromFile(incorrectFile);
+		
+		HiddenMarkovModel[] hmms = new HiddenMarkovModel[5];
+		
+		for(int i = 0; i < 5; i++)
+		{
+			hmms[i] = HiddenMarkovModel.loadFromFile(String.format(datasetFiles, "hmm" + i + ".txt"));
+			System.out.println(i);
+			System.out.println("Correct score = " + hmms[i].scoreStateSequence(correct));
+			System.out.println("Incorrect score = " + hmms[i].scoreStateSequence(incorrect));
 		}
 	}
 	

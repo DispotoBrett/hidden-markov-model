@@ -31,7 +31,8 @@ class HiddenMarkovModel {
   public double[][] alphaPass(ArrayList<Integer> O) {
 	  // int N = observationMat.size();
 	  int T = O.size();
-
+	  
+	  scalingFactors = new double[T];
 	  double[][] alphas = new double[T][N];
 
 	  // Compute a_0(i)
