@@ -5,10 +5,10 @@ import numpy as np
 parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
 MAX_UNIQUE_OPCODES = 32
-MAX_FAMILIES = 5
-TRAIN_SIZE = 500000
+MAX_FAMILIES = 3
+TRAIN_SIZE = 1000000
 VALIDATION_SIZE = int(TRAIN_SIZE * .2)
-TEST_SIZE = int(TRAIN_SIZE * .1)
+TEST_SIZE = int(TRAIN_SIZE * .2)
 
 
 def convert_file_to_symbol_arr(file_path, symbol_dict):
@@ -131,13 +131,13 @@ def setup_processed_dataset():
                             else:
                                 break
 
-                    print(family_name, "test ", j, ", num elements ", test2_elements)
+                    print(family_name, "test", j + ',', "num elements", test2_elements)
                     np.savetxt(fname=opcode_dir + '/' + family_name + '/' + 'test' + str(j) + '.txt', X=test2_arr, fmt=format)
 
 
 #count_opcodes()
 #popular_opcodes(MAX_UNIQUE_OPCODES)
-#largest_families()
+largest_families()
 setup_processed_dataset()
 
 
