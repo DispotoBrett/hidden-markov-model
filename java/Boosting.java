@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Boosting
 {
 	public static int MAX_UNIQUE_OPCODES = 32;
+	public static int MAX_HMMS = 5;
 	public static ArrayList<Integer> getObservationSequenceFromFile(String filename)
 	{
 		ArrayList<Integer> sequence = new ArrayList<>();
@@ -38,7 +39,7 @@ public class Boosting
 		
 		
 		//testManyFamilies(processedFamilies, opcodeDir);
-		//testOneFamily(processedFamilies.get(2), opcodeDir, 5);
+		//testOneFamily(processedFamilies.get(2), opcodeDir);
 		testCorrectIncorrect(processedFamilies.get(0), opcodeDir);
 		
 		System.out.print("Testing done");
@@ -67,9 +68,9 @@ public class Boosting
 		}
 	}
 	
-	public static void testOneFamily(String family, String opcodeDir, int maxIterations)
+	public static void testOneFamily(String family, String opcodeDir)
 	{
-		for(int i = 0; i < maxIterations; i++)
+		for(int i = 0; i < MAX_HMMS; i++)
 		{
 			String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
 			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
@@ -78,6 +79,7 @@ public class Boosting
 			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
 			int seed =(int) System.nanoTime();
 			System.out.println(seed);
+			
 			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, seed);
 			System.out.println("HMM for " + family);
 			hmm.train(train, train, 100);
@@ -92,21 +94,29 @@ public class Boosting
 	
 	public static void testCorrectIncorrect(String family, String opcodeDir)
 	{
-		String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-		String correctFile = opcodeDir + "/" + family + "/proc_correct.txt";
-		String incorrectFile = opcodeDir + "/" + family + "/proc_incorrect.txt";
-		
-		ArrayList<Integer> correct = getObservationSequenceFromFile(correctFile);
-		ArrayList<Integer> incorrect = getObservationSequenceFromFile(incorrectFile);
+		String datasetFiles = opcodeDir + "/" + family + "/%s.txt";		
 		
 		HiddenMarkovModel[] hmms = new HiddenMarkovModel[5];
 		
-		for(int i = 0; i < 5; i++)
+		for(int i = 0; i < MAX_HMMS; i++)
 		{
 			hmms[i] = HiddenMarkovModel.loadFromFile(String.format(datasetFiles, "hmm" + i + ".txt"));
-			System.out.println(i);
-			System.out.println("Correct score = " + hmms[i].scoreStateSequence(correct));
-			System.out.println("Incorrect score = " + hmms[i].scoreStateSequence(incorrect));
+			System.out.println("HMM #" + i);
+			
+			for(int j = 0; j < 10; j++)
+			{
+				String correctFile = opcodeDir + "/" + family + "/proc_correct" + j + ".txt";
+				ArrayList<Integer> correct = getObservationSequenceFromFile(correctFile);
+				System.out.println("Correct score = " + hmms[i].scoreStateSequence(correct));
+			}
+			
+			for(int j = 0; j < 10; j++)
+			{
+				String incorrectFile = opcodeDir + "/" + family + "/proc_incorrect" + j + ".txt";
+				ArrayList<Integer> incorrect = getObservationSequenceFromFile(incorrectFile);
+				System.out.println("Incorrect score = " + hmms[i].scoreStateSequence(incorrect));
+			}
+			
 		}
 	}
 	
