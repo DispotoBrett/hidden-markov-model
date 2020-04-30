@@ -157,29 +157,29 @@ def test_correct_incorrect():
         format = '%d'
         correct_files = 0
         for file in os.scandir(family_dir):
-            if not file.name in used_files and correct_files < NUM_FILES_PER_FAMILY:
+            if file.name not in used_files and correct_files < NUM_FILES_PER_FAMILY:
                 correct_symbols = convert_file_to_symbol_arr(file, symbol_dict)
                 np.savetxt(fname=family_dir + '/' + 'proc_correct' + str(correct_files) + '.txt', X=correct_symbols, fmt=format)
                 correct_files += 1
-            else:
+            elif correct_files >= NUM_FILES_PER_FAMILY:
                 break
 
         incorrect_files = 0
         for file in os.scandir(opcode_dir + '/' + sorted_families[(i + 1) % MAX_FAMILIES]):
-            if not file.name in used_files and incorrect_files < NUM_FILES_PER_FAMILY:
+            if file.name not in used_files and incorrect_files < NUM_FILES_PER_FAMILY:
 
                 incorrect_symbols = convert_file_to_symbol_arr(file, symbol_dict)
-                print(len(incorrect_symbols))
+
                 np.savetxt(fname=family_dir + '/' + 'proc_incorrect' + str(incorrect_files) + '.txt', X=incorrect_symbols, fmt=format)
                 incorrect_files += 1
-            else:
+            elif correct_files >= NUM_FILES_PER_FAMILY:
                 break
 
 
-count_opcodes()
-popular_opcodes(MAX_UNIQUE_OPCODES)
-largest_families()
-setup_processed_dataset()
+#count_opcodes()
+#popular_opcodes(MAX_UNIQUE_OPCODES)
+#largest_families()
+#setup_processed_dataset()
 test_correct_incorrect()
 
 
