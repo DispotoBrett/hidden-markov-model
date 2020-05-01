@@ -428,75 +428,71 @@ class HiddenMarkovModel {
 
   //---------------------- File IO Stuff ----------------------\\
 
-  /*public static void main(String[] args) {
-    double[][] a = {
-      {.7, .3},
-      {.4, .6}
-    };
+	public static void main(String[] args) throws IOException
+	{ 
 
-    double[][] b = {
-      {.1, .4, .5},
-      {.7, .2, .1}
-    };
+		int HEADER_SIZE = 15;
+		String line = "";
+		ArrayList<Integer> O2 = new ArrayList<Integer>();
 
-    double[] pi = {.6, .4};
+		//thanks to Stack Overflow user Andreas and this answer
+		// https://stackoverflow.com/a/36273874
+		File tempFile = new File("").getCanonicalFile();
+		String parentDir = tempFile.getParent();
+		String corpusDir = parentDir + "/corpus.dos";
 
-    HiddenMarkovModel hmm = new HiddenMarkovModel(a, b, pi);
+		//thanks to Stack Overflow user BalusC and this answer
+		//https://stackoverflow.com/a/3154523
+		File[] files = new File(corpusDir).listFiles();
 
-    ArrayList<Integer> O = new ArrayList<Integer>();
-    O.add(0);
-    O.add(1);
-    O.add(0);
-    O.add(2);
+		int numObservations = 0;
+		for(File file: files)
+		{
+			if(!file.isDirectory() && numObservations < 50000)
+			{
+				Scanner scan = new Scanner(file);
+				while (scan.hasNextLine() && numObservations < 50000) 
+				{
+					line = scan.nextLine();
+					for (int i = HEADER_SIZE; i < line.length() && numObservations < 50000; i++) 
+					{
+						char c = line.charAt(i);
 
-    double score = hmm.scoreStateSequence(O);
-    p("Score: " + score);
-    ArrayList<Integer> optimal = hmm.optimalStateSequence(O);
-    for (Integer i : optimal) System.out.print(i + " ");
-    p("");
-    int HEADER_SIZE = 15;
-    String line = "";
-    ArrayList<Integer> O2 = new ArrayList<Integer>();
-    // this should be an absolute path to corpus.dos, and A is the only starting letter of files
-    // that I am iterating through.
-     String filebase = "C:\\Users\\jorda\\git\\hidden-markov-model\\java\\corpus\\A";
-    //String filebase = "/home/brett/Projects/hidden-markov-model/java/corpus/A";
-    String filenames[] = new String[40];
-    for (int i = 1; i < 40; i++) {
-      filenames[i] = filebase;
-      if (i < 10) filenames[i] += "0";
-      filenames[i] += i;
-    }
+						if (c == ' ')
+						{
+							O2.add(26); 
+							numObservations++;
+						}
+							
+						else 
+						{
+							c = Character.toLowerCase(c);
+							int o = returnObservation(c);
+							if (o < 27 && o >= 0) 
+							{
+								O2.add(o);
+								numObservations++;
+							}
+								
+						}
+					}
+				}
+			}
+			else
+				break;
+		}
+		
+		double[] pi = {.51316, .48684};
+		double[][] a = {{ .47468, .52532},
+						{ .51656, .48344}};
+		
+		double[][] b = {{.03909, .03537,.03537,.03909,.03583,.03630,.04048,.03537,.03816,.03909,.03490,.03723,.03537,.03909,.03397,.03397,.03816,.03676,.04048,.03443,.03537,.03955,.03816,.03723,.03769,.03955,.03397},
+						{.03735, .03408,.03455,.03828,.03782,.03922,.03688,.03408,.03875,.04062,.03735,.03968,.03548,.03735,.04062,.03595,.03641,.03408,.04062,.03548,.03922,.04062,.03455,.03595,.03408,.03408,.03408}};
+		HiddenMarkovModel hmm2 = new HiddenMarkovModel(a, b, pi);
+		hmm2.prettyPrint();
 
-    for (int j = 1; j < 40; j++) {
-      File file = new File(filenames[j]);
-      try {
-        Scanner scan = new Scanner(file);
-        while (scan.hasNextLine()) {
-          line = scan.nextLine();
-          for (int i = HEADER_SIZE; i < line.length(); i++) {
-            char c = line.charAt(i);
-
-            if (c == ' ') // TODO TODO
-            O2.add(26); // TODO I CHANGED TO 26 (used to be 27 -- thorws out of bounds ex)?
-            else {
-              c = Character.toLowerCase(c);
-              int o = returnObservation(c);
-              if (o < 27 && o >= 0) O2.add(o);
-            }
-          }
-        }
-        scan.close();
-      } catch (Exception e) {
-        System.out.println("oops");
-      }
-    }
-
-    HiddenMarkovModel hmm2 = new HiddenMarkovModel(O2, 2, 27, 0);
-    hmm2.prettyPrint();
-
-    hmm2.train(O2, 100);
-    System.out.println("finished trainign HMM");
-    hmm2.prettyPrint();
-  }*/
+		hmm2.train(O2, 100);
+		System.out.println("finished trainign HMM");
+		hmm2.prettyPrint();
+	}
 }
