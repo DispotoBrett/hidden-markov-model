@@ -6,9 +6,11 @@ class HiddenMarkovModel {
   double[][] transitionMat;
   double[][] observationMat;
   double[] initialState;
-  double[] scalingFactors;
   double[][] gammas;
   double[][][] digammas;
+  double[][] alphas;
+  double[][] betas;
+
   int M, N;
 
   public HiddenMarkovModel(double[][] A, double[][] B, double[] pi) {
@@ -17,26 +19,25 @@ class HiddenMarkovModel {
     observationMat = B;
     this.M = B[0].length;
     initialState = pi;
-    scalingFactors = new double[99];
   }
 
   public double scoreStateSequence(ArrayList<Integer> O) {
-    alphaPass(O);
-    double logProb = computeLogProb(O);
+    double scalingFactors[] = alphaPass(O);
+    double logProb = computeLogProb(O, scalingFactors);
     return logProb;
   }
 
   
 
-  public double[][] alphaPass(ArrayList<Integer> O) {
+  public double[] alphaPass(ArrayList<Integer> O) {
 	  // int N = observationMat.size();
 	  int T = O.size();
 	  
-	  scalingFactors = new double[T];
-	  double[][] alphas = new double[T][N];
+	  double[] scalingFactors = new double[T];
+	  alphas = new double[T][N];
 
 	  // Compute a_0(i)
-	  scalingFactors[0] = 0;
+	  scalingFactors[0] = 0.0;
 	  for (int i = 0; i < N; i++) {
 		  alphas[0][i] = initialState[i] * observationMat[i][O.get(0)]; // equivalent to pi_i * b_i(O_0)
 		  scalingFactors[0] += alphas[0][i];
@@ -65,14 +66,13 @@ class HiddenMarkovModel {
 			  alphas[t][i] *= scalingFactors[t];
 		  }
 	  }
-
-	  return alphas;
+	  return scalingFactors;
   }
 
   
   
 
-  public double computeLogProb(ArrayList<Integer> O) {
+  public double computeLogProb(ArrayList<Integer> O, double[] scalingFactors) {
 	 
     double newLogProb = 0;
     for (int i = 0; i < O.size(); i++) {
@@ -86,10 +86,10 @@ class HiddenMarkovModel {
   
 
   public ArrayList<Integer> optimalStateSequence(ArrayList<Integer> O) {
-    double[][] alphas = alphaPass(O);
+    double[] scalingFactors = alphaPass(O);
     double score = scoreStateSequence(O);
-    double[][] betas = betaPass(O);
-    computeDiGammas(alphas, betas, O);
+    betaPass(O, scalingFactors);
+    computeDiGammas(O);
 
     int T = gammas.length;
     ArrayList<Integer> optimalSequence = new ArrayList<Integer>(T);
@@ -111,7 +111,7 @@ class HiddenMarkovModel {
 
   
 
-  void computeDiGammas(double[][] alphas, double[][] betas, ArrayList<Integer> O) {
+  void computeDiGammas(ArrayList<Integer> O) {
 
 	  N = observationMat.length;
 	  int T = alphas.length;
@@ -152,11 +152,11 @@ class HiddenMarkovModel {
 
   
 
-  double[][] betaPass(ArrayList<Integer> O) {
+  void betaPass(ArrayList<Integer> O, double[] scalingFactors) {
 	  // N = observationMat.size();
 	  int T = O.size();
 
-	  double betas[][] = new double[T][N];
+	  betas = new double[T][N];
 
 	  for (int i = 0; i < N; i++) {
 		  betas[T - 1][i] = scalingFactors[T - 1];
@@ -174,8 +174,6 @@ class HiddenMarkovModel {
 			  betas[t][i] *= scalingFactors[t];
 		  }
 	  }
-
-	  return betas;
   }
 
   
@@ -187,23 +185,23 @@ class HiddenMarkovModel {
   
 
   public void train(ArrayList<Integer> O, ArrayList<Integer> validation, int maxIters) {
-	  double[][] alphas = null, betas = null;
-	  update(alphas, betas, O);
+	  double[] scalingFactors;
+	  update(O);
 
 	  // do training
 	  int iters = 0;
 	  double oldLogProb = -Double.MAX_VALUE;
 	  double newLogProb = -Double.MAX_VALUE;
 	  double epsilon = 100;
-	  
+
 	  do
 	  {
 		  iters++;
-		  update(alphas, betas, O);
+		  scalingFactors = update(O);
 		  doTrainStep(O);
 		  
 		  oldLogProb = newLogProb;
-		  newLogProb = computeLogProb(validation);
+		  newLogProb = computeLogProb(validation, scalingFactors);
 		  
 	  } while (iters < maxIters && (oldLogProb + epsilon) < newLogProb);
 	  
@@ -257,11 +255,13 @@ class HiddenMarkovModel {
 
   
   //*angrily coughs up a lung* It means stupid in Armenian
-  public void update(double[][] alphas, double[][] betas, ArrayList<Integer> O) 
+  public double[] update(ArrayList<Integer> O) 
   {
-    alphas = alphaPass(O);
-    betas = betaPass(O);
-    computeDiGammas(alphas, betas, O);
+    double[] scalingFactors = alphaPass(O);
+    betaPass(O, scalingFactors);
+    computeDiGammas(O);
+
+	return scalingFactors;
   }
 
 
@@ -272,9 +272,6 @@ class HiddenMarkovModel {
 	  observationMat = new double[N][M];
 
 	  initialState = new double[N];
-
-	  scalingFactors = new double[O.size()];
-	  for (int i = 0; i < O.size(); i++) scalingFactors[i] = 0.0;
 
 	  Random rand1 = new Random(seed);
 	  for (int i = 0; i < N; i++) {
