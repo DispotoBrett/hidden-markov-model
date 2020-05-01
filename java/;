@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-import java.text.DecimalFormat;
 
 class HiddenMarkovModel {
   double[][] transitionMat;
@@ -341,11 +340,12 @@ class HiddenMarkovModel {
     }
 
     p("ObservationMatrix: ");
-      for(int j = 0; j < observationMat[0].length; j++)
+      for(int j = 0; j < observationMat[i].length; j++)
 	  {
-        System.out.print(returnSymbol((char)j) + ": " + new DecimalFormat("#0.0000").format(observationMat[1][j]) + ", " + new DecimalFormat("#0.0000").format(observationMat[0][j]) );
+        System.out.print(returnSymbol((char)j) + ": " +observationMat[0][j] + ", " );
       	p("");
 	  }
+    }
   }
   
   //---------------------- File IO Stuff ----------------------\\
