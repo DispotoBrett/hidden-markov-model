@@ -193,7 +193,7 @@ class HiddenMarkovModel {
 	  int iters = 0;
 	  double oldLogProb = -Double.MAX_VALUE;
 	  double newLogProb = -Double.MAX_VALUE;
-	  double epsilon = 0.0001;
+	  double epsilon = 0.001;
 
 	  do
 	  {
@@ -255,7 +255,6 @@ class HiddenMarkovModel {
   }
 
   
-  //*angrily coughs up a lung* It means stupid in Armenian
   public double[] update(ArrayList<Integer> O) 
   {
     double[] scalingFactors = alphaPass(O);
@@ -306,7 +305,7 @@ class HiddenMarkovModel {
   }
   
   
-  //-------------------------- If you made it to here, you've gone too far ---------------------------------------------------\\
+  //-------------------------- If you made it to here, you've gone too far --------------------------\\
   public void makeStochasticRow(double[] mat) {
     double sum = 0;
     for (int i = 0; i < mat.length; i++) sum += mat[i];
@@ -322,7 +321,10 @@ class HiddenMarkovModel {
   }
 
   static char returnSymbol(int x) {
-    return (char) (x + 97);
+	  if(x == 26)
+		  return ' ';
+	  else
+		  return (char) (x + 97);
   }
 
   public static void p(Object s) {
@@ -343,7 +345,7 @@ class HiddenMarkovModel {
     p("ObservationMatrix: ");
       for(int j = 0; j < observationMat[0].length; j++)
 	  {
-        System.out.print(returnSymbol((char)j) + ": " + new DecimalFormat("#0.0000").format(observationMat[1][j]) + ", " + new DecimalFormat("#0.0000").format(observationMat[0][j]) );
+        System.out.print(returnSymbol(j) + ": " + new DecimalFormat("#0.0000").format(observationMat[1][j]) + ", " + new DecimalFormat("#0.0000").format(observationMat[0][j]) );
       	p("");
 	  }
   }
