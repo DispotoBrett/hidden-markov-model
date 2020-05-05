@@ -3,16 +3,19 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.text.DecimalFormat;
 
-class HiddenMarkovModel {
-  double[][] transitionMat;
-  double[][] observationMat;
-  double[] initialState;
-  double[][] gammas;
-  double[][][] digammas;
-  double[][] alphas;
-  double[][] betas;
+class HiddenMarkovModel 
+{
+  private static final double UPPER_INITIAL_VALUE_MULTIPLIER = 1.5;
+  private static final double LOWER_INITIAL_VALUE_MULTIPLIER = .5;
+  private double[][] transitionMat;
+  private double[][] observationMat;
+  private double[] initialState;
+  private double[][] gammas;
+  private double[][][] digammas;
+  private double[][] alphas;
+  private double[][] betas;
 
-  int M, N;
+  private int M, N;
 
   public HiddenMarkovModel(double[][] A, double[][] B, double[] pi) {
     transitionMat = A;
@@ -193,7 +196,7 @@ class HiddenMarkovModel {
 	  int iters = 0;
 	  double oldLogProb = -Double.MAX_VALUE;
 	  double newLogProb = -Double.MAX_VALUE;
-	  double epsilon = 0.001;
+	  double epsilon = 0.1;
 
 	  do
 	  {
@@ -273,54 +276,61 @@ class HiddenMarkovModel {
 
 	  initialState = new double[N];
 
-	  Random rand1 = new Random(seed);
-	  for (int i = 0; i < N; i++) {
-		  // Initialize transition matrix
+	  Random rand = new Random(seed);
+	  
+	  for (int i = 0; i < N; i++) 
+	  {
+		  //initialize row i in A
+		  double transitionValue = 1.0 / N;
 		  double[] transitionRow = new double[N];
-
-		  double sum = 0;
-		  for (int j = 0; j < N; j++) {
-			  double randNum =
-					  ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.01), ((1.0 / N) + 0.01));
-			  transitionRow[j] = randNum;
-			  sum += transitionRow[j];
+		  for(int j = 0; j < N; j++)
+		  {
+			  double valueMultipier = rand.nextDouble() % (UPPER_INITIAL_VALUE_MULTIPLIER - LOWER_INITIAL_VALUE_MULTIPLIER) + LOWER_INITIAL_VALUE_MULTIPLIER;
+			  transitionRow[j] = transitionValue * valueMultipier;
 		  }
+		  makeStochasticRow(transitionRow);
 		  transitionMat[i] = transitionRow;
-
-		  // Initialize observation matrix
+		  
+		  //initialize row i in B
+		  double observationValue = 1.0 / M;
 		  double[] observationRow = new double[M];
-		  for (int j = 0; j < M; j++) {
-			  double randNum =
-					  ThreadLocalRandom.current().nextDouble(((1.0 / M) - 0.01), ((1.0 / M) + 0.01));
-			  observationRow[j] = randNum;
+		  for(int j = 0; j < M; j++)
+		  {
+			  double valueMultipier = rand.nextDouble() % (UPPER_INITIAL_VALUE_MULTIPLIER - LOWER_INITIAL_VALUE_MULTIPLIER)+  LOWER_INITIAL_VALUE_MULTIPLIER;
+			  observationRow[j] = observationValue * valueMultipier;
 		  }
+		  makeStochasticRow(observationRow);
 		  observationMat[i] = observationRow;
-
-		  initialState[i] =
-				  ThreadLocalRandom.current().nextDouble(((1.0 / N) - 0.01), ((1.0 / N) + 0.01));
-		  makeStochasticRow(observationMat[i]);
-		  makeStochasticRow(transitionMat[i]);
-		  makeStochasticRow(initialState);
+		  
+		  //initialize element i in Pi
+		  double initialStateValue = 1.0 / N;
+		  double valueMultipier = rand.nextDouble() % (UPPER_INITIAL_VALUE_MULTIPLIER - LOWER_INITIAL_VALUE_MULTIPLIER)+  LOWER_INITIAL_VALUE_MULTIPLIER;
+		  initialState[i] = initialStateValue * valueMultipier;
 	  }
+	  
+	  makeStochasticRow(initialState);
   }
   
   
   //-------------------------- If you made it to here, you've gone too far --------------------------\\
-  public void makeStochasticRow(double[] mat) {
-    double sum = 0;
-    for (int i = 0; i < mat.length; i++) sum += mat[i];
+  
+  private void makeStochasticRow(double[] mat) 
+  {
+	  double sum = 0;
+	  
+	  for(int i = 0; i < mat.length; i++)
+		  sum += mat[i];
+	  
+	  for(int i = 0; i < mat.length; i++)
+		  mat[i] = mat[i] / sum;
 
-    if (sum != 1) {
-      double diff = (1 - sum) / mat.length;
-      for (int i = 0; i < mat.length; i++) mat[i] += diff;
-    }
   }
 
-  static int returnObservation(char x) {
+  private static int returnObservation(char x) {
     return (int) x - 97;
   }
 
-  static char returnSymbol(int x) {
+  private static char returnSymbol(int x) {
 	  if(x == 26)
 		  return ' ';
 	  else
