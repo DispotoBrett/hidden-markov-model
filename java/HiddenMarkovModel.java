@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 
 class HiddenMarkovModel 
 {
-  private static final double UPPER_INITIAL_VALUE_MULTIPLIER = 1.5;
+  private static final double UPPER_INITIAL_VALUE_MULTIPLIER = 3;
   private static final double LOWER_INITIAL_VALUE_MULTIPLIER = .5;
   private double[][] transitionMat;
   private double[][] observationMat;
@@ -196,7 +196,7 @@ class HiddenMarkovModel
 	  int iters = 0;
 	  double oldLogProb = -Double.MAX_VALUE;
 	  double newLogProb = -Double.MAX_VALUE;
-	  double epsilon = 0.1;
+	  double epsilon = 1;
 
 	  do
 	  {
@@ -268,7 +268,7 @@ class HiddenMarkovModel
   }
 
 
-  public HiddenMarkovModel(ArrayList<Integer> O, int N, int M, int seed) {
+  public HiddenMarkovModel(ArrayList<Integer> O, int N, int M, long seed) {
 	  this.N = N;
 	  this.M = M;
 	  transitionMat = new double[N][N];
