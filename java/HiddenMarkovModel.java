@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 
 class HiddenMarkovModel 
 {
-  private static final double UPPER_INITIAL_VALUE_MULTIPLIER = 3;
+  private static final double UPPER_INITIAL_VALUE_MULTIPLIER = 1.5;
   private static final double LOWER_INITIAL_VALUE_MULTIPLIER = .5;
   private double[][] transitionMat;
   private double[][] observationMat;
@@ -437,7 +437,7 @@ class HiddenMarkovModel
 
   //---------------------- File IO Stuff ----------------------\\
 
-	public static void main(String[] args) throws IOException
+	/*public static void main(String[] args) throws IOException
 	{ 
 
 		int HEADER_SIZE = 15;
@@ -503,5 +503,5 @@ class HiddenMarkovModel
 		hmm2.train(O2, 100);
 		System.out.println("finished trainign HMM");
 		hmm2.prettyPrint();
-	}
+	}*/
 }
