@@ -4,7 +4,7 @@ import numpy as np
 
 parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
-MAX_UNIQUE_OPCODES = 40
+MAX_UNIQUE_OPCODES = 35
 MAX_FAMILIES = 3
 TRAIN_SIZE = 1000000
 VALIDATION_SIZE = int(TRAIN_SIZE * .2)
@@ -100,13 +100,13 @@ def setup_processed_dataset():
                     # elif val_elements < VALIDATION_SIZE:
                     #     val_arr[val_elements] = symbol
                     #     val_elements += 1
-                    elif test_elements < TEST_SIZE:
-                        test_arr[test_elements] = symbol
-                        test_elements += 1
+                    #elif test_elements < TEST_SIZE:
+                    #    test_arr[test_elements] = symbol
+                    #    test_elements += 1
                     else:
                         break
 
-                if train_elements < TRAIN_SIZE  or test_elements < TEST_SIZE:
+                if train_elements < TRAIN_SIZE:  #or test_elements < TEST_SIZE:
                     used_files.append(virus.name)
                     num_files += 1
                 else:
@@ -115,7 +115,7 @@ def setup_processed_dataset():
             format = '%d'
             np.savetxt(fname=family_dir + '/' + 'train.txt', X=train_arr, fmt=format)
             #np.savetxt(fname=family_dir + '/' + 'val.txt', X=val_arr, fmt=format)
-            np.savetxt(fname=family_dir + '/' + 'test.txt', X=test_arr, fmt=format)
+            #np.savetxt(fname=family_dir + '/' + 'test.txt', X=test_arr, fmt=format)
 
             print(family_name,'used',num_files,'files for training/testing')
             np.savetxt(fname=family_dir + '/' + 'used_files.txt', X=np.asarray(used_files,dtype=str), fmt='%s')
@@ -178,9 +178,9 @@ def test_correct_incorrect():
                 break
 
 
-count_opcodes()
-popular_opcodes(MAX_UNIQUE_OPCODES)
-largest_families()
+#count_opcodes()
+#popular_opcodes(MAX_UNIQUE_OPCODES)
+#largest_families()
 setup_processed_dataset()
 test_correct_incorrect()
 

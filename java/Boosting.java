@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Boosting
 {
-	public static int MAX_UNIQUE_OPCODES = 40;
+	public static int MAX_UNIQUE_OPCODES = 35;
 	public static int MAX_HMMS = 5;
 	public static int NUM_CORRECT_FILES = 800;
 	public static int NUM_INCORRECT_FILES = 800;
@@ -31,10 +31,13 @@ public class Boosting
 		
 		
 		//testManyFamilies(processedFamilies, opcodeDir);
-		//for(int i = 0; i < 1; i++)
-		//	testOneFamily(processedFamilies.get(i), opcodeDir);
-		trainCorrectIncorrect(processedFamilies.get(0), opcodeDir);
-		testCorrectIncorrect(processedFamilies.get(0), opcodeDir);
+		for(int i = 2; i < 3; i++)
+		{
+			testOneFamily(processedFamilies.get(i), opcodeDir);
+			trainCorrectIncorrect(processedFamilies.get(i), opcodeDir);
+			testCorrectIncorrect(processedFamilies.get(i), opcodeDir);
+		}
+			
 		
 		System.out.print("Testing done");
 	}
@@ -48,17 +51,17 @@ public class Boosting
 			//ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
 			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
 			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-			int seed =(int) System.nanoTime();
+			long seed =  System.nanoTime();
 			
-			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 2, MAX_UNIQUE_OPCODES + 1, seed);
+			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 3, MAX_UNIQUE_OPCODES + 1, seed);
 			System.out.println("HMM for " + family);
 			//hmm.prettyPrint();
 			hmm.train(train, train, 150);
 			
-			System.out.println("Training Score = " + hmm.scoreStateSequence(train));
+			//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
 			//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
+			//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
+			//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
 			hmm.saveToFile(String.format(datasetFiles, "hmm" + i));
 			System.out.println("HMM saved to file\n");
 		}
