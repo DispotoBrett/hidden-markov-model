@@ -85,12 +85,19 @@ We can also use SVM as a meta-classifier, such that we no longer use of these ag
 
 
 \section{Steps for Final}
+
+\subsection{Preprocessing}
+
+
+\subsection{Bagging}
+\hl{What does fabio mean by "we score pairs of families?" What is N supposed to be in our HMM?}
 Here are the steps to complete for the final. Crossed out means that it's finished.
 \begin{enumerate}
   \item \st{Make an HMM.}
   \item Download the dataset.
   \item Add dataset to .gitignore
   \item Split the dataset into different directories based on the malware family they belong to.
+  \item \textit{(Think about doing n-grams)}
   \item Do bagging.
     \begin{enumerate}
   \item Create a file \texttt{Bagging.java}. Allow for command line arguments. The usage should be something like: 

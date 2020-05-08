@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1588886775 "notes.tex" "notes.pdf" "notes" 1588886776
+["pdflatex"] 1588891204 "notes.tex" "notes.pdf" "notes" 1588891204
   "/home/brett/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1582583602 797358 0bd2c1937e70eb3af887cb2d78db28da ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
@@ -74,11 +74,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1580928261 22417 1d9df1eb66848aa31b18a593099cf45c ""
   "/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty" 1137110840 23636 c37eef0334dd2011d112d2040c11328f ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1580927610 35594 9aef19174c178978f61d14961262af5d ""
-  "diffFeatures.png" 1588885195 48377 159e87ac4b304ba561b49b8ed534d29b ""
-  "diffSamples.png" 1588885195 42960 60ecfcadfaa7a1101073294bfb24edae ""
-  "notes.aux" 1588886775 615 1eb7515b2dbf6429c782400ebfc69e1e "pdflatex"
-  "notes.tex" 1588886772 5388 0b38b5ea7eb651e177edde9eaf131856 ""
+  "diffFeatures.png" 1588887984 48377 159e87ac4b304ba561b49b8ed534d29b ""
+  "diffSamples.png" 1588887984 42960 60ecfcadfaa7a1101073294bfb24edae ""
+  "notes.aux" 1588891204 817 83c8c818b925119dd0cd5da410b8c431 "pdflatex"
+  "notes.tex" 1588891202 5580 f13462f34e0fd8c103735bee8af4c426 ""
   (generated)
   "notes.log"
-  "notes.aux"
   "notes.pdf"
+  "notes.aux"
