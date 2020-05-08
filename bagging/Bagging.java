@@ -121,22 +121,17 @@ public class Bagging
       System.out.println("ABORTING BECAUSE I'M AFRAID");
       System.exit(-1);
     }
-    int numOpCodes = scan.nextInt();
-    System.out.println("There are " + numOpCodes + " (minus one) distinct opcodes");
+    int largestSymbol = scan.nextInt();
+    System.out.println("There are " + (largestSymbol + 1) + " distinct opcodes");
 
  		for(int i = 0; i < splits.size(); i++)
 		{
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      HiddenMarkovModel hmm = new HiddenMarkovModel(splits.get(i), 2, 1 + numOpCodes, SEED); 
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
-      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      // The plusOne is needed for largestSymbol, because counting starts from 0 for the symbols.
+      HiddenMarkovModel hmm = new HiddenMarkovModel(splits.get(i), 2, 1 + largestSymbol, SEED); 
+      
       hmm.train(splits.get(i), 150);
+
+			System.out.println("Training Score = " + hmm.scoreStateSequence(splits.get(i))); //This is a bit weird, why would we score the sample we just used to train on?
 
 			//ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
 			////ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
@@ -149,7 +144,6 @@ public class Bagging
 			/*//hmm.prettyPrint();
 			hmm.train(train, train, 150);
 			
-			//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
 			//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
 			//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
 			//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));

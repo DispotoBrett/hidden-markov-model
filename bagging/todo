@@ -1,0 +1,1 @@
+For some reason, when we score the dataset just trained on, we find that the logprob returned is EXTREMELY low. Woudlnt we expect the exact opposite?
