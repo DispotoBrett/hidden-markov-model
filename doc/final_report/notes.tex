@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.25in]{geometry}
+\usepackage{textcomp}
+\usepackage{float, graphicx, color, soul}
+\usepackage{amsmath}
+\usepackage{listings}
+\lstset{
+basicstyle=\ttfamily,
+frame=single,
+numbers=left
+}
+\title{CS185C: \\ 
+Final Project \\
+Malware Classification}
+
+\author{Jordan Conragan,  Brett Dispoto}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Preprocessing}
+Most of the machine learning techniques used in this report use variations of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. The preprocessing was done in python3, and the relevant files can be found in the \texttt{preprocessing} directory of our submission.
+  \begin{enumerate}
+    \item Download the dataset.
+    \item Split the dataset into directories based upon their family label. (Already completed by the dataset provider.)
+    \item For each malware family, the following steps were then taken:
+      \begin{enumerate}
+        \item Read through all of the files, count the occurance of each uniqe opcode across all files.
+        \item Take the $n$ (turning parameter) most common Opcodes, and convert them to an ASCII symbol for observation sybmols for our HMMs. The Opcodes which are not within the $n$ most common will be converted to an "other" symbol. This will reduce noise in our model.
+        \item Once each opcode is assigned a symbol, we again read through the files and convert the opcodes to symbols.
+
+        \begin{enumerate}
+          \item If bagging is being used, make copies of \textbf{each} converted malware file, which will later be split up accordingly during training.
+          \item Otherwise, if boosting or stacking is being used, we can simply dump the converted opcodes (symbols) for the entire family into one huge file. This file will be our observation sequence.
+        \end{enumerate}
+      \end{enumerate}
+  \end{enumerate}
+
+\end{document}

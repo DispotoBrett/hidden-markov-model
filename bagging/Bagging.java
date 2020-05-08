@@ -1,8 +1,5 @@
 import java.util.stream.Collectors; 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,7 +8,6 @@ import java.util.*;
 
 public class Bagging
 {
-	public static int MAX_UNIQUE_OPCODES = 35; // GET THIS FROM THE OUTPUT OF THE PYTHON SCRIPT.
   public static final int NUM_SPLIT = 10; //Tuning parameter.
   public static final int N = 2; //Tuning parameter.
   public static final int SEED = 0;
@@ -41,6 +37,7 @@ public class Bagging
 		{
       ArrayList<ArrayList<Integer>> splits = splitDataset(processedFamilies.get(i), opcodeDir);
 
+      /*
       //------remove later-----------
         // Construct a new list from the set constucted from elements 
         // of the original list 
@@ -58,6 +55,7 @@ public class Bagging
         }
         
         //------remove later-----------
+        */
 			testOneFamily(processedFamilies.get(i), splits);
 		}
 			
@@ -114,9 +112,30 @@ public class Bagging
 	{
     ArrayList<HiddenMarkovModel> models = new ArrayList<HiddenMarkovModel>();
 
+    File numSymbolsFile = new File(opcodeDir + "/" + family + "/converted_to_symbols/numSymbols.txt");
+    Scanner scan = null;
+    try{
+      scan = new Scanner(numSymbolsFile);
+    }catch(Exception e){
+      System.out.println(numSymbolsFile + " not found.");
+      System.out.println("ABORTING BECAUSE I'M AFRAID");
+      System.exit(-1);
+    }
+    int numOpCodes = scan.nextInt();
+    System.out.println("There are " + numOpCodes + " (minus one) distinct opcodes");
+
  		for(int i = 0; i < splits.size(); i++)
 		{
-      HiddenMarkovModel hmm = new HiddenMarkovModel(splits.get(i), 2, MAX_UNIQUE_OPCODES + 1, SEED);
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      HiddenMarkovModel hmm = new HiddenMarkovModel(splits.get(i), 2, 1 + numOpCodes, SEED); 
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
+      //I DONT THINK I ACTUALLY NEED THE PLUS ONE FOR numOPCODES
       hmm.train(splits.get(i), 150);
 
 			//ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
