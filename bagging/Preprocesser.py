@@ -30,7 +30,14 @@ def convert_all():
             for virus_file in os.scandir(family):
                 if virus_file.is_file() and virus_file.name.endswith('.asm.txt'):
                     symbol_dict = np.load(family.path + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
-                    converted = convert_file_to_symbol_arr_bagging(family.path + '/'+ virus_file.name, symbol_dict)
+
+                    other_symbol = 1 + symbol_dict[max(symbol_dict, key=symbol_dict.get)]
+
+                    converted = convert_file_to_symbol_arr_bagging(family.path + '/'+ virus_file.name, symbol_dict, other_symbol)
+
+                    numSymbolsFile = open(family.path + "/converted_to_symbols/numSymbols.txt", "w")
+                    numSymbolsFile.write(str(other_symbol))
+                    numSymbolsFile.close()
 
                     #Make the copy of converted files.
                     symbol_file = open(family.path + "/converted_to_symbols/" + virus_file.name, "w")
@@ -38,15 +45,17 @@ def convert_all():
                         symbol_file.write("{0}\n".format(symbol)) #Write the symbol to a line.
                     symbol_file.close()
 
-def convert_file_to_symbol_arr_bagging(file_path, symbol_dict):
+def convert_file_to_symbol_arr_bagging(file_path, symbol_dict, other_symbol):
     symbols = []
     #print(file_path)
     with open(file_path, 'r') as file:
         opcode_reader = csv.reader(file)
         for opcode in opcode_reader:
             opcode = opcode[0]
-            symbols.append(symbol_dict.get(opcode, MAX_UNIQUE_OPCODES))
+            symbols.append(symbol_dict.get(opcode, other_symbol))
 
+    if other_symbol != 40:
+        print("Other symbol {}".format(other_symbol))
     return symbols
 
 
