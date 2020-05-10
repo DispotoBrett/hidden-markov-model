@@ -12,16 +12,14 @@ public class Bagging
   public static final int NUM_SPLIT = 10; //Tuning parameter.
   public static final int N = 2; //Tuning parameter.
   public static final int SEED = 0;
-	public static int MAX_HMMS = 5;
-	public static int NUM_CORRECT_FILES = 800;
-	public static int NUM_INCORRECT_FILES = 800;
-	public static int NUM_TOTAL_FILES = NUM_CORRECT_FILES + NUM_INCORRECT_FILES;
   public static String parentDir;
   public static String OPCODE_DIR;
   public static ArrayList<String> processedFamilies;
   public static ArrayList<Double> originalTrainingScores;
   public enum AggregateFunction{MAX, AVG}
   public static ArrayList<ArrayList<Integer>> DEBUG_NAN_COUNT_PER_FAMILY;
+  public static int samplesTested = 0;
+  public static int samplesCorrect = 0;
 
 	public static void main(String[] args) throws IOException
 	{
@@ -99,6 +97,7 @@ public class Bagging
 		
 		System.out.println(YELLOW + "Testing done" + RESET);
     debugFinishUp();
+		System.out.println(WHITE + "Accuracy: "  + ((double) samplesCorrect / samplesTested) + RESET);
   }
 
   public static void debugFinishUp()
@@ -156,21 +155,27 @@ public class Bagging
     }
 
     //To count our accuracy
-    double success  = 0;
-    double numTests = 0;
+    double familySuccess  = 0;
+    double familyNumTests = 0;
 
     //currSampleScores has 3 "pre-ensembled" scores, one for each family.
     for(ArrayList<Double> currSampleScores: familySampleScores)
     {
       int classification = classifyBasedOnScore(currSampleScores);
       if(classification == actualFamilyEnsemblerIndex)
-        success++;
+      {
+        familySuccess++;
+        samplesCorrect++;
+      }
       else
+      {
         System.out.println("Clasified as:" + processedFamilies.get(classification) + "\nActual: " + processedFamilies.get(actualFamilyEnsemblerIndex));
-      numTests++;
+      }
+      familyNumTests++;
+      samplesTested++;
     }
 
-    System.out.println(CYAN + "ACCURACY FOR " + RED + family + CYAN + " is: " + (success / numTests) + RESET);
+    System.out.println(CYAN + "ACCURACY FOR " + RED + family + CYAN + " is: " + (familySuccess / familyNumTests) + RESET);
   }
 
   public static int classifyBasedOnScore(ArrayList<Double> scoresForEachFamily)
@@ -340,7 +345,7 @@ public class Bagging
 		  scores.add(hmm.scoreStateSequence(splits.get(i)));
 
 			hmm.saveToFile(String.format(OPCODE_DIR + "/" + family + "/converted_to_symbols/hmms/hmm" + i));
-			System.out.println("HMM saved to file\n");
+			System.out.println("HMM " + RED + i + " / " + splits.size() + RESET + " saved to file");
 		}
 
     saveEnsembledScoreToFile(scores, family);
