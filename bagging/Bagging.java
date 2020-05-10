@@ -165,10 +165,12 @@ public class Bagging
       int classification = classifyBasedOnScore(currSampleScores);
       if(classification == actualFamilyEnsemblerIndex)
         success++;
+      else
+        System.out.println("Clasified as:" + processedFamilies.get(classification) + "\nActual: " + processedFamilies.get(actualFamilyEnsemblerIndex));
       numTests++;
     }
 
-    System.out.println(CYAN + "ACCURACY FOR " + RED + family + CYAN + " is: " + (success / numTests));
+    System.out.println(CYAN + "ACCURACY FOR " + RED + family + CYAN + " is: " + (success / numTests) + RESET);
   }
 
   public static int classifyBasedOnScore(ArrayList<Double> scoresForEachFamily)
@@ -196,10 +198,9 @@ public class Bagging
 
   public static double scoreWithEnsembler(ArrayList<Integer> sample, ArrayList<HiddenMarkovModel> ensembler, int MODEL, int SAMPLE_FAMILY)
   {
-    //Remove later
+    //Helps tell how many of the scores are NaN.
     boolean allNan =  true;
     boolean allGood = true;
-    //Remove later
 
     ArrayList<Double> scores = new ArrayList<Double>();
 
@@ -230,8 +231,6 @@ public class Bagging
         familyNanCount++;
         DEBUG_NAN_COUNT_PER_FAMILY.get(MODEL).set(SAMPLE_FAMILY, familyNanCount);
     }
-
-    //Remove later
 
     return ensembleScore(scores);
   }
@@ -336,24 +335,7 @@ public class Bagging
       // The plusOne is needed for largestSymbol, because counting starts from 0 for the symbols.
       HiddenMarkovModel hmm = new HiddenMarkovModel(splits.get(i), 2, 1 + largestSymbol, SEED); 
      
-
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      hmm.train(splits.get(i), 1); //SHOULD BE 150 NOT ONE
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
-      //MaxIters SHOULD BE 150 NOT 1. DON'T FORGET TO CHANGE IT. 
+      hmm.train(splits.get(i), 150);
 
 		  scores.add(hmm.scoreStateSequence(splits.get(i)));
 
