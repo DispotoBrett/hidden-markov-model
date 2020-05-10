@@ -38,4 +38,20 @@ Most of the machine learning techniques used in this report use variations of th
       \end{enumerate}
   \end{enumerate}
 
+\section{Bagging Procedure}
+  The following steps were performed in order to use bagging as an ensemble method:
+  \begin{enumerate}
+    \item Split assembly instructions into their appropape family, and translate the instrutins to HMM symbols,
+    \item Within these family folders, use a shell script (included, \texttt{makeTesting.sh}) in order to split 10 percent of the samples into a test set.
+    \item Train $x$ HMMs on each family,
+    \item Once each HMM for a given family is trained, score the observation sequence which just used to train the model.
+    \item Write down this score. 
+    \item Once all HMMs of a given family are trained, use whichever ensembler aggegrate function to take all the generated scores and aggregate them into one score. 
+    \item Once training is complete for all families, for each family we now have this "aggregate score" written down in a log in the directory where the training samples are located.
+    \item Finally, to test all of these trained HMMs, we go into all of the test sets, score the test sample using the \textbf{each of the three "ensemblers"} (each made up of $x$ HMMs.). Once we have the score from each ensembler, we can then go back to the logs where the original score was written down for the training samples. 
+  \item Now, our sample has three scores for each ensembler. We classify this sample as whichever has the minimum of $abs(S(x_{\text{test}}) - \text{\textit{score}}_\text{family} )$
+
+      "written down" score is closest to the score the ensembler
+  \end{enumerate}
+
 \end{document}
