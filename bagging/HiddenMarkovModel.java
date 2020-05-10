@@ -414,7 +414,7 @@ class HiddenMarkovModel
 			String[] splitB = in.nextLine().split(";");
 			for(int i = 0; i < N; i++)
 				B[i] = stringToRow(splitB[i]);
-			
+		
 			return new HiddenMarkovModel(A, B, pi);
 			
 		} catch (FileNotFoundException e)

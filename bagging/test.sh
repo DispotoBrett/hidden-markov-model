@@ -1,2 +1,2 @@
 javac Bagging.java
-java Bagging
+java Bagging test
