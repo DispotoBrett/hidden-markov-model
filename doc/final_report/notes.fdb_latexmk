@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1588900359 "notes.tex" "notes.pdf" "notes" 1588900360
+["pdflatex"] 1589142828 "notes.tex" "notes.pdf" "notes" 1589142828
   "/home/brett/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1582583602 797358 0bd2c1937e70eb3af887cb2d78db28da ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -64,11 +64,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1580928261 22417 1d9df1eb66848aa31b18a593099cf45c ""
   "/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty" 1137110840 23636 c37eef0334dd2011d112d2040c11328f ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1580927610 35594 9aef19174c178978f61d14961262af5d ""
-  "notes.aux" 1588900359 107 aaaf24c42d4ca247bb76dae80372b6b2 "pdflatex"
-  "notes.tex" 1588900358 1967 aa17a1ba5796331cf57780916cb07ae7 ""
-  "notes.toc" 1588900359 59 00c16ab17cfe5ff6790f514cf9890f12 "pdflatex"
+  "notes.aux" 1589142828 107 aaaf24c42d4ca247bb76dae80372b6b2 "pdflatex"
+  "notes.tex" 1589142827 1967 aa17a1ba5796331cf57780916cb07ae7 ""
+  "notes.toc" 1589142828 59 00c16ab17cfe5ff6790f514cf9890f12 "pdflatex"
   (generated)
   "notes.toc"
-  "notes.pdf"
   "notes.aux"
+  "notes.pdf"
   "notes.log"
