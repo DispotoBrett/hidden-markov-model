@@ -6,12 +6,16 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class Boosting
 {
 	public static int MAX_UNIQUE_OPCODES = 35;
 	public static int MAX_HMMS = 5;
+	public static int MAX_ITERATIONS = 100;
+	public static int N = 3;
 	public static int NUM_CORRECT_FILES = 800;
 	public static int NUM_INCORRECT_FILES = 800;
 	public static int NUM_TOTAL_FILES = NUM_CORRECT_FILES + NUM_INCORRECT_FILES;
@@ -29,52 +33,67 @@ public class Boosting
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		
-		//testManyFamilies(processedFamilies, opcodeDir);
-		for(int i = 2; i < 3; i++)
-		{
-			testOneFamily(processedFamilies.get(i), opcodeDir);
-			trainCorrectIncorrect(processedFamilies.get(i), opcodeDir);
-			testCorrectIncorrect(processedFamilies.get(i), opcodeDir);
-		}
+		ExecutorService service = Executors.newCachedThreadPool();
+
+		/*for(int i = 0; i < MAX_HMMS; i++)
+			service.execute(SingleHMMTrainer(processedFamilies.get(2), opcodeDir, i));*/
 			
 		
+		trainCorrectIncorrect(processedFamilies.get(1), opcodeDir, 1);
+		testCorrectIncorrect(processedFamilies.get(1), opcodeDir, 1);
 		System.out.print("Testing done");
 	}
 	
-	public static void testOneFamily(String family, String opcodeDir)
+	public static Runnable FamilyHMMTrainer(String family, String opcodeDir)
 	{
-		for(int i = 0; i < MAX_HMMS; i++)
+		return () ->
 		{
-			String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
-			//ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
-			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-			long seed =  System.nanoTime();
+			for(int i = 0; i < MAX_HMMS; i++)
+			{
+				SingleHMMTrainer(family, opcodeDir, i).run();
+			}
 			
-			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 3, MAX_UNIQUE_OPCODES + 1, seed);
-			System.out.println("HMM for " + family);
-			//hmm.prettyPrint();
-			hmm.train(train, train, 150);
+			trainCorrectIncorrect(family, opcodeDir, 0);
+			testCorrectIncorrect(family, opcodeDir, 0);
 			
-			//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
-			//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-			//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-			//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
-			hmm.saveToFile(String.format(datasetFiles, "hmm" + i));
-			System.out.println("HMM saved to file\n");
-		}
+		};
 	}
 	
-	public static void trainCorrectIncorrect(String family, String opcodeDir)
+	public static Runnable SingleHMMTrainer(String family, String opcodeDir, int i)
 	{
-		helperCorrectIncorrect(family, opcodeDir, 0, 0, "trainSVM");
+		return () ->
+		{
+				String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
+				ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
+				//ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
+				//ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
+				//ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
+				long seed =  System.nanoTime();
+				
+				HiddenMarkovModel hmm = new HiddenMarkovModel(train, N, MAX_UNIQUE_OPCODES + 1, seed);
+				System.out.println("HMM for " + family);
+				//hmm.prettyPrint();
+				hmm.train(train, train, MAX_ITERATIONS);
+				
+				//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
+				//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
+				//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
+				//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
+				hmm.saveToFile(String.format(datasetFiles, "hmm" + i));
+				System.out.println("HMM saved to file\n");			
+				
+		};
 	}
 	
-	public static void testCorrectIncorrect(String family, String opcodeDir)
+	
+	public static void trainCorrectIncorrect(String family, String opcodeDir, int number)
 	{
-		helperCorrectIncorrect(family, opcodeDir, NUM_CORRECT_FILES, NUM_INCORRECT_FILES, "testSVM");
+		helperCorrectIncorrect(family, opcodeDir, 0, 0, "trainSVM" + number);
+	}
+	
+	public static void testCorrectIncorrect(String family, String opcodeDir, int number)
+	{
+		helperCorrectIncorrect(family, opcodeDir, NUM_CORRECT_FILES, NUM_INCORRECT_FILES, "testSVM" + number);
 	}
 	
 	public static void helperCorrectIncorrect(String family, String opcodeDir, int correctOffset, int incorrectOffset, String fileName)
