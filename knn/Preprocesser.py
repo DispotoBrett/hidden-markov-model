@@ -58,6 +58,23 @@ def extract_all_features():
 
             family_feature_matrix = np.stack(tmp_family_sample_features)
             np.save(family.path + '/knn/extracted_features.npy', family_feature_matrix)
+            print('\n\ntrain: family {0} shape {1}'.format(family.path, family_feature_matrix.shape))
+
+def extract_all_features_testset():
+    for family in os.scandir(opcode_dir):
+        if is_proper_family(family.path) and family.is_dir():
+            tmp_family_sample_features = []
+            print('Extracting (test) features for files of type {0}'.format(family.path))
+            for virus_file in os.scandir(family.path + "/knn/testSet"):
+                if virus_file.is_file() and virus_file.name.endswith('.asm.txt'):
+                    num_distinct_opcodes, entropy = extract_features(family.path + '/knn/testSet/'+ virus_file.name)
+
+                    sample_features = np.array([num_distinct_opcodes, entropy])
+                    tmp_family_sample_features.append(sample_features)
+
+            family_feature_matrix = np.stack(tmp_family_sample_features)
+            np.save(family.path + '/knn/testSet/extracted_features.npy', family_feature_matrix)
+            print('\n\ntest: family {0} shape {1}'.format(family.path, family_feature_matrix.shape))
 
 def is_proper_family(family_path):
     families = ['winwebsec', 'zbot', 'zeroaccess']
@@ -94,7 +111,9 @@ def compute_entropy(arr):
 
 
 if __name__ == "__main__":
-    #print('Converting opcodes to symbols...')
+    #print('Converting TRAIN opcodes to symbols...')
     #convert_all()
-    #print('Extracting features')
-    #extract_all_features()
+    print('extracting TEST features...')
+    extract_all_features_testset()
+    print('Extracting features')
+    extract_all_features()
