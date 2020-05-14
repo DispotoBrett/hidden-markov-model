@@ -9,6 +9,7 @@ import scipy
 from scipy import stats
 from sklearn import neighbors, datasets
 from sklearn.neighbors import NearestNeighbors
+import matplotlib.pyplot as plt
 
 DEBUG_MODE = True
 K_NEIGHBORS = 2
@@ -29,7 +30,7 @@ def test(train_set, test_set, train_labels, test_labels):
 
     print(correct / tested)
 
-def plot(train_set, test_set):
+def plot(train_set, train_labels):
     h = .02  # step size in the mesh
     X = train_set
     Y = train_labels
@@ -127,11 +128,13 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 if __name__ == "__main__":
-    print('{0}Loading Dataset{1}'.format(bcolors.OKBLUE, bcolors.ENDC))
-    print(bcolors.OKGREEN)
+    #print('{0}Loading Dataset{1}'.format(bcolors.OKBLUE, bcolors.ENDC))
+    #print(bcolors.OKGREEN)
     train_set, train_labels = load_dataset()
     test_set, test_labels = load_testset()
-    print(bcolors.ENDC)
-    test(train_set, test_set, train_labels, test_labels)
+    #print(bcolors.ENDC)
+    #test(train_set, test_set, train_labels, test_labels)
+
+    plot(train_set, train_labels)
 
 
