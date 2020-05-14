@@ -22,9 +22,9 @@ Malware Classification}
 
 \part{Preprocessing}
 \section{Preprocessing the Dataset}
-Most of the machine learning techniques used in this report use variations of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. The preprocessing was done in python3, and the relevant files can be found in the \texttt{preprocessing} directory of our submission.
+Most of the machine learning techniques used in this report use variants of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. The preprocessing was done in python3, and the relevant files can be found in the \texttt{preprocessing} directory of our submission.
   \begin{enumerate}
-    \item Download the dataset.
+    \item Download the dataset (\texttt{malicia}).
     \item Split the dataset into directories based upon their family label. (Already completed by the dataset provider.)
     \item For each malware family, the following steps were then taken:
       \begin{enumerate}
@@ -40,7 +40,7 @@ Most of the machine learning techniques used in this report use variations of th
   \end{enumerate}
 
 \part{Experiments}
-\section{Bagging}
+\section{HMM Bagging}
   Bagging is performed using the files \texttt{Bagging.java} and \texttt{HiddenMarkovModel.java}. The procedues and results are described in the secions below.
 \subsection{Bagging Procedure}
   The following steps were performed in order to use bagging as an ensemble method:
@@ -54,10 +54,10 @@ Most of the machine learning techniques used in this report use variations of th
     \item Once training is complete for all families, for each family we now have this "aggregate score" written down in a log in the directory where the training samples are located.
     \item Finally, to test all of these trained HMMs, we go into all of the test sets, score the test sample using the \textbf{each of the three "ensemblers"} (each made up of $x$ HMMs.). Once we have the score from each ensembler, we can then go back to the logs where the original score was written down for the training samples. 
     \item Now, our sample has one score for each ensembler, denoted as $S_{1..\text{\texttt{num\_ensembler}}}(x_{\text{test}})$
-    \item We classify this sample as whichever has the minimum of $abs(S_{\text{\textit{family}}}(x_{\text{test}}) - \text{\textit{score}}_\text{family} )$, that is, we classify as whichever family's "original score" score is closest to the score for the sample given by \textit{that family's} "ensembled" HMMs.
+    \item We classify this sample as whichever has the minimum of $abs(S_{\text{\textit{family}}}(x_{\text{test}}) - \text{\textit{score}}_\text{family} )$, that is, we classify as whichever family's "original score" score is closest to the score for the sample given by \textit{that family's} "ensembled" HMMs. In other words, we're just doing the KNN algorithm, where $k = 1$
   \end{enumerate}
 
-\subsection{Bagging Results}
+\subsection{HMM Bagging Results}
   \subsubsection{Initial Bagging Results}
   Initial bagging results are given in the below table:
   \begin{table}[H]
@@ -80,6 +80,7 @@ Most of the machine learning techniques used in this report use variations of th
         \item To attempt to remedy this, we tried changing training methodology:
           \begin{enumerate}
             \item \textbf{Increase number of HMMs} | Currently, durring training, when an HMM is trained on an observation sequence, that observation sequence is much, much larger than the actual samples which are being scored. To remedy this, we can split our "ensemblers" into more "bags" such that they're made up of more HMMs. In turn, each HMM will be trained on a closer amount of data it will be tested on. Despite our rationale.... results from splitting the ensemblers into 30 or 100 HMMs each rather than 10 yielded the \textit{exact same results.}.
+        \item Originally, the plan was to add an HMM on top of the bagging described here. However, because samples of the "wrong" family are always given a score of \texttt{NaN}, this would be completely useless.
           \end{enumerate}
      \end{itemize}
   \end{enumerate}
@@ -97,3 +98,12 @@ Most of the machine learning techniques used in this report use variations of th
  
 
 \end{document}
+
+\iffalse
+Todo:
+  Sample with replacement for training baggging HMM.
+ 
+  Do some ML method (perhaps KNN) where features could be:
+  -Entropy
+  -Number of distinct opcodes
+\fi

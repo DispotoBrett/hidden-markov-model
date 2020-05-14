@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1589151764 "notes.tex" "notes.pdf" "notes" 1589151764
+["pdflatex"] 1589400320 "notes.tex" "notes.pdf" "notes" 1589400320
   "/home/brett/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1582583602 797358 0bd2c1937e70eb3af887cb2d78db28da ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
@@ -80,11 +80,11 @@
   "/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty" 1137110840 23636 c37eef0334dd2011d112d2040c11328f ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1580927610 35594 9aef19174c178978f61d14961262af5d ""
   "bagging1.png" 1589148347 52611 35124aae715c2cf292528230b9b8a017 ""
-  "notes.aux" 1589151764 1000 5b1ab750b475aed3fc46e42643b81472 "pdflatex"
-  "notes.tex" 1589151763 6655 6c56bd679b5d01c0797bd6e7a1b92b0b ""
-  "notes.toc" 1589151764 512 5ac8af9717daeb233469b4c6d7d5c076 "pdflatex"
+  "notes.aux" 1589400320 1008 3d99ed98e249cd1233af9d42d93f65dc "pdflatex"
+  "notes.tex" 1589400319 7135 1037c779774926858c5950449f6abf6f ""
+  "notes.toc" 1589400320 520 62a32f6704c30ebb1be1bd3da34cdc26 "pdflatex"
   (generated)
   "notes.toc"
-  "notes.aux"
-  "notes.pdf"
   "notes.log"
+  "notes.pdf"
+  "notes.aux"

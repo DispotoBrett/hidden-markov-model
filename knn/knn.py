@@ -10,6 +10,7 @@ from scipy import stats
 from sklearn import neighbors, datasets
 from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 
 DEBUG_MODE = True
 K_NEIGHBORS = 2
@@ -31,6 +32,9 @@ def test(train_set, test_set, train_labels, test_labels):
     print(correct / tested)
 
 def plot(train_set, train_labels):
+    cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue'])
+    cmap_bold = ListedColormap(['darkorange', 'c', 'darkblue'])
+
     h = .02  # step size in the mesh
     X = train_set
     Y = train_labels
@@ -55,12 +59,11 @@ def plot(train_set, train_labels):
     plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
 
     # Plot also the training points
-    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold,
+    plt.scatter(X[:, 0], X[:, 1], c=Y, cmap=cmap_bold,
                 edgecolor='k', s=20)
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
-    plt.title("3-Class classification (k = %i, weights = '%s')"
-              % (n_neighbors, weights))
+    plt.title("3-Class classification (k = %i, weights = '%s')")
 
     plt.show()
     
