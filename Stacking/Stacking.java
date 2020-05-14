@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-public class Boosting
+public class Stacking
 {
 	public static int MAX_UNIQUE_OPCODES = 35;
 	public static int MAX_HMMS = 5;
@@ -22,69 +22,67 @@ public class Boosting
 	
 	public static void main(String[] args) throws IOException
 	{
-		//thanks to Stack Overflow user Andreas and this answer
-		//https://stackoverflow.com/a/36273874
-		File tempFile = new File("").getCanonicalFile();
-		String parentDir = tempFile.getParent();
-		String opcodeDir = parentDir + "/Opcodes";
-		
-		Path processedFamiliesFile = Paths.get(opcodeDir + "/preprocessed_families.txt");
+		Path processedFamiliesFile = Paths.get("preprocessed_families.txt");
 		
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		ExecutorService service = Executors.newCachedThreadPool();
-
-		/*for(int i = 0; i < MAX_HMMS; i++)
-		{
-			String datasetFiles = opcodeDir + "/" + processedFamilies.get(1) + "/%s.txt";
-			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
-			service.execute(SingleHMMTrainer(processedFamilies.get(1), opcodeDir, train, i));
-		}*/
-			
-			
+		ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
 		
-		trainCorrectIncorrect(processedFamilies.get(2), opcodeDir, 2);
-		testCorrectIncorrect(processedFamilies.get(2), opcodeDir, 2);
-		System.out.print("Testing done");
 	}
 	
-	public static Runnable FamilyHMMTrainer(String family, String opcodeDir, ArrayList<Integer> observation)
+	public static Runnable TrainHMMFamily(String family)
 	{
 		return () ->
 		{
+			System.out.println("Training HMMs on " + family);
+			ArrayList<Integer> trainingSet = new ArrayList<>();
+			
+			int currentFile = 0;
+			String filename = "hmm_train/" + currentFile + ".txt";
+			
+			//adapted from this answer https://stackoverflow.com/a/1816707
+			while(new File(filename).isFile())
+			{
+				trainingSet.addAll(getObservationSequenceFromFile(filename));
+				currentFile++;
+				filename = "hmm_train/" + currentFile + ".txt";
+			}
+			
 			for(int i = 0; i < MAX_HMMS; i++)
 			{
-				SingleHMMTrainer(family, opcodeDir, observation, i).run();
+				System.out.println("Training HMM #" + i);
+				long seed =  System.nanoTime();
+				HiddenMarkovModel hmm = new HiddenMarkovModel(N, MAX_UNIQUE_OPCODES + 1, seed);
+				hmm.train(trainingSet, MAX_ITERATIONS);
+				hmm.saveToFile(String.format("%s/hmm%d.txt", family, i)); 
 			}
 			
 		};
 	}
 	
-	public static Runnable SingleHMMTrainer(String family, String opcodeDir, ArrayList<Integer> train, int i)
+	public static void trainSVM(String family)
 	{
-		return () ->
+		System.out.println("Traing SVM on " + family);
+		
+		int currentFile = 0;
+		String filename = "svm_train/" + currentFile + ".txt";
+		
+		HiddenMarkovModel[] hmms = new HiddenMarkovModel[MAX_HMMS];
+		
+		//adapted from this answer https://stackoverflow.com/a/1816707
+		while(new File(filename).isFile())
 		{
-				String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-				//ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
-				//ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-				//ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-				long seed =  System.nanoTime();
-				
-				HiddenMarkovModel hmm = new HiddenMarkovModel(train, N, MAX_UNIQUE_OPCODES + 1, seed);
-				System.out.println("HMM for " + family);
-				//hmm.prettyPrint();
-				hmm.train(train, train, MAX_ITERATIONS);
-				
-				//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
-				//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-				//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-				//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
-				hmm.saveToFile(String.format(datasetFiles, "hmm" + i));
-				System.out.println("HMM saved to file\n");			
-				
-		};
+			for(int i = 0; i < MAX_HMMS; i++)
+			{
+				hmms[i] = HiddenMarkovModel.loadFromFile(String.format("%s/hmm%d.txt", family, i));
+				System.out.println("Loaded HMM #" + i);
+			}
+			currentFile++;
+			filename = "hmm_train/" + currentFile + ".txt";
+		}
 	}
+
 	
 	
 	public static void trainCorrectIncorrect(String family, String opcodeDir, int number)

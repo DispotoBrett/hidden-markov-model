@@ -9,7 +9,7 @@ MAX_UNIQUE_OPCODES = 35
 MAX_FAMILIES = 3
 PERCENT_TRAIN_HMM = .5
 PERCENT_TRAIN_SVM = .25
-#PERCENT_TEST_SVM = 1 - PERCENT_TRAIN_HMM - PERCENT_TRAIN_SVM
+PERCENT_TEST_SVM = 1 - PERCENT_TRAIN_HMM - PERCENT_TRAIN_SVM
 
 def convert_file_to_symbol_arr(file_path, symbol_dict):
     symbols = []
@@ -68,7 +68,7 @@ def popular_opcodes(unique_opcodes):
 
 
 def preprocess_families():
-    with open(opcode_dir + '/' + 'preprocessed_families.txt', 'w') as preprocessed_families:
+    with open('preprocessed_families.txt', 'w') as preprocessed_families:
         sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
 
         for i in range(MAX_FAMILIES):
@@ -101,15 +101,14 @@ def preprocess_families():
                 np.savetxt(fname='{0}/hmm_train/{1}.txt'.format(family_name, i), X=np.asarray(file_list[i]), fmt='%d')
 
             for i in range(num_svm_train):
-                np.savetxt(fname='{0}/svm_train/{1}.txt'.format(family_name, i), X=np.asarray(file_list[i + num_hmm_train]), fmt='%d')
+                np.savetxt(fname='{0}/svm_train/same_family{1}.txt'.format(family_name, i), X=np.asarray(file_list[i + num_hmm_train]), fmt='%d')
 
             for i in range(len(file_list) - (num_hmm_train + num_svm_train)):
                 np.savetxt(fname='{0}/svm_test/same_family{1}.txt'.format(family_name, i), X=np.asarray(file_list[i + num_hmm_train + num_svm_train]), fmt='%d')
 
             preprocessed_families.write(family_name + '\n')
 
-
-def setup_testing_different_families():
+def setup_different_families_training_testing():
     sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
     for i in range(MAX_FAMILIES):
         family_name = sorted_families[i]
@@ -117,16 +116,24 @@ def setup_testing_different_families():
 
         symbol_dict = np.load('{0}/{1}/opcode_symbol.npy'.format(opcode_dir, family_name), allow_pickle=True).item()
 
+        num_svm_test_files = 0
+        num_svm_train_files = 0
         for j in range(1, MAX_FAMILIES):
             test_family = sorted_families[(i + j) % MAX_FAMILIES]
             print('Generating test files for {0} from {1}'.format(family_name, test_family))
             family_dir = opcode_dir + '/' + test_family
             file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
 
-            num_different_files = 0
-            for symbol_file in file_list:
-                np.savetxt(fname='{0}/svm_test/different_family{1}.txt'.format(output_dir, num_different_files), X=np.asarray(symbol_file), fmt='%d')
-                num_different_files += 1
+            for symbol_file in file_list[int(len(file_list) * .5):]:
+                np.savetxt(fname='{0}/svm_train/different_family{1}.txt'.format(output_dir, num_svm_train_files),
+                           X=np.asarray(symbol_file), fmt='%d')
+                num_svm_train_files += 1
+
+            for symbol_file in file_list[0:int(len(file_list) * .5):]:
+                np.savetxt(fname='{0}/svm_test/different_family{1}.txt'.format(output_dir, num_svm_test_files), X=np.asarray(symbol_file), fmt='%d')
+                num_svm_test_files += 1
+
+
 
 
 
@@ -134,8 +141,8 @@ def setup_testing_different_families():
 #count_opcodes()
 #largest_families()
 #popular_opcodes(MAX_UNIQUE_OPCODES)
-#preprocess_families()
-setup_testing_different_families()
+preprocess_families()
+setup_different_families_training_testing()
 
 
 
