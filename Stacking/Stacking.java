@@ -15,10 +15,8 @@ public class Stacking
 	public static int MAX_UNIQUE_OPCODES = 35;
 	public static int MAX_HMMS = 5;
 	public static int MAX_ITERATIONS = 100;
-	public static int N = 4;
-	public static int NUM_CORRECT_FILES = 400;
-	public static int NUM_INCORRECT_FILES = 400;
-	public static int NUM_TOTAL_FILES = NUM_CORRECT_FILES + NUM_INCORRECT_FILES;
+	public static int N = 5;
+	public static int MAX_WINWEBSEC_FILES = 1000;
 	
 	public static void main(String[] args) throws IOException
 	{
@@ -27,8 +25,15 @@ public class Stacking
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
+		//ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
 		
+		for(String family: processedFamilies)
+		{
+			trainSVM(family);
+			testSVM(family);
+		}
+		
+		//TrainHMMFamily("winwebsec").run();;
 	}
 	
 	public static Runnable TrainHMMFamily(String family)
@@ -39,14 +44,14 @@ public class Stacking
 			ArrayList<Integer> trainingSet = new ArrayList<>();
 			
 			int currentFile = 0;
-			String filename = "hmm_train/" + currentFile + ".txt";
+			String filename = String.format("%s/hmm_train/%s.txt", family, currentFile);
 			
 			//adapted from this answer https://stackoverflow.com/a/1816707
-			while(new File(filename).isFile())
+			while(new File(filename).isFile() && (!family.equals("winwebsec") || currentFile < MAX_WINWEBSEC_FILES))
 			{
 				trainingSet.addAll(getObservationSequenceFromFile(filename));
 				currentFile++;
-				filename = "hmm_train/" + currentFile + ".txt";
+				filename = String.format("%s/hmm_train/%s.txt", family, currentFile);
 			}
 			
 			for(int i = 0; i < MAX_HMMS; i++)
@@ -63,80 +68,68 @@ public class Stacking
 	
 	public static void trainSVM(String family)
 	{
-		System.out.println("Traing SVM on " + family);
-		
-		int currentFile = 0;
-		String filename = "svm_train/" + currentFile + ".txt";
+		helperSVM(family, "train");
+	}
+	
+	public static void testSVM(String family)
+	{
+		helperSVM(family, "test");
+	}
+	
+	private static void helperSVM(String family, String typeOfDataset)
+	{
+		System.out.println(String.format("%sing SVM for %s", typeOfDataset, family));		
 		
 		HiddenMarkovModel[] hmms = new HiddenMarkovModel[MAX_HMMS];
-		
-		//adapted from this answer https://stackoverflow.com/a/1816707
-		while(new File(filename).isFile())
-		{
-			for(int i = 0; i < MAX_HMMS; i++)
-			{
-				hmms[i] = HiddenMarkovModel.loadFromFile(String.format("%s/hmm%d.txt", family, i));
-				System.out.println("Loaded HMM #" + i);
-			}
-			currentFile++;
-			filename = "hmm_train/" + currentFile + ".txt";
-		}
-	}
-
-	
-	
-	public static void trainCorrectIncorrect(String family, String opcodeDir, int number)
-	{
-		helperCorrectIncorrect(family, opcodeDir, 0, 0, "trainSVM" + number);
-	}
-	
-	public static void testCorrectIncorrect(String family, String opcodeDir, int number)
-	{
-		helperCorrectIncorrect(family, opcodeDir, NUM_CORRECT_FILES, NUM_INCORRECT_FILES, "testSVM" + number);
-	}
-	
-	public static void helperCorrectIncorrect(String family, String opcodeDir, int correctOffset, int incorrectOffset, String fileName)
-	{
-		String datasetFiles = opcodeDir + "/" + family + "/%s.txt";		
-		
-		HiddenMarkovModel[] hmms = new HiddenMarkovModel[MAX_HMMS];
-		double[][] results = new double[NUM_TOTAL_FILES][MAX_HMMS];
+		ArrayList<double[]> result = new ArrayList<>();
 		
 		for(int i = 0; i < MAX_HMMS; i++)
 		{
-			hmms[i] = HiddenMarkovModel.loadFromFile(String.format(datasetFiles, "hmm" + i));
+			hmms[i] = HiddenMarkovModel.loadFromFile(String.format("%s/hmm%d.txt", family, i));
 			System.out.println("Loaded HMM #" + i);
 		}
-			
-		for(int j = 0; j < NUM_CORRECT_FILES; j++)
+		
+		//works on files from the same family
+		int currentFile = 0;
+		String sameFamilyFile = String.format("%s/svm_%s/same_family%d.txt", family, typeOfDataset, currentFile);
+		//adapted from this answer https://stackoverflow.com/a/1816707
+		while(new File(sameFamilyFile).isFile())
 		{
-			System.out.println("Correct File #" + j);
-			String correctFile = opcodeDir + "/" + family + "/svm_tests/proc_correct" + (j + correctOffset) + ".txt";
-			ArrayList<Integer> correct = getObservationSequenceFromFile(correctFile);
+			ArrayList<Integer> testSequence = getObservationSequenceFromFile(sameFamilyFile);
+			double[] row = new double[MAX_HMMS + 1];
+			row[0] = 1;
 			for(int i = 0; i < MAX_HMMS; i++)
-				results[j][i] = hmms[i].scoreStateSequence(correct);
-				//System.out.println("HMM #" + j + " score = " + hmms[i].scoreStateSequence(correct));
+				row[i + 1] = hmms[i].scoreStateSequence(testSequence);
+			
+			result.add(row);
+			currentFile++;
+			sameFamilyFile = String.format("%s/svm_%s/same_family%d.txt", family, typeOfDataset, currentFile);
 		}
 		
-		for(int j = 0; j < NUM_INCORRECT_FILES; j++)
+		//works on files from a different family
+		currentFile = 0;
+		String differentFamilyFile = String.format("%s/svm_%s/different_family%d.txt", family, typeOfDataset, currentFile);
+		while(new File(differentFamilyFile).isFile())
 		{
-			System.out.println("Incorrect File #" + j);
-			String incorrectFile = opcodeDir + "/" + family + "/svm_tests/proc_incorrect" + (j + incorrectOffset) + ".txt";
-			ArrayList<Integer> incorrect = getObservationSequenceFromFile(incorrectFile);
+			ArrayList<Integer> testSequence = getObservationSequenceFromFile(differentFamilyFile);
+			double[] row = new double[MAX_HMMS + 1];
+			row[0] = 0;
 			for(int i = 0; i < MAX_HMMS; i++)
-				results[NUM_CORRECT_FILES + j][i] = hmms[i].scoreStateSequence(incorrect);
-				//System.out.println("HMM #" + j + " score = " + hmms[i].scoreStateSequence(incorrect));
+				row[i + 1] = hmms[i].scoreStateSequence(testSequence);
+			
+			result.add(row);
+			currentFile++;
+			differentFamilyFile = String.format("%s/svm_%s/different_family%d.txt", family, typeOfDataset, currentFile);
 		}
-		//try(BufferedWriter writer = new BufferedWriter(new FileWriter(String.format(datasetFiles, "svm_tests/" + fileName))))
-		String outputDir = "C:\\Users\\jorda\\Documents\\School\\Tensor Fascia Lata\\libsvm-3.24\\libsvm-3.24\\windows";
-		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputDir + "\\" + fileName + ".txt")))
-		{
-			for(int i = 0; i < NUM_TOTAL_FILES; i++)
+		
+		String outputFile = String.format("%s/svm_%s/svm_input.txt", family, typeOfDataset);
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile)))
+		{			
+			for(double[] scores: result)
 			{
-				String row = (i < NUM_CORRECT_FILES)?"1 ":"0 ";
-				
-				for(int j = 0; j < MAX_HMMS; j++)
-					row += (j+1) + ":" + results[i][j] + " ";
+				String row = String.valueOf((int) scores[0]) + " ";
+				for(int i = 1; i < scores.length; i++)
+					row += i + ":" + scores[i] + " ";
 				
 				writer.append(row + "\n");
 			}
@@ -144,7 +137,6 @@ public class Stacking
 		{
 			e.printStackTrace();
 		}
-		
 	}
 	
 	
@@ -161,28 +153,5 @@ public class Stacking
 		
 		return sequence;
 	}
-	
-	/*public static void testManyFamilies(ArrayList<String> families, String opcodeDir)
-	{
-		
-		for(String family: families)
-		{
-			String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
-			ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
-			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-			long seed = System.nanoTime();
-			
-			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 3, MAX_UNIQUE_OPCODES + 1, seed);
-			System.out.println("HMM for " + family);
-			hmm.train(train, train, 150);
-			hmm.prettyPrint();
-			System.out.println("Training Score = " + hmm.scoreStateSequence(train));
-			System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2) + "\n");
-		}
-	}*/
-	
+
 }
