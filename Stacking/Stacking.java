@@ -27,13 +27,13 @@ public class Stacking
 		
 		//ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
 		
-		for(String family: processedFamilies)
+		/*for(String family: processedFamilies)
 		{
 			trainSVM(family);
 			testSVM(family);
-		}
+		}*/
 		
-		//TrainHMMFamily("winwebsec").run();;
+		TrainHMMFamily("zeroaccess").run();
 	}
 	
 	public static Runnable TrainHMMFamily(String family)
