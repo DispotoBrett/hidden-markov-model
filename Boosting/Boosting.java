@@ -15,130 +15,131 @@ public class Boosting
 	public static int MAX_UNIQUE_OPCODES = 35;
 	public static int MAX_HMMS = 5;
 	public static int MAX_ITERATIONS = 100;
-	public static int N = 4;
-	public static int NUM_CORRECT_FILES = 400;
-	public static int NUM_INCORRECT_FILES = 400;
-	public static int NUM_TOTAL_FILES = NUM_CORRECT_FILES + NUM_INCORRECT_FILES;
+	public static int N = 2;
+	public static int MAX_WINWEBSEC_FILES = 1000;
 	
 	public static void main(String[] args) throws IOException
 	{
-		//thanks to Stack Overflow user Andreas and this answer
-		//https://stackoverflow.com/a/36273874
-		File tempFile = new File("").getCanonicalFile();
-		String parentDir = tempFile.getParent();
-		String opcodeDir = parentDir + "/Opcodes";
-		
-		Path processedFamiliesFile = Paths.get(opcodeDir + "/preprocessed_families.txt");
+		Path processedFamiliesFile = Paths.get("preprocessed_families.txt");
 		
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		ExecutorService service = Executors.newCachedThreadPool();
-
-		/*for(int i = 0; i < MAX_HMMS; i++)
-		{
-			String datasetFiles = opcodeDir + "/" + processedFamilies.get(1) + "/%s.txt";
-			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
-			service.execute(SingleHMMTrainer(processedFamilies.get(1), opcodeDir, train, i));
-		}*/
-			
-			
+		//ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
 		
-		trainCorrectIncorrect(processedFamilies.get(2), opcodeDir, 2);
-		testCorrectIncorrect(processedFamilies.get(2), opcodeDir, 2);
-		System.out.print("Testing done");
+		for(String family: processedFamilies)
+		{
+			//TrainHMMFamily(family).run();
+			testHMM(family);
+		}
+		
+		
 	}
 	
-	public static Runnable FamilyHMMTrainer(String family, String opcodeDir, ArrayList<Integer> observation)
+	public static Runnable TrainHMMFamily(String family)
 	{
 		return () ->
 		{
+			System.out.println("Training HMMs on " + family);
+			ArrayList<Integer> trainingSet = new ArrayList<>();
+			ArrayList<Integer> valSet = new ArrayList<>();
+			
+			int currentFile = 0;
+			String testFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
+			
+			//adapted from this answer https://stackoverflow.com/a/1816707
+			while(new File(testFilename).isFile() && (!family.equals("winwebsec") || currentFile < MAX_WINWEBSEC_FILES))
+			{
+				trainingSet.addAll(getObservationSequenceFromFile(testFilename));
+				currentFile++;
+				testFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
+			}
+			
+			currentFile = 0;
+			String valFilename = String.format("%s/hmm_validate/same_family%s.txt", family, currentFile);
+			while(new File(valFilename).isFile() && (!family.equals("winwebsec") || currentFile < MAX_WINWEBSEC_FILES))
+			{
+				trainingSet.addAll(getObservationSequenceFromFile(valFilename));
+				currentFile++;
+				valFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
+			}
+			
 			for(int i = 0; i < MAX_HMMS; i++)
 			{
-				SingleHMMTrainer(family, opcodeDir, observation, i).run();
+				System.out.println("Training HMM #" + i);
+				long seed =  System.nanoTime();
+				HiddenMarkovModel hmm = new HiddenMarkovModel(N, MAX_UNIQUE_OPCODES + 1, seed);
+				hmm.train(trainingSet, valSet, MAX_ITERATIONS);
+				hmm.saveToFile(String.format("%s/hmm%d.txt", family, i)); 
 			}
 			
 		};
 	}
 	
-	public static Runnable SingleHMMTrainer(String family, String opcodeDir, ArrayList<Integer> train, int i)
+	/*public static void trainSVM(String family)
 	{
-		return () ->
-		{
-				String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-				//ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
-				//ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-				//ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-				long seed =  System.nanoTime();
-				
-				HiddenMarkovModel hmm = new HiddenMarkovModel(train, N, MAX_UNIQUE_OPCODES + 1, seed);
-				System.out.println("HMM for " + family);
-				//hmm.prettyPrint();
-				hmm.train(train, train, MAX_ITERATIONS);
-				
-				//System.out.println("Training Score = " + hmm.scoreStateSequence(train));
-				//System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-				//System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-				//System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2));
-				hmm.saveToFile(String.format(datasetFiles, "hmm" + i));
-				System.out.println("HMM saved to file\n");			
-				
-		};
+		helperSVM(family, "train");
+	}*/
+	
+	public static void testHMM(String family)
+	{
+		helperSVM(family, "test");
 	}
 	
-	
-	public static void trainCorrectIncorrect(String family, String opcodeDir, int number)
+	private static void helperSVM(String family, String typeOfDataset)
 	{
-		helperCorrectIncorrect(family, opcodeDir, 0, 0, "trainSVM" + number);
-	}
-	
-	public static void testCorrectIncorrect(String family, String opcodeDir, int number)
-	{
-		helperCorrectIncorrect(family, opcodeDir, NUM_CORRECT_FILES, NUM_INCORRECT_FILES, "testSVM" + number);
-	}
-	
-	public static void helperCorrectIncorrect(String family, String opcodeDir, int correctOffset, int incorrectOffset, String fileName)
-	{
-		String datasetFiles = opcodeDir + "/" + family + "/%s.txt";		
+		System.out.println(String.format("%sing HMM for %s", typeOfDataset, family));		
 		
 		HiddenMarkovModel[] hmms = new HiddenMarkovModel[MAX_HMMS];
-		double[][] results = new double[NUM_TOTAL_FILES][MAX_HMMS];
+		ArrayList<double[]> result = new ArrayList<>();
 		
 		for(int i = 0; i < MAX_HMMS; i++)
 		{
-			hmms[i] = HiddenMarkovModel.loadFromFile(String.format(datasetFiles, "hmm" + i));
+			hmms[i] = HiddenMarkovModel.loadFromFile(String.format("%s/hmm%d.txt", family, i));
 			System.out.println("Loaded HMM #" + i);
 		}
-			
-		for(int j = 0; j < NUM_CORRECT_FILES; j++)
+		
+		//works on files from the same family
+		int currentFile = 0;
+		String sameFamilyFile = String.format("%s/hmm_%s/same_family%d.txt", family, typeOfDataset, currentFile);
+		//adapted from this answer https://stackoverflow.com/a/1816707
+		while(new File(sameFamilyFile).isFile())
 		{
-			System.out.println("Correct File #" + j);
-			String correctFile = opcodeDir + "/" + family + "/svm_tests/proc_correct" + (j + correctOffset) + ".txt";
-			ArrayList<Integer> correct = getObservationSequenceFromFile(correctFile);
+			ArrayList<Integer> testSequence = getObservationSequenceFromFile(sameFamilyFile);
+			double[] scores = new double[MAX_HMMS];
+			
 			for(int i = 0; i < MAX_HMMS; i++)
-				results[j][i] = hmms[i].scoreStateSequence(correct);
-				//System.out.println("HMM #" + j + " score = " + hmms[i].scoreStateSequence(correct));
+				scores[i] = hmms[i].scoreStateSequence(testSequence);
+			
+			double[] row = new double[] {1, BoostingFunction(scores) };
+			result.add(row);
+			currentFile++;
+			sameFamilyFile = String.format("%s/hmm_%s/same_family%d.txt", family, typeOfDataset, currentFile);
 		}
 		
-		for(int j = 0; j < NUM_INCORRECT_FILES; j++)
+		//works on files from a different family
+		currentFile = 0;
+		String differentFamilyFile = String.format("%s/hmm_%s/different_family%d.txt", family, typeOfDataset, currentFile);
+		while(new File(differentFamilyFile).isFile())
 		{
-			System.out.println("Incorrect File #" + j);
-			String incorrectFile = opcodeDir + "/" + family + "/svm_tests/proc_incorrect" + (j + incorrectOffset) + ".txt";
-			ArrayList<Integer> incorrect = getObservationSequenceFromFile(incorrectFile);
+			ArrayList<Integer> testSequence = getObservationSequenceFromFile(differentFamilyFile);
+			double[] scores = new double[MAX_HMMS];
+			
 			for(int i = 0; i < MAX_HMMS; i++)
-				results[NUM_CORRECT_FILES + j][i] = hmms[i].scoreStateSequence(incorrect);
-				//System.out.println("HMM #" + j + " score = " + hmms[i].scoreStateSequence(incorrect));
+				scores[i] = hmms[i].scoreStateSequence(testSequence);
+			
+			double[] row = new double[] {0, BoostingFunction(scores) };
+			result.add(row);
+			currentFile++;
+			differentFamilyFile = String.format("%s/hmm_%s/different_family%d.txt", family, typeOfDataset, currentFile);
 		}
-		//try(BufferedWriter writer = new BufferedWriter(new FileWriter(String.format(datasetFiles, "svm_tests/" + fileName))))
-		String outputDir = "C:\\Users\\jorda\\Documents\\School\\Tensor Fascia Lata\\libsvm-3.24\\libsvm-3.24\\windows";
-		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputDir + "\\" + fileName + ".txt")))
-		{
-			for(int i = 0; i < NUM_TOTAL_FILES; i++)
+		
+		String outputFile = String.format("%s/boosting_output.txt", family, typeOfDataset);
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile)))
+		{			
+			for(double[] scores: result)
 			{
-				String row = (i < NUM_CORRECT_FILES)?"1 ":"0 ";
-				
-				for(int j = 0; j < MAX_HMMS; j++)
-					row += (j+1) + ":" + results[i][j] + " ";
+				String row = String.valueOf((int) scores[0]) + " " + String.valueOf(scores[1]);
 				
 				writer.append(row + "\n");
 			}
@@ -146,7 +147,6 @@ public class Boosting
 		{
 			e.printStackTrace();
 		}
-		
 	}
 	
 	
@@ -164,27 +164,18 @@ public class Boosting
 		return sequence;
 	}
 	
-	/*public static void testManyFamilies(ArrayList<String> families, String opcodeDir)
+	private static double BoostingFunction(double[] arr)
 	{
+		return average(arr);
+	}
+	
+	private static double average(double[] arr)
+	{
+		double sum = 0;
+		for(int i = 0; i < arr.length; i++)
+			sum += arr[i];
 		
-		for(String family: families)
-		{
-			String datasetFiles = opcodeDir + "/" + family + "/%s.txt";
-			ArrayList<Integer> train = getObservationSequenceFromFile(String.format(datasetFiles, "train"));
-			ArrayList<Integer> validate = getObservationSequenceFromFile(String.format(datasetFiles, "val"));
-			ArrayList<Integer> test = getObservationSequenceFromFile(String.format(datasetFiles, "test"));
-			ArrayList<Integer> test2 = getObservationSequenceFromFile(String.format(datasetFiles, "test2"));
-			long seed = System.nanoTime();
-			
-			HiddenMarkovModel hmm = new HiddenMarkovModel(train, 3, MAX_UNIQUE_OPCODES + 1, seed);
-			System.out.println("HMM for " + family);
-			hmm.train(train, train, 150);
-			hmm.prettyPrint();
-			System.out.println("Training Score = " + hmm.scoreStateSequence(train));
-			System.out.println("Validate Score = " + hmm.scoreStateSequence(validate));
-			System.out.println("Testing Score = " + hmm.scoreStateSequence(test));
-			System.out.println("Testing Score 2 = " + hmm.scoreStateSequence(test2) + "\n");
-		}
-	}*/
+		return sum / arr.length;
+	}
 	
 }

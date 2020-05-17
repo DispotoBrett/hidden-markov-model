@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 from sklearn.metrics import roc_curve, auc
 
-def plot_roc(x_limits=[0,1], y_limits=[0, 1.05]):
+def plot_roc(x_limits=[0, 1], y_limits=[0, 1.05]):
 
     all_labels = dict()
     all_scores = dict()
@@ -13,15 +13,11 @@ def plot_roc(x_limits=[0,1], y_limits=[0, 1.05]):
             labels = []
             scores = []
 
-            with open('{0}\svm_test\svm_input.txt'.format(family), 'r') as rows:
+            with open(r'{0}\boosting_output.txt'.format(family), 'r') as rows:
                 for row in rows:
-                    labels.append(int(row.split()[0]))
-
-            with open(r'{0}\test.predict'.format(family), 'r') as rows:
-                next(rows)
-
-                for row in rows:
-                    scores.append(float(row.split()[1]))
+                    split = row.split()
+                    labels.append(int(split[0]))
+                    scores.append(float(split[1]))
 
             all_labels[family] = labels
             all_scores[family] = scores
@@ -48,10 +44,9 @@ def plot_roc(x_limits=[0,1], y_limits=[0, 1.05]):
     plt.ylim(y_limits)
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('ROC Curves from Stacking HMMs via SVM for {} families'.format(len(families)))
+    plt.title('ROC Curves from Randomly Restarted HMMs for {} families'.format(len(families)))
     plt.legend(loc="lower right")
     plt.show()
 
 
 plot_roc()
-plot_roc([0, .15], [.9, 1.05])

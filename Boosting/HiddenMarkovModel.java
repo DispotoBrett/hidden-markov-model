@@ -268,7 +268,7 @@ class HiddenMarkovModel
   }
 
 
-  public HiddenMarkovModel(ArrayList<Integer> O, int N, int M, long seed) {
+  public HiddenMarkovModel(int N, int M, long seed) {
 	  this.N = N;
 	  this.M = M;
 	  transitionMat = new double[N][N];

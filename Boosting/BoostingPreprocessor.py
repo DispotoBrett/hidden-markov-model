@@ -5,11 +5,11 @@ import numpy as np
 
 parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
-MAX_UNIQUE_OPCODES = 35
+MAX_UNIQUE_OPCODES = 30
 MAX_FAMILIES = 3
 PERCENT_TRAIN_HMM = .5
-PERCENT_TRAIN_SVM = .25
-#PERCENT_TEST_SVM = 1 - PERCENT_TRAIN_HMM - PERCENT_TRAIN_SVM
+PERCENT_VALIDATE_HMM = .2
+PERCENT_TEST_HMM = 1 - PERCENT_TRAIN_HMM - PERCENT_VALIDATE_HMM
 
 def convert_file_to_symbol_arr(file_path, symbol_dict):
     symbols = []
@@ -68,13 +68,21 @@ def popular_opcodes(unique_opcodes):
 
 
 def preprocess_families():
-    with open(opcode_dir + '/' + 'preprocessed_families.txt', 'w') as preprocessed_families:
+    with open('preprocessed_families.txt', 'w') as preprocessed_families:
         sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
 
         for i in range(MAX_FAMILIES):
             family_name = sorted_families[i]
+
             if not os.path.isdir(family_name):
                 os.mkdir(family_name)
+            if not os.path.isdir(family_name + '/hmm_train'):
+                os.mkdir(family_name + '/hmm_train')
+            if not os.path.isdir(family_name + '/hmm_validate'):
+                os.mkdir(family_name + '/hmm_validate')
+            if not os.path.isdir(family_name + '/hmm_test'):
+                os.mkdir(family_name + '/hmm_test')
+
 
             print('Processing family ' + family_name)
             family_dir = opcode_dir + '/' + family_name #location of the directory where the original opcodes are found
@@ -82,48 +90,48 @@ def preprocess_families():
             symbol_dict = np.load(opcode_dir + '/' + family_name + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
 
             #each element in the list is a virus file that has been converted to a symbol (possible symbols are 0, 1, 2, ... , MAX_UNIQUE_OPCODES)
-            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scan_dir(family_dir) if file.name.endswith('.asm.txt')]
+            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
 
             random.shuffle(file_list)
 
             num_hmm_train = int(len(file_list) * PERCENT_TRAIN_HMM)
-            num_svm_train = int(len(file_list) * PERCENT_TRAIN_SVM)
+            num_hmm_validate = int(len(file_list) * PERCENT_VALIDATE_HMM)
 
             for i in range(num_hmm_train):
-                np.save(fname= '{0}/hmm_train/{1}.txt'.format(family_name, i), X=file_list[i], fmt='%d')
+                np.savetxt(fname='{0}/hmm_train/{1}.txt'.format(family_name, i), X=np.asarray(file_list[i]), fmt='%d')
 
-            for i in range(num_svm_train):
-                np.save(fname= '{0}/svm_train/{1}.txt'.format(family_name, i), X=file_list[i + num_hmm_train], fmt='%d')
+            for i in range(num_hmm_validate):
+                np.savetxt(fname='{0}/hmm_validate/same_family{1}.txt'.format(family_name, i), X=np.asarray(file_list[i + num_hmm_train]), fmt='%d')
 
-            for i in range(len(file_list) - (num_hmm_train + num_svm_train)):
-                np.save(fname= '{0}/svm_test/same_family{1}.txt'.format(family_name, i), X=file_list[i + num_hmm_train + num_svm_train], fmt='%d')
+            for i in range(len(file_list) - (num_hmm_train + num_hmm_validate)):
+                np.savetxt(fname='{0}/hmm_test/same_family{1}.txt'.format(family_name, i), X=np.asarray(file_list[i + num_hmm_train + num_hmm_validate]), fmt='%d')
 
+            preprocessed_families.write(family_name + '\n')
 
-def setup_testing_different_families():
+def setup_different_families_training_testing():
     sorted_families = np.load(opcode_dir + '/' + 'sorted_families.npy')
     for i in range(MAX_FAMILIES):
         family_name = sorted_families[i]
+        output_dir = os.getcwd() + '/' + family_name  # the folder where everything is stored for this particular family
 
-        symbol_dict = np.load(family_dir + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
+        symbol_dict = np.load('{0}/{1}/opcode_symbol.npy'.format(opcode_dir, family_name), allow_pickle=True).item()
 
-
+        num_hmm_test_files = 0
         for j in range(1, MAX_FAMILIES):
             test_family = sorted_families[(i + j) % MAX_FAMILIES]
             print('Generating test files for {0} from {1}'.format(family_name, test_family))
             family_dir = opcode_dir + '/' + test_family
-            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.list_dir(family_dir) if file.name.endswith('.asm.txt')]
+            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
 
-            for k in range(len(file_list)):
-                np.save(fname= '{0}/svm_test/different_family{1}.txt'.format(family_name, k), X=file_list[k], fmt='%d')
+            for symbol_file in file_list[0:int(len(file_list) * .5)]: # only took the first half of the files to match the Stacking program
+                np.savetxt(fname='{0}/hmm_test/different_family{1}.txt'.format(output_dir, num_hmm_test_files), X=np.asarray(symbol_file), fmt='%d')
+                num_hmm_test_files += 1
 
-
-
-
-count_opcodes()
-largest_families()
-popular_opcodes(MAX_UNIQUE_OPCODES)
+#count_opcodes()
+#largest_families()
+#popular_opcodes(MAX_UNIQUE_OPCODES)
 preprocess_families()
-setup_testing_different_families()
+setup_different_families_training_testing()
 
 
 
