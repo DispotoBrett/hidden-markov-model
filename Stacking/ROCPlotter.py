@@ -6,25 +6,26 @@ def plot_roc(x_limits=[0,1], y_limits=[0, 1.05]):
 
     all_labels = dict()
     all_scores = dict()
+
     with open('preprocessed_families.txt', 'r') as file:
         families = [x.strip() for x in file]
 
-        for family in families:
-            labels = []
-            scores = []
+    for family in families:
+        labels = []
+        scores = []
 
-            with open('{0}\svm_test\svm_input.txt'.format(family), 'r') as rows:
-                for row in rows:
-                    labels.append(int(row.split()[0]))
+        with open('{0}\svm_test\svm_input.txt'.format(family), 'r') as rows:
+            for row in rows:
+                labels.append(int(row.split()[0]))
 
-            with open(r'{0}\test.predict'.format(family), 'r') as rows:
-                next(rows)
+        with open(r'{0}\test.predict'.format(family), 'r') as rows:
+            next(rows)
 
-                for row in rows:
-                    scores.append(float(row.split()[1]))
+            for row in rows:
+                scores.append(float(row.split()[1]))
 
-            all_labels[family] = labels
-            all_scores[family] = scores
+        all_labels[family] = labels
+        all_scores[family] = scores
 
     # Code adapted from
     # https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html#sphx-glr-auto-examples-model-selection-plot-roc-py
@@ -52,6 +53,6 @@ def plot_roc(x_limits=[0,1], y_limits=[0, 1.05]):
     plt.legend(loc="lower right")
     plt.show()
 
-
-plot_roc()
-plot_roc([0, .15], [.9, 1.05])
+if __name__ == "__main__":
+    plot_roc()
+    plot_roc([0, .15], [.9, 1.05])

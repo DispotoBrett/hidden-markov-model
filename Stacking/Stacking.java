@@ -12,11 +12,11 @@ import java.util.concurrent.Executors;
 
 public class Stacking
 {
-	public static int MAX_UNIQUE_OPCODES = 35;
-	public static int MAX_HMMS = 5;
-	public static int MAX_ITERATIONS = 100;
-	public static int N = 5;
-	public static int MAX_WINWEBSEC_FILES = 1000;
+	public static final int MAX_UNIQUE_OPCODES = 35;
+	public static final int MAX_HMMS = 5;
+	public static final int MAX_ITERATIONS = 100;
+	public static final int N = 5;
+	public static final int MAX_FILES = 1000; //unfortunately, this variable machine and memory dependent
 	
 	public static void main(String[] args) throws IOException
 	{
@@ -25,15 +25,30 @@ public class Stacking
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		//ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
-		
-		/*for(String family: processedFamilies)
+		if(args.length == 0)
 		{
-			trainSVM(family);
-			testSVM(family);
-		}*/
+			for(String family: processedFamilies)
+			{
+				TrainHMMFamily(family).run();
+				trainSVM(family);
+			}
+		}
 		
-		TrainHMMFamily("zeroaccess").run();
+		if(args[0].equals("--test"))
+		{
+			for(String family: processedFamilies)
+			{
+				testSVM(family);
+			}
+		}
+		
+		else if(args[0].equals("--predict"))
+		{
+			for(String family: processedFamilies)
+			{
+				scoreFile(family);
+			}
+		}
 	}
 	
 	public static Runnable TrainHMMFamily(String family)
@@ -47,7 +62,7 @@ public class Stacking
 			String filename = String.format("%s/hmm_train/%s.txt", family, currentFile);
 			
 			//adapted from this answer https://stackoverflow.com/a/1816707
-			while(new File(filename).isFile() && (!family.equals("winwebsec") || currentFile < MAX_WINWEBSEC_FILES))
+			while(new File(filename).isFile() && currentFile < MAX_FILES) //machine dependent, 
 			{
 				trainingSet.addAll(getObservationSequenceFromFile(filename));
 				currentFile++;
@@ -64,6 +79,36 @@ public class Stacking
 			}
 			
 		};
+	}
+	
+	public static void scoreFile(String family)
+	{
+		System.out.println("Scoring file on " + family);
+		HiddenMarkovModel[] hmms = new HiddenMarkovModel[MAX_HMMS];
+		ArrayList<Integer> symbols = getObservationSequenceFromFile("predicting/"+ family +"_symbols.txt");
+		
+		double[] scores = new double[MAX_HMMS + 1];
+		scores[0] = 0;
+		for(int i = 0; i < MAX_HMMS; i++)
+		{
+			hmms[i] = HiddenMarkovModel.loadFromFile(String.format("%s/hmm%d.txt", family, i));
+			scores[i + 1] = hmms[i].scoreStateSequence(symbols);
+		}
+		
+		String outputFile = "predicting/"+ family +"_svm_input.txt";
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile)))
+		{			
+			String row = String.valueOf((int) scores[0]) + " ";
+			for(int i = 1; i < scores.length; i++)
+				row += i + ":" + scores[i] + " ";
+			
+			writer.append(row + "\n");
+
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public static void trainSVM(String family)

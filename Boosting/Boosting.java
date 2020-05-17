@@ -25,7 +25,6 @@ public class Boosting
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		//ExecutorService service = Executors.newFixedThreadPool(processedFamilies.size());
 		
 		for(String family: processedFamilies)
 		{
@@ -42,7 +41,7 @@ public class Boosting
 		{
 			System.out.println("Training HMMs on " + family);
 			ArrayList<Integer> trainingSet = new ArrayList<>();
-			ArrayList<Integer> valSet = new ArrayList<>();
+			//ArrayList<Integer> valSet = new ArrayList<>();
 			
 			int currentFile = 0;
 			String testFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
@@ -55,38 +54,25 @@ public class Boosting
 				testFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
 			}
 			
-			currentFile = 0;
-			String valFilename = String.format("%s/hmm_validate/same_family%s.txt", family, currentFile);
-			while(new File(valFilename).isFile() && (!family.equals("winwebsec") || currentFile < MAX_WINWEBSEC_FILES))
-			{
-				trainingSet.addAll(getObservationSequenceFromFile(valFilename));
-				currentFile++;
-				valFilename = String.format("%s/hmm_train/%s.txt", family, currentFile);
-			}
 			
 			for(int i = 0; i < MAX_HMMS; i++)
 			{
 				System.out.println("Training HMM #" + i);
 				long seed =  System.nanoTime();
 				HiddenMarkovModel hmm = new HiddenMarkovModel(N, MAX_UNIQUE_OPCODES + 1, seed);
-				hmm.train(trainingSet, valSet, MAX_ITERATIONS);
+				hmm.train(trainingSet, MAX_ITERATIONS);
 				hmm.saveToFile(String.format("%s/hmm%d.txt", family, i)); 
 			}
 			
 		};
 	}
-	
-	/*public static void trainSVM(String family)
-	{
-		helperSVM(family, "train");
-	}*/
-	
+
 	public static void testHMM(String family)
 	{
-		helperSVM(family, "test");
+		helperHMM(family, "test");
 	}
 	
-	private static void helperSVM(String family, String typeOfDataset)
+	private static void helperHMM(String family, String typeOfDataset)
 	{
 		System.out.println(String.format("%sing HMM for %s", typeOfDataset, family));		
 		
@@ -166,7 +152,7 @@ public class Boosting
 	
 	private static double BoostingFunction(double[] arr)
 	{
-		return average(arr);
+		return max(arr);
 	}
 	
 	private static double average(double[] arr)
@@ -176,6 +162,17 @@ public class Boosting
 			sum += arr[i];
 		
 		return sum / arr.length;
+	}
+	
+	private static double max(double[] arr)
+	{
+		double max = Double.NEGATIVE_INFINITY;
+		
+		for(int i = 0; i < arr.length; i++)
+			if(arr[i] > max)
+				max = arr[i];
+		
+		return max;
 	}
 	
 }

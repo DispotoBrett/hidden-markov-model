@@ -44,7 +44,7 @@ def plot_roc(x_limits=[0, 1], y_limits=[0, 1.05]):
     plt.ylim(y_limits)
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('ROC Curves from Randomly Restarted HMMs for {} families'.format(len(families)))
+    plt.title('ROC Curves from Boosting HMMs for {} families'.format(len(families)))
     plt.legend(loc="lower right")
     plt.show()
 

@@ -5,7 +5,7 @@ import numpy as np
 
 parent_dir = os.path.dirname(os.getcwd())
 opcode_dir = parent_dir + '/Opcodes'
-MAX_UNIQUE_OPCODES = 30
+MAX_UNIQUE_OPCODES = 35
 MAX_FAMILIES = 3
 PERCENT_TRAIN_HMM = .5
 PERCENT_VALIDATE_HMM = .2
