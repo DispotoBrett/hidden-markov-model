@@ -25,8 +25,6 @@ def test_svm():
     ROCPlotter.plot_roc()
 
 def svm_predict():
-    likely_family = ''
-    highest_score = ''
     exe_dir = 'libsvm-3.24\\windows'
     with open('preprocessed_families.txt', 'r') as file:
         families = [x.strip() for x in file.readlines()]
@@ -39,5 +37,19 @@ def svm_predict():
 
         with open('predicting/{}.predict'.format(family), 'r') as file:
             next(file)
-            scores.append(file.split()[1])
+            score = next(file).split()[1]
+            scores.append(float(score))
+
+    likely_family = ''
+    highest_score = 0
+
+    for score, family in zip(scores, families):
+        if score > highest_score:
+            likely_family = family
+            highest_score = score
+
+    if highest_score < .5:
+        likely_family = 'None'
+
+    return likely_family
 

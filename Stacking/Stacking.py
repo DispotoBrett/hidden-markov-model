@@ -3,6 +3,7 @@ import StackingPreprocessor as Processer
 import numpy as np
 import sys
 import os
+from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog
 
@@ -21,14 +22,22 @@ def identify_file():
         families = [x.strip() for x in file]
 
     for family in families:
-        symbol_dict = np.load('{Processer.opcode_dir}/{family}/opcode_symbol.npy', allow_pickle=True).item()
-        symbols = Processer.convert_file_to_symbols(file_path, symbol_dict)
+        symbol_dict = np.load('{0}/{1}/opcode_symbol.npy'.format(Processer.opcode_dir, family), allow_pickle=True).item()
+        # thanks to StackOverflow user realityinabox and this answer
+        # https://stackoverflow.com/q/26124281
+        symbols = Processer.convert_file_to_symbols(Path(file_path), symbol_dict)
 
         np.savetxt(fname='predicting/{}_symbols.txt'.format(family), X=np.asarray(symbols), fmt='%d')
 
+    os.system('javac Stacking.java')
+    os.system('java Stacking --predict')
+
+    family = SVMHandler.svm_predict()
+    print(family)
+
 if __name__ == "__main__":
 
-    if len(sys.argv) == 0:
+    if len(sys.argv) == 1:
         identify_file()
 
 
