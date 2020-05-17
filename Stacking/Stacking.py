@@ -29,16 +29,48 @@ def identify_file():
 
         np.savetxt(fname='predicting/{}_symbols.txt'.format(family), X=np.asarray(symbols), fmt='%d')
 
-    os.system('javac Stacking.java')
     os.system('java Stacking --predict')
 
     family = SVMHandler.svm_predict()
     print(family)
 
+def train():
+    Processer.count_opcodes()
+    Processer.largest_families()
+    Processer.popular_opcodes()
+    Processer.preprocess_families()
+    Processer.setup_different_families_training_testing()
+
+    os.system('javac Stacking.java')
+    os.system('java Stacking --predict')
+
+    SVMHandler.train_svm()
+
+def test():
+    os.system('java Stacking --test')
+    SVMHandler.test_svm()
+
 if __name__ == "__main__":
 
     if len(sys.argv) == 1:
         identify_file()
+
+    else:
+        if sys.argv[1] == '--train':
+            if len(sys.argv) > 2:
+                Processer.MAX_FAMILIES = int(sys.argv[2])
+
+            train()
+
+        elif sys.argv[1] == '--test':
+            test()
+
+        elif sys.argv[1] == '--all':
+            train()
+            test()
+            identify_file()
+
+
 
 
 

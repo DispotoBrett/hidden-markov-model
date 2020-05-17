@@ -13,6 +13,7 @@ PERCENT_TEST_SVM = 1 - PERCENT_TRAIN_HMM - PERCENT_TRAIN_SVM
 
 def convert_file_to_symbols(file_path, symbol_dict):
     symbols = []
+
     if os.path.exists(file_path) and file_path.name.endswith('.asm.txt'):
         with open(file_path, 'r') as file:
             opcode_reader = csv.reader(file)
@@ -53,7 +54,7 @@ def largest_families():
     families.sort(reverse=True, key=lambda f: num_files[f])
     np.save(opcode_dir + '/' + 'sorted_families.npy', np.asarray(families))
 
-def popular_opcodes(unique_opcodes):
+def popular_opcodes(unique_opcodes=MAX_UNIQUE_OPCODES):
     for family in os.scandir(opcode_dir):
         if family.is_dir():
             print('Sorting opcode popularity in family ' + family.name)
