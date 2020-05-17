@@ -42,7 +42,7 @@ def train():
     Processer.setup_different_families_training_testing()
 
     os.system('javac Stacking.java')
-    os.system('java Stacking --predict')
+    os.system('java Stacking')
 
     SVMHandler.train_svm()
 
@@ -52,6 +52,7 @@ def test():
 
 if __name__ == "__main__":
 
+    print(sys.argv)
     if len(sys.argv) == 1:
         identify_file()
 

@@ -25,7 +25,7 @@ public class Stacking
 		ArrayList<String> processedFamilies = new ArrayList<>();
 		Files.lines(processedFamiliesFile).forEach(s -> processedFamilies.add(s));
 		
-		if(args.length == 0)
+		if(args.length == 0 || args[0].equals("--train"))
 		{
 			for(String family: processedFamilies)
 			{
