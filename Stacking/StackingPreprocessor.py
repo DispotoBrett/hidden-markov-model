@@ -11,8 +11,9 @@ PERCENT_TRAIN_HMM = .5
 PERCENT_TRAIN_SVM = .25
 PERCENT_TEST_SVM = 1 - PERCENT_TRAIN_HMM - PERCENT_TRAIN_SVM
 
-def convert_file_to_symbol_arr(file_path, symbol_dict):
+def convert_file_to_symbols(file_path, symbol_dict):
     symbols = []
+
     if os.path.exists(file_path) and file_path.name.endswith('.asm.txt'):
         with open(file_path, 'r') as file:
             opcode_reader = csv.reader(file)
@@ -53,7 +54,7 @@ def largest_families():
     families.sort(reverse=True, key=lambda f: num_files[f])
     np.save(opcode_dir + '/' + 'sorted_families.npy', np.asarray(families))
 
-def popular_opcodes(unique_opcodes):
+def popular_opcodes(unique_opcodes=MAX_UNIQUE_OPCODES):
     for family in os.scandir(opcode_dir):
         if family.is_dir():
             print('Sorting opcode popularity in family ' + family.name)
@@ -90,7 +91,7 @@ def preprocess_families():
             symbol_dict = np.load(opcode_dir + '/' + family_name + '/' + 'opcode_symbol.npy', allow_pickle=True).item()
 
             #each element in the list is a virus file that has been converted to a symbol (possible symbols are 0, 1, 2, ... , MAX_UNIQUE_OPCODES)
-            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
+            file_list = [convert_file_to_symbols(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
 
             random.shuffle(file_list)
 
@@ -122,7 +123,7 @@ def setup_different_families_training_testing():
             test_family = sorted_families[(i + j) % MAX_FAMILIES]
             print('Generating test files for {0} from {1}'.format(family_name, test_family))
             family_dir = opcode_dir + '/' + test_family
-            file_list = [convert_file_to_symbol_arr(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
+            file_list = [convert_file_to_symbols(file, symbol_dict) for file in os.scandir(family_dir) if file.name.endswith('.asm.txt')]
 
             for symbol_file in file_list[int(len(file_list) * .5):]:
                 np.savetxt(fname='{0}/svm_train/different_family{1}.txt'.format(output_dir, num_svm_train_files),
@@ -134,15 +135,12 @@ def setup_different_families_training_testing():
                 num_svm_test_files += 1
 
 
-
-
-
-
-#count_opcodes()
-#largest_families()
-#popular_opcodes(MAX_UNIQUE_OPCODES)
-preprocess_families()
-setup_different_families_training_testing()
+if __name__ == "__main__":
+    count_opcodes()
+    largest_families()
+    popular_opcodes(MAX_UNIQUE_OPCODES)
+    preprocess_families()
+    setup_different_families_training_testing()
 
 
 
