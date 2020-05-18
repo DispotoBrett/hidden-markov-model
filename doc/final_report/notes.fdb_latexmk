@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1589796276 "notes.tex" "notes.pdf" "notes" 1589796277
+["pdflatex"] 1589803894 "notes.tex" "notes.pdf" "notes" 1589803895
   "/home/brett/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1582583602 797358 0bd2c1937e70eb3af887cb2d78db28da ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
@@ -33,6 +33,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1248133631 35660 fb24af7afbadb71801619f1415838111 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
@@ -79,15 +80,16 @@
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1580928261 22417 1d9df1eb66848aa31b18a593099cf45c ""
   "/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty" 1137110840 23636 c37eef0334dd2011d112d2040c11328f ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1580927610 35594 9aef19174c178978f61d14961262af5d ""
-  "bagging1.png" 1589148347 52611 35124aae715c2cf292528230b9b8a017 ""
+  "boosting.png" 1589799041 49525 a307b11dcb8e3ae62e697a9ba0a4096b ""
   "k1.png" 1589795788 48347 f4e257827f38d91c460693f2b25cd5ac ""
   "k3.png" 1589795904 47939 6ed799b8799dd57cf8623a4edcfb22a3 ""
   "knn.png" 1589795138 7751 65749b0383037e306d4878d536d0f98a ""
-  "notes.aux" 1589796276 2092 231ad58ff0c2c61e7548b8d743ec9617 "pdflatex"
-  "notes.tex" 1589796275 10005 060182a5b9a78fdb81bf6eb579a378ce ""
-  "notes.toc" 1589796276 935 58c2f92dcfd2742331b7b4351a82c715 "pdflatex"
+  "notes.aux" 1589803894 3511 49bc69f18b1cb305b16fa4f3253a6b22 "pdflatex"
+  "notes.tex" 1589803893 18960 8bea72ee935f50c3d75b57b33c82cdbb ""
+  "notes.toc" 1589803894 1707 60b6e7636edb955c1f70a8c3d5129f21 "pdflatex"
+  "stacking.png" 1589800069 44258 db358f367f073d749922f11eb4688530 ""
   (generated)
   "notes.aux"
   "notes.log"
-  "notes.toc"
   "notes.pdf"
+  "notes.toc"

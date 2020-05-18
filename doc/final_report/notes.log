@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.24)  18 MAY 2020 03:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.24)  18 MAY 2020 05:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,15 +345,15 @@ LaTeX Font Info:    ... okay on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
+* h-part:(L,W,R)=(18.06749pt, 578.16002pt, 18.06749pt)
+* v-part:(T,H,B)=(18.06749pt, 758.835pt, 18.06749pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=505.89pt
-* \textheight=686.56499pt
-* \oddsidemargin=-18.06749pt
-* \evensidemargin=-18.06749pt
-* \topmargin=-55.06749pt
+* \textwidth=578.16002pt
+* \textheight=758.835pt
+* \oddsidemargin=-54.2025pt
+* \evensidemargin=-54.2025pt
+* \topmargin=-91.2025pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -424,43 +424,48 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
  [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<knn.png, id=14, 217.81375pt x 205.76875pt>
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+<knn.png, id=26, 217.81375pt x 205.76875pt>
 File: knn.png Graphic file (type png)
 <use knn.png>
-Package pdftex.def Info: knn.png  used on input line 77.
-(pdftex.def)             Requested size: 151.76854pt x 143.37463pt.
- [3]
-<k1.png, id=20, 587.19376pt x 449.68pt>
+Package pdftex.def Info: knn.png  used on input line 151.
+(pdftex.def)             Requested size: 173.44977pt x 163.85852pt.
+<k1.png, id=27, 587.19376pt x 449.68pt>
 File: k1.png Graphic file (type png)
 <use k1.png>
-Package pdftex.def Info: k1.png  used on input line 85.
-(pdftex.def)             Requested size: 278.24104pt x 213.07874pt.
-<k3.png, id=21, 557.08125pt x 435.6275pt>
+Package pdftex.def Info: k1.png  used on input line 159.
+(pdftex.def)             Requested size: 317.98976pt x 243.51659pt.
+<k3.png, id=28, 557.08125pt x 435.6275pt>
 File: k3.png Graphic file (type png)
 <use k3.png>
-Package pdftex.def Info: k3.png  used on input line 96.
-(pdftex.def)             Requested size: 252.94499pt x 197.79869pt.
- [4 <./knn.png> <./k1.png>] [5 <./k3.png>] [6]
-<bagging1.png, id=37, 482.80376pt x 670.505pt>
-File: bagging1.png Graphic file (type png)
-<use bagging1.png>
-Package pdftex.def Info: bagging1.png  used on input line 157.
-(pdftex.def)             Requested size: 252.94499pt x 351.28377pt.
- [7 <./bagging1.png>] (./notes.aux) ) 
+Package pdftex.def Info: k3.png  used on input line 169.
+(pdftex.def)             Requested size: 289.08pt x 226.0623pt.
+ [5 <./knn.png> <./k1.png>]
+<Boosting.png, id=32, 642.4pt x 481.8pt>
+File: Boosting.png Graphic file (type png)
+<use Boosting.png>
+Package pdftex.def Info: Boosting.png  used on input line 197.
+(pdftex.def)             Requested size: 260.17024pt x 195.12793pt.
+ [6 <./k3.png>]
+<stacking.png, id=37, 642.4pt x 481.8pt>
+File: stacking.png Graphic file (type png)
+<use stacking.png>
+Package pdftex.def Info: stacking.png  used on input line 218.
+(pdftex.def)             Requested size: 381.58772pt x 286.20036pt.
+ [7 <./boosting.png> <./stacking.png>] [8] [9] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 4703 strings out of 494553
- 65106 string characters out of 6177318
- 136589 words of memory out of 5000000
- 8303 multiletter control sequences out of 15000+600000
+ 4965 strings out of 494553
+ 67108 string characters out of 6177318
+ 150580 words of memory out of 5000000
+ 8564 multiletter control sequences out of 15000+600000
  12744 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,32p,679b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on notes.pdf (7 pages, 274864 bytes).
+ 41i,12n,32p,1298b,1553s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on notes.pdf (9 pages, 318245 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
