@@ -29,7 +29,7 @@ def test(train_set, test_set, train_labels, test_labels):
             correct += 1
         tested += 1
 
-    print(correct / tested)
+    return (correct / tested)
 
 def plot(train_set, train_labels):
     cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue'])
@@ -63,7 +63,7 @@ def plot(train_set, train_labels):
                 edgecolor='k', s=20)
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
-    plt.title("3-Class classification (k = %i, weights = '%s')")
+    plt.title("3-Class classification (k = {0})".format(K_NEIGHBORS))
 
     plt.show()
     
@@ -131,13 +131,30 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 if __name__ == "__main__":
-    #print('{0}Loading Dataset{1}'.format(bcolors.OKBLUE, bcolors.ENDC))
+    print('{0}Loading Dataset{1}'.format(bcolors.OKBLUE, bcolors.ENDC))
     #print(bcolors.OKGREEN)
     train_set, train_labels = load_dataset()
     test_set, test_labels = load_testset()
     #print(bcolors.ENDC)
     #test(train_set, test_set, train_labels, test_labels)
-
+    K_NEIGHBORS=7
     plot(train_set, train_labels)
 
-
+    #Finding 'k'
+    #high_score = -1
+    #high_index = 0
+    #print(bcolors.FAIL, end='')
+    #for i in range(8):
+    #    K_NEIGHBORS = i + 1
+    #    tmp = test(train_set, test_set, train_labels, test_labels)
+    #    if tmp > high_score:
+    #        high_index = K_NEIGHBORS
+    #        high_score = tmp
+    #    print('K = {0} | Score = {1}'.format(K_NEIGHBORS, "%.5f"%round(tmp,5)))
+    #print(bcolors.BOLD, end='')
+    #print(bcolors.UNDERLINE, end='')
+    #print(bcolors.OKBLUE, end='')
+    #print('-----------------------')
+    #print('K = {0} | Score = {1}'.format(high_index, "%.5f"%round(high_score, 5)))
+    #print('-----------------------')
+    #print(bcolors.ENDC)

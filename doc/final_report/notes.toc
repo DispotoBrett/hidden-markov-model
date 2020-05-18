@@ -1,8 +1,15 @@
 \contentsline {part}{I\hspace {1em}Preprocessing}{2}% 
 \contentsline {section}{\numberline {1}Preprocessing the Dataset}{2}% 
-\contentsline {part}{II\hspace {1em}Experiments}{2}% 
-\contentsline {section}{\numberline {2}HMM Bagging}{2}% 
-\contentsline {subsection}{\numberline {2.1}Bagging Procedure}{2}% 
-\contentsline {subsection}{\numberline {2.2}HMM Bagging Results}{3}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Initial Bagging Results}{3}% 
-\contentsline {section}{\numberline {A}Selected Screenshots}{4}% 
+\contentsline {part}{II\hspace {1em}Experiments}{3}% 
+\contentsline {section}{\numberline {2}K-Nearest Neighbors}{3}% 
+\contentsline {subsection}{\numberline {2.1}KNN Procedure}{3}% 
+\contentsline {subsection}{\numberline {2.2}KNN Results}{3}% 
+\contentsline {section}{\numberline {3}Primitive SVM}{5}% 
+\contentsline {subsection}{\numberline {3.1}SVM Procedure}{5}% 
+\contentsline {subsection}{\numberline {3.2}SVM Results}{5}% 
+\contentsline {section}{\numberline {4}HMM Bagging}{5}% 
+\contentsline {subsection}{\numberline {4.1}Bagging Procedure}{5}% 
+\contentsline {subsection}{\numberline {4.2}HMM Bagging Results}{6}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Bagging Results}{6}% 
+\contentsline {paragraph}{On the Result:}{6}% 
+\contentsline {section}{\numberline {A}Selected Screenshots}{7}% 
