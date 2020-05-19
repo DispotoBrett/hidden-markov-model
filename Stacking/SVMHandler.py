@@ -53,3 +53,7 @@ def svm_predict():
 
     return likely_family
 
+
+if __name__ == "__main__":
+    train_svm()
+    test_svm()
