@@ -20,16 +20,16 @@ Malware Classification}
 \tableofcontents
 \newpage
 
-\part{Abstract and Introduction}
-\section{Abstract}
+\section{Abstract and Introduction}
+\subsection{Abstract}
 In this work we provide experiments and analysis of various multiclass classification algorithms to identify families of malicious software (malware). \hl{The best result was achieved using stacking as an ensemble method, with an average of 98.2\% accuracy on the three largest malware families:  winwebsec, zbot, and zeroaccess.} Additionally, the ROC curve for each family have an area under curve of at least $0.998$. The stacking framework is made up of one support vector machine (SVM) per malware family, each trained on scores from $N=5$ "boosted" HMMs per Malware family. Each SVM was trained and tested using a one-versus-rest methodology. Further hyperparameters for this model include: \texttt{max\_unique\_opcodes}$=35$, \texttt{c\_budget}$=2$, \texttt{max\_iters}$=100$, and \texttt{gamma}$=2^{-16}$. In addition to the stacking experiments and tuning, several experiments were performed with varying methodologies and relative levels of success. Clustering experiments were performed using a reduced feature set, using K-Means  (init=\textsc{KMeans++}, 46.66\% accuracy) and K-Nearest-Neighbors ($K=1$, 94.99\% accuracy) algorithms. Multiclass supervised classification experiments were performed on this reduced feature set using a SVM, and best results of 75.8\% accuracy was achieved with a radial kernel of degree 3. Finally, bagging and boosting experiments were performed using Hidden Markov Models as classifiers to ensemble. Bagging achieved high accuracy of 99.7\%; however, the results cannot be mathematical derived for reasons described in the paper. Boosting experiments were not successful because it is too difficult to naively discover a threshold for scoring when random seeds are used across HMMs.
-\part{Methodology and Data set}
+\section{Methodology and Data set}
 %Talk about the data set, 
 %Features,
 %imbalanced classes,
 %which families we use
 %preprocessing
-\section{The Dataset}
+\subsection{The Dataset}
 The dataset used is the \textsc{Malicia} dataset published by the International Journal of Information Security. The dataset is comprised of several malware family subsets all of which contain several opcode sequences of malware from that family. The only malware families with enough samples to perform the machine learning techniques describe here are: 
 \begin{enumerate}
   \item \textsc{WinWebSec}
@@ -39,7 +39,7 @@ The dataset used is the \textsc{Malicia} dataset published by the International 
 
 The dataset is unbalanced, with there being about a $1:1$ ratio for the sample count for \textsc{WinWebSec} as compared to the number of samples from \textsc{ZeroAccess} and \textsc{ZBot} combined. Class imbalance is addressed according to which model is in use. For example, when using K-Means algorithm, class weights are used.
 
-\section{Preprocessing the Dataset}
+\subsection{Preprocessing the Dataset}
 Most of the machine learning techniques used in this report use variants of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. Preprocessing was done using both python and bash scripts. The relevant files can be found in the \texttt{preprocessingScipts} directory of our submission.
   \begin{enumerate}
   \item Download the dataset (\texttt{malicia} | provided by Fabio Di'Troia).
@@ -59,8 +59,8 @@ Most of the machine learning techniques used in this report use variants of the 
 
 
 
-\part{Experimental Setup}
-\section{K-Nearest Neighbors}
+\section{Experimental Setup}
+\subsection{K-Nearest Neighbors}
 K-Nearest Neighbors (KNN) was one of the first algorithms implemented in this work. KNN makes a wise first choice because it allows us to examine the dataset, potentially for intuitive solutions to building a model.
 
 KNN was implemented following according to the following features of our samples:
@@ -68,9 +68,9 @@ KNN was implemented following according to the following features of our samples
     \item Entropy of opcode sequence, and
     \item Number of distinct opcodes
   \end{enumerate}
-  KNN is performed using the files \texttt{KNN.py} and \texttt{knnPreprocesor.py}. The procedures and results are described in the sections below. \textit{sklearn} was used as a KNN library for python.
+  KNN is performed using the files \texttt{KNN.py} and \texttt{knnPreprocesor.py}. The procedures and results are described in the subsections below. \textit{sklearn} was used as a KNN library for python.
 
-\subsection{KNN Procedure}
+\subsection*{KNN Procedure}
   Procedures for running the KNN algorithm on the dataset is as follows:
   \begin{enumerate}
     \item Preprocess the dataset. This includes:
@@ -88,8 +88,8 @@ KNN was implemented following according to the following features of our samples
       \item Repeat steps 2 and 3 for different values of $K$, ranging from $2$ to $10$. Keep the best result.
   \end{enumerate}
 
-  \section{Support Vector Machines}
-  Given that the dataset had already been preprocessed to be represented in two dimensions from the KNN experiments, we figured we might as well feed this into support vector machines and see if they might be able to better partition the classes when the dataset is viewed from the perspective of other dimensions/ coordinate systems. In addition to reducing the observations to two features, we also:
+  \subsection{Support Vector Machines}
+  Given that the dataset had already been preprocessed to be represented in two dimensions from the KNN experiments, we figured we might as well feed this into support vector machines and see if they might be able to better sectionition the classes when the dataset is viewed from the perspective of other dimensions/ coordinate systems. In addition to reducing the observations to two features, we also:
 \begin{enumerate}
   \item Normalize our dataset because it makes computing distances for SVM much faster.
   \item Use class weights inversely proportional to their frequency in the dataset. This will help deal with the unbalanced dataset.
@@ -102,18 +102,17 @@ KNN was implemented following according to the following features of our samples
     \item radial
   \end{enumerate}
 
-  \section{K-Means Clustering}
+  \subsection{K-Means Clustering}
   We also figured that we might as well experiment with K-Means clustering in addition to SVMs and KNNs in our experiments consisting of the two reduced feature sets. The K-Means clustering algorithm was supplied by sklearn, and provides hyperparameter tuning on attributes of the model such as the number of random resets of centroids, number of clusters, and initial position of centroids.
 
 
 
 
-\section{HMM Boosting}
-  \subsection{HMM Boosting Procedure}
+\subsection{HMM Boosting}
   Boosting was done according to the procedure described in lecture. That is, all HMMs of a malware family were trained using the same observation, only with different training parameters (random seeds) varying across models. \textit{HiddenMarkovModel.java} and \textit{Boosting.java} are the files where boosting is implemented.
  
-\section{Stacking}
-  \subsection{Stacking Procedure}
+\subsection{Stacking}
+  \subsubsection{Stacking Procedure}
   Because stacking yielded the best results among all tested models, most extensive hyperparameter tuning was performed using stacking. Stacking is implemented using the files \textit{Stacking.java}, \textit{Stacking.python}, \textit{HiddenMarkovModel.java}, in addition to the library LibSVM. Stacking is implemented using HMMs as weak classifiers, then using SVMs as metaclassifiers, using "one-vs-everything else"  methodology to achieve multiclass classification using support vector machines.
 
 The procedure for each component of the classifier:
@@ -135,20 +134,7 @@ Below is the methodology of training each pre-ensembled HMM for stacking.
   \\\hline
   \end{tabular}
   \end{table}  
-
-  \subsection{A Stacking Framework}
-  In order to efficiently perform experiments based on empirical results, we have developed a framework (desktop application) which allows for rapid hyperparameter tuning and testing. 
-
-  \paragraph{Classifying}
-  The program is Stacking.py in the Stacking folder of the project. When you run the program on Windows, either in the command line with python Stacking.py or by running the main function with an IDE, a file dialog window opens up and you must choose a malware file to classify. The program will output the family that it thinks the virus most likely belongs to, or 'None' if it doesn't believe that the malware belongs to a family that the program has been trained on. 
-
-  \paragraph{Training}
-Before the file classification can be used, however, the models used by the program must first be trained. This can be achieved by running  \texttt{python Stacking.py --train} in the command line. By default, the model will be trained on 3 families with the highest number of files. However, one can specify the number of families that the model is trained on by using the \texttt{--train <number\_of\_files>} option. For example, to train the model on 5 different families, one should run \texttt{python Stacking.py --train 5}. Depending on the performance of the machine, it could take several hours to completely train the model. If it is interrupted, it unfortunately has to be retrained from scratch. The more families included in training, the longer it will take to train the model used by the program. 
-
-After the model has been trained, the program is ready to classify malware files, but it is a good idea to know how accurate the model is. This can be seen by running  \texttt{python Stacking.py --test} in the command line. It will print the test accuracy for each family, and it will also produce a single graph containing an ROC curve for each family. Testing the model takes significantly less time than training it.
-Finally, running  \texttt{python Stacking.py --all} will train the model with the default number of families, test the model as if the \texttt{--test} option was set, and then prompt the user to chose a file for classification. After some manual and unscientific testing, I found that the program works well when classifying a malware sample from one of the families that the model was trained on. However, it has difficulties classifying a file that did not come from any of the training families as 'None'.
-
-
+  \newpage
 \paragraph{SVM Training}
 Below is the methodology of training each SVM for stacking.
   \begin{table}[H]
@@ -203,9 +189,27 @@ Below are is the methodology of testing each SVM for stacking.
 
 
 
-\section{HMM Bagging}
-  Bagging is performed using the files \texttt{Bagging.java} and \texttt{HiddenMarkovModel.java}. The procedures and results are described in the sections below.
-\subsection{Bagging Procedure}
+
+
+
+  \subsubsection{A Stacking Framework}
+  In order to efficiently perform experiments based on empirical results, we have developed a framework (desktop application) which allows for rapid hyperparameter tuning and testing. 
+
+  \paragraph{Classifying}
+  The program is Stacking.py in the Stacking folder of the project. When you run the program on Windows, either in the command line with python Stacking.py or by running the main function with an IDE, a file dialog window opens up and you must choose a malware file to classify. The program will output the family that it thinks the virus most likely belongs to, or 'None' if it doesn't believe that the malware belongs to a family that the program has been trained on. 
+
+  \paragraph{Training}
+Before the file classification can be used, however, the models used by the program must first be trained. This can be achieved by running  \texttt{python Stacking.py --train} in the command line. By default, the model will be trained on 3 families with the highest number of files. However, one can specify the number of families that the model is trained on by using the \texttt{--train <number\_of\_files>} option. For example, to train the model on 5 different families, one should run \texttt{python Stacking.py --train 5}. Depending on the performance of the machine, it could take several hours to completely train the model. If it is interrupted, it unfortunately has to be retrained from scratch. The more families included in training, the longer it will take to train the model used by the program. 
+
+After the model has been trained, the program is ready to classify malware files, but it is a good idea to know how accurate the model is. This can be seen by running  \texttt{python Stacking.py --test} in the command line. It will print the test accuracy for each family, and it will also produce a single graph containing an ROC curve for each family. Testing the model takes significantly less time than training it.
+Finally, running  \texttt{python Stacking.py --all} will train the model with the default number of families, test the model as if the \texttt{--test} option was set, and then prompt the user to chose a file for classification. After some manual and unscientific testing, I found that the program works well when classifying a malware sample from one of the families that the model was trained on. However, it has difficulties classifying a file that did not come from any of the training families as 'None'.
+
+
+
+
+\subsection{HMM Bagging}
+  Bagging is performed using the files \texttt{Bagging.java} and \texttt{HiddenMarkovModel.java}. The procedures and results are described in the subsections below.
+\subsubsection*{Bagging Procedure}
   The following steps were performed in order to use bagging as an ensemble method:
   \begin{enumerate}
     \item Split assembly instructions into their appropriate family, and translate the instructions to HMM symbols,
@@ -222,7 +226,7 @@ Below are is the methodology of testing each SVM for stacking.
 
 
 \newpage
-\part{Experimental Results}
+\section{Experimental Results}
   \subsection{KNN Results}
   Below are the results of the KNN experiments:
   \begin{table}[H]
@@ -267,7 +271,7 @@ Below are is the methodology of testing each SVM for stacking.
   \end{tabular}
   \end{table}  
  
-  Based on the results from both these SVM tests and the KNN tests of the previous section, we conclude that clustering/ partitioning the malware families based on only these two features is not enough to produce a strong classifier. We can see from the plotted SVMs that there is a lot of overlap between classes, and any kernel would not be able to determine a coloration which does not exist to begin with, as can be seen in the zoomed in \texttt{rbf} kernel SVM below:
+  Based on the results from both these SVM tests and the KNN tests of the previous subsection, we conclude that clustering/ sectionitioning the malware families based on only these two features is not enough to produce a strong classifier. We can see from the plotted SVMs that there is a lot of overlap between classes, and any kernel would not be able to determine a coloration which does not exist to begin with, as can be seen in the zoomed in \texttt{rbf} kernel SVM below:
 
   \begin{figure}[H]
   \centering
@@ -281,7 +285,7 @@ Below are is the methodology of testing each SVM for stacking.
   \caption{Family clusters using different SVM kernels}
   \end{figure}
   
-\section{K-Means Clustering}
+\subsection{K-Means Clustering}
   Based on simply visually inspecting the dataset from our primitive SVM and KNN experiments, we didn't expect that K-Means would be able to differentiate classes based on their centroids. This is because there is \textit{a lot} of overlap between the families when plotted on a 2D plane. Unlike KNN, K-means cannot handle the case of a class being made up of several disjoint clusters, which seems to be the case here. The best achieved accuracy using K-Means was found under the following conditions:
 
   \begin{table}[H]
@@ -324,7 +328,7 @@ Score 3: 10555.795790797403
 Score 4: 7972.734255134028
 Score 5: 9193.531925297084
 \end{lstlisting}
-It is easy to see that a simple threshold is not sufficient to categorize a file as either malware from the same family the HMMs were trained on or malware from a different family. Different hyperparameters were tested, such as letting N = 3, 4, 5, or letting the number of unique opcodes be 20, 30, and 40. Each one yielded a similar result. It is possible that the HMMs are overfitting, and so performing some sort of cross validation would produce better results, but due to the overwhelming success of the Stacking experiments (next section), this was not pursued.
+It is easy to see that a simple threshold is not sufficient to categorize a file as either malware from the same family the HMMs were trained on or malware from a different family. Different hyperparameters were tested, such as letting N = 3, 4, 5, or letting the number of unique opcodes be 20, 30, and 40. Each one yielded a similar result. It is possible that the HMMs are overfitting, and so performing some sort of cross validation would produce better results, but due to the overwhelming success of the Stacking experiments (next subsection), this was not pursued.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.45\textwidth]{Boosting.png}
@@ -355,16 +359,17 @@ It is easy to see that a simple threshold is not sufficient to categorize a file
   Each family was split by 50\%, 25\%, and 25\%. 50\% of the family trains the HMMs. 25\% trains the SVM, and the final 25\% tests the SVM. It took well over an hour and a half to train all 15 HMMs used for these experiments, and though multithreading was implemented, our workstation was running out of memory when training with large observation sequences.
 \paragraph{Hyperparameter Tuning}
   \subparagraph{Number of Opcodes}
-  The number of unique opcodes for the best found classifier was 35. Originally tests were perfromed with 32 unique opcodes and got good results from that. Then 30 and 40 unique opcodes were tried, getting slightly worse results. Finally 35 opcodes was tested, which yielded slightly better results. The difference between 32 and 35 opcodes could just have been due to a lucky random restart, but it does seem like 35 opcodes is reliably better than 30 and 40 (the exact scores I got have unfortunately been lost). Finally, I tried 20 opcodes, getting significantly worse results.
+  The number of unique opcodes for the best found classifier was 35. Originally tests were perfromed with 32 unique opcodes and got good results from that. Then 30 and 40 unique opcodes were tried, getting slightly worse results. Finally 35 opcodes was tested, which yielded slightly better results. The difference between 32 and 35 opcodes could just have been due to a lucky random restart, but after some experimentation, using 35 unique opcodes reliably performed better than using either 30 or 40 unique opcodes. Further experimentation showed that using 20 unique opcodes reduced the accuracy of the models by 15-20\%
+  
   \subparagraph{Number of HMMs}
-  Stacking was tried with scores from 3, 5 and 6 different HMMs. 5 and 6 HMMs were comparable in accuracy and differences were likely caused by the random restarts. However, since it took 20\% longer to train 6 HMMs, not many experiments were performed with them, so it is possible that there was some further way to optimize them beyond what I could do with 5 HMMs.
+Since it took 20\% longer to train 6 HMMs, few experiments were performed with them. Thus, it is possible that there was some way to achieve a better accuracy using 6 HMMs that was not discovered due to time constraints.
   \subparagraph{HMM Tuning}
- For the HMMs themselves, N = 2, 3, 4, and 5 were tried. N = 4 and 5 were comparable in accuracy, though N= 5 seems to have been slightly better (once again, possibly just due to randomness). N = 2 and 3 were outclassed by 4 and 5 by at least 2-3\%. N = 5 takes longer to train and uses more memory, but there is a reason I chose it over N = 4, and it has to due with the hyperparameters for the SVM described below.
+ For the HMMs themselves, N = 2, 3, 4, and 5 were tried. N = 4 and 5 were comparable in accuracy, though N= 5 seems to have been slightly better (once again, possibly just due to randomness). Even though N = 5 takes longer to train than N = 4, we chose it because it synergizes better with the SVM hyperparameters, as discussed in the Library Specific Tuning subsection.
   \subparagraph{SVM Tuning}
   Finally, we get to the SVM. The library used was Libsvm version 3.24. There are a couple of SVMs that Libsvm supports, so we chose the default \textsc{c-svc}. For the SVM kernel, the Radial Basis Function (RBF) kernel was used, which also happens to be the default kernel. Libsvm offers other kernels, such as a linear, polynomial, and sigmoid kernel. The linear kernel yielded horrible results (54\% - 60\%, little better than guessing) and every other available kernel would cause an \textit{MAX\_ITERATIONS\_REACHED} error from LibSVM.
   \subparagraph{Library Specific Tuning}
-  Per the suggestion of the creators of Libsvm, there are two hyperparameters, $c$ (budget) and gamma (RBF kernel parameter), that I should tweak. If appropriate values are chosen for these hyperparmeters,the testing accuracy can be drastically increased, but if the wrong values are chosen, then accuracies tend to then range from 60-80\%, which is obviously suboptimal.  We found through experimentation (choosing values c = $2^2$ through $2^-15$) that letting c = 2 is pretty much optimal for every family, for any number of HMMs with any N, and for any gamma value for the SVM. It is possible that we could have optimized these hyperparameters more by searching through smaller intervals such as $c = 1.9, 1.8, 1.7, ... 2.1, 2.2, .....$ but at that point, we would basically just be optimizing the SVM for the test set of the family, and while that would definitely be good to eek out the highest score in a competition, it probably wouldn't make the model better overall. Finally, we get to gamma. Choosing a good value for gamma is just as important as choosing a good value for c. We found experimentally that good values range between $2^{-10}$ and $2^{-20}$, although choosing the right one between those limits could mean a difference in accuracy of 5\% or more.
-The proper gamma value seemed to change with N, the number of files that are being used in the training set for the HMM/SVM, and random chance from the randomly restarted HMMs. When N = 4, it was difficult to find a single gamma value that would give a consistent result for all 3 families at once. Each family would be 1-5\% less accurate than the last (although this did allow me to reach a 99.3007\% accuracy on ZeroAccess). However, when N = 5, I found that I could find a gamma value where all families would be about equally accurate (in the 98.5\% range). 
+  Per the suggestion of the creators of Libsvm, there are two hyperparameters, $c$ (budget) and gamma (RBF kernel parameter), that we should modify. If appropriate values are chosen for these hyperparmeters,the testing accuracy can be drastically increased, but if the wrong values are chosen, then accuracies tend to then range from 60-80\%, which is obviously suboptimal.  We found through experimentation (choosing values c = $2^2$ through $2^-15$) that letting c = 2 is pretty much optimal for every family, for any number of HMMs with any N, and for any gamma value for the SVM. It is possible that we could have optimized these hyperparameters more by searching through smaller intervals such as $c = 1.9, 1.8, 1.7, ... 2.1, 2.2, .....$ but at that point, we would basically just be optimizing the SVM for the test set of the family, and while that would definitely be good to eek out the highest score in a competition, it probably wouldn't make the model better overall. Finally, we get to gamma. Choosing a good value for gamma is just as important as choosing a good value for c. We found experimentally that good values range between $2^{-10}$ and $2^{-20}$, although choosing the right one between those limits could mean a difference in accuracy of 5\% or more.
+The proper gamma value seemed to change with N, the number of files that are being used in the training set for the HMM/SVM, and random chance from the randomly restarted HMMs. When N = 4, it was difficult to find a single gamma value that would give a consistent result for all 3 families at once. Each family would be 1-5\% less accurate than the last (although this did allow me to reach a 99.3007\% accuracy on ZeroAccess). However, when N = 5, we could find a gamma value where all families would be about equally accurate (in the 98.5\% range). 
 
 \subsection{Bagging Results}
   The best found bagging results are given in the below table:
@@ -395,8 +400,8 @@ The proper gamma value seemed to change with N, the number of files that are bei
      \end{itemize}
   \end{enumerate}
 
-\part{Discussion and Future Work}
-  \paragraph{Discussion}
+\section{Discussion and Future Work}
+  \subsection{Discussion}
     In review, the following methods were tested to classify malware samples into families:
     \begin{enumerate}
       \item KNN (94.99\% accuracy, reduced feature set, overfitting)
@@ -406,7 +411,7 @@ The proper gamma value seemed to change with N, the number of files that are bei
       \item Bagging HMMs ($NaN$ errors, unexplainable, high accuracy)
       \item \hl{\textbf{Best Model:}} Stacking with "boosted" HMMs (extensive hyperparameter tuning, highest accuracy, quick computation)
     \end{enumerate}
-  \paragraph{Future Work}
+  \subsection{Future Work}
   Although the results from the experiments performed here are promising, there is always more work to do. Here is a list of suggested next steps for anyone interested in continuing this work: 
   \begin{enumerate}
     \item Work with a larger dataset to better determine method and model accuracy
@@ -417,26 +422,7 @@ The proper gamma value seemed to change with N, the number of files that are bei
     \item Speed up the training and lessen the memory-usage of HMMs
     \item Develop Stacking framework further to increase accuracy with samples from malware families not used in the training set
     \item Extract more features for further clustering experiments in higher dimensions
-    \item Investigate the mysterious \texttt{NaN} error described in the "Bagging Results" section
+    \item Investigate the mysterious \texttt{NaN} error described in the "Bagging Results" subsection
   \end{enumerate}
 
 \end{document}
-
-\iffalse
-Todo:
-  Sample with replacement for training baggging HMM.
-
-  SVM using the same features as the KNN tests
-
-  Add N-Fold to KNN
-
-  DONE Do some ML method (perhaps KNN) where features could be:
-  -Entropy
-  -Number of distinct opcodes
-
-  Add N-fold validation to bagging
-  Trying bagging with replacement
-  Use ROC curves
-
-  Add random forrest somewhere?
-\fi

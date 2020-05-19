@@ -1,40 +1,37 @@
-\contentsline {part}{I\hspace {1em}Abstract and Introduction}{3}% 
-\contentsline {section}{\numberline {1}Abstract}{3}% 
-\contentsline {part}{II\hspace {1em}Methodology and Dataset}{3}% 
-\contentsline {section}{\numberline {2}The Dataset}{3}% 
-\contentsline {section}{\numberline {3}Preprocessing the Dataset}{3}% 
-\contentsline {part}{III\hspace {1em}Experimental Setup}{4}% 
-\contentsline {section}{\numberline {4}K-Nearest Neighbors}{4}% 
-\contentsline {subsection}{\numberline {4.1}KNN Procedure}{4}% 
-\contentsline {section}{\numberline {5}Support Vector Machines}{5}% 
-\contentsline {section}{\numberline {6}K-Means Clustering}{5}% 
-\contentsline {section}{\numberline {7}HMM Boosting}{5}% 
-\contentsline {subsection}{\numberline {7.1}HMM Boosting Procedure}{5}% 
-\contentsline {section}{\numberline {8}Stacking}{5}% 
-\contentsline {subsection}{\numberline {8.1}Stacking Procedure}{5}% 
-\contentsline {paragraph}{HMM Training}{5}% 
-\contentsline {subsection}{\numberline {8.2}A Stacking Framework}{6}% 
-\contentsline {paragraph}{Classifying}{6}% 
+\contentsline {section}{\numberline {1}Abstract and Introduction}{2}% 
+\contentsline {subsection}{\numberline {1.1}Abstract}{2}% 
+\contentsline {section}{\numberline {2}Methodology and Data set}{2}% 
+\contentsline {subsection}{\numberline {2.1}The Dataset}{2}% 
+\contentsline {subsection}{\numberline {2.2}Preprocessing the Dataset}{2}% 
+\contentsline {section}{\numberline {3}Experimental Setup}{3}% 
+\contentsline {subsection}{\numberline {3.1}K-Nearest Neighbors}{3}% 
+\contentsline {subsection}{\numberline {3.2}Support Vector Machines}{3}% 
+\contentsline {subsection}{\numberline {3.3}K-Means Clustering}{4}% 
+\contentsline {subsection}{\numberline {3.4}HMM Boosting}{4}% 
+\contentsline {subsection}{\numberline {3.5}Stacking}{4}% 
+\contentsline {subsubsection}{\numberline {3.5.1}Stacking Procedure}{4}% 
+\contentsline {paragraph}{HMM Training}{4}% 
+\contentsline {paragraph}{SVM Training}{5}% 
+\contentsline {paragraph}{Testing SVM}{5}% 
+\contentsline {subsubsection}{\numberline {3.5.2}A Stacking Framework}{5}% 
+\contentsline {paragraph}{Classifying}{5}% 
 \contentsline {paragraph}{Training}{6}% 
-\contentsline {paragraph}{SVM Training}{6}% 
-\contentsline {paragraph}{Testing SVM}{6}% 
-\contentsline {section}{\numberline {9}HMM Bagging}{7}% 
-\contentsline {subsection}{\numberline {9.1}Bagging Procedure}{7}% 
-\contentsline {part}{IV\hspace {1em}Experimental Results}{8}% 
-\contentsline {subsection}{\numberline {9.2}KNN Results}{8}% 
-\contentsline {subsection}{\numberline {9.3}(Primitive) Support Vector Machine Results}{9}% 
-\contentsline {section}{\numberline {10}K-Means Clustering}{10}% 
-\contentsline {subsection}{\numberline {10.1}Boosting Results}{11}% 
-\contentsline {subsection}{\numberline {10.2}Stacking Results}{12}% 
-\contentsline {paragraph}{Logistics}{13}% 
-\contentsline {paragraph}{Hyperparameter Tuning}{13}% 
-\contentsline {subparagraph}{Number of Opcodes}{13}% 
-\contentsline {subparagraph}{Number of HMMs}{13}% 
-\contentsline {subparagraph}{HMM Tuning}{13}% 
-\contentsline {subparagraph}{SVM Tuning}{13}% 
-\contentsline {subparagraph}{Library Specific Tuning}{13}% 
-\contentsline {subsection}{\numberline {10.3}Bagging Results}{13}% 
-\contentsline {paragraph}{On the Result:}{14}% 
-\contentsline {part}{V\hspace {1em}Discussion and Future Work}{14}% 
-\contentsline {paragraph}{Discussion}{14}% 
-\contentsline {paragraph}{Future Work}{15}% 
+\contentsline {subsection}{\numberline {3.6}HMM Bagging}{6}% 
+\contentsline {section}{\numberline {4}Experimental Results}{7}% 
+\contentsline {subsection}{\numberline {4.1}KNN Results}{7}% 
+\contentsline {subsection}{\numberline {4.2}(Primitive) Support Vector Machine Results}{8}% 
+\contentsline {subsection}{\numberline {4.3}K-Means Clustering}{9}% 
+\contentsline {subsection}{\numberline {4.4}Boosting Results}{10}% 
+\contentsline {subsection}{\numberline {4.5}Stacking Results}{11}% 
+\contentsline {paragraph}{Logistics}{12}% 
+\contentsline {paragraph}{Hyperparameter Tuning}{12}% 
+\contentsline {subparagraph}{Number of Opcodes}{12}% 
+\contentsline {subparagraph}{Number of HMMs}{12}% 
+\contentsline {subparagraph}{HMM Tuning}{12}% 
+\contentsline {subparagraph}{SVM Tuning}{12}% 
+\contentsline {subparagraph}{Library Specific Tuning}{12}% 
+\contentsline {subsection}{\numberline {4.6}Bagging Results}{12}% 
+\contentsline {paragraph}{On the Result:}{13}% 
+\contentsline {section}{\numberline {5}Discussion and Future Work}{13}% 
+\contentsline {subsection}{\numberline {5.1}Discussion}{13}% 
+\contentsline {subsection}{\numberline {5.2}Future Work}{14}% 

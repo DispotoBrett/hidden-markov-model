@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.24)  18 MAY 2020 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.24)  18 MAY 2020 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -418,66 +418,66 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count118
- (./notes.toc [1
-
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}])
+ (./notes.toc)
 \tf@toc=\write3
 \openout3 = `notes.toc'.
 
- [2] [3] [4] [5] [6] [7]
-<k1.png, id=38, 587.19376pt x 449.68pt>
+ [1
+
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+<k1.png, id=34, 587.19376pt x 449.68pt>
 File: k1.png Graphic file (type png)
 <use k1.png>
-Package pdftex.def Info: k1.png  used on input line 245.
+Package pdftex.def Info: k1.png  used on input line 249.
 (pdftex.def)             Requested size: 317.98976pt x 243.51659pt.
-<k3.png, id=39, 557.08125pt x 435.6275pt>
+<k3.png, id=35, 557.08125pt x 435.6275pt>
 File: k3.png Graphic file (type png)
 <use k3.png>
-Package pdftex.def Info: k3.png  used on input line 252.
+Package pdftex.def Info: k3.png  used on input line 256.
 (pdftex.def)             Requested size: 289.08pt x 226.0623pt.
- [8 <./k1.png>]
-<svmZoom.png, id=43, 571.13374pt x 314.17375pt>
+ [7 <./k1.png>]
+<svmZoom.png, id=40, 571.13374pt x 314.17375pt>
 File: svmZoom.png Graphic file (type png)
 <use svmZoom.png>
-Package pdftex.def Info: svmZoom.png  used on input line 274.
+Package pdftex.def Info: svmZoom.png  used on input line 278.
 (pdftex.def)             Requested size: 289.07823pt x 189.70897pt.
-<svms.png, id=44, 1309.89375pt x 677.53125pt>
+<svms.png, id=41, 1309.89375pt x 677.53125pt>
 File: svms.png Graphic file (type png)
 <use svms.png>
-Package pdftex.def Info: svms.png  used on input line 280.
+Package pdftex.def Info: svms.png  used on input line 284.
 (pdftex.def)             Requested size: 578.1539pt x 379.42525pt.
- [9 <./k3.png> <./svmZoom.png>]
-<kmeans2.png, id=48, 1350.04375pt x 728.7225pt>
+ [8 <./k3.png> <./svmZoom.png>]
+<kmeans2.png, id=45, 1350.04375pt x 728.7225pt>
 File: kmeans2.png Graphic file (type png)
 <use kmeans2.png>
-Package pdftex.def Info: kmeans2.png  used on input line 300.
+Package pdftex.def Info: kmeans2.png  used on input line 304.
 (pdftex.def)             Requested size: 578.16002pt x 312.07695pt.
- [10 <./svms.png>]
-<Boosting.png, id=52, 642.4pt x 481.8pt>
+ [9 <./svms.png>]
+<Boosting.png, id=49, 642.4pt x 481.8pt>
 File: Boosting.png Graphic file (type png)
 <use Boosting.png>
-Package pdftex.def Info: Boosting.png  used on input line 330.
+Package pdftex.def Info: Boosting.png  used on input line 334.
 (pdftex.def)             Requested size: 260.17024pt x 195.12793pt.
- [11 <./kmeans2.png>]
-<stacking.png, id=57, 642.4pt x 481.8pt>
+ [10 <./kmeans2.png>]
+<stacking.png, id=54, 642.4pt x 481.8pt>
 File: stacking.png Graphic file (type png)
 <use stacking.png>
-Package pdftex.def Info: stacking.png  used on input line 351.
+Package pdftex.def Info: stacking.png  used on input line 355.
 (pdftex.def)             Requested size: 381.58772pt x 286.20036pt.
- [12 <./boosting.png> <./stacking.png>] [13] [14] [15] (./notes.aux) ) 
+ [11 <./boosting.png> <./stacking.png>] [12] [13] [14] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 4975 strings out of 494553
- 67261 string characters out of 6177318
+ 4974 strings out of 494553
+ 67243 string characters out of 6177318
  141580 words of memory out of 5000000
- 8572 multiletter control sequences out of 15000+600000
- 12744 words of font info for 46 fonts, out of 8000000 for 9000
+ 8571 multiletter control sequences out of 15000+600000
+ 12437 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,32p,1758b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,32p,1760b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on notes.pdf (15 pages, 517771 bytes).
+Output written on notes.pdf (14 pages, 516589 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
