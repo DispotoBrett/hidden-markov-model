@@ -40,7 +40,7 @@ The dataset used is the \textsc{Malicia} dataset published by the International 
 The dataset is unbalanced, with there being about a $1:1$ ratio for the sample count for \textsc{WinWebSec} as compared to the number of samples from \textsc{ZeroAccess} and \textsc{ZBot} combined. Class imbalance is addressed according to which model is in use. For example, when using K-Means algorithm, class weights are used.
 
 \subsection{Preprocessing the Dataset}
-Most of the machine learning techniques used in this report use variants of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. Preprocessing was done using both python and bash scripts. The relevant files can be found in the \texttt{preprocessingScipts} directory of our submission.
+Most of the machine learning techniques used in this report use variants of the same preprocessing steps. Here are the preprocessing steps taken for the methods described in this report. Preprocessing was done using both python and bash scripts. The relevant files for preprocessing for each model can be found in the directory where that model's implementation is.
   \begin{enumerate}
   \item Download the dataset (\texttt{malicia} | provided by Fabio Di'Troia).
     \item Split the dataset into directories based upon their family label. (Already completed by the dataset provider.)
