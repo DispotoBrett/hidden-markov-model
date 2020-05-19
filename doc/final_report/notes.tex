@@ -364,7 +364,7 @@ It is easy to see that a simple threshold is not sufficient to categorize a file
   \subparagraph{Number of HMMs}
 Since it took 20\% longer to train 6 HMMs, few experiments were performed with them. Thus, it is possible that there was some way to achieve a better accuracy using 6 HMMs that was not discovered due to time constraints.
   \subparagraph{HMM Tuning}
- For the HMMs themselves, N = 2, 3, 4, and 5 were tried. N = 4 and 5 were comparable in accuracy, though N= 5 seems to have been slightly better (once again, possibly just due to randomness). Even though N = 5 takes longer to train than N = 4, we chose it because it synergizes better with the SVM hyperparameters, as discussed in the Library Specific Tuning subsection.
+For the HMMs themselves, N = 2, 3, 4, and 5 were tried. N = 4 and 5 were comparable in accuracy, though N= 5 scored slightly better (once again, possibly just due to randomness). N = 2 and 3 were outclassed by 4 and 5 by at least 2-3\%. Even though N = 5 takes longer to train than N = 4, we chose it because it synergizes better with the SVM hyperparameters, as discussed in the Library Specific Tuning section.
   \subparagraph{SVM Tuning}
   Finally, we get to the SVM. The library used was Libsvm version 3.24. There are a couple of SVMs that Libsvm supports, so we chose the default \textsc{c-svc}. For the SVM kernel, the Radial Basis Function (RBF) kernel was used, which also happens to be the default kernel. Libsvm offers other kernels, such as a linear, polynomial, and sigmoid kernel. The linear kernel yielded horrible results (54\% - 60\%, little better than guessing) and every other available kernel would cause an \textit{MAX\_ITERATIONS\_REACHED} error from LibSVM.
   \subparagraph{Library Specific Tuning}
