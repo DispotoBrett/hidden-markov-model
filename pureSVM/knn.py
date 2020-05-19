@@ -7,8 +7,9 @@ import numpy as np
 import pandas as pd
 import scipy
 from scipy import stats
-from sklearn import neighbors, datasets
+from sklearn import neighbors, datasets, preprocessing
 from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from sklearn.svm import SVC 
@@ -133,17 +134,86 @@ class bcolors:
 
 
 
-if __name__ == "__main__":
-    train_set, train_labels = load_dataset()
-    test_set, test_labels = load_testset()
+train_set, train_labels = load_dataset()
+test_set, test_labels = load_testset()
 
-    svm_model_linear = SVC(kernel = 'linear', C = 1).fit(train_set, train_labels) 
-    svm_predictions = svm_model_linear.predict(test_set) 
-      
-    # model accuracy for X_test   
-    accuracy = svm_model_linear.score(test_set, test_labels) 
+scaling = MinMaxScaler(feature_range=(-1,1)).fit(train_set)
+train_set = scaling.transform(train_set)
+test_set = scaling.transform(test_set)
 
-    print(accuracy)
+#for i in range(5):
+#    print('Degree {0}:'.format(1 + i), end='')
+#    svm_model_linear = SVC(kernel = 'rbf', degree=i + 1, C =1, class_weight='balanced').fit(train_set, train_labels) 
+#    svm_predictions = svm_model_linear.predict(test_set) 
+#      
+#    # model accuracy for X_test   
+#    accuracy = svm_model_linear.score(test_set, test_labels) 
+
+#    print(accuracy)
+
+print(__doc__)
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import svm, datasets
+
+# import some data to play with
+X = train_set
+y = train_labels
+
+h = .02  # step size in the mesh
+
+# we create an instance of SVM and fit out data. We do not scale our
+# data since we want to plot the support vectors
+C = 1.0  # SVM regularization parameter
+svc = SVC(kernel = 'poly', degree=3, C =1, class_weight='balanced').fit(X, y) 
+rbf_svc = SVC(kernel = 'rbf', degree=3, C =1, class_weight='balanced').fit(X, y) 
+poly_svc = svm.SVC(kernel='poly', degree=2, C=C, class_weight='balanced').fit(X, y)
+lin_svc = svm.LinearSVC(C=C,  class_weight='balanced').fit(X, y)
+
+# create a mesh to plot in
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                     np.arange(y_min, y_max, h))
+
+# title for the plots
+titles = ['SVC polynomal (degree 3) kernel',
+          'LinearSVC (linear kernel)',
+          'SVC with RBF kernel',
+          'SVC with polynomial (degree 2) kernel']
+
+svc_score = svc.score(test_set, test_labels) 
+rbf_score = rbf_svc.score(test_set, test_labels) 
+poly_score = poly_svc.score(test_set, test_labels) 
+lin_score = lin_svc.score(test_set, test_labels) 
+
+scores = [svc_score, lin_score, rbf_score, poly_score]
+
+for i, clf in enumerate((svc, lin_svc, rbf_svc, poly_svc)):
+    # Plot the decision boundary. For that, we will assign a color to each
+    # point in the mesh [x_min, x_max]x[y_min, y_max].
+    plt.subplot(2, 2, i + 1)
+    plt.subplots_adjust(wspace=0.4, hspace=0.4)
+
+    Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+
+    # Put the result into a color plot
+    Z = Z.reshape(xx.shape)
+    plt.contourf(xx, yy, Z, cmap=plt.cm.coolwarm, alpha=0.8)
+    
+    # Plot also the training points
+    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.coolwarm)
+    plt.xlabel('Number of distinct opcodes')
+    plt.ylabel('Entropy')
+    plt.xlim(xx.min(), xx.max())
+    plt.ylim(yy.min(), yy.max())
+    plt.xticks(())
+    plt.yticks(())
+    plt.title('{0}. Accuracy={1}'.format(titles[i], scores[i]))
+
+plt.show()
+
 
 
 

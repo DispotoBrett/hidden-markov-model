@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1589803894 "notes.tex" "notes.pdf" "notes" 1589803895
+["pdflatex"] 1589847219 "notes.tex" "notes.pdf" "notes" 1589847220
   "/home/brett/.texlive2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1582583602 797358 0bd2c1937e70eb3af887cb2d78db28da ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1571529271 4705165 89f805375525bb3eb1f534beca7104e4 ""
@@ -83,13 +83,15 @@
   "boosting.png" 1589799041 49525 a307b11dcb8e3ae62e697a9ba0a4096b ""
   "k1.png" 1589795788 48347 f4e257827f38d91c460693f2b25cd5ac ""
   "k3.png" 1589795904 47939 6ed799b8799dd57cf8623a4edcfb22a3 ""
-  "knn.png" 1589795138 7751 65749b0383037e306d4878d536d0f98a ""
-  "notes.aux" 1589803894 3511 49bc69f18b1cb305b16fa4f3253a6b22 "pdflatex"
-  "notes.tex" 1589803893 18960 8bea72ee935f50c3d75b57b33c82cdbb ""
-  "notes.toc" 1589803894 1707 60b6e7636edb955c1f70a8c3d5129f21 "pdflatex"
+  "kmeans2.png" 1589842193 106624 a6a3e2841c0b2c8ec3a8a5220f3f1d97 ""
+  "notes.aux" 1589847220 4953 6c0e36bd1ee4b9b9f2365ffc0cde52fa "pdflatex"
+  "notes.tex" 1589847217 31010 7672be81873ac724fc1d29a3ab9c4387 ""
+  "notes.toc" 1589847220 2361 6b4451ca586b75bffe838a535e722322 "pdflatex"
   "stacking.png" 1589800069 44258 db358f367f073d749922f11eb4688530 ""
+  "svmZoom.png" 1589826747 56462 8bc3b5c90dc23a2678112f889c672483 ""
+  "svms.png" 1589825499 85299 6d8713ea8e9746daa80583006078d529 ""
   (generated)
   "notes.aux"
-  "notes.log"
   "notes.pdf"
   "notes.toc"
+  "notes.log"
